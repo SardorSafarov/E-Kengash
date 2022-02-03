@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_murojaat_yuborish.xml" value="0.2395" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy2.xml" value="0.1390625" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_kuproq.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_murojatlar.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.29322916666666665" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

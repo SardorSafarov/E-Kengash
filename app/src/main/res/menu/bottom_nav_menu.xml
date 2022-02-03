@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/asosiy"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always"
+        android:title="Asosiy" />
+
+    <item
+        android:id="@+id/murojaat"
+        android:icon="@drawable/ic_murojaatlar"
+        app:showAsAction="always"
+        android:title="Murojaatlar  " />
+
+    <item
+        android:id="@+id/yangi"
+        android:icon="@drawable/ic_yangi"
+        app:showAsAction="always"
+        android:title="Yangi" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_chat"
+        app:showAsAction="always"
+        android:title="Chat" />
+    <item
+        android:id="@+id/kuproq"
+        android:icon="@drawable/ic_koproq"
+        app:showAsAction="always"
+        android:title="Ko'proq" />
+
+</menu>
