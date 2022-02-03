@@ -106,6 +106,7 @@
                     android:layout_width="64dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:text="Barchasi"
                     android:textAllCaps="false"
                     android:textSize="8.5dp" />
@@ -114,16 +115,24 @@
                     android:layout_width="117dp"
                     android:layout_height="wrap_content"
                     android:text="Ko`rib chiqilmoqda"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:backgroundTint="@color/white"
                     android:layout_gravity="center"
+                    android:textColor="#ACACAC"
+                    android:elevation="0dp"
                     android:textAllCaps="false"
                     android:textSize="8.5dp" />
 
                 <Button
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="86dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/white"
                     android:text="Yakunlangan"
+                    android:textColor="#ACACAC"
                     android:textAllCaps="false"
+                    android:elevation="0dp"
                     android:textSize="8.5dp" />
 
                 <Button
@@ -131,6 +140,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Ko`rilmagan"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:textColor="#ACACAC"
+                    android:backgroundTint="@color/white"
                     android:textAllCaps="false"
                     android:textSize="8.5dp" />
             </LinearLayout>
