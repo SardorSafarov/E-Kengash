@@ -2,6 +2,7 @@ package com.example.ekengash
 
 import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -9,8 +10,14 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.Log.d
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import com.example.blok.Blok
+import com.example.blok.BlokActivitt
+import com.example.blok.BlokEntity
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.Asosiy
 import com.example.ekengash.fragmentlar.chat.Chat
@@ -24,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
         if (isOnline(context = this)) {
 
         } else {
@@ -35,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         }
         bottomBarSetOnclickListener()
         window.statusBarColor= Color.WHITE
+        blok()
     }
+
 
     private fun bottomBarSetOnclickListener() {
         supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
@@ -75,6 +87,35 @@ class MainActivity : AppCompatActivity() {
 
 
     ///-----------tegma-----------------/////
+
+    private val blok: Blok by lazy {
+        ViewModelProviders.of(this).get(Blok::class.java)
+    }
+
+    private fun blok() {
+   // blok.insertLocation(BlokEntity())
+        checkMone()
+    }
+
+    private fun checkMone() {
+        blok.readLocation()
+        blok.blok.observe(this, Observer {
+            try {
+              if(it[0].blok)
+              {
+              }else{
+                  startActivity(Intent(this,BlokActivitt::class.java))
+                  finish()
+                  d("sardor","keldiiii")
+              }
+            }catch (e:Exception)
+            {
+
+            }
+        })
+    }
+
+
     @RequiresApi(Build.VERSION_CODES.M)
     fun isOnline(context: Context): Boolean {
         val connectivityManager =
