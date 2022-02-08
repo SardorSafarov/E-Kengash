@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,Asosiy()).commit()
                     true
                 }
-                R.id.murojaat->
+                R.id.kompas->
                 {
                     supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
                         Murojatlar()

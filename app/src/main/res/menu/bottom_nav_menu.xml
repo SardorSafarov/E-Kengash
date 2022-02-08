@@ -9,24 +9,24 @@
         android:title="Asosiy" />
 
     <item
-        android:id="@+id/murojaat"
-        android:icon="@drawable/ic_murojaatlar"
+        android:id="@+id/kompas"
+        android:icon="@drawable/ic_kompas_ic"
         app:showAsAction="always"
-        android:title="Murojaatlar  " />
+        android:title="Explore" />
 
     <item
-        android:id="@+id/yangi"
-        android:icon="@drawable/ic_yangi"
+        android:id="@+id/save"
+        android:icon="@drawable/ic_save_ic"
         app:showAsAction="always"
-        android:title="Yangi" />
+        android:title="Saved" />
     <item
         android:id="@+id/chat"
         android:icon="@drawable/ic_chat"
         app:showAsAction="always"
-        android:title="Chat" />
+        android:title="Yordam" />
     <item
         android:id="@+id/kuproq"
-        android:icon="@drawable/ic_koproq"
+        android:icon="@drawable/ic_kuproq_ic"
         app:showAsAction="always"
         android:title="Ko'proq" />
 

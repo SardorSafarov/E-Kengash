@@ -24,7 +24,6 @@
         android:layout_height="46dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/gerb"
         app:layout_constraintStart_toEndOf="@+id/qaytish"
         app:layout_constraintTop_toTopOf="parent" />
 

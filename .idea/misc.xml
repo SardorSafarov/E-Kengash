@@ -3,13 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/asosiy_card_bac.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/asosiy_layfhaklar.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/asosiy_oynadagi.xml" value="0.202" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_filelarga_kirish.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_home.xml" value="0.1835" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_kompas_ic.xml" value="0.1835" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_koproq.xml" value="0.202" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_kuproq_ic.xml" value="0.1835" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_murojaat_yuborish.xml" value="0.2395" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_murojaatlar.xml" value="0.202" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_qongroq.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_save_ic.xml" value="0.1835" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/image.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_blok_activitt.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/asosiy_tugmalar.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy.xml" value="0.29322916666666665" />
-        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy2.xml" value="0.1390625" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy2.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_kuproq.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_murojatlar.xml" value="0.25" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/item_asosiy_layfhaklar.xml" value="0.27760416666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.29322916666666665" />
       </map>
     </option>
