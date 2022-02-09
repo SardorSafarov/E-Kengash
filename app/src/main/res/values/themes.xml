@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:windowLightStatusBar">true</item>
+       <item name="android:windowLightStatusBar">true</item>
     </style>
     <style name="FullScreenThem" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:windowTranslucentNavigation">true</item>

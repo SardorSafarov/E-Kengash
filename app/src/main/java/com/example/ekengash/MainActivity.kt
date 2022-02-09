@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
+import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
@@ -34,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
         if (isOnline(context = this)) {
 
         } else {
@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             alerDialogBinding.show()
         }
         bottomBarSetOnclickListener()
-        window.statusBarColor= Color.WHITE
         blok()
     }
 
