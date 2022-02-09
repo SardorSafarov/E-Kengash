@@ -21,6 +21,7 @@ import com.example.blok.BlokEntity
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.Asosiy
 import com.example.ekengash.fragmentlar.chat.Chat
+import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
 import com.example.ekengash.fragmentlar.murojaatlar.Murojatlar
 
@@ -68,9 +69,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.chat->{
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-                        Chat()
-                    ).commit()
+                   startActivity(Intent(this,ChatScreen::class.java))
                     true
                 }
                 R.id.kuproq->{

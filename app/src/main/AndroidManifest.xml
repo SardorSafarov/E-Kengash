@@ -6,19 +6,22 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_sardor"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_sardor"
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash">
+        <activity
+            android:name=".fragmentlar.chat.ChatScreen"
+            android:exported="false" />
         <activity
             android:name="com.example.blok.BlokActivitt"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/FullScreenThem"
-            android:exported="true">
+            android:theme="@style/FullScreenThem">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
