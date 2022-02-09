@@ -19,10 +19,12 @@ class Kuproqq : Fragment() {
     }
 
     private fun topbuttonUzgartirish() {
+        childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,KuproqItem1()).commit()
         binding.kuproqTopButton1.setOnClickListener {
+            childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,KuproqItem1()).commit()
         }
         binding.kuproqTopButton2.setOnClickListener {
-
+            childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,Kuproqitem2()).commit()
         }
     }
 
