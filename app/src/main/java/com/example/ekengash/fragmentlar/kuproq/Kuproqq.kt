@@ -7,17 +7,43 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.ekengash.R
+import com.example.ekengash.databinding.FragmentKuproqBinding
 
 
 class Kuproqq : Fragment() {
 
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        topbuttonUzgartirish()
+    }
+
+    private fun topbuttonUzgartirish() {
+        binding.kuproqTopButton1.setOnClickListener {
+        }
+        binding.kuproqTopButton2.setOnClickListener {
+
+        }
+    }
+
+
+    /*---------------teginma---------------------------*/
+    private var _binding: FragmentKuproqBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kuproq, container, false)
+        _binding = FragmentKuproqBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 

@@ -13,6 +13,7 @@
         android:theme="@style/Theme.EKengash">
         <activity
             android:name=".fragmentlar.chat.ChatScreen"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name="com.example.blok.BlokActivitt"
