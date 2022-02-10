@@ -1,11 +1,10 @@
-package com.example.ekengash.adapter
+package com.example.ekengash.adapter.kuproq
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
-import com.example.ekengash.databinding.ItemKuproq1Binding
 import com.example.ekengash.databinding.ItemKuproq2Binding
 import com.example.ekengash.entity.KuproqItemEntitit
 
@@ -23,19 +22,22 @@ class KuproqItem2Adapter(private var listener: OnClickLister) :
         fun bind(item: KuproqItemEntitit) {
             binding.icon.setImageResource(item.icon)
             binding.textView5.text = item.text
+            itemView.setOnClickListener {
+                listener.onClickListener(item.text)
+            }
         }
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): KuproqItem2Adapter.ViewHolder {
+    ): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_kuproq_2, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: KuproqItem2Adapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(list[position])
     }
 

@@ -1,16 +1,22 @@
 package com.example.ekengash.fragmentlar.kuproq
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.ekengash.R
-import com.example.ekengash.adapter.KuproqItem1Adapter
+import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
+import com.example.ekengash.databinding.FragmentKuproqBinding
 import com.example.ekengash.databinding.FragmentKuproqItem1Binding
 import com.example.ekengash.entity.KuproqItemEntitit
+import com.example.ekengash.servislar.Aviachipta
+import com.example.ekengash.servislar.Avtobus
+import com.example.ekengash.servislar.Poyezd
 
 
 class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
@@ -31,7 +37,23 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
         binding.recyclerVieKuproq1.layoutManager = layoutManager
         adapter.setData(list)
     }
+    override fun onClickListener(text: String) {
+        when(text)
+        {
+            "Aviachipta"->{
+                startActivity(Intent(context,Aviachipta::class.java))
+            }
+            "Avtobus"->{
+                startActivity(Intent(context,Avtobus::class.java))
+            }
+            "Poyezd"->{
+                startActivity(Intent(context,Poyezd::class.java))
+            }
+            else->{
 
+            }
+        }
+    }
 
     /*-------------Teginmaaa----------------*/
     private var _binding: FragmentKuproqItem1Binding? = null
@@ -52,9 +74,7 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
         _binding = null
     }
 
-    override fun onClickListener(userName: String) {
-        TODO("Not yet implemented")
-    }
+
     private var list: List<KuproqItemEntitit> = listOf(
         KuproqItemEntitit(
             icon = R.drawable.ic_chegirmalar,

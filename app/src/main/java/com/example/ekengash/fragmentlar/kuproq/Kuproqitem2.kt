@@ -1,5 +1,6 @@
 package com.example.ekengash.fragmentlar.kuproq
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,12 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ekengash.R
-import com.example.ekengash.adapter.KuproqItem2Adapter
+import com.example.ekengash.adapter.kuproq.KuproqItem2Adapter
 import com.example.ekengash.databinding.FragmentKuproqitem2Binding
 import com.example.ekengash.entity.KuproqItemEntitit
+import com.example.ekengash.servislar.Aviachipta
+import com.example.ekengash.servislar.Avtobus
+import com.example.ekengash.servislar.Poyezd
 
 
-class Kuproqitem2 : Fragment(),KuproqItem2Adapter.OnClickLister {
+class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
 
     private lateinit var adapter: KuproqItem2Adapter
 
@@ -29,7 +33,23 @@ class Kuproqitem2 : Fragment(),KuproqItem2Adapter.OnClickLister {
         binding.recyclerView.layoutManager = layoutManager
         adapter.setData(list)
     }
+    override fun onClickListener(text: String) {
+        when(text)
+        {
+            "Aviachipta"->{
+                startActivity(Intent(context, Aviachipta::class.java))
+            }
+            "Avtobus"->{
+                startActivity(Intent(context, Avtobus::class.java))
+            }
+            "Poyezd"->{
+                startActivity(Intent(context, Poyezd::class.java))
+            }
+            else->{
 
+            }
+        }
+    }
 
 
     /*--------------------Teginmaaa----------------*/
@@ -111,7 +131,5 @@ class Kuproqitem2 : Fragment(),KuproqItem2Adapter.OnClickLister {
 
     )
 
-    override fun onClickListener(userName: String) {
-        TODO("Not yet implemented")
-    }
+
 }

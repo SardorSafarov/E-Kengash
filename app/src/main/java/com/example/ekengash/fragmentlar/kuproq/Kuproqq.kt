@@ -23,7 +23,7 @@ class Kuproqq : Fragment() {
 
 
 
-    /*---------------teginma---------------------------*/
+    /*---------------Teginma---------------------------*/
     private var _binding: FragmentKuproqBinding? = null
     private val binding get() = _binding!!
 

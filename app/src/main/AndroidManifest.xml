@@ -12,9 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash">
         <activity
-            android:name=".fragmentlar.chat.ChatScreen"
-            android:screenOrientation="portrait"
+            android:name=".servislar.Poyezd"
+            android:exported="false"
+            android:label="@string/title_activity_poyezd"
+            android:theme="@style/Theme.EKengash.NoActionBar" />
+        <activity
+            android:name=".servislar.Avtobus"
             android:exported="false" />
+        <activity
+            android:name=".servislar.Aviachipta"
+            android:exported="false" />
+        <activity
+            android:name=".fragmentlar.chat.ChatScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.blok.BlokActivitt"
             android:exported="false" />
