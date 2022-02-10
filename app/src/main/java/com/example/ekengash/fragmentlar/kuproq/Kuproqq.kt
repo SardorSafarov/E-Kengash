@@ -18,15 +18,9 @@ class Kuproqq : Fragment() {
         topbuttonUzgartirish()
     }
 
-    private fun topbuttonUzgartirish() {
-        childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,KuproqItem1()).commit()
-        binding.kuproqTopButton1.setOnClickListener {
-            childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,KuproqItem1()).commit()
-        }
-        binding.kuproqTopButton2.setOnClickListener {
-            childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment,Kuproqitem2()).commit()
-        }
-    }
+
+
+
 
 
     /*---------------teginma---------------------------*/
@@ -42,11 +36,39 @@ class Kuproqq : Fragment() {
         val view = binding.root
         return view
     }
+    private fun topbuttonUzgartirish() {
+        childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment, KuproqItem1())
+            .commit()
+        binding.kuproqTopButton1.setOnClickListener {
+            topButtons(true)
+            childFragmentManager.beginTransaction()
+                .replace(R.id.kuproq_item_fragment, KuproqItem1()).commit()
+        }
+        binding.kuproqTopButton2.setOnClickListener {
+            topButtons(false)
+            childFragmentManager.beginTransaction()
+                .replace(R.id.kuproq_item_fragment, Kuproqitem2()).commit()
+        }
+    }
 
+    private fun topButtons(b: Boolean) {
+        when (b) {
+            true -> {
+                binding.kuproqTopButton2.setImageResource(R.drawable.ic_kuproq_top_button_2)
+                binding.kuproqTopButton1.setImageResource(R.drawable.ic_kuproq_top_button_1)
+                binding.kuproqTopButton2.setBackgroundResource(R.drawable.kuproq_top_button_2)
+                binding.kuproqTopButton1.setBackgroundResource(R.drawable.kuproq_top_button_1)
+            }
+            false -> {
+                binding.kuproqTopButton2.setImageResource(R.drawable.ic_kuproq_top_button_2_0)
+                binding.kuproqTopButton1.setImageResource(R.drawable.ic_kuproq_top_button_1_0)
+                binding.kuproqTopButton2.setBackgroundResource(R.drawable.kuproq_top_button_1)
+                binding.kuproqTopButton1.setBackgroundResource(R.drawable.kuproq_top_button_2)
+            }
+        }
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }
