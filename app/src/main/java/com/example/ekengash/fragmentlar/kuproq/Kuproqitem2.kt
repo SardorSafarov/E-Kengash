@@ -11,7 +11,7 @@ import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem2Adapter
 import com.example.ekengash.databinding.FragmentKuproqitem2Binding
 import com.example.ekengash.entity.KuproqItemEntitit
-import com.example.ekengash.servislar.Aviachipta
+import com.example.ekengash.servislar.aviachipta.Aviachipta
 import com.example.ekengash.servislar.Avtobus
 import com.example.ekengash.servislar.Poyezd
 

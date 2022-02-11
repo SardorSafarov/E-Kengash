@@ -20,8 +20,15 @@
             android:name=".servislar.Avtobus"
             android:exported="false" />
         <activity
-            android:name=".servislar.Aviachipta"
-            android:exported="false" />
+            android:name=".servislar.aviachipta.Aviachipta"
+            android:screenOrientation="portrait"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".fragmentlar.chat.ChatScreen"
             android:exported="false"
@@ -34,11 +41,7 @@
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreenThem">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
