@@ -13,7 +13,9 @@ import com.example.ekengash.databinding.FragmentKuproqBinding
 class AviaQidirish : Fragment() {
 
 
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+    }
 
 
 
