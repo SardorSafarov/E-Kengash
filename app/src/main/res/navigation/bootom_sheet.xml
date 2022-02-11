@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bootom_sheet"
+    app:startDestination="@id/aviaQidirish">
+
+    <fragment
+        android:id="@+id/aviaQidirish"
+        android:name="com.example.ekengash.servislar.aviachipta.qidirish.AviaQidirish"
+        android:label="fragment_avia_qidirish"
+        tools:layout="@layout/fragment_avia_qidirish" >
+        <action
+            android:id="@+id/action_aviaQidirish_to_aviaQayerdan"
+            app:destination="@id/aviaQayerdan" />
+    </fragment>
+    <dialog
+        android:id="@+id/aviaQayerdan"
+        android:name="com.example.ekengash.servislar.aviachipta.bootomsheet.AviaQayerdan"
+        android:label="fragment_avia_qayerdan"
+        tools:layout="@layout/fragment_avia_qayerdan" />
+</navigation>

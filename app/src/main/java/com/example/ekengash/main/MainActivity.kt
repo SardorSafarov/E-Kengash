@@ -1,9 +1,8 @@
-package com.example.ekengash
+package com.example.ekengash.main
 
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -11,20 +10,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
-import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
-import com.example.blok.BlokEntity
+import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.Asosiy
-import com.example.ekengash.fragmentlar.chat.Chat
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
-import com.example.ekengash.fragmentlar.murojaatlar.Murojatlar
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -50,7 +46,8 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun bottomBarSetOnclickListener() {
-        supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
+        supportFragmentManager.beginTransaction().replace(
+            R.id.nav_host_fragment_activity_main,
             Asosiy()
         ).commit()
         binding.navView.setOnItemSelectedListener {
@@ -60,19 +57,20 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,Asosiy()).commit()
                     true
                 }
-                R.id.kompas->
+                R.id.kompas ->
                 {
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-                        Murojatlar()
-                    ).commit()
+//                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
+//                        Murojatlar()
+//                    ).commit()
                     true
                 }
-                R.id.chat->{
+                R.id.chat ->{
                    startActivity(Intent(this,ChatScreen::class.java))
                     true
                 }
-                R.id.kuproq->{
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
+                R.id.kuproq ->{
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.nav_host_fragment_activity_main,
                         Kuproqq()
                     ).commit()
                     true
