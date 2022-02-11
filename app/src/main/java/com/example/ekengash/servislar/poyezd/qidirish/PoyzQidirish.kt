@@ -1,4 +1,4 @@
-package com.example.ekengash.servislar.aviachipta.qidirish
+package com.example.ekengash.servislar.poyezd.qidirish
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,35 +6,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentAviaQidirishBinding
-import com.example.ekengash.databinding.FragmentKuproqBinding
+import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayerdanAvia
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayergaAvia
-import com.example.log.D
 
 
-class AviaQidirish : Fragment() {
-
-
+class PoyzQidirish : Fragment() {
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.aviaQayerdan.setOnClickListener {
-           startActivity(Intent(context,QayerdanAvia::class.java))
+            startActivity(Intent(context, QayerdanAvia::class.java))
         }
         binding.aviaQayerga.setOnClickListener {
-            startActivity(Intent(context,QayergaAvia::class.java))
+            startActivity(Intent(context, QayergaAvia::class.java))
         }
     }
 
 
 
     /*----------------Tegma----------------------*/
-    private var _binding: FragmentAviaQidirishBinding? = null
+    private var _binding: FragmentPoyzQidirishBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -42,9 +37,8 @@ class AviaQidirish : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentAviaQidirishBinding.inflate(inflater, container, false)
+        _binding = FragmentPoyzQidirishBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
-
 }

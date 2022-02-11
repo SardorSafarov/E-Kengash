@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F3F3F3"
     android:layout_height="match_parent"
-    tools:context=".servislar.aviachipta.qidirish.AviaQidirish">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".servislar.poyezd.qidirish.PoyzQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"
@@ -43,7 +42,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_aviabeletlar_qayerdan"
+                        android:src="@drawable/ic_poyezd_qayerdan"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -94,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="0dp"
-                        android:src="@drawable/ic_abiabelet_qayerga"
+                        android:src="@drawable/ic_poyezd_qayerga"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -199,7 +198,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/ic_avia_qachongacha"
+                            android:src="@drawable/ic_holat"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -210,7 +209,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
-                            android:text="Qachongacha"
+                            android:text="Holat"
                             android:textSize="12dp"
                             app:layout_constraintStart_toEndOf="@+id/eee"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -219,7 +218,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:text="24 Fev,Juma"
+                            android:text="2 ta yo`lovchi"
                             android:textColor="@color/black"
                             android:textSize="14dp"
 
@@ -253,6 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="12dp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
@@ -269,7 +269,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginBottom="0dp"
-                        android:src="@drawable/ic_holat"
+                        android:src="@drawable/ic_abiabelet_qayerga"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -391,5 +391,6 @@
                 tools:listitem="@layout/item_asosiy_layfhaklar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

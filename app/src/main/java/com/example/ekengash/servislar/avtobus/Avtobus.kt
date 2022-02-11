@@ -1,12 +1,12 @@
-package com.example.ekengash.servislar
+package com.example.ekengash.servislar.avtobus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.R
 
-class Poyezd : AppCompatActivity() {
+class Avtobus : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_poyezd2)
+        setContentView(R.layout.activity_avtobus)
     }
 }

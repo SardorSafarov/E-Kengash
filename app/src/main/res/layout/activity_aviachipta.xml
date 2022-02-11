@@ -86,4 +86,5 @@
         app:layout_constraintTop_toBottomOf="@+id/materialCardView9"
         tools:layout="@layout/fragment_avia_qidirish" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
