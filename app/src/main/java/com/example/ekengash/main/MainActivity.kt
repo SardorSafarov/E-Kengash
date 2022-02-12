@@ -100,9 +100,11 @@ class MainActivity : AppCompatActivity() {
               if(it[0].blok)
               {
               }else{
-                  startActivity(Intent(this,BlokActivitt::class.java))
+                  var intent=Intent(this,BlokActivitt::class.java)
+                  intent.putExtra("xabar",it[0].text)
+                  startActivity(intent)
                   finish()
-                  d("sardor","keldiiii")
+
               }
             }catch (e:Exception)
             {
