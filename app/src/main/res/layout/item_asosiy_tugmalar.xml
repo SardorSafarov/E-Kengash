@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button1"
+            android:id="@+id/serves_A_B_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -51,7 +51,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button2"
+            android:id="@+id/serves_aviabelet_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -59,8 +59,8 @@
             android:layout_weight="1"
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
-            app:layout_constraintStart_toEndOf="@+id/button1"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintStart_toEndOf="@+id/serves_A_B_button"
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -96,8 +96,8 @@
             android:layout_weight="1"
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintStart_toEndOf="@+id/serves_aviabelet_button"
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -125,7 +125,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button4"
+            android:id="@+id/serves_turar_joy_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -135,7 +135,7 @@
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
             app:layout_constraintStart_toEndOf="@+id/buton3"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -171,7 +171,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button5"
+            android:id="@+id/serves_avtobus_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -208,7 +208,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button6"
+            android:id="@+id/serves_taxsi_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -216,8 +216,8 @@
             android:layout_weight="1"
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
-            app:layout_constraintStart_toEndOf="@+id/button1"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintStart_toEndOf="@+id/serves_A_B_button"
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -245,7 +245,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button7"
+            android:id="@+id/serves_turpaket_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -253,8 +253,8 @@
             android:layout_weight="1"
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintStart_toEndOf="@+id/serves_aviabelet_button"
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -282,7 +282,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/button8"
+            android:id="@+id/serves_chegirmalar_button"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
@@ -292,7 +292,7 @@
             android:backgroundTint="#DFEAFD"
             app:cornerRadius="10dp"
             app:layout_constraintStart_toEndOf="@+id/buton3"
-            app:layout_constraintTop_toTopOf="@+id/button1">
+            app:layout_constraintTop_toTopOf="@+id/serves_A_B_button">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
