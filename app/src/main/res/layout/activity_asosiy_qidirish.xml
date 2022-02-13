@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentlar.asosiy_qidirish_oynasi.AsosiyQidirish">
+    tools:context=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish">
 
     <ImageButton
         android:id="@+id/imageButton"

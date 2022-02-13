@@ -1,9 +1,8 @@
-package com.example.ekengash.fragmentlar.asosiy_qidirish_oynasi
+package com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityAsosiyQidirishBinding
 
 class AsosiyQidirish : AppCompatActivity() {

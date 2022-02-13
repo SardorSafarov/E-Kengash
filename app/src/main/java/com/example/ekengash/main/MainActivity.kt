@@ -1,8 +1,10 @@
 package com.example.ekengash.main
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -10,8 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
+import android.widget.ImageButton
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
@@ -21,16 +26,17 @@ import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.Asosiy
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
+import com.example.log.D
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    @SuppressLint("WrongViewCast")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
+        window.statusBarColor=Color.WHITE
         if (isOnline(context = this)) {
 
         } else {
@@ -44,7 +50,19 @@ class MainActivity : AppCompatActivity() {
         blok()
     }
 
+    fun openCloseNavigationDrawer() {
+        try {
+            val drawer = (R.id.asosiy_menu_chap) as DrawerLayout
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START)
+            } else {
+                drawer.openDrawer(GravityCompat.START)
+            }
+        }catch (e:Exception){
+            e.message?.let { D.d(it) }
+        }
 
+    }
     private fun bottomBarSetOnclickListener() {
         supportFragmentManager.beginTransaction().replace(
             R.id.nav_host_fragment_activity_main,

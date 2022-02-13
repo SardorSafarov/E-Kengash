@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash">
         <activity
-            android:name=".fragmentlar.asosiy_qidirish_oynasi.AsosiyQidirish"
+            android:name="com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
             android:name=".servislar.aviachipta.bootomsheet.QayergaAvia"
@@ -40,7 +40,7 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/FullScreenThem">
+            android:theme="@style/Theme.EKengash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

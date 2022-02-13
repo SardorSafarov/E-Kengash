@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/serves_button"
+    app:startDestination="@id/servesButton1">
+
+    <fragment
+        android:id="@+id/servesButton1"
+        android:name="com.example.ekengash.fragmentlar.asosiyy.asosiy_serves_buttons_fragment.ServesButton1"
+        android:label="fragment_serves_button1"
+        tools:layout="@layout/fragment_serves_button1" />
+    <fragment
+        android:id="@+id/servesButton2"
+        android:name="com.example.ekengash.fragmentlar.asosiyy.asosiy_serves_buttons_fragment.ServesButton2"
+        android:label="fragment_serves_button2"
+        tools:layout="@layout/fragment_serves_button2" />
+</navigation>
