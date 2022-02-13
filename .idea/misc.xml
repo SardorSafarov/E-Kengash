@@ -13,6 +13,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/chat_top_button.xml" value="0.221" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_aviabeletlar_fab.xml" value="0.277" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_back.xml" value="0.2475" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chap_m_ilovani_ulash.xml" value="0.189" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat11.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat_sozlamalari.xml" value="0.221" />
@@ -39,6 +40,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_save_ic.xml" value="0.1835" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_send.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_tangga.xml" value="0.2555" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_tasdiqlanmagan_foydalanuvchi_1.xml" value="0.189" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_videocamera.xml" value="0.2555" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_yangi.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/image.xml" value="0.2555" />
@@ -48,13 +50,13 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_avtobus.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_blok_activitt.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_chat_screen.xml" value="0.25" />
-        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_poyezd2.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_qayerdan_avia.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_qayerga_avia.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/asosiy_tugmalar.xml" value="0.33" />
-        <entry key="..\:/EKengash2/app/src/main/res/layout/chap_menu.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/chap_menu.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/content_poyezd.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_asosiy2.xml" value="0.37384140061791965" />
