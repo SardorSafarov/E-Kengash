@@ -93,20 +93,25 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/materialCardView3"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="5dp"
         app:cardCornerRadius="5dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/xabar_junatish"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#F2F2F2">
 
             <ImageView
                 android:id="@+id/buttonicon2"
@@ -119,7 +124,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/matinliy_xabar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
@@ -127,23 +132,25 @@
                 android:hint="Xabar yozing"
                 android:paddingStart="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button_icon3"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/buttonicon2"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/button_icon3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginEnd="5dp"
-                app:layout_constraintBottom_toBottomOf="@+id/editText"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/chat_send_button"
-                android:src="@drawable/ic_chat_mikrafon"
-                android:padding="10dp"
-                app:layout_constraintTop_toTopOf="@+id/editText" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/xabar_junatish"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/chat_send_button"
+        android:padding="10dp"
+        android:src="@drawable/ic_chat_mikrafon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
