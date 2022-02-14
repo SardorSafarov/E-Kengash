@@ -11,6 +11,7 @@ import com.example.ekengash.databinding.FragmentAviaQidirishBinding
 import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayerdanAvia
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayergaAvia
+import com.example.ekengash.servislar.poyezd.izlash.PoyezdIzlash
 
 
 class PoyzQidirish : Fragment() {
@@ -23,6 +24,9 @@ class PoyzQidirish : Fragment() {
         }
         binding.aviaQayerga.setOnClickListener {
             startActivity(Intent(context, QayergaAvia::class.java))
+        }
+        binding.poyezdIzlash.setOnClickListener {
+            startActivity(Intent(context,PoyezdIzlash::class.java))
         }
     }
 

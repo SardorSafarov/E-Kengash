@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".servislar.aviachipta.izlash.AviaIzlash">
-
+    tools:context=".servislar.poyezd.izlash.PoyezdIzlash">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView11"
         android:layout_width="match_parent"
@@ -37,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Samarqand"
+                android:text="Toshkent"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18dp"
@@ -58,19 +57,20 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Toshkent"
+                android:text="Buxoro"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView11"
                 app:layout_constraintTop_toTopOf="parent"
-                 />
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:visibility="invisible"
                 android:text="1 yo`lovchi,biznez klas"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textView20"
@@ -201,7 +201,4 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

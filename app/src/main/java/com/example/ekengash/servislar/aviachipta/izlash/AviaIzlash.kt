@@ -14,6 +14,13 @@ class AviaIzlash : AppCompatActivity() {
         setContentView(binding.root)
         window.statusBarColor=Color.WHITE
         ortga()
+        filterlash()
+    }
+
+    private fun filterlash() {
+        binding.filterButton.setOnClickListener {
+
+        }
     }
 
     private fun ortga() {
