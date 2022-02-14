@@ -6,24 +6,43 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log.d
+import android.view.Menu
 import androidx.core.widget.addTextChangedListener
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityChatScreenBinding
 import com.example.log.D
 
 class ChatScreen : AppCompatActivity() {
-    lateinit var binding :ActivityChatScreenBinding
-    var ovozliButton=true
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityChatScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor= Color.WHITE
+
+        teginma()
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.chat_top_menu,menu)
+        return true
+    }
+
+    /*------------------------Teginma--------------------------------*/
+
+    private fun teginma() {
         chatdanChiqish()
         topButton1()
         xabarniKuzatish()
+        window.statusBarColor= Color.WHITE
     }
 
+    lateinit var binding :ActivityChatScreenBinding
+    var ovozliButton=true
     private fun xabarniKuzatish() {
         binding.matinliyXabar.addTextChangedListener (object :TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -46,8 +65,7 @@ class ChatScreen : AppCompatActivity() {
 
         })
     }
-
-
+    
     private fun topButton1() {
         binding.ovozliChatButton.setOnClickListener {
            when(ovozliButton)

@@ -13,6 +13,7 @@ import com.example.ekengash.databinding.FragmentAviaQidirishBinding
 import com.example.ekengash.databinding.FragmentKuproqBinding
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayerdanAvia
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayergaAvia
+import com.example.ekengash.servislar.aviachipta.izlash.AviaIzlash
 import com.example.log.D
 
 
@@ -23,6 +24,10 @@ class AviaQidirish : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        binding.aviaIzlash.setOnClickListener {
+            startActivity(Intent(context,AviaIzlash::class.java))
+        }
         binding.aviaQayerdan.setOnClickListener {
            startActivity(Intent(context,QayerdanAvia::class.java))
         }
