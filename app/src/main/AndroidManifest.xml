@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash">
         <activity
-            android:name="com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
+            android:name=".servislar.turarjoy.ServesTurarjoy"
+            android:exported="false" />
+        <activity
+            android:name=".servislar.chegirmalar.ServesChegirmalar"
+            android:exported="false" />
+        <activity
+            android:name=".servislar.ab.ServesAB"
+            android:exported="false" />
+        <activity
+            android:name=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
             android:name=".servislar.aviachipta.bootomsheet.QayergaAvia"
@@ -24,13 +33,13 @@
             android:name=".servislar.poyezd.Poyezd"
             android:exported="true"
             android:label="@string/title_activity_poyezd"
-            android:theme="@style/Theme.EKengash.NoActionBar"></activity>
+            android:theme="@style/Theme.EKengash.NoActionBar" />
         <activity
             android:name=".servislar.avtobus.Avtobus"
             android:exported="false" />
         <activity
             android:name=".servislar.aviachipta.Aviachipta"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".fragmentlar.chat.ChatScreen"
             android:exported="false" />

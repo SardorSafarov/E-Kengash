@@ -14,14 +14,17 @@ import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.ekengash.entity.AsosiyServislarButtonEntity
 import com.example.ekengash.entity.KuproqItemEntitit
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
+import com.example.ekengash.servislar.ab.ServesAB
 import com.example.ekengash.servislar.aviachipta.Aviachipta
 import com.example.ekengash.servislar.avtobus.Avtobus
+import com.example.ekengash.servislar.chegirmalar.ServesChegirmalar
 import com.example.ekengash.servislar.poyezd.Poyezd
 import com.example.log.D
 
 
 
 class Asosiy : Fragment() {
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         asosiyQidirishOynasi()
@@ -42,6 +45,12 @@ class Asosiy : Fragment() {
         }
         binding.servesPoyezdButton.setOnClickListener {
             startActivity(Intent(context,Poyezd::class.java))
+        }
+        binding.servesABButton.setOnClickListener {
+        startActivity(Intent(context,ServesAB::class.java))
+        }
+        binding.servesChegirmalarButton.setOnClickListener {
+            startActivity(Intent(context,ServesChegirmalar::class.java))
         }
     }
     private fun asosiyQidirishOynasi() {

@@ -143,9 +143,9 @@ class MainActivity : AppCompatActivity() {
 
         } else {
             val alerDialogBinding = AlertDialog.Builder(this)
-            alerDialogBinding.setTitle("Internetga ulaning!!")
-            alerDialogBinding.setPositiveButton("Ok") { dialogInterface: DialogInterface, i: Int ->
-            }
+            alerDialogBinding.setTitle("Internetga ulaning.")
+            alerDialogBinding.setMessage("Tarmoqni tekshiring!!")
+            alerDialogBinding.setCancelable(false)
             alerDialogBinding.show()
         }
     }
