@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ekengash">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_sardor"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_sardor"
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash">
         <activity
-            android:name=".kirish.Kirish"
-            android:exported="true" >
+            android:name="com.example.kirish.Kirish"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,11 +28,11 @@
         <activity
             android:name=".servislar.aviachipta.izlash.AviaIzlash"
             android:exported="false" />
-        <activity
-            android:name=".servislar.aviachipta.izlash.AviaChptaIzlash"
-            android:exported="false"
-            android:label="@string/title_activity_avia_chpta_izlash"
-            android:theme="@style/Theme.EKengash.NoActionBar" />
+<!--        <activity-->
+<!--            android:name=".servislar.aviachipta.izlash.AviaChptaIzlash"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_avia_chpta_izlash"-->
+<!--            android:theme="@style/Theme.EKengash.NoActionBar" />-->
         <activity
             android:name=".servislar.turarjoy.ServesTurarjoy"
             android:exported="false" />
