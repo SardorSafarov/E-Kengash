@@ -17,66 +17,56 @@ class Kirish : AppCompatActivity() {
     // Bislillahir rohimanir rohim
 
 
-
-
     private fun setUi() {
-        val kirishRepository =KirishRepository()
+        val kirishRepository = KirishRepository()
         val kirishViewModelFactory = KirishViewModelFactory(kirishRepository)
-       val  viewModelKirish =ViewModelProvider(this,kirishViewModelFactory).get(KirishViewModel::class.java) as KirishViewModel
+        val kirishViewModel = ViewModelProvider(
+            this,
+            kirishViewModelFactory
+        ).get(KirishViewModel::class.java)
+
         binding.davomEtishButton.setOnClickListener {
-            viewModelKirish.telJunatish(binding.telNumber.text.toString())
+            kirishViewModel.telJunatish(binding.telNumber.text.toString())
         }
-        viewModelKirish.telJunatish.observe(this, Observer {
-            if(it.isSuccessful)
-            {
-
-               if(it.body()!!.data.check=="No")
-               {
-                binding.kirishRuyxatdanUtish.visibility=View.VISIBLE
-               }
-
-            }else
-            {
-
+        kirishViewModel.telJunatish.observe(this, Observer {
+            if (it.isSuccessful) {
+                binding.kirish.visibility=View.INVISIBLE
+                binding.kirishRuyxatdanUtish.visibility=View.INVISIBLE
+                if(it.body()!!.data.check=="Yes")
+                {
+                    binding.kirish.visibility=View.VISIBLE
+                }
+                else
+                {
+                    binding.kirishRuyxatdanUtish.visibility=View.VISIBLE
+                }
             }
+            else{
+                D.d("ishlamadi")
+            }
+
+
         })
-    }
-
-    private fun telJunatish() {
-
     }
 
 
     /*------------------------------------------------Teginma-------------------------------------------------------------------------------------*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     lateinit var binding: ActivityKirishBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityKirishBinding.inflate(layoutInflater)
+        binding = ActivityKirishBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        telJunatish()
         teginma()
         setUi()
     }
 
-    private fun teginma(){
+    private fun teginma() {
         statusbar()
     }
 
     private fun statusbar() {
-        window.statusBarColor= Color.WHITE
+        window.statusBarColor = Color.WHITE
     }
 }

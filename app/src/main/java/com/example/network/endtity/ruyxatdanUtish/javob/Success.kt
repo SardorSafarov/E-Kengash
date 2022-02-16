@@ -1,4 +1,4 @@
-package com.example.network.endtity.kirish
+package com.example.network.endtity.ruyxatdanUtish.javob
 
 data class Success(
     val data: Data,
