@@ -4,10 +4,9 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityServesChegirmalarBinding
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
-import com.example.ekengash.servislar.turarjoy.ServesTurarjoy
+import com.example.ekengash.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy
 
 class ServesChegirmalar : AppCompatActivity() {
 
@@ -24,7 +23,7 @@ class ServesChegirmalar : AppCompatActivity() {
             startActivity(Intent(this,AsosiyQidirish::class.java))
         }
         binding.turarJoy.setOnClickListener {
-            startActivity(Intent(this,ServesTurarjoy::class.java))
+            startActivity(Intent(this,ServesChegirmaTurarJoy::class.java))
         }
     }
 }

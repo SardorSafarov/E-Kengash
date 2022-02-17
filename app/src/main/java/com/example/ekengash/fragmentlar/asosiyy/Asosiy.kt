@@ -5,22 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
-import com.example.ekengash.entity.AsosiyServislarButtonEntity
-import com.example.ekengash.entity.KuproqItemEntitit
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
 import com.example.ekengash.servislar.ab.ServesAB
 import com.example.ekengash.servislar.aviachipta.Aviachipta
 import com.example.ekengash.servislar.avtobus.Avtobus
 import com.example.ekengash.servislar.chegirmalar.ServesChegirmalar
 import com.example.ekengash.servislar.poyezd.Poyezd
-import com.example.log.D
-
+import com.example.ekengash.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy
+import com.example.ekengash.servislar.turarJoylar.ServesTurarjoy
 
 
 class Asosiy : Fragment() {
@@ -51,6 +45,9 @@ class Asosiy : Fragment() {
         }
         binding.servesChegirmalarButton.setOnClickListener {
             startActivity(Intent(context,ServesChegirmalar::class.java))
+        }
+        binding.servesTurarJoyButton.setOnClickListener {
+            startActivity(Intent(context,ServesTurarjoy::class.java))
         }
     }
     private fun asosiyQidirishOynasi() {

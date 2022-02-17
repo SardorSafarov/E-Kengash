@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".servislar.turarjoy.ServesTurarjoy">
+    tools:context=".servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView11"
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
-                android:text="Turar-joy"
+                android:text="Chegirmalar"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"

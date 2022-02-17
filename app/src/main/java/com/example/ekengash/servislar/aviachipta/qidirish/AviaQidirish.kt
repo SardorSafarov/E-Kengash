@@ -15,6 +15,7 @@ import com.example.ekengash.servislar.aviachipta.bootomsheet.QayerdanAvia
 import com.example.ekengash.servislar.aviachipta.bootomsheet.QayergaAvia
 import com.example.ekengash.servislar.aviachipta.izlash.AviaIzlash
 import com.example.log.D
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class AviaQidirish : Fragment() {
@@ -33,6 +34,13 @@ class AviaQidirish : Fragment() {
         }
         binding.aviaQayerga.setOnClickListener {
             startActivity(Intent(context,QayergaAvia::class.java))
+        }
+        binding.aviaQachon.setOnClickListener {
+            val bottomDialog = BottomSheetDialog(requireContext())
+            val view = layoutInflater.inflate(R.layout.dialog_bottom_sheet_calendar,null)
+            bottomDialog.setContentView(view)
+            bottomDialog.setTitle("sardor")
+            bottomDialog.show()
         }
     }
 

@@ -1,16 +1,16 @@
-package com.example.ekengash.servislar.turarjoy
+package com.example.ekengash.servislar.chegirmalar.turarjoy
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityServesTurarjoyBinding
+import com.example.ekengash.databinding.ActivityServesChegirmalarTurarjoyBinding
 
-class ServesTurarjoy : AppCompatActivity() {
-    lateinit var binding:ActivityServesTurarjoyBinding
+
+class ServesChegirmaTurarJoy : AppCompatActivity() {
+    lateinit var binding:ActivityServesChegirmalarTurarjoyBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityServesTurarjoyBinding.inflate(layoutInflater)
+        binding= ActivityServesChegirmalarTurarjoyBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor= Color.WHITE
         binding.imageView10.setOnClickListener {

@@ -5,11 +5,12 @@
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.kirish.Kirish">
+    tools:context="com.example.avtorizatsiya.main.Kirish">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -17,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tizimga kirish"
+        android:visibility="gone"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="20dp"
         android:textSize="20dp"
@@ -28,6 +30,7 @@
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Tizimga kirish uchun telefon raqaminggizni kiriting:"
@@ -37,13 +40,14 @@
 
     <com.alimuzaffar.lib.pin.PinEntryEditText
         android:id="@+id/tel_number"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="60dp"
         android:layout_height="wrap_content"
         android:background="@null"
         android:cursorVisible="false"
         android:inputType="number"
-        android:maxLength="12"
+        android:maxLength="9"
         android:textIsSelectable="false"
         android:textSize="20sp"
         android:layout_marginTop="100dp"
@@ -54,9 +58,10 @@
         android:id="@+id/kirish_ruyxatdan_utish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
@@ -94,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical"
@@ -104,6 +109,7 @@
             android:id="@+id/tt"
             android:layout_width="match_parent"
             android:layout_marginTop="10dp"
+
             android:layout_height="wrap_content"
             android:hint="Parol"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -121,6 +127,7 @@
         android:id="@+id/davom_etish_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="#109CFE"
@@ -136,5 +143,301 @@
             android:textColor="@color/white"
             />
     </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/kirshdagi_rasm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/chap_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_asosiy_icon"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Katrip"
+                    android:textColor="@color/white"
+                    android:textSize="26dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biz bilan tez va oson sayohat qiling!"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+
+            <!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/asosiy_qidirish_button"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginHorizontal="16dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:backgroundTint="#99999988"-->
+<!--                app:cardCornerRadius="12dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/chap_menu"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/imageView1"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/chap_menu"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/chap_menu"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:strokeColor="#99999988"-->
+<!--                app:strokeWidth="1dp">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:text="Nimadir izlang"-->
+<!--                    android:textColor="#B6C2B1"-->
+<!--                    />-->
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_asoyiy_qidirsh"-->
+<!--                    android:layout_gravity="end|center_vertical"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    />-->
+<!--                <SearchView-->
+<!--                    android:id="@+id/chats_searchView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentTop="true"-->
+<!--                    android:background="@null"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:backgroundTint="#99999988"-->
+<!--                    android:iconifiedByDefault="false"-->
+<!--                    android:queryHint="Nimadir izlash" />-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/imageView"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:backgroundTint="#99999988"-->
+<!--                app:cardCornerRadius="8dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/asosiy_qidirish_button"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/asosiy_qidirish_button">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:src="@drawable/ic_qongroq"-->
+<!--                        android:padding="5dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/imageView1"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:backgroundTint="#99999988"-->
+<!--                app:cardCornerRadius="8dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/asosiy_qidirish_button"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/imageView"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/asosiy_qidirish_button">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageView8"-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:src="@drawable/tangga"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="0dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:text="22 000"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/imageView8"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/materialCardView4"-->
+<!--                android:layout_width="170dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:backgroundTint="#99999988"-->
+<!--                app:cardCornerRadius="8dp"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/chap_menu"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/chap_menu">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    >-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageView2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="12dp"-->
+<!--                        android:src="@drawable/ic_asosiy_eng_yaqin"-->
+<!--                        android:elevation="0dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:text="Eng yaqin"-->
+<!--                        android:elevation="0dp"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/imageView2"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="170dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:backgroundTint="#99999988"-->
+<!--                app:cardCornerRadius="8dp"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/imageView"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/chap_menu">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:background="@null"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/imageView22"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="12dp"-->
+<!--                        android:src="@drawable/ic_kamera"-->
+<!--                        android:background="@null"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:tint="@color/white" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:text="Skaner (AR)"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/imageView22"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#898989"
+            android:background="#898989"
+            android:alpha="0.1"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="-15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:backgroundTint="#F3F3F3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <fragment
+                android:id="@+id/kirsh_qismidagi_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toTopOf="@id/nav_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout="@layout/fragment_kirish_qismi"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

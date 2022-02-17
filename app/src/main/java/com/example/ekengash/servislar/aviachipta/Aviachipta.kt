@@ -12,7 +12,6 @@ class Aviachipta : AppCompatActivity() {
     lateinit var binding:ActivityAviachiptaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding= ActivityAviachiptaBinding.inflate(layoutInflater)
-        window.statusBarColor=Color.WHITE
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         ortgaqaytish()
