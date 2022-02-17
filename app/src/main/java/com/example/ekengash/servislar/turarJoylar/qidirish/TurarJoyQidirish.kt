@@ -6,18 +6,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ekengash.R
+import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
+import com.example.ekengash.databinding.FragmentTurarJoyQidirishBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class TurarJoyQidirish : Fragment() {
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_turar_joy_qidirish, container, false)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        binding.turarJoyHolat.setOnClickListener {
+            val bottomsheet=BottomSheetDialog(requireContext())
+            val view = layoutInflater.inflate(R.layout.bottom_sheet_turar_joy_holat,null)
+            bottomsheet.setContentView(view)
+
+            bottomsheet.show()
+        }
     }
 
 
+
+    private var _binding: FragmentTurarJoyQidirishBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentTurarJoyQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 }

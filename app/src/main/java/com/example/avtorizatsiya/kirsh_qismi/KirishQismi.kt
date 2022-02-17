@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.avtorizatsiya.main.Kirish
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
@@ -15,7 +16,7 @@ import com.example.ekengash.main.MainActivity
 
 class KirishQismi : Fragment() {
 
-
+     var kirish: Kirish = Kirish()
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.ruyxatdanUtish.setOnClickListener {
@@ -25,7 +26,6 @@ class KirishQismi : Fragment() {
             startActivity(Intent(context,MainActivity::class.java))
         }
     }
-
 
 
 

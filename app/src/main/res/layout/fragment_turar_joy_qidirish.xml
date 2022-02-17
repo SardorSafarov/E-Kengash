@@ -133,7 +133,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/avia_qayerga">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/avia_qachon"
+                    android:id="@+id/turar_joy_qachon"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
@@ -182,7 +182,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/avia_qachongacha"
+                    android:id="@+id/turar_joy_qachongacha"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
@@ -252,7 +252,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/avia_holat"
+                android:id="@+id/turar_joy_holat"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="12dp"
@@ -322,7 +322,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/avia_holat"
+                app:layout_constraintTop_toBottomOf="@+id/turar_joy_holat"
                 app:strokeColor="#109BFF"
                 app:strokeWidth="1dp">
 
