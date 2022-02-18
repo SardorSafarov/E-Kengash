@@ -29,6 +29,7 @@
         <item name="android:windowSharedElementExitTransition" tools:targetApi="lollipop">@android:transition/move</item>
     </style>
 
+
     <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
     </style>
@@ -47,4 +48,17 @@
     </style>
     <style name="Theme.EKengash.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.EKengash.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+   <!---Bottom sheet diaolg theme-->
+   <style name="BottomSheetDiaolg" parent="Theme.Design.BottomSheetDialog">
+       <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+   </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+         <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
+
 </resources>
