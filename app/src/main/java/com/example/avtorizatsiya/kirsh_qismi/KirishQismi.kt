@@ -6,30 +6,88 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.avtorizatsiya.main.Kirish
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
 import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentAsosiy2Binding
+import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
+import com.example.network.repository.KirishRepository
+import com.example.network.viewModelFactory.KirishViewModelFactory
+import com.example.network.viewmodel.KirishViewModel
 
 
 class KirishQismi : Fragment() {
 
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        binding.ruyxatdanUtish.setOnClickListener {
-            requireFragmentManager().beginTransaction().replace(R.id.kirsh_qismidagi_fragment,RuyxatdanUtish()).commit()
-        }
+    private lateinit var kirishViewModel: KirishViewModel
+    private var checkUser = ""
+    private fun setUi() {
+        val kirishRepository = KirishRepository()
+        val kirishViewModelFactory = KirishViewModelFactory(kirishRepository)
+        val kirishViewModel = ViewModelProvider(
+            this,
+            kirishViewModelFactory
+        ).get(KirishViewModel::class.java)
+        this.kirishViewModel = kirishViewModel
+
+    }
+
+    fun telJunatish() {
         binding.davomEtishButton.setOnClickListener {
-            D.d(binding.telNumber.text.toString())
-           // startActivity(Intent(context,MainActivity::class.java))
+            if(binding.parol.text.toString().isNotEmpty())
+            {
+                startActivity(Intent(requireContext(),MainActivity::class.java))
+            }
+            else {
+                when (checkUser) {
+                    "" -> {
+                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
+                    }
+                    "Yes" -> {
+                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
+                    }
+                    "No" -> {
+                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
+                    }
+                }
+            }
         }
+        kirishViewModel.telJunatish.observe(requireActivity(), Observer {
+            if (it.isSuccessful) {
+                checkUser = it.body()!!.data.check
+                D.d("$checkUser")
+                if (checkUser == "Yes") {
+                    binding.linearLayout7r.visibility = View.VISIBLE
+                    binding.textView24r.visibility = View.VISIBLE
+                    binding.parolniUnutdinggizmi.visibility=View.VISIBLE
+                    binding.ruyxatdanUtish.visibility=View.VISIBLE
+                    binding.textView24r.text="Parolni kiriting"
+                } else {
+                    binding.textView24r.visibility = View.VISIBLE
+                    binding.linearLayout7r.visibility = View.INVISIBLE
+                    binding.textView24r.text="Bunday Foydalanuvchi yo`q!"
+                }
+            } else {
+                D.d("kirshqismidagi teljunatish ishlamadi")
+            }
+
+
+        })
     }
 
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        setUi()
+        telJunatish()
+        binding.ruyxatdanUtish.setOnClickListener {
+            requireFragmentManager().beginTransaction()
+                .replace(R.id.kirsh_qismidagi_fragment, RuyxatdanUtish()).commit()
+        }
+    }
 
 
     /*----------------------Teginma------------------------------------*/
