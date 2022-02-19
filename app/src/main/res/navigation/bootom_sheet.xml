@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/aviaQidirish"
-        android:name="com.example.ekengash.servislar.aviachipta.qidirish.AviaQidirish"
+        android:name="com.example.servislar.aviachipta.qidirish.AviaQidirish"
         android:label="fragment_avia_qidirish"
         tools:layout="@layout/fragment_avia_qidirish" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <dialog
         android:id="@+id/aviaQayerdan"
-        android:name="com.example.ekengash.servislar.aviachipta.bootomsheet.AviaQayerdan"
+        android:name="com.example.servislar.aviachipta.bootomsheet.AviaQayerdan"
         android:label="fragment_avia_qayerdan"
         tools:layout="@layout/fragment_avia_qayerdan" />
 </navigation>

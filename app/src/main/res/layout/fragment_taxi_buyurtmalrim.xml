@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".servislar.taxi.buyurtmalrim.TaxiBuyurtmalrim">
+    tools:context="com.example.servislar.taxi.buyurtmalrim.TaxiBuyurtmalrim">
 
     <TextView
         android:id="@+id/textView10"

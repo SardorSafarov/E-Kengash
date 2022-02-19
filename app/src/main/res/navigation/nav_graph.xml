@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.ekengash.servislar.aviachipta.izlash.FirstFragment"
+        android:name="com.example.servislar.aviachipta.izlash.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first" >
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.ekengash.servislar.aviachipta.izlash.SecondFragment"
+        android:name="com.example.servislar.aviachipta.izlash.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second" >
 

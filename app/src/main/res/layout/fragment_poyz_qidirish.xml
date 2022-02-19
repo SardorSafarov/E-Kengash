@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".servislar.poyezd.qidirish.PoyzQidirish">
+    tools:context="com.example.servislar.poyezd.qidirish.PoyzQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#F3F3F3"
     android:layout_height="match_parent"
-    tools:context=".servislar.aviachipta.qidirish.AviaQidirish">
+    tools:context="com.example.servislar.aviachipta.qidirish.AviaQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"
@@ -56,7 +56,7 @@
                         android:layout_marginTop="6dp"
                         android:text="Qayerdan"
                         android:textSize="10dp"
-                        android:visibility="visible"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Samarqand"
+                        android:text="Qayerdan"
                         android:textColor="@color/black"
                         android:textSize="13dp"
                         app:layout_constraintStart_toEndOf="@+id/imageView6"
@@ -107,7 +107,7 @@
                         android:layout_marginTop="6dp"
                         android:text="Qayerga"
                         android:textSize="10dp"
-                        android:visibility="visible"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toEndOf="@+id/qayerga_image"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Toshkent"
+                        android:text="Qayerga"
                         android:textColor="@color/black"
                         android:textSize="13dp"
                         app:layout_constraintStart_toEndOf="@+id/qayerga_image"

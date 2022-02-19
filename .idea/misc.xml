@@ -64,7 +64,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_blok_activitt.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_chat_screen.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_kirish.xml" value="0.29322916666666665" />
-        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_poyezd2.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_poyezd_izlash.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_qayerdan_avia.xml" value="0.29322916666666665" />
@@ -77,6 +77,8 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_taxi.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/asosiy_tugmalar.xml" value="0.33" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_avia_holat.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_serves_qayerdan.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_turar_joy_holat.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/chap_menu.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/content_avia_chpta_izlash.xml" value="0.29322916666666665" />

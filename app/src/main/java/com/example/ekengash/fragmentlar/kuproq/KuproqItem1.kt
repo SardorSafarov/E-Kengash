@@ -11,9 +11,9 @@ import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
 import com.example.ekengash.databinding.FragmentKuproqItem1Binding
 import com.example.ekengash.entity.KuproqItemEntitit
-import com.example.ekengash.servislar.aviachipta.ServesAvia
-import com.example.ekengash.servislar.avtobus.main.ServesAvtobus
-import com.example.ekengash.servislar.poyezd.ServesPoyezd
+import com.example.servislar.aviachipta.main.ServesAvia
+import com.example.servislar.avtobus.main.ServesAvtobus
+import com.example.servislar.poyezd.main.ServesPoyezd
 
 
 class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {

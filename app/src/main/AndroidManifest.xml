@@ -14,59 +14,56 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".servislar.taxi.main.ServesTaxi"
+            android:name="com.example.servislar.taxi.main.ServesTaxi"
             android:exported="false" />
         <activity
-            android:name=".servislar.turarJoylar.ServesTurarjoy"
+            android:name="com.example.servislar.turarJoylar.main.ServesTurarjoy"
             android:exported="false" />
         <activity
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
             android:theme="@style/FullScreenThem">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".servislar.poyezd.izlash.PoyezdIzlash"
+            android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
             android:exported="false" />
         <activity
-            android:name=".servislar.aviachipta.izlash.AviaIzlash"
-            android:exported="false" /> <!-- <activity -->
+            android:name="com.example.servislar.aviachipta.izlash.AviaIzlash"
+            android:exported="false" />
+        <!-- <activity -->
         <!-- android:name=".servislar.aviachipta.izlash.AviaChptaIzlash" -->
         <!-- android:exported="false" -->
         <!-- android:label="@string/title_activity_avia_chpta_izlash" -->
         <!-- android:theme="@style/Theme.EKengash.NoActionBar" /> -->
         <activity
-            android:name=".servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy"
+            android:name="com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy"
             android:exported="false" />
         <activity
-            android:name=".servislar.chegirmalar.ServesChegirmalar"
+            android:name="com.example.servislar.chegirmalar.ServesChegirmalar"
             android:exported="false" />
         <activity
-            android:name=".servislar.ab.ServesAB"
+            android:name="com.example.servislar.ab.ServesAB"
             android:exported="false" />
         <activity
             android:name=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
-            android:name=".servislar.aviachipta.bootomsheet.QayergaAvia"
+            android:name="com.example.servislar.aviachipta.bootomsheet.QayergaAvia"
             android:exported="false" />
         <activity
-            android:name=".servislar.aviachipta.bootomsheet.QayerdanAvia"
+            android:name="com.example.servislar.aviachipta.bootomsheet.QayerdanAvia"
             android:exported="false" />
         <activity
-            android:name=".servislar.poyezd.ServesPoyezd"
+            android:name="com.example.servislar.poyezd.main.ServesPoyezd"
             android:exported="true"
             android:label="@string/title_activity_poyezd"
             android:theme="@style/Theme.EKengash.NoActionBar" />
         <activity
-            android:name=".servislar.avtobus.main.ServesAvtobus"
+            android:name="com.example.servislar.avtobus.main.ServesAvtobus"
             android:exported="false" />
         <activity
-            android:name=".servislar.aviachipta.ServesAvia"
+            android:name="com.example.servislar.aviachipta.main.ServesAvia"
             android:exported="false" />
         <activity
             android:name=".fragmentlar.chat.ChatScreen"
@@ -76,9 +73,13 @@
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.EKengash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

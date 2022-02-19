@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".servislar.taxi.main.ServesTaxi">
+    tools:context="com.example.servislar.taxi.main.ServesTaxi">
     <ImageButton
         android:id="@+id/imageView3"
         android:layout_width="18dp"
