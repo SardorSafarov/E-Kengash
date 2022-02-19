@@ -2,7 +2,6 @@ package com.example.ekengash.main
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.net.ConnectivityManager
@@ -22,7 +21,7 @@ import com.example.blok.Blok
 import com.example.blok.BlokActivitt
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
-import com.example.ekengash.fragmentlar.asosiyy.Asosiy
+import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
 

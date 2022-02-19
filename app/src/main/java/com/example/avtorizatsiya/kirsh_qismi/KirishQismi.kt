@@ -12,18 +12,20 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
+import com.example.log.D
 
 
 class KirishQismi : Fragment() {
 
-     var kirish: Kirish = Kirish()
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.ruyxatdanUtish.setOnClickListener {
             requireFragmentManager().beginTransaction().replace(R.id.kirsh_qismidagi_fragment,RuyxatdanUtish()).commit()
         }
         binding.davomEtishButton.setOnClickListener {
-            startActivity(Intent(context,MainActivity::class.java))
+            D.d(binding.telNumber.text.toString())
+           // startActivity(Intent(context,MainActivity::class.java))
         }
     }
 

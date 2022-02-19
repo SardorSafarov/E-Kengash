@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#F3F3F3"
     android:layout_height="match_parent"
-    tools:context=".servislar.aviachipta.Aviachipta">
+    tools:context=".servislar.aviachipta.ServesAvia">
 
     <ImageButton
         android:id="@+id/imageView3"

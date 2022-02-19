@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".servislar.poyezd.ServesPoyezd">
-
+    tools:context=".servislar.taxi.main.ServesTaxi">
     <ImageButton
         android:id="@+id/imageView3"
         android:layout_width="18dp"
@@ -23,7 +22,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Temir yo`l"
+        android:text="Taxi"
         android:textSize="22dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -49,7 +48,7 @@
             android:paddingHorizontal="3dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/avia_qirirish"
+                android:id="@+id/taxi_qirirish"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
@@ -60,7 +59,7 @@
                 app:cornerRadius="6dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/avia_chiptalar"
+                android:id="@+id/taxi_chiptalar"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -85,4 +84,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView9"
         tools:layout="@layout/fragment_avia_qidirish" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

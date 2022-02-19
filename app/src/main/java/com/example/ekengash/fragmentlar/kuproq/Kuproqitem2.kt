@@ -11,9 +11,9 @@ import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem2Adapter
 import com.example.ekengash.databinding.FragmentKuproqitem2Binding
 import com.example.ekengash.entity.KuproqItemEntitit
-import com.example.ekengash.servislar.aviachipta.Aviachipta
-import com.example.ekengash.servislar.avtobus.Avtobus
-import com.example.ekengash.servislar.poyezd.Poyezd
+import com.example.ekengash.servislar.aviachipta.ServesAvia
+import com.example.ekengash.servislar.avtobus.main.ServesAvtobus
+import com.example.ekengash.servislar.poyezd.ServesPoyezd
 
 
 class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
@@ -37,13 +37,13 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         when(text)
         {
             "Aviachipta"->{
-                startActivity(Intent(context, Aviachipta::class.java))
+                startActivity(Intent(context, ServesAvia::class.java))
             }
             "Avtobus"->{
-                startActivity(Intent(context, Avtobus::class.java))
+                startActivity(Intent(context, ServesAvtobus::class.java))
             }
             "Poyezd"->{
-                startActivity(Intent(context, Poyezd::class.java))
+                startActivity(Intent(context, ServesPoyezd::class.java))
             }
             else->{
 

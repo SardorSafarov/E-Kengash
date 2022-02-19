@@ -29,42 +29,42 @@ class Kirish : AppCompatActivity() {
         this.kirishViewModel=kirishViewModel
         supportFragmentManager.beginTransaction().replace(R.id.kirsh_qismidagi_fragment,KirishQismi()).commit()
     }
-//    fun telJunatish(){
-//        binding.davomEtishButton.setOnClickListener {
-//            when(checkUser){
-//                ""->{
-//                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
-//                }
-//                "Yes"->{
-//                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
-//                }
-//                "No"->{
-//                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
-//                }
-//            }
-//
-//        }
-//        kirishViewModel.telJunatish.observe(this, Observer {
-//            if (it.isSuccessful) {
-//                binding.kirish.visibility=View.INVISIBLE
-//                binding.kirishRuyxatdanUtish.visibility=View.INVISIBLE
-//                checkUser=it.body()!!.data.check
-//                if(checkUser=="Yes")
-//                {
-//                    binding.kirish.visibility=View.VISIBLE
-//                }
-//                else
-//                {
-//                    binding.kirishRuyxatdanUtish.visibility=View.VISIBLE
-//                }
-//            }
-//            else{
-//                D.d("ishlamadi")
-//            }
-//
-//
-//        })
-//    }
+    fun telJunatish(){
+        binding.davomEtishButton.setOnClickListener {
+            when(checkUser){
+                ""->{
+                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
+                }
+                "Yes"->{
+                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
+                }
+                "No"->{
+                    kirishViewModel.telJunatish("998"+binding.telNumber.text.toString())
+                }
+            }
+
+        }
+        kirishViewModel.telJunatish.observe(this, Observer {
+            if (it.isSuccessful) {
+                binding.kirish.visibility=View.INVISIBLE
+                binding.kirishRuyxatdanUtish.visibility=View.INVISIBLE
+                checkUser=it.body()!!.data.check
+                if(checkUser=="Yes")
+                {
+                    binding.kirish.visibility=View.VISIBLE
+                }
+                else
+                {
+                    binding.kirishRuyxatdanUtish.visibility=View.VISIBLE
+                }
+            }
+            else{
+                D.d("ishlamadi")
+            }
+
+
+        })
+    }
 
 
     /*------------------------------------------------Teginma-------------------------------------------------------------------------------------*/

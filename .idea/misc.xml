@@ -34,6 +34,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_kuproq_top_button_2.xml" value="0.245" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_kuproq_top_button_2_0.xml" value="0.297" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2475" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_minus_kuk.xml" value="0.171" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_minus_oq.xml" value="0.212" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_murojaat_yuborish.xml" value="0.2395" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_murojaatlar.xml" value="0.202" />
@@ -73,6 +74,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_serves_chegirmalar_turarjoy.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_serves_turarjoy.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_serves_turarjoy2.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_taxi.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/asosiy_tugmalar.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_turar_joy_holat.xml" value="0.29322916666666665" />
@@ -86,6 +88,8 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_avia_qayerdan.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_avia_qidirish.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_aviabiletlar.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_avtobus_chiptalarim.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_avtobus_qidirish.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_first.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_kirish_qismi.xml" value="0.3346394984326019" />
@@ -99,6 +103,8 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_ruyxatdan_utish_tuliq.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_second.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_smsni_tasdiqlash.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_taxi_buyurtmalrim.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_taxi_qidirish.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_turar_joy_buyurmalar.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_turar_joy_qidirish.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_ab_top.xml" value="0.5" />

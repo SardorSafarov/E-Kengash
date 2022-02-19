@@ -1,4 +1,4 @@
-package com.example.ekengash.fragmentlar.asosiyy
+package com.example.ekengash.fragmentlar.asosiyy.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,11 @@ import androidx.fragment.app.Fragment
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
 import com.example.ekengash.servislar.ab.ServesAB
-import com.example.ekengash.servislar.aviachipta.Aviachipta
-import com.example.ekengash.servislar.avtobus.Avtobus
+import com.example.ekengash.servislar.aviachipta.ServesAvia
+import com.example.ekengash.servislar.avtobus.main.ServesAvtobus
 import com.example.ekengash.servislar.chegirmalar.ServesChegirmalar
-import com.example.ekengash.servislar.poyezd.Poyezd
-import com.example.ekengash.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy
+import com.example.ekengash.servislar.poyezd.ServesPoyezd
+import com.example.ekengash.servislar.taxi.main.ServesTaxi
 import com.example.ekengash.servislar.turarJoylar.ServesTurarjoy
 
 
@@ -32,13 +32,13 @@ class Asosiy : Fragment() {
 
     private fun servesButton() {
         binding.servesAviabeletButton.setOnClickListener {
-            startActivity(Intent(context,Aviachipta::class.java))
+            startActivity(Intent(context,ServesAvia::class.java))
         }
         binding.servesAvtobusButton.setOnClickListener {
-            startActivity(Intent(context,Avtobus::class.java))
+            startActivity(Intent(context, ServesAvtobus::class.java))
         }
         binding.servesPoyezdButton.setOnClickListener {
-            startActivity(Intent(context,Poyezd::class.java))
+            startActivity(Intent(context,ServesPoyezd::class.java))
         }
         binding.servesABButton.setOnClickListener {
         startActivity(Intent(context,ServesAB::class.java))
@@ -48,6 +48,9 @@ class Asosiy : Fragment() {
         }
         binding.servesTurarJoyButton.setOnClickListener {
             startActivity(Intent(context,ServesTurarjoy::class.java))
+        }
+        binding.servesTaxsiButton.setOnClickListener {
+            startActivity(Intent(context,ServesTaxi::class.java))
         }
     }
     private fun asosiyQidirishOynasi() {

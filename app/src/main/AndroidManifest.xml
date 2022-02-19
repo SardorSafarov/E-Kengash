@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ekengash" >
+    package="com.example.ekengash">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,15 +12,17 @@
         android:roundIcon="@mipmap/ic_sardor"
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".servislar.taxi.main.ServesTaxi"
+            android:exported="false" />
         <activity
             android:name=".servislar.turarJoylar.ServesTurarjoy"
             android:exported="false" />
         <activity
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
-            android:theme="@style/FullScreenThem"
-            >
+            android:theme="@style/FullScreenThem">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,15 +58,15 @@
             android:name=".servislar.aviachipta.bootomsheet.QayerdanAvia"
             android:exported="false" />
         <activity
-            android:name=".servislar.poyezd.Poyezd"
+            android:name=".servislar.poyezd.ServesPoyezd"
             android:exported="true"
             android:label="@string/title_activity_poyezd"
             android:theme="@style/Theme.EKengash.NoActionBar" />
         <activity
-            android:name=".servislar.avtobus.Avtobus"
+            android:name=".servislar.avtobus.main.ServesAvtobus"
             android:exported="false" />
         <activity
-            android:name=".servislar.aviachipta.Aviachipta"
+            android:name=".servislar.aviachipta.ServesAvia"
             android:exported="false" />
         <activity
             android:name=".fragmentlar.chat.ChatScreen"
@@ -75,9 +77,7 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.EKengash" >
-
-        </activity>
+            android:theme="@style/Theme.EKengash"></activity>
     </application>
 
 </manifest>

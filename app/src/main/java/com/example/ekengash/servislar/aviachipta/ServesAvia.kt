@@ -8,7 +8,7 @@ import com.example.ekengash.databinding.ActivityAviachiptaBinding
 import com.example.ekengash.servislar.aviachipta.chiptalarim.AviaChiptalarim
 import com.example.ekengash.servislar.aviachipta.qidirish.AviaQidirish
 
-class Aviachipta : AppCompatActivity() {
+class ServesAvia : AppCompatActivity() {
     lateinit var binding:ActivityAviachiptaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding= ActivityAviachiptaBinding.inflate(layoutInflater)
