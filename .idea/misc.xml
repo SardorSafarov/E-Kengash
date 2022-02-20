@@ -13,6 +13,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/chat_send_button.xml" value="0.2385" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/chat_top_button.xml" value="0.221" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic___tangga.xml" value="0.1735" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_avia_qachongacha.xml" value="0.191" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_aviabeletlar_fab.xml" value="0.277" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_avtobus.xml" value="0.183" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_back.xml" value="0.2475" />
@@ -78,6 +79,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/asosiy_tugmalar.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_avia_holat.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_calendar.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_serves_qayerdan.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/bottom_sheet_turar_joy_holat.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/chap_menu.xml" value="0.33" />
@@ -104,6 +106,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_ruyxatdan_utish.xml" value="0.2791666666666667" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_ruyxatdan_utish_tuliq.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_second.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_serves_button1.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_smsni_tasdiqlash.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_taxi_buyurtmalrim.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/fragment_taxi_qidirish.xml" value="0.29322916666666665" />

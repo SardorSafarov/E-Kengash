@@ -23,7 +23,11 @@
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
             android:theme="@style/FullScreenThem">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
@@ -49,12 +53,6 @@
             android:name=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.aviachipta.bootomsheet.QayergaAvia"
-            android:exported="false" />
-        <activity
-            android:name="com.example.servislar.aviachipta.bootomsheet.QayerdanAvia"
-            android:exported="false" />
-        <activity
             android:name="com.example.servislar.poyezd.main.ServesPoyezd"
             android:exported="true"
             android:label="@string/title_activity_poyezd"
@@ -75,11 +73,7 @@
             android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.EKengash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

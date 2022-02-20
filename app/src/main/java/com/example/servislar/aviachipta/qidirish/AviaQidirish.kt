@@ -2,6 +2,8 @@ package com.example.servislar.aviachipta.qidirish
 
 import android.content.Intent
 import android.graphics.Color
+import android.icu.text.DateFormat.Field.DAY_OF_MONTH
+import android.icu.util.Calendar.DAY_OF_MONTH
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +16,9 @@ import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
 import com.example.ekengash.databinding.FragmentAviaQidirishBinding
 import com.example.servislar.aviachipta.izlash.AviaIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import java.text.DateFormat.Field.DAY_OF_MONTH
+import java.util.*
+import java.util.Calendar.DAY_OF_MONTH
 
 
 class AviaQidirish : Fragment() {
@@ -118,8 +123,24 @@ class AviaQidirish : Fragment() {
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
         bottomDialog.setContentView(view)
         val qachonBinding = BottomSheetCalendarBinding.bind(view)
-
         qachonBinding.textView22.text="Qachongacha"
+        val calendar = Calendar.getInstance()
+        calendar.set(
+            2025, // year
+            10, // month nov, 0 based index
+            3 // day of month
+        )
+        qachonBinding.calendarView.setDate(
+            calendar.timeInMillis, // long: The date.
+
+            // boolean: Whether to animate the scroll to the current date.
+            false,
+
+            // boolean: Whether to center the current date
+            // even if it is already visible.
+            false
+        )
+
         binding.aviaQachongacha.setOnClickListener {
             bottomDialog.show()
         }

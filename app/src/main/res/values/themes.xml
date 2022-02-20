@@ -54,11 +54,25 @@
    <style name="BottomSheetDiaolg" parent="Theme.Design.BottomSheetDialog">
        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
    </style>
+
     <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
          <item name="android:background">@android:color/transparent</item>
     </style>
 
 
 
+    <!-- Calendar style-->
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/kuk</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
 
 </resources>
