@@ -75,4 +75,14 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+
+
+    <style name="Spiner" parent="">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopRight">18dp</item>
+    <item name="cornerSizeTopLeft">18dp</item>
+    <item name="cornerSizeBottomRight">18dp</item>
+    <item name="cornerSizeBottomLeft">18dp</item>
+    </style>
+
 </resources>

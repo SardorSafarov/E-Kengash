@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import com.example.ekengash.R
 import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
 import com.example.ekengash.databinding.BottomSheetCalendarBinding
@@ -124,6 +125,10 @@ class AviaQidirish : Fragment() {
         bottomDialog.setContentView(view)
         val qachonBinding = BottomSheetCalendarBinding.bind(view)
         qachonBinding.textView22.text="Qachongacha"
+        qachonBinding.oylar.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
+            resources.getStringArray(R.array.Oylar))
+        qachonBinding.yillar.adapter=ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
+            resources.getStringArray(R.array.Yillar))
         val calendar = Calendar.getInstance()
         calendar.set(
             2025, // year
