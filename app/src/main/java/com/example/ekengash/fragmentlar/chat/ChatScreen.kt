@@ -5,11 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log.d
 import android.view.Menu
-import androidx.core.widget.addTextChangedListener
 import com.example.ekengash.R
+import com.example.ekengash.adapter.spinner.ChatSpinnerAdapter
 import com.example.ekengash.databinding.ActivityChatScreenBinding
+import com.example.ekengash.entity.SpinnerEntity
 import com.example.log.D
 
 class ChatScreen : AppCompatActivity() {
@@ -21,10 +21,8 @@ class ChatScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityChatScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         teginma()
-
-
+        binding.spinerr.adapter = ChatSpinnerAdapter(this,list)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -89,4 +87,12 @@ class ChatScreen : AppCompatActivity() {
             finish()
         }
     }
+
+    val list:List<SpinnerEntity> = listOf(
+        SpinnerEntity(text = "Tilni sozlash   ", image = R.drawable.ic_til_icon),
+        SpinnerEntity(text = "Xabarni eslatish", image = R.drawable.ic_qongroq),
+        SpinnerEntity(text = "Yordam haqida   ", image = R.drawable.ic_chat_yordam_haqida)
+    )
+
+
 }

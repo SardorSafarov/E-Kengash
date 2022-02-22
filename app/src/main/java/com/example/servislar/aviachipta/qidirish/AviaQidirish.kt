@@ -2,24 +2,23 @@ package com.example.servislar.aviachipta.qidirish
 
 import android.content.Intent
 import android.graphics.Color
-import android.icu.text.DateFormat.Field.DAY_OF_MONTH
-import android.icu.util.Calendar.DAY_OF_MONTH
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.ekengash.R
 import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
 import com.example.ekengash.databinding.BottomSheetCalendarBinding
 import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
 import com.example.ekengash.databinding.FragmentAviaQidirishBinding
+import com.example.log.D
 import com.example.servislar.aviachipta.izlash.AviaIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import java.text.DateFormat.Field.DAY_OF_MONTH
 import java.util.*
-import java.util.Calendar.DAY_OF_MONTH
 
 
 class AviaQidirish : Fragment() {
@@ -120,31 +119,76 @@ class AviaQidirish : Fragment() {
     }
 
     private fun aviQachongacha() {
+        val calendar = Calendar.getInstance()
         val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
         bottomDialog.setContentView(view)
         val qachonBinding = BottomSheetCalendarBinding.bind(view)
         qachonBinding.textView22.text="Qachongacha"
+        var oyPosition = 0
+        var yilPosition = 0
         qachonBinding.oylar.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
             resources.getStringArray(R.array.Oylar))
-        qachonBinding.yillar.adapter=ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
-            resources.getStringArray(R.array.Yillar))
-        val calendar = Calendar.getInstance()
-        calendar.set(
-            2025, // year
-            10, // month nov, 0 based index
-            3 // day of month
-        )
+
+//        qachonBinding.oylar.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View,
+//                position: Int,
+//                id: Long
+//            ) {
+//                 oyPosition = position
+//                (view as TextView).setTextColor(Color.parseColor("#109BFF")) //Change selected text color
+//                calendar.set(
+//                    yilPosition, // year
+//                    oyPosition,
+//                    1
+//                )
+//
+//            }
+//            override fun onNothingSelected(parent: AdapterView<*>?) {}
+//        })
+//
+//        qachonBinding.yillar.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View,
+//                position: Int,
+//                id: Long
+//            ) {
+//                (view as TextView).setTextColor(Color.parseColor("#109BFF"))
+//                yilPosition=resources.getStringArray(R.array.Yillar)[position].toInt()
+//                calendar.set(
+//                    yilPosition, // year
+//                    oyPosition,
+//                    1
+//                )
+//                qachonBinding.calendarView.setDate(
+//                    calendar.timeInMillis,
+//                    false,
+//                    false
+//                )
+//                D.d("$oyPosition    $yilPosition")
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {}
+//        })
+
+            calendar.set(
+                    2022, // year
+                    1,
+                    1
+                )
         qachonBinding.calendarView.setDate(
-            calendar.timeInMillis, // long: The date.
-
-            // boolean: Whether to animate the scroll to the current date.
+            calendar.timeInMillis,
             false,
-
-            // boolean: Whether to center the current date
-            // even if it is already visible.
             false
         )
+
+
+
+        qachonBinding.yillar.adapter=ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
+            resources.getStringArray(R.array.Yillar))
 
         binding.aviaQachongacha.setOnClickListener {
             bottomDialog.show()

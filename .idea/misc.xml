@@ -51,6 +51,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_strelka_unga.xml" value="0.1735" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_tangga.xml" value="0.2555" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_tasdiqlanmagan_foydalanuvchi_1.xml" value="0.189" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_til_icon.xml" value="0.1695" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_uzbekistan_bayroq.xml" value="0.227" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_videocamera.xml" value="0.2555" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_xabar_yuborish.xml" value="0.1735" />
@@ -115,6 +116,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_ab_top.xml" value="0.5" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_asosiy_layfhaklar.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_asosiy_tugmalar.xml" value="0.29322916666666665" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/item_chat_top_spinner.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_kuproq_1.xml" value="0.33" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_kuproq_2.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/item_spineer.xml" value="0.29322916666666665" />
