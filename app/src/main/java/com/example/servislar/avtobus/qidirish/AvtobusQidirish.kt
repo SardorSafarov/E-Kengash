@@ -6,17 +6,78 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ekengash.R
+import com.example.ekengash.databinding.BottomSheetCalendarBinding
+import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
+import com.example.ekengash.databinding.FragmentAvtobusQidirishBinding
+import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class AvtobusQidirish : Fragment() {
 
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        avtobusQayerdan()
+        avtobusQayerga()
+        avtobusQachon()
+    }
+
+    private fun avtobusQachon() {
+        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
+        bottomDialog.setContentView(view)
+        val qachonBinding = BottomSheetCalendarBinding.bind(view)
+        binding.avtobusQachon.setOnClickListener {
+            bottomDialog.show()
+        }
+        qachonBinding.chiqish.setOnClickListener {
+            bottomDialog.dismiss()
+        }
+    }
+
+
+    private fun avtobusQayerga() {
+        val bottomsheet= BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan,null)
+        val bottomsheetBinding = BottomSheetServesQayerdanBinding.bind(view)
+        bottomsheet.setContentView(view)
+        bottomsheetBinding.chiqish.setOnClickListener {
+            bottomsheet.dismiss()
+        }
+        bottomsheetBinding.textView11.setText("Qayerga")
+        binding.avtobusQayerga.setOnClickListener {
+            bottomsheet.show()
+        }
+    }
+    private fun avtobusQayerdan() {
+        val bottomsheet= BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan,null)
+        val bottomsheetBinding = BottomSheetServesQayerdanBinding.bind(view)
+        bottomsheet.setContentView(view)
+        bottomsheetBinding.chiqish.setOnClickListener {
+            bottomsheet.dismiss()
+        }
+        binding.avtobusQayerdan.setOnClickListener {
+            bottomsheet.show()
+        }
+    }
+
+
+
+
+    /*----------------Tegma----------------------*/
+    private var _binding: FragmentAvtobusQidirishBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_avtobus_qidirish, container, false)
+        _binding = FragmentAvtobusQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
     }
 
 

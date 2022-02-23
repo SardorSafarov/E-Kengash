@@ -58,6 +58,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <RadioGroup
+                android:id="@+id/belet_turi"
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"

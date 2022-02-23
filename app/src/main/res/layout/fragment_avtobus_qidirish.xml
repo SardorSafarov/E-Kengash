@@ -23,7 +23,7 @@
 
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/avia_qayerdan"
+                android:id="@+id/avtobus_qayerdan"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="12dp"
@@ -76,13 +76,13 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/avia_qayerga"
+                android:id="@+id/avtobus_qayerga"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/avia_qayerdan"
+                app:layout_constraintTop_toBottomOf="@+id/avtobus_qayerdan"
                 app:strokeColor="#DEDEDE"
                 app:strokeWidth="1dp">
 
@@ -133,7 +133,7 @@
                 android:layout_height="55dp"
                 android:visibility="gone"
                 android:layout_marginTop="12dp"
-                app:layout_constraintTop_toBottomOf="@+id/avia_qayerga">
+                app:layout_constraintTop_toBottomOf="@+id/avtobus_qayerga">
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/avia_qachon"
@@ -240,9 +240,9 @@
                 android:layout_height="45dp"
                 android:layout_marginEnd="18dp"
                 app:cardCornerRadius="100dp"
-                app:layout_constraintBottom_toTopOf="@+id/avia_qayerga"
-                app:layout_constraintEnd_toEndOf="@+id/avia_qayerdan"
-                app:layout_constraintTop_toBottomOf="@+id/avia_qayerdan"
+                app:layout_constraintBottom_toTopOf="@+id/avtobus_qayerga"
+                app:layout_constraintEnd_toEndOf="@+id/avtobus_qayerdan"
+                app:layout_constraintTop_toBottomOf="@+id/avtobus_qayerdan"
                 app:strokeColor="#DEDEDE"
                 app:strokeWidth="1dp">
 
@@ -254,7 +254,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/avia_holat"
+                android:id="@+id/avtobus_qachon"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="12dp"
@@ -325,7 +325,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/avia_holat"
+                app:layout_constraintTop_toBottomOf="@+id/avtobus_qachon"
                 app:strokeColor="#109BFF"
                 app:strokeWidth="1dp">
 

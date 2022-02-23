@@ -22,6 +22,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat11.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chat_sozlamalari.xml" value="0.221" />
+        <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_chiqish.xml" value="0.1765" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_dragin.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_ellips.xml" value="0.2475" />
         <entry key="..\:/EKengash2/app/src/main/res/drawable/ic_filelarga_kirish.xml" value="0.2555" />
@@ -66,7 +67,7 @@
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_blok_activitt.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_chat_screen.xml" value="0.25" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_kirish.xml" value="0.29322916666666665" />
-        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/EKengash2/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_poyezd2.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_poyezd_izlash.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/layout/activity_qayerdan_avia.xml" value="0.29322916666666665" />

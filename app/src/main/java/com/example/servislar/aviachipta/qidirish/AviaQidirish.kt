@@ -185,12 +185,23 @@ class AviaQidirish : Fragment() {
             false
         )
 
-
-
         qachonBinding.yillar.adapter=ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
             resources.getStringArray(R.array.Yillar))
 
         binding.aviaQachongacha.setOnClickListener {
+            bottomDialog.show()
+        }
+        qachonBinding.chiqish.setOnClickListener {
+            bottomDialog.dismiss()
+        }
+    }
+
+    private fun aviQachon() {
+        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
+        bottomDialog.setContentView(view)
+        val qachonBinding = BottomSheetCalendarBinding.bind(view)
+        binding.aviaQachon.setOnClickListener {
             bottomDialog.show()
         }
         qachonBinding.chiqish.setOnClickListener {
@@ -226,18 +237,7 @@ class AviaQidirish : Fragment() {
         }
     }
 
-    private fun aviQachon() {
-        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
-        bottomDialog.setContentView(view)
-        val qachonBinding = BottomSheetCalendarBinding.bind(view)
-        binding.aviaQachon.setOnClickListener {
-            bottomDialog.show()
-        }
-        qachonBinding.chiqish.setOnClickListener {
-            bottomDialog.dismiss()
-        }
-    }
+
 
     private var _binding: FragmentAviaQidirishBinding? = null
     private val binding get() = _binding!!
