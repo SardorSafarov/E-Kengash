@@ -10,6 +10,7 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.BottomSheetTurarJoyHolatBinding
 import com.example.ekengash.databinding.FragmentTurarJoyQidirishBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.datepicker.MaterialDatePicker
 
 
 class TurarJoyQidirish : Fragment() {
@@ -18,7 +19,32 @@ class TurarJoyQidirish : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         bottomSheetDialog()
+        turarJoyQachon()
+        turarJoyQachongacha()
+    }
 
+    private fun turarJoyQachon()
+    {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.turarJoyQachon.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
+        }
+    }
+
+    private fun turarJoyQachongacha()
+    {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.turarJoyQachongacha.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
+        }
     }
 
 

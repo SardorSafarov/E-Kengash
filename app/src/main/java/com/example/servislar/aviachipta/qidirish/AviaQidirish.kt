@@ -18,6 +18,7 @@ import com.example.ekengash.databinding.FragmentAviaQidirishBinding
 import com.example.log.D
 import com.example.servislar.aviachipta.izlash.AviaIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 
@@ -118,96 +119,59 @@ class AviaQidirish : Fragment() {
 
     }
 
-    private fun aviQachongacha() {
-        val calendar = Calendar.getInstance()
-        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
-        bottomDialog.setContentView(view)
-        val qachonBinding = BottomSheetCalendarBinding.bind(view)
-        qachonBinding.textView22.text="Qachongacha"
-        var oyPosition = 0
-        var yilPosition = 0
-        qachonBinding.oylar.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
-            resources.getStringArray(R.array.Oylar))
+//    private fun aviQachongacha() {
+//        val calendar = Calendar.getInstance()
+//        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
+//        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
+//        bottomDialog.setContentView(view)
+//        val qachonBinding = BottomSheetCalendarBinding.bind(view)
+//        qachonBinding.textView22.text="Qachongacha"
+//        binding.aviaQachongacha.setOnClickListener {
+//            bottomDialog.show()
+//        }
+//        qachonBinding.chiqish.setOnClickListener {
+//            bottomDialog.dismiss()
+//        }
+//    }
 
-//        qachonBinding.oylar.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(
-//                parent: AdapterView<*>?,
-//                view: View,
-//                position: Int,
-//                id: Long
-//            ) {
-//                 oyPosition = position
-//                (view as TextView).setTextColor(Color.parseColor("#109BFF")) //Change selected text color
-//                calendar.set(
-//                    yilPosition, // year
-//                    oyPosition,
-//                    1
-//                )
-//
-//            }
-//            override fun onNothingSelected(parent: AdapterView<*>?) {}
-//        })
-//
-//        qachonBinding.yillar.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(
-//                parent: AdapterView<*>?,
-//                view: View,
-//                position: Int,
-//                id: Long
-//            ) {
-//                (view as TextView).setTextColor(Color.parseColor("#109BFF"))
-//                yilPosition=resources.getStringArray(R.array.Yillar)[position].toInt()
-//                calendar.set(
-//                    yilPosition, // year
-//                    oyPosition,
-//                    1
-//                )
-//                qachonBinding.calendarView.setDate(
-//                    calendar.timeInMillis,
-//                    false,
-//                    false
-//                )
-//                D.d("$oyPosition    $yilPosition")
-//            }
-//
-//            override fun onNothingSelected(parent: AdapterView<*>?) {}
-//        })
-
-            calendar.set(
-                    2022, // year
-                    1,
-                    1
-                )
-        qachonBinding.calendarView.setDate(
-            calendar.timeInMillis,
-            false,
-            false
-        )
-
-        qachonBinding.yillar.adapter=ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1,
-            resources.getStringArray(R.array.Yillar))
-
-        binding.aviaQachongacha.setOnClickListener {
-            bottomDialog.show()
-        }
-        qachonBinding.chiqish.setOnClickListener {
-            bottomDialog.dismiss()
-        }
+//    private fun aviQachon() {
+//        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
+//        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
+//        bottomDialog.setContentView(view)
+//        val qachonBinding = BottomSheetCalendarBinding.bind(view)
+//        binding.aviaQachon.setOnClickListener {
+//            bottomDialog.show()
+//        }
+//        qachonBinding.chiqish.setOnClickListener {
+//            bottomDialog.dismiss()
+//        }
+//    }
+private fun aviQachongacha() {
+    val datePicker =
+        MaterialDatePicker.Builder.datePicker()
+            .setTitleText("Select date")
+            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+            .build()
+    binding.aviaQachongacha.setOnClickListener {
+        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
     }
+}
 
-    private fun aviQachon() {
-        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
-        bottomDialog.setContentView(view)
-        val qachonBinding = BottomSheetCalendarBinding.bind(view)
-        binding.aviaQachon.setOnClickListener {
-            bottomDialog.show()
-        }
-        qachonBinding.chiqish.setOnClickListener {
-            bottomDialog.dismiss()
-        }
+private fun aviQachon() {
+    val datePicker =
+        MaterialDatePicker.Builder.datePicker()
+            .setTitleText("Select date")
+            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+            .build()
+
+
+    binding.aviaQachon.setOnClickListener {
+        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
     }
+//    qachonBinding.chiqish.setOnClickListener {
+//        bottomDialog.dismiss()
+//    }
+}
 
     private fun aviaQayerga() {
         val bottomsheet=BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)

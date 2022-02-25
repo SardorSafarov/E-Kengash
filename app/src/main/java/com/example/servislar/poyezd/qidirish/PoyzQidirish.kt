@@ -15,6 +15,7 @@ import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
 import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
 import com.example.servislar.poyezd.izlash.PoyezdIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 
@@ -99,18 +100,28 @@ class PoyzQidirish : Fragment() {
         }
     }
 
-    private fun poyezdQachon() {
-        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
-        bottomDialog.setContentView(view)
-        val qachonBinding = BottomSheetCalendarBinding.bind(view)
-        binding.poyezdQachon.setOnClickListener {
-            bottomDialog.show()
-        }
-        qachonBinding.chiqish.setOnClickListener {
-            bottomDialog.dismiss()
-        }
+//    private fun poyezdQachon() {
+//        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
+//        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
+//        bottomDialog.setContentView(view)
+//        val qachonBinding = BottomSheetCalendarBinding.bind(view)
+//        binding.poyezdQachon.setOnClickListener {
+//            bottomDialog.show()
+//        }
+//        qachonBinding.chiqish.setOnClickListener {
+//            bottomDialog.dismiss()
+//        }
+//    }
+private fun poyezdQachon() {
+    val datePicker =
+        MaterialDatePicker.Builder.datePicker()
+            .setTitleText("Select date")
+            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+            .build()
+    binding.poyezdQachon.setOnClickListener {
+        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
     }
+}
 
 
     private fun poyezdQayerdan() {
