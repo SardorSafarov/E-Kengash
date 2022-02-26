@@ -10,12 +10,6 @@ import com.example.ekengash.R
 
 class Chat : Fragment() {
 
-
-
-
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

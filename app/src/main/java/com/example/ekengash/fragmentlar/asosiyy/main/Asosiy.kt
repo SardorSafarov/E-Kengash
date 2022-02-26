@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
-import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.Bildirshnomalar
+import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.servislar.ab.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
@@ -29,7 +29,7 @@ class Asosiy : Fragment() {
 
     private fun asosiyBildishnomalar() {
         binding.asosiyBildirshnomalar.setOnClickListener {
-            startActivity(Intent(requireContext(),Bildirshnomalar::class.java))
+            startActivity(Intent(requireContext(), Bildirshnomalar::class.java))
         }
     }
 

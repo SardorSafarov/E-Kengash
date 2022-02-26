@@ -1,16 +1,23 @@
 package com.example.ekengash.fragmentlar.chat
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.Menu
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuBuilder
+import androidx.appcompat.view.menu.MenuPopupHelper
 import com.example.ekengash.R
-import com.example.ekengash.adapter.spinner.ChatSpinnerAdapter
 import com.example.ekengash.databinding.ActivityChatScreenBinding
-import com.example.ekengash.entity.SpinnerEntity
 import com.example.log.D
+import android.annotation.SuppressLint
+import android.view.LayoutInflater
+import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
+import com.example.ekengash.databinding.DiaolgChatYordamHaqidaBinding
+
 
 class ChatScreen : AppCompatActivity() {
 
@@ -19,28 +26,89 @@ class ChatScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityChatScreenBinding.inflate(layoutInflater)
+        binding = ActivityChatScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         teginma()
-        binding.spinerr.adapter = ChatSpinnerAdapter(this,list)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.chat_top_menu,menu)
-        return true
+
+
+    private fun chatYordamHaqida() {
+        val alertDialog = AlertDialog.Builder(this,R.style.CustomAlertDialog)
+        val view = LayoutInflater.from(this).inflate(R.layout.diaolg_chat_yordam_haqida,null)
+        val dialogBinding = DiaolgChatYordamHaqidaBinding.bind(view)
+
+        alertDialog.setView(view)
+        dialogBinding.orqagaQaytish.setOnClickListener {
+            alertDialog.setOnDismissListener { dialog ->
+                dialog.dismiss()
+            }
+        }
+        alertDialog.show()
     }
 
-    /*------------------------Teginma--------------------------------*/
+
+    /*======================Teginma====================================================================*/
+
+
 
     private fun teginma() {
         chatdanChiqish()
         topButton1()
         xabarniKuzatish()
         window.statusBarColor= Color.WHITE
+        topMenu()
     }
 
     lateinit var binding :ActivityChatScreenBinding
     var ovozliButton=true
+
+    private fun topMenu() {
+        val clickListener = View.OnClickListener { view ->
+            when (view.id) {
+                R.id.imageView5 -> {
+                    showPopup(view)
+                }
+            }
+        }
+        binding.imageView5.setOnClickListener(clickListener)
+
+    }
+
+
+    @SuppressLint("RestrictedApi")
+    private fun showPopup(view: View) {
+
+        val menuBuilder = MenuBuilder(this)
+        val inflater = MenuInflater(this)
+        inflater.inflate(R.menu.chat_top_menu, menuBuilder)
+        val optionsMenu = MenuPopupHelper(this, menuBuilder, view)
+        optionsMenu.setForceShowIcon(true)
+        menuBuilder.setCallback(object : MenuBuilder.Callback {
+
+
+            override fun onMenuItemSelected(menu: MenuBuilder, item: MenuItem): Boolean {
+                when(item.itemId)
+                {
+                    R.id.chat_xabar->{
+
+                        true
+                    }
+                    R.id.chat_yordam_haqida ->{
+                        chatYordamHaqida()
+                        true
+                    }
+                    else -> false
+                }
+                return true
+            }
+
+            override fun onMenuModeChange(menu: MenuBuilder) {}
+        })
+        optionsMenu.show()
+
+    }
+
     private fun xabarniKuzatish() {
         binding.matinliyXabar.addTextChangedListener (object :TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -88,11 +156,6 @@ class ChatScreen : AppCompatActivity() {
         }
     }
 
-    val list:List<SpinnerEntity> = listOf(
-        SpinnerEntity(text = "Tilni sozlash   ", image = R.drawable.ic_til_icon),
-        SpinnerEntity(text = "Xabarni eslatish", image = R.drawable.ic_qongroq),
-        SpinnerEntity(text = "Yordam haqida   ", image = R.drawable.ic_chat_yordam_haqida)
-    )
 
 
 }

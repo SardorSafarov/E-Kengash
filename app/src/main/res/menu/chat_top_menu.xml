@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/top_item1"
-        android:title="sardor"
-        />
+        android:id="@+id/chat_tilni_sozlash"
+        android:title="Tilni sozlash"
+        android:icon="@drawable/ic_til_icon"
+        >
+        <menu>
+
+        </menu>
+    </item>
     <item
-        android:id="@+id/top_item2"
-        android:title="sardor"
-        />
+        android:id="@+id/chat_xabar"
+        android:title="Xabarni eslatish"
+        android:icon="@drawable/ic_qongroq"
+        android:iconTint="#9B9B9B"
+        >
+        <menu>
+            <item
+                android:title="Eslatilsin"
+                android:icon="@drawable/ic_qongroq"
+                android:iconTint="#9B9B9B"
+                />
+            <item
+                android:title="Eslatilsin"
+                android:icon="@drawable/ic_ovozli_chat_2"
+                android:iconTint="#9B9B9B"
+                />
+            <item
+                android:title="Vibratsiya"
+                android:icon="@drawable/ic_chat_vibratsiya"
+                />
+
+        </menu>
+    </item>
     <item
-        android:id="@+id/top_item3"
-        android:title="sardor"
-        />
+        android:id="@+id/chat_yordam_haqida"
+        android:title="Yordam haqida"
+        android:icon="@drawable/ic_chat_yordam_haqida"
+        >
+        <menu></menu>
+    </item>
+
 </menu>

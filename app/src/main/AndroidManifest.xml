@@ -14,7 +14,10 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".fragmentlar.asosiyy.bildirishnomalar.Bildirshnomalar"
+            android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"
+            android:exported="false" />
+        <activity
+            android:name=".fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.taxi.main.ServesTaxi"
@@ -25,7 +28,7 @@
         <activity
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
-            android:theme="@style/FullScreenThem"></activity>
+            android:theme="@style/FullScreenThem" />
         <activity
             android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
             android:exported="false" />

@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".fragmentlar.chat.ChatScreen">
 
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -20,9 +22,10 @@
 
             <ImageView
                 android:id="@+id/orqaga_qaytish"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="25dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:paddingVertical="14dp"
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,17 +77,6 @@
                 app:layout_constraintEnd_toStartOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <Spinner
-                android:id="@+id/spinerr"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="20dp"
-                android:padding="5dp"
-                android:background="@drawable/chat_top_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="36dp"
@@ -100,6 +92,9 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
