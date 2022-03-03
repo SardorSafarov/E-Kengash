@@ -27,6 +27,7 @@ class Asosiy : Fragment() {
         asosiyBildishnomalar()
     }
 
+
     private fun asosiyBildishnomalar() {
         binding.asosiyBildirshnomalar.setOnClickListener {
             startActivity(Intent(requireContext(), Bildirshnomalar::class.java))

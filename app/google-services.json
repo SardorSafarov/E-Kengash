@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "776902586827",
+    "project_id": "ekengash",
+    "storage_bucket": "ekengash.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776902586827:android:6c7474d37ac31d50a5864e",
+        "android_client_info": {
+          "package_name": "com.example.ekengash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776902586827-bcitia5il4scgu0m1jjs20tsubjgus5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN41e99mOwzblu2VNV0rBTA2DjXq-aAEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776902586827-bcitia5il4scgu0m1jjs20tsubjgus5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

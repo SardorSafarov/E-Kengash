@@ -14,6 +14,9 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.chapMenu.valyutaKurslari.ValyutaKurslari"
+            android:exported="false" />
+        <activity
             android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"
             android:exported="false" />
         <activity

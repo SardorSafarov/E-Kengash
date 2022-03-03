@@ -36,6 +36,9 @@
     <item
         android:id="@+id/chap_menu_valuta_kursi"
         android:title="Valuta kursi"
-        app:showAsAction="always"/>
+        android:icon="@drawable/ic_valyuta"
+        app:showAsAction="always"
+
+        />
 
 </menu>

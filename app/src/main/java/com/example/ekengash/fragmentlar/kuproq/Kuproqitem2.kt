@@ -140,6 +140,10 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         KuproqItemEntitit(
             icon = R.drawable.ic_turpaket,
             text = "Turpaket"
+        ),
+        KuproqItemEntitit(
+            icon = R.drawable.ic_valyuta,
+            text = "Valyuta kursi"
         )
 
     )

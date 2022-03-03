@@ -9,30 +9,33 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
+import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
+import com.example.log.D
+import com.google.android.material.navigation.NavigationView
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
     lateinit var binding: ActivityMainBinding
-
-
-
 
     @SuppressLint("WrongViewCast")
     @RequiresApi(Build.VERSION_CODES.M)
@@ -41,10 +44,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         teginma()
-
+        binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
 
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        when(id)
+        {
+            R.id.chap_menu_valuta_kursi->{
+                startActivity(Intent(this,ValyutaKurslari::class.java))
+            }
+        }
+
+        val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+        drawer.closeDrawer(GravityCompat.START)
+        return true
+    }
 
 
 
@@ -177,6 +193,8 @@ class MainActivity : AppCompatActivity() {
         }
         return false
     }
+
+
 
 
 }
