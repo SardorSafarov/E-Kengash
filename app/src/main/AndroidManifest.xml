@@ -14,6 +14,27 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.chapMenu.sozlanmalar.qurulmalar.Qurulmalar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.sozlanmalar.ilovaHaqida.IlovaHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.sozlanmalar.dasturTili.DasturTili"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.sozlanmalar.bildirishnoma.SozlanmalarBildishnomalar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.sozlanmalar.shaxsiy.ShaxsiyMalumotlar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.sozlanmalar.main.Sozlanmalar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar"
+            android:exported="false" />
+        <activity
             android:name="com.example.chapMenu.valyutaKurslari.ValyutaKurslari"
             android:exported="false" />
         <activity

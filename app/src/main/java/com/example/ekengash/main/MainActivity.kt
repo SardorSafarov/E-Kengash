@@ -22,13 +22,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
+import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
+import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
-import com.example.log.D
 import com.google.android.material.navigation.NavigationView
 
 
@@ -54,6 +55,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         {
             R.id.chap_menu_valuta_kursi->{
                 startActivity(Intent(this,ValyutaKurslari::class.java))
+            }
+            R.id.chap_menu_kup_savol ->{
+                startActivity(Intent(this,KupBeriladiganSavollar::class.java))
+            }
+            R.id.chap_menu_sozlanma ->{
+                startActivity(Intent(this,Sozlanmalar::class.java))
             }
         }
 

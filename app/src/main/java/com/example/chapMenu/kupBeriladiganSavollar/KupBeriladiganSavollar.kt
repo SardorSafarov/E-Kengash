@@ -1,16 +1,15 @@
-package com.example.chapMenu.valyutaKurslari
+package com.example.chapMenu.kupBeriladiganSavollar
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityValyutaKurslariBinding
+import com.example.ekengash.databinding.ActivityKupBeriladiganSavollarBinding
 
-class ValyutaKurslari : AppCompatActivity() {
-    lateinit var binding:ActivityValyutaKurslariBinding
+class KupBeriladiganSavollar : AppCompatActivity() {
+    lateinit var binding:ActivityKupBeriladiganSavollarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityValyutaKurslariBinding.inflate(layoutInflater)
+        binding = ActivityKupBeriladiganSavollarBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor = Color.WHITE
         binding.orqagaQaytish.setOnClickListener {

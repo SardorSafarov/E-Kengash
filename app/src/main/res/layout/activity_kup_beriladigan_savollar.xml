@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chapMenu.valyutaKurslari.ValyutaKurslari">
-
+    tools:context="com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -33,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valyuta kursi"
+                android:text="Ko'p beriladigan savollar"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -55,5 +54,4 @@
                 app:tint="#109BFF" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
