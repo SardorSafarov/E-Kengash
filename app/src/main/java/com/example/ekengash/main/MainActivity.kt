@@ -22,6 +22,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
+import com.example.chapMenu.boglanish.Boglanish
 import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
@@ -65,6 +66,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.chap_menu_offerta ->{
                 startActivity(Intent(this,Offerta::class.java))
+            }
+            R.id.chap_menu_boglanish ->{
+                startActivity(Intent(this,Boglanish::class.java))
             }
         }
 

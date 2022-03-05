@@ -38,6 +38,11 @@
         android:title="Valuta kursi"
         android:icon="@drawable/ic_valyuta"
         app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/chap_menu_boglanish"
+        android:title="Bog'lanish"
+        app:showAsAction="always"
 
         />
 

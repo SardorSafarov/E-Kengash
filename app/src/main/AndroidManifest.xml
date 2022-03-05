@@ -14,6 +14,9 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.chapMenu.boglanish.Boglanish"
+            android:exported="false" />
+        <activity
             android:name="com.example.chapMenu.offerta.Offerta"
             android:exported="false" />
         <activity
