@@ -1,5 +1,6 @@
 package com.example.chapMenu.sozlanmalar.bildirishnoma
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.databinding.ActivityBildirshnomalarBinding
@@ -11,5 +12,9 @@ class SozlanmalarBildishnomalar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySozlanmalarBildishnomalarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.statusBarColor = Color.WHITE
+        binding.orqagaQaytish.setOnClickListener {
+            finish()
+        }
     }
 }

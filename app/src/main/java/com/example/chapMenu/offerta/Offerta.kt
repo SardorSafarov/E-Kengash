@@ -1,15 +1,15 @@
-package com.example.chapMenu.sozlanmalar.ilovaHaqida
+package com.example.chapMenu.offerta
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityIlovaHaqidaBinding
+import com.example.ekengash.databinding.ActivityOffertaBinding
 
-class IlovaHaqida : AppCompatActivity() {
-    lateinit var binding:ActivityIlovaHaqidaBinding
+class Offerta : AppCompatActivity() {
+    lateinit var binding:ActivityOffertaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityIlovaHaqidaBinding.inflate(layoutInflater)
+        binding = ActivityOffertaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor = Color.WHITE
         binding.orqagaQaytish.setOnClickListener {

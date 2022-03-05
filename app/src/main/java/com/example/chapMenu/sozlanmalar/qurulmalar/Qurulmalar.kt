@@ -1,5 +1,6 @@
 package com.example.chapMenu.sozlanmalar.qurulmalar
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.databinding.ActivityQurulmalarBinding
@@ -10,5 +11,9 @@ class Qurulmalar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityQurulmalarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.orqagaQaytish.setOnClickListener {
+            finish()
+        }
+        window.statusBarColor = Color.WHITE
     }
 }
