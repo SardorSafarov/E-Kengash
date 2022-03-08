@@ -80,13 +80,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/valyuta_sotib_olish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sotib olish"
                 android:textSize="18dp" />
 
             <TextView
+                android:id="@+id/valyuta_sotib_olish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10 000 00"

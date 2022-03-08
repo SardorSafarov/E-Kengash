@@ -1,4 +1,4 @@
-package com.example.network.endtity.valyuta
+package com.example.network.netWorkEndtity.valyuta
 
 data class ValyutaEntityItem(
     val Ccy: String,

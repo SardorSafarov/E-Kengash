@@ -1,4 +1,4 @@
-package com.example.ekengash.entity
+package com.example.ekengash.recyclerViewItemEntity
 
 class KuproqItemEntitit
     (

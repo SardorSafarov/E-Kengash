@@ -1,4 +1,4 @@
-package com.example.network.endtity.kirsh.ruyxatdanUtish.javob
+package com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.javob
 
 data class RuyxatdanUtishJavob(
     val `data`: Data,

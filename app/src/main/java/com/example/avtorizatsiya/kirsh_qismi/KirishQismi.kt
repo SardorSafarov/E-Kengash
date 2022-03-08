@@ -10,11 +10,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
 import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
-import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
@@ -48,9 +47,9 @@ class KirishQismi : Fragment() {
                     if (it.isSuccessful){
                         if(it.body()!!.status=="success")
                         {
-                            D.d(it.body()!!.data.token)
                             startActivity(Intent(requireContext(),MainActivity::class.java))
                             activity?.finish()
+
                         }
                         else
                         {

@@ -1,4 +1,4 @@
-package com.example.network.endtity.kirsh.parolniTekshirish.surov
+package com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov
 
 data class ParolniTekshirishSurov(
     val password: String,

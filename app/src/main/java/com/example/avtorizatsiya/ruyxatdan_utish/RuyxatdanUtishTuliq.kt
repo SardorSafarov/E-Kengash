@@ -12,7 +12,7 @@ import com.example.avtorizatsiya.kirsh_qismi.KirishQismi
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentRuyxatdanUtishTuliqBinding
 import com.example.log.D
-import com.example.network.endtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
+import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel

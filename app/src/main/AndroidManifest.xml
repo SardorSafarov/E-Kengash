@@ -42,7 +42,13 @@
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.valyutaKurslari.ValyutaKurslari"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"
             android:exported="false" />
@@ -59,22 +65,14 @@
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
             android:theme="@style/FullScreenThem" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity
             android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.aviachipta.izlash.AviaIzlash"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".servislar.aviachipta.izlash.AviaChptaIzlash" -->
-        <!-- android:exported="false" -->
-        <!-- android:label="@string/title_activity_avia_chpta_izlash" -->
-        <!-- android:theme="@style/Theme.EKengash.NoActionBar" /> -->
+            android:exported="false" />
         <activity
             android:name="com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy"
             android:exported="false" />

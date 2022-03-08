@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
 import com.example.ekengash.databinding.FragmentKuproqItem1Binding
-import com.example.ekengash.entity.KuproqItemEntitit
+import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
 import com.example.servislar.ab.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus

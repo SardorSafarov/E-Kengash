@@ -1,6 +1,6 @@
 package com.example.network.api
 
-import com.example.network.endtity.valyuta.ValyutaEntity
+import com.example.network.netWorkEndtity.valyuta.ValyutaEntity
 import retrofit2.Response
 import retrofit2.http.GET
 

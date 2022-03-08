@@ -1,4 +1,4 @@
-package com.example.ekengash.entity
+package com.example.ekengash.recyclerViewItemEntity
 
 class AsosiyServislarButtonEntity (
     val buttonName:List<KuproqItemEntitit> = listOf()

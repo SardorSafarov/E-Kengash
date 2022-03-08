@@ -1,4 +1,4 @@
-package com.example.network.endtity.kirsh.parolniTekshirish.javob
+package com.example.network.netWorkEndtity.kirsh.parolniTekshirish.javob
 
 data class User(
     val balanc: String,

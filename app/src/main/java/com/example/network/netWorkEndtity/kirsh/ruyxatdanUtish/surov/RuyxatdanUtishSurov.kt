@@ -1,4 +1,4 @@
-package com.example.network.endtity.kirsh.ruyxatdanUtish.surov
+package com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.surov
 
 data class RuyxatdanUtishSurov(
     val full_name: String,

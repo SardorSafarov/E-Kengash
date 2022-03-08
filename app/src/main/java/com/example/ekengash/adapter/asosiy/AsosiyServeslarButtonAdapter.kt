@@ -3,11 +3,10 @@ package com.example.ekengash.adapter.asosiy
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemAsosiyTugmalarBinding
-import com.example.ekengash.entity.AsosiyServislarButtonEntity
+import com.example.ekengash.recyclerViewItemEntity.AsosiyServislarButtonEntity
 
 class AsosiyServeslarButtonAdapter():RecyclerView.Adapter<AsosiyServeslarButtonAdapter.ViewHolder>() {
 

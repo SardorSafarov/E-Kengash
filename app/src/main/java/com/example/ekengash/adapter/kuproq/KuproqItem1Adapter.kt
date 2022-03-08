@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemKuproq1Binding
-import com.example.ekengash.entity.KuproqItemEntitit
+import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
 
 class KuproqItem1Adapter(private var listener: OnClickLister) :
     RecyclerView.Adapter<KuproqItem1Adapter.ViewHolder>() {

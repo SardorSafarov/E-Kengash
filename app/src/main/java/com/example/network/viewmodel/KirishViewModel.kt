@@ -4,11 +4,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
-import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
-import com.example.network.endtity.kirsh.parolniTekshirish.javob.ParolniTekshirishJavob
-import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
-import com.example.network.endtity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
-import com.example.network.endtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
+import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
+import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.javob.ParolniTekshirishJavob
+import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
+import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
 import com.example.network.repository.KirishRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response

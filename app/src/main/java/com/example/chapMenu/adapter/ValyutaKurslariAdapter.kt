@@ -1,0 +1,48 @@
+package com.example.chapMenu.adapter
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.ekengash.R
+import com.example.ekengash.databinding.ItemValyutaBinding
+import com.example.network.netWorkEndtity.valyuta.ValyutaEntityItem
+
+class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewHolder>() {
+
+    var list:List<ValyutaEntityItem> = mutableListOf()
+
+
+    inner class ViewHolder(item: View):RecyclerView.ViewHolder(item)
+    {
+        private val binding= ItemValyutaBinding.bind(itemView)
+        fun bind(item:ValyutaEntityItem)
+        {
+            binding.valyutaRamziyKodi.setText("1 "+item.Ccy)
+            binding.valyutaNomi.setText(item.CcyNm_UZ)
+            binding.valyutaMbDagi.setText(item.Rate)
+            binding.valyutaSotibOlish.setText((item.Rate.toDouble()-90).toString())
+            binding.valyutaSotish.setText((item.Rate.toDouble()+250).toString())
+
+        }
+    }
+
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ValyutaKurslariAdapter.ViewHolder {
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_valyuta,parent,false))
+    }
+
+    override fun onBindViewHolder(holder: ValyutaKurslariAdapter.ViewHolder, position: Int) {
+       holder.bind(list[position])
+    }
+
+    override fun getItemCount(): Int  = list.size
+
+    fun setData(list:List<ValyutaEntityItem>){
+        this.list = list
+        notifyDataSetChanged()
+    }
+}
