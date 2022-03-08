@@ -14,6 +14,7 @@ import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
+import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
@@ -39,7 +40,29 @@ class KirishQismi : Fragment() {
         binding.davomEtishButton.setOnClickListener {
             if(binding.parol.text.toString().isNotEmpty())
             {
-                startActivity(Intent(requireContext(),MainActivity::class.java))
+                kirishViewModel.parolniTekshirish(ParolniTekshirishSurov(
+                    password = binding.parol.text.toString().trim(),
+                    username ="998"+binding.telNumber.text.toString()
+                ))
+                kirishViewModel.parolniTekshirish.observe(viewLifecycleOwner, Observer {
+                    if (it.isSuccessful){
+                        if(it.body()!!.status=="success")
+                        {
+                            D.d(it.body()!!.data.token)
+                            startActivity(Intent(requireContext(),MainActivity::class.java))
+                            activity?.finish()
+                        }
+                        else
+                        {
+                            binding.textView24r.setText("Parol xato!!")
+
+                        }
+
+                    }else
+                    {
+                        D.d("KirishQismi parolniTekshirishga qara")
+                    }
+                })
             }
             else {
                 when (checkUser) {
@@ -58,12 +81,10 @@ class KirishQismi : Fragment() {
         kirishViewModel.telJunatish.observe(requireActivity(), Observer {
             if (it.isSuccessful) {
                 checkUser = it.body()!!.data.check
-                D.d("$checkUser")
                 if (checkUser == "Yes") {
                     binding.linearLayout7r.visibility = View.VISIBLE
                     binding.textView24r.visibility = View.VISIBLE
                     binding.parolniUnutdinggizmi.visibility=View.VISIBLE
-                    binding.ruyxatdanUtish.visibility=View.VISIBLE
                     binding.textView24r.text="Parolni kiriting"
                 } else {
                     binding.textView24r.visibility = View.VISIBLE
@@ -71,7 +92,7 @@ class KirishQismi : Fragment() {
                     binding.textView24r.text="Bunday Foydalanuvchi yo`q!"
                 }
             } else {
-                D.d("kirshqismidagi teljunatish ishlamadi")
+                D.d("KirishQismi telJunatish ishlamadi")
             }
 
 

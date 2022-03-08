@@ -1,4 +1,4 @@
-package com.example.network.endtity.foydalanuvchiBor
+package com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh
 
 data class FooydalanuvchiniTekshirish(
     val `data`: Data,
