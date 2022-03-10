@@ -4,15 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/davlat_bayrogi"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/davlat_bayrogi_material_card"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:background="@color/asosiy_orqa_ranggi"
+        app:cardCornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <ImageView
+            android:id="@+id/davlat_bayrog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -20,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/davlat_bayrogi"
-        app:layout_constraintTop_toTopOf="@+id/davlat_bayrogi">
+        app:layout_constraintStart_toEndOf="@+id/davlat_bayrogi_material_card"
+        app:layout_constraintTop_toTopOf="@+id/davlat_bayrogi_material_card">
 
         <TextView
             android:id="@+id/valyuta_ramziy_kodi"
@@ -49,7 +56,7 @@
         android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/davlat_bayrogi"
+        app:layout_constraintStart_toStartOf="@+id/davlat_bayrogi_material_card"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <LinearLayout

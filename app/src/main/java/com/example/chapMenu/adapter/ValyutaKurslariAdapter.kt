@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemValyutaBinding
+import com.example.log.D
 import com.example.network.netWorkEndtity.valyuta.ValyutaEntityItem
 
 class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewHolder>() {
@@ -18,6 +19,15 @@ class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewH
         private val binding= ItemValyutaBinding.bind(itemView)
         fun bind(item:ValyutaEntityItem)
         {
+            when(adapterPosition)
+            {
+                0->{binding.davlatBayrog.setImageResource(R.drawable.usa)}
+                1->{binding.davlatBayrog.setImageResource(R.drawable.euro)}
+                2->{binding.davlatBayrog.setImageResource(R.drawable.russia)}
+                3->{binding.davlatBayrog.setImageResource(R.drawable.gbp)}
+                4->{binding.davlatBayrog.setImageResource(R.drawable.jpy)}
+                5->{binding.davlatBayrog.setImageResource(R.drawable.chf)}
+            }
             binding.valyutaRamziyKodi.setText("1 "+item.Ccy)
             binding.valyutaNomi.setText(item.CcyNm_UZ)
             binding.valyutaMbDagi.setText(item.Rate)
@@ -36,10 +46,16 @@ class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewH
     }
 
     override fun onBindViewHolder(holder: ValyutaKurslariAdapter.ViewHolder, position: Int) {
-       holder.bind(list[position])
+        try {
+            holder.bind(list[position])
+        }catch (e:Exception)
+        {
+            D.d(e.message.toString())
+        }
+
     }
 
-    override fun getItemCount(): Int  = list.size
+    override fun getItemCount(): Int  = 6
 
     fun setData(list:List<ValyutaEntityItem>){
         this.list = list
