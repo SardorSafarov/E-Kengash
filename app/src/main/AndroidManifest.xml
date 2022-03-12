@@ -21,14 +21,32 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ProfilShaxsiyParofilTasdiqlash"
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.ShaxsiyProfilTasdiqlashSms"
             android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.YuzniSkanerlash"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.PassportMalumotlar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.ShaxsiyMalumotlar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.biznes.sms.BiznesProfilQurishSms"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.main.ProfilShaxsiyParofilTasdiqlash"
+            android:exported="true" />
         <activity
             android:name="com.example.chapMenu.profil.profileHaqida.ProfilHaqida"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.profil.main.Profil"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.example.qrcode.QRcodeScaner"
             android:exported="true"

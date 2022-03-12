@@ -1,19 +1,23 @@
-package com.example.chapMenu.profil.biznes
+package com.example.chapMenu.profil.biznes.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ekengash.R
+import com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish
 import com.example.ekengash.databinding.FragmentProfilBiznesBinding
-import com.example.ekengash.databinding.FragmentProfilShaxsiyBinding
 
 class ProfilBiznes : Fragment() {
 
 
-
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        binding.biznesProfilQushish.setOnClickListener {
+            startActivity(Intent(requireContext(),ProfilBiznesProfilQushish::class.java))
+        }
+    }
 
 
 

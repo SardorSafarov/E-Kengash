@@ -4,7 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.chapMenu.profil.biznes.ProfilBiznes
+import com.example.chapMenu.profil.biznes.main.ProfilBiznes
 import com.example.chapMenu.profil.profileHaqida.ProfilHaqida
 import com.example.chapMenu.profil.shaxsiy.ProfilShaxsiy
 import com.example.ekengash.R
