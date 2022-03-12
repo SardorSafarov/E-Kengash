@@ -1,8 +1,10 @@
 package com.example.ekengash.main
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -16,6 +18,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
@@ -25,6 +28,7 @@ import com.example.blok.BlokActivitt
 import com.example.chapMenu.boglanish.Boglanish
 import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
+import com.example.chapMenu.profil.Profil
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
@@ -39,6 +43,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     lateinit var binding: ActivityMainBinding
+    private var PERMISSIONS: Array<String> = arrayOf(
+        Manifest.permission.CAMERA
+        //  Manifest.permission.ACCESS_COARSE_LOCATION,
+    )
 
     @SuppressLint("WrongViewCast")
     @RequiresApi(Build.VERSION_CODES.M)
@@ -50,7 +58,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
 
-
+    /*=========================Chap menu itemclick==============================*/
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         when(id)
@@ -70,8 +78,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.chap_menu_boglanish ->{
                 startActivity(Intent(this,Boglanish::class.java))
             }
+            R.id.chap_menu_profil ->{
+                startActivity(Intent(this,Profil::class.java))
+            }
         }
-
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
         drawer.closeDrawer(GravityCompat.START)
         return true
@@ -128,6 +138,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         blok()
         statusBar()
         chapMenu()
+        chackPerimition()
     }
 
     private fun chapMenu() {
@@ -211,5 +222,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 
+    /*---------------Ruxsat berish-------------------*/
+    private fun chackPerimition() {
+        if (!hasPermissions(this, *PERMISSIONS)) {
+
+            ActivityCompat.requestPermissions(this,PERMISSIONS,1);
+        }
+    }
+    private fun hasPermissions(context: Context?, vararg PERMISSIONS: String): Boolean {
+        if (context != null && PERMISSIONS != null) {
+            for (permission in PERMISSIONS) {
+                if (ActivityCompat.checkSelfPermission(
+                        context,
+                        permission
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String?>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            }
+        }
+    }
 
 }

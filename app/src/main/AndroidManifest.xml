@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ekengash">
+    package="com.example.ekengash" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +19,15 @@
         android:roundIcon="@mipmap/ic_sardor"
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.example.chapMenu.profil.Profil"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qrcode.QRcodeScaner"
+            android:exported="true"
+            android:theme="@style/FullScreenThem" >
+        </activity>
         <activity
             android:name="com.example.chapMenu.boglanish.Boglanish"
             android:exported="false" />
@@ -43,11 +58,6 @@
         <activity
             android:name="com.example.chapMenu.valyutaKurslari.ValyutaKurslari"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"
@@ -65,7 +75,11 @@
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
             android:theme="@style/FullScreenThem" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
@@ -105,8 +119,7 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.EKengash">
-
+            android:theme="@style/Theme.EKengash" >
         </activity>
     </application>
 

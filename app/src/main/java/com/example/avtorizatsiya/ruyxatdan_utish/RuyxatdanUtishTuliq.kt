@@ -20,10 +20,6 @@ import com.example.network.viewmodel.KirishViewModel
 
 class RuyxatdanUtishTuliq : Fragment() {
 
-
-
-
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         setUi()
@@ -58,7 +54,6 @@ class RuyxatdanUtishTuliq : Fragment() {
                         phone = "998"+binding.telNumber.text.toString()
                     )
                 )
-
             }else
             {
                 binding.parolXarXil.visibility = View.VISIBLE
@@ -66,7 +61,7 @@ class RuyxatdanUtishTuliq : Fragment() {
         }
     }
 
-    /*=================Teginma============================================*/
+    /*=========================Teginma============================================*/
 
 
     private lateinit var kirishViewModel: KirishViewModel
