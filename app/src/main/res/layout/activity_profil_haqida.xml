@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chapMenu.profil.main.Profil">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chapMenu.profil.profileHaqida.ProfilHaqida">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profil"
+                android:text="Profil haqida"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="0dp"
                 android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:src="@drawable/ic_bildirishnoma_ic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,60 +56,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView9"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="#E8E8E8"
-        app:cardCornerRadius="6dp"
+        android:text="Profil haqida"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView6">
+        app:layout_constraintStart_toStartOf="@+id/materialCardView6"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingHorizontal="3dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/profil_shaxsiy"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:text="Shaxsiy"
-                android:textAllCaps="false"
-                android:stateListAnimator="@null"
-                android:textColor="@color/black"
-                app:cornerRadius="6dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/profil_biznes"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:backgroundTint="#E8E8E8"
-                android:text="Biznes"
-                android:stateListAnimator="@null"
-                android:textAllCaps="false"
-                android:textColor="#C0C0C0"
-                app:cornerRadius="6dp" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <FrameLayout
-        android:id="@+id/profil_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="14dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView9"
-        tools:layout="@layout/fragment_avia_qidirish" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ import com.example.blok.BlokActivitt
 import com.example.chapMenu.boglanish.Boglanish
 import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
-import com.example.chapMenu.profil.Profil
+import com.example.chapMenu.profil.main.Profil
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var binding: ActivityMainBinding
     private var PERMISSIONS: Array<String> = arrayOf(
         Manifest.permission.CAMERA
-        //  Manifest.permission.ACCESS_COARSE_LOCATION,
     )
 
     @SuppressLint("WrongViewCast")
@@ -79,7 +78,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this,Boglanish::class.java))
             }
             R.id.chap_menu_profil ->{
-                startActivity(Intent(this,Profil::class.java))
+                startActivity(Intent(this, Profil::class.java))
             }
         }
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
