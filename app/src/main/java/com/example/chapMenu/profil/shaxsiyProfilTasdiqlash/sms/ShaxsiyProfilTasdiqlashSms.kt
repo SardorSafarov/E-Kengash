@@ -1,4 +1,4 @@
-package com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish
+package com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

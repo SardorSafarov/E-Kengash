@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.main.ProfilShaxsiyParofilTasdiqlash
+import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.shaxsiyMalumotlar.ShaxsiyMalumotlar
 import com.example.ekengash.databinding.FragmentProfilShaxsiyBinding
 
 
@@ -20,7 +20,7 @@ class ProfilShaxsiy : Fragment() {
 
     private fun shaxsiyProfilniTasdiqlash() {
         binding.shaxsiyProfilniTasdiqlash.setOnClickListener {
-            startActivity(Intent(requireContext(), ProfilShaxsiyParofilTasdiqlash::class.java))
+            startActivity(Intent(requireContext(), ShaxsiyMalumotlar::class.java))
         }
     }
 

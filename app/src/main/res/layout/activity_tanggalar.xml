@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash.YuzniSkanerlash">
-       <com.google.android.material.card.MaterialCardView
+    android:background="@color/asosiy_orqa_ranggi"
+    tools:context="com.example.servislar.tanggalar.main.Tanggalar">
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -27,20 +27,18 @@
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/kuk" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yuzni skanerlash"
+                android:text="Tanggalar"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
                 android:id="@+id/qidirsh"
                 android:layout_width="50dp"
@@ -49,34 +47,68 @@
                 android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
                 android:visibility="invisible"
-                android:src="@drawable/ic_asoyiy_qidirsh"
+                android:src="@drawable/ic_list"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tint="@color/kuk" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="match_parent"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView9"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_yuzni_scanerlash"
+        android:backgroundTint="#E8E8E8"
+        app:cardCornerRadius="6dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6">
 
-    <SurfaceView
-        android:id="@+id/view"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="3dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/avia_qirirish"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:stateListAnimator="@null"
+                android:text="Tangga"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:cornerRadius="6dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/avia_chiptalar"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:backgroundTint="#E8E8E8"
+                android:stateListAnimator="@null"
+                android:text="Taxi"
+                android:textAllCaps="false"
+                android:textColor="#C0C0C0"
+                app:cornerRadius="6dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <FrameLayout
+        android:id="@+id/tanggalar_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-
-
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView9"
+        tools:layout="@layout/fragment_tanggalardan_foydalanish" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

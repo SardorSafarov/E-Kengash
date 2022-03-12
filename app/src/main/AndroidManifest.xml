@@ -21,16 +21,27 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.ShaxsiyProfilTasdiqlashSms"
+            android:name="com.example.servislar.tanggalar.main.Tanggalar"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.YuzniSkanerlash"
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash.YuzniSkanerlash"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.PassportMalumotlar"
-            android:exported="false" />
-        <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.ruyxatdanUtish.ShaxsiyMalumotlar"
+            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.shaxsiyMalumotlar.ShaxsiyMalumotlar"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.profil.biznes.sms.BiznesProfilQurishSms"
@@ -38,9 +49,6 @@
         <activity
             android:name="com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish"
             android:exported="false" />
-        <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.main.ProfilShaxsiyParofilTasdiqlash"
-            android:exported="true" />
         <activity
             android:name="com.example.chapMenu.profil.profileHaqida.ProfilHaqida"
             android:exported="false" />
@@ -68,9 +76,6 @@
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.sozlanmalar.bildirishnoma.SozlanmalarBildishnomalar"
-            android:exported="false" />
-        <activity
-            android:name="com.example.chapMenu.sozlanmalar.shaxsiy.ShaxsiyMalumotlar"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.sozlanmalar.main.Sozlanmalar"
@@ -135,13 +140,7 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.EKengash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.EKengash"></activity>
     </application>
 
 </manifest>

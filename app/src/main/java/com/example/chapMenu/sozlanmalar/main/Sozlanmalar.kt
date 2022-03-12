@@ -8,7 +8,6 @@ import com.example.chapMenu.sozlanmalar.bildirishnoma.SozlanmalarBildishnomalar
 import com.example.chapMenu.sozlanmalar.dasturTili.DasturTili
 import com.example.chapMenu.sozlanmalar.ilovaHaqida.IlovaHaqida
 import com.example.chapMenu.sozlanmalar.qurulmalar.Qurulmalar
-import com.example.chapMenu.sozlanmalar.shaxsiy.ShaxsiyMalumotlar
 import com.example.ekengash.databinding.ActivitySozlanmalarBinding
 
 class Sozlanmalar : AppCompatActivity() {
@@ -21,7 +20,7 @@ class Sozlanmalar : AppCompatActivity() {
         binding.orqagaQaytish.setOnClickListener {
             finish()
         }
-        shaxsiyMalumotlar()
+     //   shaxsiyMalumotlar()
         bildirishnomalar()
         dasturTili()
         qurulmalar()
@@ -52,9 +51,9 @@ class Sozlanmalar : AppCompatActivity() {
         }
     }
 
-    private fun shaxsiyMalumotlar() {
-        binding.sozlanmalarShaxsiyMalumotlar.setOnClickListener {
-            startActivity(Intent(this,ShaxsiyMalumotlar::class.java))
-        }
-    }
+//    private fun shaxsiyMalumotlar() {
+//        binding.sozlanmalarShaxsiyMalumotlar.setOnClickListener {
+//            startActivity(Intent(this,ShaxsiyMalumotlar::class.java))
+//        }
+//    }
 }
