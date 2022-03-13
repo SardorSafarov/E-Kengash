@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityTanggalarBinding
-import com.example.servislar.aviachipta.chiptalarim.AviaChiptalarim
-import com.example.servislar.aviachipta.qidirish.AviaQidirish
-import com.example.servislar.tanggalar.tangga_1.TanggalardanFoydalanish
+import com.example.servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish
 import com.example.servislar.tanggalar.taxi.TanggalardanTaxi
 
-class Tanggalar : AppCompatActivity() {
+class ServisTanggalar : AppCompatActivity() {
     private lateinit var binding:ActivityTanggalarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

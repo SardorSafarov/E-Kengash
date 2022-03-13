@@ -1,16 +1,17 @@
-package com.example.servislar.ab
+package com.example.servislar.ab.izlash
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.ekengash.databinding.ActivityAbIzlashBinding
 import com.example.ekengash.databinding.ActivityServesAbBinding
 
-class ServesAB : AppCompatActivity() {
+class ABIzlash : AppCompatActivity() {
 
-    lateinit var binding:ActivityServesAbBinding
+    lateinit var binding:ActivityAbIzlashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityServesAbBinding.inflate(layoutInflater)
+        binding= ActivityAbIzlashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor= Color.parseColor("#F3F3F3")
 

@@ -41,7 +41,7 @@
             android:backgroundTint="#99999988"
             app:cardCornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/chap_menu"
-            app:layout_constraintEnd_toStartOf="@+id/imageView1"
+            app:layout_constraintEnd_toStartOf="@+id/tanggalar"
             app:layout_constraintStart_toEndOf="@+id/chap_menu"
             app:layout_constraintTop_toTopOf="@+id/chap_menu"
             android:orientation="horizontal"
@@ -103,7 +103,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/imageView1"
+            android:id="@+id/tanggalar"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginEnd="5dp"

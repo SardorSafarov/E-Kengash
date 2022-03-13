@@ -13,6 +13,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_avia_chpta_izlash">AviaChptaIzlash</string>
     <string name="davom_etish_btn_text">Davom etish</string>
+    <string name="cameraga_olish" >Iltimos sizning yuzinggiz belgilangan maydondan chiqmasligi va ko\'zlaringgiz yumulmagan bo\'lishini taninlang.Agar ko\'zoynakinggiz bo\'lsa yechib oling.</string>
 
 
     <string-array name="Oylar">

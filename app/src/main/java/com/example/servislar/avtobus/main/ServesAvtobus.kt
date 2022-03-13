@@ -63,7 +63,7 @@ class ServesAvtobus : AppCompatActivity() {
 
 
     private fun ortgaqaytish() {
-        binding.imageView3.setOnClickListener {
+        binding.orqagaQaytishAb.setOnClickListener {
             finish()
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ekengash">
+    package="com.example.ekengash" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,24 +19,38 @@
         android:roundIcon="@mipmap/ic_sardor"
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
+
         <activity
-            android:name="com.example.servislar.tanggalar.main.Tanggalar"
-            android:exported="true" >
+            android:name="com.example.avtorizatsiya.main.Kirish"
+            android:exported="true"
+            android:theme="@style/FullScreenThem" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.servislar.ab.main.ServesAB"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name="com.example.servislar.tanggalar.turarJoy.TanggalarTurarJoy"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.tanggalar.main.ServisTanggalar"
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash.YuzniSkanerlash"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar"
             android:exported="false" />
@@ -98,10 +112,7 @@
         <activity
             android:name="com.example.servislar.turarJoylar.main.ServesTurarjoy"
             android:exported="false" />
-        <activity
-            android:name="com.example.avtorizatsiya.main.Kirish"
-            android:exported="true"
-            android:theme="@style/FullScreenThem" />
+
         <activity
             android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
             android:exported="false" />
@@ -115,7 +126,7 @@
             android:name="com.example.servislar.chegirmalar.ServesChegirmalar"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.ab.ServesAB"
+            android:name="com.example.servislar.ab.izlash.ABIzlash"
             android:exported="false" />
         <activity
             android:name=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
@@ -140,7 +151,7 @@
         <activity
             android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.EKengash"></activity>
+            android:theme="@style/Theme.EKengash" />
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash
 
 import android.Manifest.permission.CAMERA
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.AssetFileDescriptor
 import android.graphics.Color
@@ -11,23 +12,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.SurfaceHolder
 import androidx.annotation.RequiresApi
+import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms
 import com.example.ekengash.databinding.ActivityYuzniSkanerlashBinding
 
-class YuzniSkanerlash : AppCompatActivity(),SurfaceHolder.Callback2 {
+class YuzniSkanerlash : AppCompatActivity() {
     lateinit var binding:ActivityYuzniSkanerlashBinding
-    lateinit var mediya:MediaPlayer
-    lateinit var surfaceHolder: SurfaceHolder
-    lateinit var file:AssetFileDescriptor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityYuzniSkanerlashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         statusbar()
         ortgaQaytish()
+        davomEtish()
+    }
 
-        surfaceHolder = binding.view.holder
-        surfaceHolder.addCallback(this)
-        file = assets.openFd("sardor.mp4")
+    private fun davomEtish() {
+        binding.davomEtishButton.setOnClickListener {
+            startActivity(Intent(this,ShaxsiyProfilTasdiqlashSms::class.java))
+        }
     }
 
     private fun ortgaQaytish() {
@@ -41,26 +44,6 @@ class YuzniSkanerlash : AppCompatActivity(),SurfaceHolder.Callback2 {
     }
 
 
-    @RequiresApi(Build.VERSION_CODES.N)
-    override fun surfaceCreated(surfaceHolde: SurfaceHolder) {
-        mediya = MediaPlayer()
-        mediya.setDisplay(surfaceHolde)
-        mediya.setDataSource(file)
-        mediya.prepareAsync()
-        mediya.setOnPreparedListener{mediaPlyer -> mediaPlyer.start()}
-    }
-
-    override fun surfaceChanged(p0: SurfaceHolder, p1: Int, p2: Int, p3: Int) {
-
-    }
-
-    override fun surfaceDestroyed(p0: SurfaceHolder) {
-
-    }
-
-    override fun surfaceRedrawNeeded(p0: SurfaceHolder) {
-
-    }
 }
 //
 //

@@ -10,11 +10,12 @@ import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.qrcode.QRcodeScaner
-import com.example.servislar.ab.ServesAB
+import com.example.servislar.ab.izlash.ABIzlash
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
 import com.example.servislar.poyezd.main.ServesPoyezd
+import com.example.servislar.tanggalar.main.ServisTanggalar
 import com.example.servislar.taxi.main.ServesTaxi
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
@@ -27,6 +28,13 @@ class Asosiy : Fragment() {
         servesButton()
         asosiyBildishnomalar()
         qrcodeScaner()
+        tanggalar()
+    }
+
+    private fun tanggalar() {
+        binding.tanggalar.setOnClickListener {
+            startActivity(Intent(requireContext(),ServisTanggalar::class.java))
+        }
     }
 
     private fun qrcodeScaner() {
@@ -56,7 +64,7 @@ class Asosiy : Fragment() {
             startActivity(Intent(context, ServesPoyezd::class.java))
         }
         binding.servesABButton.setOnClickListener {
-        startActivity(Intent(context,ServesAB::class.java))
+        startActivity(Intent(context, ABIzlash::class.java))
         }
         binding.servesChegirmalarButton.setOnClickListener {
             startActivity(Intent(context,ServesChegirmalar::class.java))

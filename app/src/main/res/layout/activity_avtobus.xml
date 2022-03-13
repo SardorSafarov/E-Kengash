@@ -7,7 +7,7 @@
     android:background="#F3F3F3"
     tools:context="com.example.servislar.avtobus.main.ServesAvtobus">
     <ImageButton
-        android:id="@+id/imageView3"
+        android:id="@+id/orqaga_qaytish_ab"
         android:layout_width="60dp"
         android:layout_height="35dp"
         android:layout_marginStart="5dp"
@@ -25,10 +25,10 @@
         android:text="Avtobus"
         android:textSize="22dp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/orqaga_qaytish_ab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="@+id/orqaga_qaytish_ab" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView9"
