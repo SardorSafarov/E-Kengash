@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/asosiy_orqa_ranggi"
     android:layout_height="match_parent"
+    android:background="@color/asosiy_orqa_ranggi"
     tools:context="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.shaxsiyMalumotlar.ShaxsiyMalumotlar">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:cardElevation="0dp"
         android:backgroundTint="@color/asosiy_orqa_ranggi"
+        app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,8 +25,8 @@
                 android:id="@+id/orqaga_qaytish"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:paddingStart="20dp"
                 android:paddingVertical="14dp"
+                android:paddingStart="20dp"
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +37,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Shaxsiy ma'lumotlar"
-                android:textSize="18dp"
                 android:textColor="@color/black"
+                android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,8 +51,8 @@
                 android:layout_marginTop="0dp"
                 android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
-                android:visibility="invisible"
                 android:src="@drawable/ic_asoyiy_qidirsh"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -119,6 +119,8 @@
                             android:layout_marginTop="30dp"
                             android:hint="Ismi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
@@ -126,7 +128,8 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,6 +137,8 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
                             android:hint="Familiyasi"
@@ -141,7 +146,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -151,12 +157,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:hint="Otasini ismi"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -166,12 +175,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:hint="Tug'ilgan kuninggiz"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <TextView
@@ -209,6 +221,8 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
                             android:hint="Davlat talang"
@@ -216,7 +230,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -225,12 +240,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:hint="Viloyat va shahar(tuman)"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -239,12 +257,15 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:hint="Telefon raqam"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -253,13 +274,16 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginBottom="20dp"
                             android:hint="Email"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                     </LinearLayout>
@@ -313,9 +337,6 @@
 
 
     </ScrollView>
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

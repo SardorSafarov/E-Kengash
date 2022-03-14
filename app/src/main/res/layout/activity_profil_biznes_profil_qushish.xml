@@ -77,18 +77,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginVertical="20dp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/avia_izlash"
+
+                android:layout_marginBottom="1dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/avia_izlash"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
                     android:layout_marginBottom="80dp"
                     app:cardCornerRadius="10dp"
-                    android:layout_marginHorizontal="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +122,8 @@
                             android:layout_marginTop="30dp"
                             android:hint="Tashkilot turi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
@@ -127,7 +131,8 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,6 +145,8 @@
                             android:layout_marginTop="9dp"
                             android:hint="Korxona yoki tashkilot nomi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismi">
@@ -147,7 +154,8 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii2"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -159,6 +167,8 @@
                             android:layout_marginTop="20dp"
                             android:hint="Tashkilotning rasmiy nomi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii">
@@ -166,6 +176,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii23"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,6 +189,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="Direktori(F.I.O)"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii12">
@@ -185,6 +198,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -197,6 +211,8 @@
                             android:layout_marginTop="20dp"
                             android:hint="Telefon raqami"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121">
@@ -204,6 +220,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233q"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -216,6 +233,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="Qo`shimcha telefon raqami"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121q">
@@ -223,6 +242,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -235,6 +255,8 @@
                             android:layout_marginTop="20dp"
                             android:hint="Email"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qq">
@@ -242,6 +264,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,6 +277,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="STIR"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqq">
@@ -261,6 +286,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -273,6 +299,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="Bank nomi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqq">
@@ -280,6 +308,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -292,6 +321,8 @@
                             android:layout_marginTop="20dp"
                             android:hint="MFO"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqq">
@@ -299,6 +330,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -311,6 +343,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="Hisob raqami"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqq">
@@ -318,6 +352,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -330,6 +365,8 @@
                             android:layout_marginTop="20dp"
                             android:hint="Davlat shahar"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqqq">
@@ -337,6 +374,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -349,6 +387,8 @@
                             android:layout_marginTop="19dp"
                             android:hint="Yuridik manzili"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqqqq">
@@ -356,6 +396,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqqqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -369,6 +410,8 @@
                             android:layout_marginBottom="20dp"
                             android:hint="Pochta indeksi"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -377,6 +420,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii233qqqqqqqqqq"
                                 android:layout_width="match_parent"
+                                android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 

@@ -52,6 +52,7 @@ class RuyxatdanUtish : Fragment() {
 
 
     private var telNomerViewModel:TelNomerViewModel? = null
+
     private var _binding: FragmentRuyxatdanUtishBinding? = null
     private val binding get() = _binding!!
 

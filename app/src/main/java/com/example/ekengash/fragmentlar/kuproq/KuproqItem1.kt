@@ -7,20 +7,36 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
 import com.example.ekengash.databinding.FragmentKuproqItem1Binding
 import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
+import com.example.qrcode.QRcodeScaner
 import com.example.servislar.ab.izlash.ABIzlash
+import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
 import com.example.servislar.poyezd.main.ServesPoyezd
+import com.example.servislar.tanggalar.main.ServisTanggalar
 import com.example.servislar.taxi.main.ServesTaxi
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
 
 class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
+    private var _binding: FragmentKuproqItem1Binding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentKuproqItem1Binding.inflate(inflater, container, false)
+        adapter = KuproqItem1Adapter(this)
+        return binding.root
+    }
 
 
     private lateinit var adapter: KuproqItem1Adapter
@@ -28,7 +44,7 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        adapter = KuproqItem1Adapter(this)
+
         adaptergaUlash()
     }
 
@@ -51,7 +67,7 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
                 startActivity(Intent(context, ServesPoyezd::class.java))
             }
             "A-B"->{
-                startActivity(Intent(context, ABIzlash::class.java))
+                startActivity(Intent(context, ServesAB::class.java))
             }
             "Taksi"->{
                 startActivity(Intent(context, ServesTaxi::class.java))
@@ -62,22 +78,20 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
             "Mehmonxona"->{
                 startActivity(Intent(context, ServesTurarjoy::class.java))
             }
+            "Valyuta kursi"->{
+                startActivity(Intent(context, ValyutaKurslari::class.java))
+            }
+            "Tanggalar"->{
+                startActivity(Intent(context, ServisTanggalar::class.java))
+            }
+            "Kamera"->{
+                startActivity(Intent(context, QRcodeScaner::class.java))
+            }
         }
     }
 
     /*-------------Teginmaaa----------------*/
-    private var _binding: FragmentKuproqItem1Binding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentKuproqItem1Binding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -102,18 +116,18 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
             icon = R.drawable.ic_chiptalarim,
             text = "Chiptalarim"
         ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_sayohatlarim,
-            text = "Sayohatlarim"
-        ),
+//        KuproqItemEntitit(
+//            icon = R.drawable.ic_sayohatlarim,
+//            text = "Sayohatlarim"
+//        ),
         KuproqItemEntitit(
             icon = R.drawable.ic_saqlanganlar,
             text = "Saqlanganlar"
         ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_mudatliy_tolov,
-            text = "Muddatli to'lov"
-        ),
+//        KuproqItemEntitit(
+//            icon = R.drawable.ic_mudatliy_tolov,
+//            text = "Muddatli to'lov"
+//        ),
         KuproqItemEntitit(
             icon = R.drawable.ic_a_b,
             text = "A-B"

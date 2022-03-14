@@ -11,6 +11,7 @@ import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQid
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.qrcode.QRcodeScaner
 import com.example.servislar.ab.izlash.ABIzlash
+import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
@@ -21,6 +22,18 @@ import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
 
 class Asosiy : Fragment() {
+    private var _binding: FragmentAsosiy2Binding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentAsosiy2Binding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -64,7 +77,7 @@ class Asosiy : Fragment() {
             startActivity(Intent(context, ServesPoyezd::class.java))
         }
         binding.servesABButton.setOnClickListener {
-        startActivity(Intent(context, ABIzlash::class.java))
+        startActivity(Intent(context, ServesAB::class.java))
         }
         binding.servesChegirmalarButton.setOnClickListener {
             startActivity(Intent(context,ServesChegirmalar::class.java))
@@ -81,18 +94,7 @@ class Asosiy : Fragment() {
             startActivity(Intent(context,AsosiyQidirish::class.java))
         }
     }
-    private var _binding: FragmentAsosiy2Binding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentAsosiy2Binding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
     //    private val list:List<AsosiyServislarButtonEntity> = listOf(
 //        AsosiyServislarButtonEntity(
 //            buttonName = listOf(

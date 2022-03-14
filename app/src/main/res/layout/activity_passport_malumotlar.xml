@@ -119,6 +119,8 @@
                             android:layout_marginTop="30dp"
                             android:hint="Passport seriyasi va raqami"
                             android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
@@ -126,7 +128,8 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismii1"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,13 +138,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginTop="15dp"
                             android:hint="JSHSHIR"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -150,13 +156,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginTop="15dp"
                             android:hint="Kim tomonidan berilgan"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -164,6 +173,8 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
                             android:hint="Berilgan vaqti"
@@ -171,7 +182,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -180,6 +192,8 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
                             android:hint="Amal qilish muddati"
@@ -187,7 +201,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -195,19 +210,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginTop="15dp"
                             android:hint="Tug'ulgan joyi(davlatlar ro'yxati)"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
                             android:hint="Doimiy ro'yxatdan o'tgan manzili"
@@ -215,7 +235,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -223,6 +244,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
                             android:layout_marginTop="15dp"
                             android:layout_marginBottom="20dp"
                             android:hint="Email"
@@ -230,7 +253,8 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"

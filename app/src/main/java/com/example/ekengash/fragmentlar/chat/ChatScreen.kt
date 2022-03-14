@@ -20,6 +20,8 @@ import com.example.ekengash.databinding.DiaolgChatYordamHaqidaBinding
 
 
 class ChatScreen : AppCompatActivity() {
+    lateinit var binding :ActivityChatScreenBinding
+    var ovozliButton=true
 
 
 
@@ -60,8 +62,6 @@ class ChatScreen : AppCompatActivity() {
         topMenu()
     }
 
-    lateinit var binding :ActivityChatScreenBinding
-    var ovozliButton=true
 
     private fun topMenu() {
         val clickListener = View.OnClickListener { view ->
@@ -114,17 +114,17 @@ class ChatScreen : AppCompatActivity() {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-              when(p0.toString().length)
-              {
-                  0->{
-                      D.d(p0.toString())
-                      binding.xabarJunatish.setImageResource(R.drawable.ic_chat_mikrafon)
-                  }
-                  else->{
-                      D.d(p0.toString())
-                      binding.xabarJunatish.setImageResource(R.drawable.ic_xabar_yuborish)
-                  }
-              }
+//              when(p0.toString().length)
+//              {
+//                  0->{
+//                      D.d(p0.toString())
+//                      binding.xabarJunatish.setImageResource(R.drawable.ic_chat_mikrafon)
+//                  }
+//                  else->{
+//                      D.d(p0.toString())
+//                      binding.xabarJunatish.setImageResource(R.drawable.ic_xabar_yuborish)
+//                  }
+//              }
             }
             override fun afterTextChanged(p0: Editable?) {
             }

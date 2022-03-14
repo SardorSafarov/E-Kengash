@@ -61,7 +61,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView9"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:backgroundTint="#E8E8E8"
         app:cardCornerRadius="6dp"
         android:layout_marginTop="20dp"
@@ -75,16 +75,47 @@
             android:orientation="horizontal"
             android:paddingHorizontal="3dp">
 
-            <com.google.android.material.button.MaterialButton
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/avia_qirirish"
                 android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:layout_marginVertical="2dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp"
+                android:layout_height="match_parent"
                 android:stateListAnimator="@null"
-                android:text="Tangga"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
-                app:cornerRadius="6dp" />
+                app:cornerRadius="6dp" >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:src="@drawable/tangga"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tangga_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="0000 ta"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/avia_chiptalar"

@@ -349,7 +349,7 @@
                                     android:id="@+id/button_name2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Aviabelet"
+                                    android:text="Aviachipta"
                                     android:textSize="10dp"
                                     android:textStyle="bold"
                                     android:textColor="@color/black"

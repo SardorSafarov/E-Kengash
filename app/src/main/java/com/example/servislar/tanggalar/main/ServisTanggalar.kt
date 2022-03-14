@@ -46,7 +46,7 @@ class ServisTanggalar : AppCompatActivity() {
             true->
             {
                 binding.aviaQirirish.setBackgroundColor(Color.WHITE)
-                binding.aviaQirirish.setTextColor(Color.BLACK)
+                binding.tanggaText.setTextColor(Color.BLACK)
                 binding.aviaChiptalar.setBackgroundColor(Color.parseColor("#E8E8E8"))
                 binding.aviaChiptalar.setTextColor(Color.parseColor("#C0C0C0"))
 
@@ -56,7 +56,7 @@ class ServisTanggalar : AppCompatActivity() {
                 binding.aviaChiptalar.setBackgroundColor(Color.WHITE)
                 binding.aviaChiptalar.setTextColor(Color.BLACK)
                 binding.aviaQirirish.setBackgroundColor(Color.parseColor("#E8E8E8"))
-                binding.aviaQirirish.setTextColor(Color.parseColor("#C0C0C0"))
+                binding.tanggaText .setTextColor(Color.parseColor("#C0C0C0"))
             }
         }
 

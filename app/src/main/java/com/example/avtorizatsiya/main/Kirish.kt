@@ -1,12 +1,11 @@
 package com.example.avtorizatsiya.main
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.avtorizatsiya.kirsh_qismi.KirishQismi
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityKirishBinding
-
 
 
 class Kirish : AppCompatActivity() {

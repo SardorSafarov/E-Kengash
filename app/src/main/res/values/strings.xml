@@ -14,6 +14,8 @@
     <string name="title_activity_avia_chpta_izlash">AviaChptaIzlash</string>
     <string name="davom_etish_btn_text">Davom etish</string>
     <string name="cameraga_olish">Iltimos sizning yuzinggiz belgilangan maydondan chiqmasligi va ko\'zlaringgiz yumulmagan bo\'lishini taninlang.Agar ko\'zoynakinggiz bo\'lsa yechib oling.</string>
+    <string name="profil_shaxsiy_text">Ilovaning barcha imkoniyatlaridan foydalanish uchun iltimos profilingizni tasdiqlash jarayonidan o\'ting.</string>
+    <string name="profil_biznes_text">Shaxsiy biznes yoki tashkilotinggizni ilovaga qo\'shish orqali xizmatlarimizdan foydalanishingiz va hisob raqamdan to\'lov qilishingiz mumkin. Batafsil ma\'lumot uchun qo\'llab-quvvatlash markaziga murojaat eting!\n\nEslatma:Biznes profil qo\'shishdan oldin avvalo,shaxsiy profilni tasdiqlashingiz shart!</string>
 
 
     <string-array name="Oylar">

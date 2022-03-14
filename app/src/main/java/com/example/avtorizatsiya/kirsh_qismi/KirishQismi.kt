@@ -9,25 +9,81 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
+import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtishTuliq
+import com.example.avtorizatsiya.ruyxatdan_utish.TelNomerViewModel
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
+import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
 import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
 import com.example.room.roomEntity.TokenEntity
 import com.example.room.viewModel.TokenViewModel
+import retrofit2.Response
 
 
 class KirishQismi : Fragment() {
-
-
+    private var _binding: FragmentKirishQismiBinding? = null
+    private val binding get() = _binding!!
     private lateinit var kirishViewModel: KirishViewModel
     private var checkUser = ""
     private val tokenViewModel: TokenViewModel by activityViewModels()
+    private var telNomerViewModel: TelNomerViewModel? = null
+    //Click listenrlani iloji bulsa onCreateViewda qoyib oling
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentKirishQismiBinding.inflate(inflater, container, false)
+        setUi()
+        binding.apply {
+            davomEtishButton.setOnClickListener {
+                val parolText = parol.text.toString()
+                if (parolText.isNotEmpty()) {
+                    kirishViewModel.parolniTekshirish(
+                        ParolniTekshirishSurov(
+                            password = binding.parol.text.toString().trim(),
+                            username = "998" + binding.telNumber.text.toString()
+                        )
+                    )
+                }
+                else
+                {
+                    kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
+                    {
+                        onResponse(it)
+                    }
+                }
+            }
+        }
+        kirishViewModel.parolniTekshirish.observe(viewLifecycleOwner, Observer {
+            if (it.isSuccessful) {
+                if (it.body()!!.status == "success") {
+                    tokenViewModel.insertToken(TokenEntity(token = it.body()!!.data.token))
+                    startActivity(Intent(requireContext(), MainActivity::class.java))
+                    activity?.finish()
+                } else {
+                    binding.textView24r.setText("Parol xato!!")
+                }
+
+            } else {
+                D.d("KirishQismi parolniTekshirishga qara")
+            }
+        })
+        return binding.root
+    }
+
+
+
+
+
     private fun setUi() {
         val kirishRepository = KirishRepository()
         val kirishViewModelFactory = KirishViewModelFactory(kirishRepository)
@@ -36,98 +92,34 @@ class KirishQismi : Fragment() {
             kirishViewModelFactory
         ).get(KirishViewModel::class.java)
         this.kirishViewModel = kirishViewModel
-
     }
 
-    fun telJunatish() {
-        binding.davomEtishButton.setOnClickListener {
-            if(binding.parol.text.toString().isNotEmpty())
-            {
-                kirishViewModel.parolniTekshirish(ParolniTekshirishSurov(
-                    password = binding.parol.text.toString().trim(),
-                    username ="998"+binding.telNumber.text.toString()
-                ))
-                kirishViewModel.parolniTekshirish.observe(viewLifecycleOwner, Observer {
-                    if (it.isSuccessful){
-                        if(it.body()!!.status=="success")
-                        {
-                            tokenViewModel.insertToken(TokenEntity(token = it.body()!!.data.token))
-                            startActivity(Intent(requireContext(),MainActivity::class.java))
-                            activity?.finish()
+    /*----------------------Teginma------------------------------------*/
 
-                        }
-                        else
-                        {
-                            binding.textView24r.setText("Parol xato!!")
 
-                        }
 
-                    }else
-                    {
-                        D.d("KirishQismi parolniTekshirishga qara")
-                    }
-                })
-            }
-            else {
-                when (checkUser) {
-                    "" -> {
-                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
-                    }
-                    "Yes" -> {
-                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
-                    }
-                    "No" -> {
-                        kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
-                    }
-                }
-            }
-        }
-        kirishViewModel.telJunatish.observe(requireActivity(), Observer {
+    fun onResponse(response: Response<FooydalanuvchiniTekshirish>?) {
+        response?.let {
             if (it.isSuccessful) {
                 checkUser = it.body()!!.data.check
                 if (checkUser == "Yes") {
                     binding.linearLayout7r.visibility = View.VISIBLE
                     binding.textView24r.visibility = View.VISIBLE
-                    binding.parolniUnutdinggizmi.visibility=View.VISIBLE
-                    binding.textView24r.text="Parolni kiriting"
+                    binding.parolniUnutdinggizmi.visibility = View.VISIBLE
+                    binding.textView24r.text = "Parolni kiriting"
                 } else {
-                    binding.textView24r.visibility = View.VISIBLE
-                    binding.linearLayout7r.visibility = View.INVISIBLE
-                    binding.textView24r.text="Bunday Foydalanuvchi yo`q!"
+                    telNomerViewModel =
+                        ViewModelProviders.of(requireActivity()).get(TelNomerViewModel::class.java)
+                    telNomerViewModel!!.telNomer(binding.telNumber.text.toString())
+                    requireFragmentManager()?.beginTransaction()
+                        ?.replace(R.id.kirsh_qismidagi_fragment, RuyxatdanUtishTuliq())
+                        ?.addToBackStack(null)?.commit()
                 }
-            } else {
+            }
+            else
+            {
                 D.d("KirishQismi telJunatish ishlamadi")
             }
-
-
-        })
-    }
-
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        setUi()
-        telJunatish()
-        binding.ruyxatdanUtish.setOnClickListener {
-            requireFragmentManager().beginTransaction()
-                .replace(R.id.kirsh_qismidagi_fragment, RuyxatdanUtish()).commit()
         }
     }
-
-
-    /*----------------------Teginma------------------------------------*/
-    private var _binding: FragmentKirishQismiBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentKirishQismiBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-
 }

@@ -8,42 +8,45 @@
         app:showAsAction="always"
         />
     <item
-        android:id="@+id/chap_menu_bildirishnoma"
-        android:title="Bildirishnomalar"
-        android:icon="@drawable/ic_chap_m_bildirishnoma"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/chap_menu_sozlanma"
-        android:title="Sozlanmalar"
-        android:icon="@drawable/ic_chap_m_sozlanma"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/chap_menu_offerta"
-        android:title="Offerta"
-        android:icon="@drawable/ic_chap_m_offerta"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/chap_menu_kup_savol"
-        android:title="Ko`p beriladigan savollar"
-        android:icon="@drawable/ic_chap_m_kup_savol"
-        app:showAsAction="always"/>
-    <item
-        android:id="@+id/chap_menu_ilova_ulashish"
-        android:title="Ilovani ulashish"
-        android:icon="@drawable/ic_chap_m_ilovani_ulash"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/chap_menu_valuta_kursi"
         android:title="Valuta kursi"
         android:icon="@drawable/ic_valyuta"
         app:showAsAction="always"
         />
     <item
-        android:id="@+id/chap_menu_boglanish"
-        android:title="Bog'lanish"
-        app:showAsAction="always"
+        android:id="@+id/chap_menu_kup_savol"
+        android:title="Ko`p beriladigan savollar"
+        android:icon="@drawable/ic_chap_m_kup_savol"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/chap_menu_offerta"
+        android:title="Offerta"
+        android:icon="@drawable/ic_chap_m_offerta"
+        app:showAsAction="always"/>
+<!--    <item-->
+<!--        android:id="@+id/chap_menu_bildirishnoma"-->
+<!--        android:title="Bildirishnomalar"-->
+<!--        android:icon="@drawable/ic_chap_m_bildirishnoma"-->
+<!--        app:showAsAction="ifRoom"/>-->
+    <item
+        android:id="@+id/chap_menu_sozlanma"
+        android:title="Sozlanmalar"
+        android:icon="@drawable/ic_chap_m_sozlanma"
+        app:showAsAction="always"/>
 
-        />
+
+    <item
+        android:id="@+id/chap_menu_ilova_ulashish"
+        android:title="Ilovani ulashish"
+        android:icon="@drawable/ic_chap_m_ilovani_ulash"
+        app:showAsAction="always"/>
+
+
+<!--    <item-->
+<!--        android:id="@+id/chap_menu_boglanish"-->
+<!--        android:title="Bog'lanish"-->
+<!--        app:showAsAction="always"-->
+
+<!--        />-->
 
 </menu>

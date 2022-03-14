@@ -45,11 +45,12 @@ class KirishViewModel(private val kirishRepository: KirishRepository):ViewModel(
 
     /*----------------Telefin raqamni junatish yani foydalanuvchini tekshirish------------------*/
     val telJunatish: MutableLiveData<Response<FooydalanuvchiniTekshirish>> = MutableLiveData()
-    fun telJunatish(tel:String)
+    //argumentiga funkiya qoyilgan interface vasifanisini bajaradi
+    fun telJunatish(tel:String,onResponse: (response: Response<FooydalanuvchiniTekshirish>)->Unit)
     {
         viewModelScope.launch {
             try {
-                telJunatish.value = kirishRepository.telJunatish(tel)
+                onResponse(kirishRepository.telJunatish(tel))
             }catch (e:Exception)
             {
                 D.d("KirishViewModel telJunatish funi  ${e.message}")

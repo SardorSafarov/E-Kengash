@@ -84,9 +84,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.chap_menu_offerta ->{
                 startActivity(Intent(this,Offerta::class.java))
             }
-            R.id.chap_menu_boglanish ->{
-                startActivity(Intent(this,Boglanish::class.java))
-            }
+//            R.id.chap_menu_boglanish ->{
+//                startActivity(Intent(this,Boglanish::class.java))
+//            }
             R.id.chap_menu_profil ->{
                 startActivity(Intent(this, Profil::class.java))
             }

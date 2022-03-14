@@ -79,14 +79,7 @@ class RuyxatdanUtishTuliq : Fragment() {
 
 
 
-    private fun telNumberniOlish() {
-        val  telNomerViewModel= ViewModelProviders.of(requireActivity()).get(TelNomerViewModel::class.java)
-        telNomerViewModel.telNomer.observe(viewLifecycleOwner,object :Observer<Any>{
-            override fun onChanged(t: Any?) {
-                telNumber(t.toString())
-            }
-        })
-    }
+
 
     fun telNumber(telNumber: String) {
         binding.telNumber.text = telNumber
@@ -96,6 +89,7 @@ class RuyxatdanUtishTuliq : Fragment() {
 
 
     private var _binding: FragmentRuyxatdanUtishTuliqBinding? = null
+    private var telNomerViewModel:TelNomerViewModel?=null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -106,6 +100,25 @@ class RuyxatdanUtishTuliq : Fragment() {
         _binding = FragmentRuyxatdanUtishTuliqBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+    }
+
+
+
+    private fun telNumberniOlish() {
+        telNomerViewModel= ViewModelProviders.of(requireActivity()).get(TelNomerViewModel::class.java)
+        telNomerViewModel!!.telNomer.observe(viewLifecycleOwner,object :Observer<Any>{
+            override fun onChanged(t: Any?) {
+                onDestoyView()
+                telNumber(t.toString())
+            }
+        })
+    }
+
+    private var destroyed = false
+
+    fun onDestoyView() {
+        destroyed = true
+        super.onDestroyView()
     }
 
 
