@@ -84,6 +84,7 @@
         app:menu="@menu/chap_menu">
 
         <LinearLayout
+            android:id="@+id/log_out"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -97,7 +98,6 @@
                 android:src="@drawable/ic_chap_m_chiqish" />
 
             <TextView
-                android:id="@+id/logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="15dp"

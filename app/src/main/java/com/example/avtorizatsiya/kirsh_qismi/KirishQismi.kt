@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
@@ -17,6 +18,8 @@ import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniT
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
+import com.example.room.roomEntity.TokenEntity
+import com.example.room.viewModel.TokenViewModel
 
 
 class KirishQismi : Fragment() {
@@ -24,6 +27,7 @@ class KirishQismi : Fragment() {
 
     private lateinit var kirishViewModel: KirishViewModel
     private var checkUser = ""
+    private val tokenViewModel: TokenViewModel by activityViewModels()
     private fun setUi() {
         val kirishRepository = KirishRepository()
         val kirishViewModelFactory = KirishViewModelFactory(kirishRepository)
@@ -47,6 +51,7 @@ class KirishQismi : Fragment() {
                     if (it.isSuccessful){
                         if(it.body()!!.status=="success")
                         {
+                            tokenViewModel.insertToken(TokenEntity(token = it.body()!!.data.token))
                             startActivity(Intent(requireContext(),MainActivity::class.java))
                             activity?.finish()
 

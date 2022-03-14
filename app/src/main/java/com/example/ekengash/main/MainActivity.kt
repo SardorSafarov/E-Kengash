@@ -3,6 +3,7 @@ package com.example.ekengash.main
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
@@ -13,6 +14,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -21,8 +23,10 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.avtorizatsiya.main.Kirish
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
 import com.example.chapMenu.boglanish.Boglanish
@@ -36,13 +40,16 @@ import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
+import com.example.log.D
+import com.example.room.viewModel.TokenViewModel
 import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-
     lateinit var binding: ActivityMainBinding
+    private val tokenViewModel: TokenViewModel by viewModels()
+
+
     private var PERMISSIONS: Array<String> = arrayOf(
         Manifest.permission.CAMERA
     )
@@ -56,6 +63,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         teginma()
         binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
+
+
+
 
     /*=========================Chap menu itemclick==============================*/
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -137,7 +147,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         blok()
         statusBar()
         chapMenu()
-        chackPerimition()
+      //  chackPerimition()
+        logOut()
+    }
+
+    private fun logOut() {
+        binding.logOut.setOnClickListener{
+           val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle("Profildan chiqish.")
+            alertDialog.setMessage("Siz ushbu profildan chiqmoqchimisiz?")
+            alertDialog.setPositiveButton("Ha"){ dialogInterface: DialogInterface, i: Int ->
+                tokenViewModel.deleteToken()
+                startActivity(Intent(this, Kirish::class.java))
+                finish()
+            }
+            alertDialog.setNegativeButton("Yo`q"){ dialogInterface: DialogInterface, i: Int -> }
+            alertDialog.show()
+        }
     }
 
     private fun chapMenu() {

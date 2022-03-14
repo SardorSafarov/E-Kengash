@@ -422,20 +422,25 @@
             android:backgroundTint="#F3F3F3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-            <fragment
-                android:id="@+id/kirsh_qismidagi_fragment"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                app:defaultNavHost="true"
-                app:layout_constraintBottom_toTopOf="@id/nav_view"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout="@layout/fragment_kirish_qismi"
-                />
+                android:layout_height="match_parent">
+                <fragment
+                    android:id="@+id/kirsh_qismidagi_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    app:defaultNavHost="true"
+                    app:layout_constraintBottom_toTopOf="@id/nav_view"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_kirish_qismi"
+                    />
+
+            </ScrollView>
+
 
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

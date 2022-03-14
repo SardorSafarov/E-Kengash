@@ -14,11 +14,11 @@
         app:showAsAction="always"
         android:title="Explore" />
 
-    <item
-        android:id="@+id/save"
-        android:icon="@drawable/ic_save_ic"
-        app:showAsAction="always"
-        android:title="Saved" />
+<!--    <item-->
+<!--        android:id="@+id/save"-->
+<!--        android:icon="@drawable/ic_save_ic"-->
+<!--        app:showAsAction="always"-->
+<!--        android:title="Saved" />-->
     <item
         android:id="@+id/chat"
         android:icon="@drawable/ic_chat"
