@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.servislar.saqlanganlar.main.ServesSaqlanganlar">
+    tools:context="com.example.servislar.saqlanganlar.saqlanganlarHaqida.SaqlanganlarHaqida">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Saqlanganlar"
+                android:text="Saqlanganlar haqida"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,13 +41,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/haqida"
+                android:id="@+id/profil_haqida"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="0dp"
-
+                android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:src="@drawable/ic_bildirishnoma_ic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -55,4 +55,15 @@
                 app:tint="@color/kuk" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saqlanganlar haqida"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView6"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

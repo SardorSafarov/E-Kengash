@@ -10,7 +10,7 @@ import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.engYaqin.EngYaqin
-import com.example.qrcode.QRcodeScaner
+import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
@@ -59,7 +59,7 @@ class Asosiy : Fragment() {
 
     private fun qrcodeScaner() {
         binding.qrCodeScaner.setOnClickListener {
-            startActivity(Intent(requireContext(),QRcodeScaner::class.java))
+            startActivity(Intent(requireContext(), QRcodeScaner::class.java))
         }
     }
 

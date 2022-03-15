@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentlar.chat.ChatScreen">
+    tools:context=".fragmentlar.chat.main.ChatScreen">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
@@ -121,7 +121,7 @@
             android:background="#F2F2F2">
 
             <ImageView
-                android:id="@+id/buttonicon2"
+                android:id="@+id/file_junatish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
@@ -140,7 +140,7 @@
                 android:paddingStart="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/buttonicon2"
+                app:layout_constraintStart_toEndOf="@+id/file_junatish"
                 app:layout_constraintTop_toTopOf="parent" />
 
 

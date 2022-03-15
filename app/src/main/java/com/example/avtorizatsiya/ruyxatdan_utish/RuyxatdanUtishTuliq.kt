@@ -19,10 +19,23 @@ import com.example.network.viewmodel.KirishViewModel
 
 
 class RuyxatdanUtishTuliq : Fragment() {
+    private var _binding: FragmentRuyxatdanUtishTuliqBinding? = null
+    private var telNomerViewModel:TelNomerViewModel?=null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentRuyxatdanUtishTuliqBinding.inflate(inflater, container, false)
+        setUi()
+        val view = binding.root
+        return view
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        setUi()
         telNumberniOlish()
         ruyxatdanUtish()
         kirishViewModel.ruyxatdanUtish.observe(viewLifecycleOwner, Observer {
@@ -88,19 +101,7 @@ class RuyxatdanUtishTuliq : Fragment() {
 
 
 
-    private var _binding: FragmentRuyxatdanUtishTuliqBinding? = null
-    private var telNomerViewModel:TelNomerViewModel?=null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentRuyxatdanUtishTuliqBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
 
 
 

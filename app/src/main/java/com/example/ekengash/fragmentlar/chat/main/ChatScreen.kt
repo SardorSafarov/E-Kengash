@@ -1,22 +1,21 @@
-package com.example.ekengash.fragmentlar.chat
+package com.example.ekengash.fragmentlar.chat.main
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.view.menu.MenuPopupHelper
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityChatScreenBinding
-import com.example.log.D
-import android.annotation.SuppressLint
-import android.view.LayoutInflater
-import android.view.MenuInflater
-import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
-import com.example.ekengash.databinding.DiaolgChatYordamHaqidaBinding
+import com.example.ekengash.fragmentlar.chat.chatHaqida.ChatHaqida
 
 
 class ChatScreen : AppCompatActivity() {
@@ -31,22 +30,37 @@ class ChatScreen : AppCompatActivity() {
         binding = ActivityChatScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         teginma()
+        fileTanlash()
+    }
+
+    private fun fileTanlash() {
+        val intent = Intent(
+            Intent.ACTION_VIEW, Uri.parse(
+                "content://media/internal/images/media"
+            )
+        )
+        binding.fileJunatish.setOnClickListener {
+            startActivity(intent)
+        }
+
     }
 
 
-
     private fun chatYordamHaqida() {
-        val alertDialog = AlertDialog.Builder(this,R.style.CustomAlertDialog)
-        val view = LayoutInflater.from(this).inflate(R.layout.diaolg_chat_yordam_haqida,null)
-        val dialogBinding = DiaolgChatYordamHaqidaBinding.bind(view)
 
-        alertDialog.setView(view)
-        dialogBinding.orqagaQaytish.setOnClickListener {
-            alertDialog.setOnDismissListener { dialog ->
-                dialog.dismiss()
-            }
-        }
-        alertDialog.show()
+        startActivity(Intent(this,ChatHaqida::class.java))
+
+//        val alertDialog = AlertDialog.Builder(this,R.style.CustomAlertDialog)
+//        val view = LayoutInflater.from(this).inflate(R.layout.diaolg_chat_yordam_haqida,null)
+//        val dialogBinding = DiaolgChatYordamHaqidaBinding.bind(view)
+//
+//        alertDialog.setView(view)
+//        dialogBinding.orqagaQaytish.setOnClickListener {
+//            alertDialog.setOnDismissListener { dialog ->
+//                dialog.dismiss()
+//            }
+//        }
+//        alertDialog.show()
     }
 
 

@@ -109,6 +109,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="50dp"
+                app:boxStrokeColor="@color/kuk"
+                app:hintTextColor="@color/kuk"
                 android:hint="Ismingizni kiriting"
                 android:maxLength="6"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +120,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/foydalanuvchi_ismii"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@color/kuk"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -129,6 +132,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:hint="Parol kiriting"
+                app:boxStrokeColor="@color/kuk"
+                app:hintTextColor="@color/kuk"
                 android:maxLength="6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,7 +144,8 @@
                     android:id="@+id/parol_11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@color/kuk"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -150,6 +156,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:hint="Parol qayta kiriting"
+                app:boxStrokeColor="@color/kuk"
+                app:hintTextColor="@color/kuk"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/parol_1"
@@ -159,7 +167,8 @@
                     android:id="@+id/parol_22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@color/kuk"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView

@@ -23,13 +23,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.avtorizatsiya.main.Kirish
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
-import com.example.chapMenu.boglanish.Boglanish
 import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
 import com.example.chapMenu.profil.main.Profil
@@ -38,9 +36,8 @@ import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
-import com.example.ekengash.fragmentlar.chat.ChatScreen
+import com.example.ekengash.fragmentlar.chat.main.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
-import com.example.log.D
 import com.example.room.viewModel.TokenViewModel
 import com.google.android.material.navigation.NavigationView
 

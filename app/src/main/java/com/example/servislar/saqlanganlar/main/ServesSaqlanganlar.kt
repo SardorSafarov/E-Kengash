@@ -1,10 +1,12 @@
-package com.example.servislar.saqlanganlar
+package com.example.servislar.saqlanganlar.main
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.databinding.ActivityServesChiptalarimBinding
 import com.example.ekengash.databinding.ActivityServesSaqlanganlarBinding
+import com.example.servislar.saqlanganlar.saqlanganlarHaqida.SaqlanganlarHaqida
 
 class ServesSaqlanganlar : AppCompatActivity() {
     private lateinit var binding: ActivityServesSaqlanganlarBinding
@@ -19,7 +21,15 @@ class ServesSaqlanganlar : AppCompatActivity() {
     private fun teginma() {
         ortgaQaytish()
         statusBar()
+        saqlanganlarHaqida()
     }
+
+    private fun saqlanganlarHaqida() {
+        binding.haqida.setOnClickListener {
+            startActivity(Intent(this,SaqlanganlarHaqida::class.java))
+        }
+    }
+
     /*=======================Teginma===============================*/
     private fun statusBar() {
         window.statusBarColor = Color.WHITE

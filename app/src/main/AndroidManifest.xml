@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -21,7 +23,13 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.servislar.saqlanganlar.ServesSaqlanganlar"
+            android:name=".fragmentlar.chat.chatHaqida.ChatHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.qrcode.qrcodeHaqida.QRcodeScanerHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.saqlanganlar.main.ServesSaqlanganlar"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.chiptalarim.ServesChiptalarim"
@@ -76,7 +84,7 @@
             android:name="com.example.chapMenu.profil.main.Profil"
             android:exported="true" />
         <activity
-            android:name="com.example.qrcode.QRcodeScaner"
+            android:name="com.example.qrcode.main.QRcodeScaner"
             android:exported="true"
             android:theme="@style/FullScreenThem" />
         <activity
@@ -148,7 +156,7 @@
             android:name="com.example.servislar.aviachipta.main.ServesAvia"
             android:exported="false" />
         <activity
-            android:name=".fragmentlar.chat.ChatScreen"
+            android:name=".fragmentlar.chat.main.ChatScreen"
             android:exported="false" />
         <activity
             android:name="com.example.blok.BlokActivitt"

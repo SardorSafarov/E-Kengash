@@ -4,9 +4,9 @@ import android.util.Log.d
 
 class D {
     companion object{
-        fun d(qara:String)
+        fun d(message:String)
         {
-            d("sardor","keldiii  $qara")
+            d("sardor","keldiii  $message")
         }
     }
 

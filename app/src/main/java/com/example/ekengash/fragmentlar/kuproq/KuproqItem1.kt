@@ -12,15 +12,14 @@ import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
 import com.example.ekengash.databinding.FragmentKuproqItem1Binding
 import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
-import com.example.qrcode.QRcodeScaner
-import com.example.servislar.ab.izlash.ABIzlash
+import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
 import com.example.servislar.chiptalarim.ServesChiptalarim
 import com.example.servislar.poyezd.main.ServesPoyezd
-import com.example.servislar.saqlanganlar.ServesSaqlanganlar
+import com.example.servislar.saqlanganlar.main.ServesSaqlanganlar
 import com.example.servislar.tanggalar.main.ServisTanggalar
 import com.example.servislar.taxi.main.ServesTaxi
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
