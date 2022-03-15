@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -35,19 +34,19 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/foydalanuvchi_ism"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="Ism Familiya Sharif"
             android:textColor="@color/white"
             android:textSize="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintBottom_toTopOf="@+id/foydalanuvchi_tel"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
             app:layout_constraintTop_toTopOf="@+id/materialCardView" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/foydalanuvchi_tel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

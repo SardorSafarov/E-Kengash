@@ -35,17 +35,21 @@ import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
+import com.example.ekengash.databinding.ChapMenuBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.main.ChatScreen
 import com.example.ekengash.fragmentlar.kuproq.Kuproqq
-import com.example.room.viewModel.TokenViewModel
+import com.example.room.viewModel.UserViewModel
 import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var binding: ActivityMainBinding
-    private val tokenViewModel: TokenViewModel by viewModels()
+    private val userViewModel: UserViewModel by viewModels()
 
+    private var drawerLayout: DrawerLayout? = null
+    private var toggle: ActionBarDrawerToggle? = null
+    private var toolbar: Toolbar? = null
 
     private var PERMISSIONS: Array<String> = arrayOf(
         Manifest.permission.CAMERA
@@ -58,11 +62,42 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         teginma()
-        binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
+
+
+
     }
 
 
 
+
+
+
+
+
+    ///-------------------Tegma-----------------------------/////
+
+
+
+    @RequiresApi(Build.VERSION_CODES.M)
+    private fun teginma() {
+        iternetniTekshirish()
+        bottomBarSetOnclickListener()
+        blok()
+        statusBar()
+        chapMenu()
+        foydalanuvchiHaqida()
+      //  chackPerimition()
+        logOut()
+        binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
+    }
+
+    private fun foydalanuvchiHaqida() {
+        val bind= ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
+        userViewModel.readUser.observe(this, Observer {
+            bind.foydalanuvchiIsm.setText(it.get(0).full_name)
+            bind.foydalanuvchiTel.setText("+"+it.get(0).phone)
+        })
+    }
 
     /*=========================Chap menu itemclick==============================*/
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -130,31 +165,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-
-    ///-------------------Tegma-----------------------------/////
-
-    private var drawerLayout: DrawerLayout? = null
-    private var toggle: ActionBarDrawerToggle? = null
-    private var toolbar: Toolbar? = null
-
-    @RequiresApi(Build.VERSION_CODES.M)
-    private fun teginma() {
-        iternetniTekshirish()
-        bottomBarSetOnclickListener()
-        blok()
-        statusBar()
-        chapMenu()
-      //  chackPerimition()
-        logOut()
-    }
-
     private fun logOut() {
         binding.logOut.setOnClickListener{
            val alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle("Profildan chiqish.")
             alertDialog.setMessage("Siz ushbu profildan chiqmoqchimisiz?")
             alertDialog.setPositiveButton("Ha"){ dialogInterface: DialogInterface, i: Int ->
-                tokenViewModel.deleteToken()
+                userViewModel.deleteToken()
                 startActivity(Intent(this, Kirish::class.java))
                 finish()
             }
@@ -165,6 +182,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun chapMenu() {
         drawerLayout = binding.drawerLayout
+
         toolbar = binding.toolbarMain
         setSupportActionBar(toolbar)
         supportActionBar!!.title = ""

@@ -4,14 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.room.dao.TokenDao
-import com.example.room.roomEntity.TokenEntity
+import com.example.room.dao.UserDao
+import com.example.room.roomEntity.UserEntity
 
 
-@Database(entities = [TokenEntity::class], version = 1)
+@Database(entities = [UserEntity::class], version = 1)
 abstract class UserRoomDatabase: RoomDatabase() {
 
-    abstract fun tokenDao(): TokenDao
+    abstract fun tokenDao(): UserDao
 
     companion object {
         @Volatile

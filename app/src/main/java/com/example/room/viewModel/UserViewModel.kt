@@ -5,29 +5,29 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
-import com.example.room.repository.TokenRepository
+import com.example.room.repository.UserRepository
 import com.example.room.rommDatabase.UserRoomDatabase
-import com.example.room.roomEntity.TokenEntity
+import com.example.room.roomEntity.UserEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
 
-class TokenViewModel(application: Application): AndroidViewModel(application) {
+class UserViewModel(application: Application): AndroidViewModel(application) {
 
-    val readToken: LiveData<List<TokenEntity>>
+    val readUser: LiveData<List<UserEntity>>
 
-    private val repositoriy: TokenRepository
+    private val repositoriy: UserRepository
 
     init {
         val userDao= UserRoomDatabase.getDatabase(application).tokenDao()
-        repositoriy= TokenRepository(userDao)
-        readToken=repositoriy.readAllData
+        repositoriy= UserRepository(userDao)
+        readUser=repositoriy.readAllData
     }
-    fun insertToken(token:TokenEntity){
+    fun insertUser(user:UserEntity){
         viewModelScope.launch(Dispatchers.IO){
             try {
-                repositoriy.insertToken(token)
+                repositoriy.insertUser(user)
             }catch (e:Exception){
                 D.d(e.message.toString()+" <--> TokenViewModel insertToken funi")
             }
@@ -37,7 +37,7 @@ class TokenViewModel(application: Application): AndroidViewModel(application) {
     fun deleteToken(){
         viewModelScope.launch {
             try {
-                repositoriy.deleteToken()
+                repositoriy.deleteUser()
             }catch (e:Exception){
                 D.d(e.message.toString()+" <--> TokenViewModel deleteToken funi")
             }

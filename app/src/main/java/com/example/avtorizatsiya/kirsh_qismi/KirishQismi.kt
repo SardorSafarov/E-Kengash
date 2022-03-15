@@ -10,7 +10,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtish
 import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtishTuliq
 import com.example.avtorizatsiya.ruyxatdan_utish.TelNomerViewModel
 import com.example.ekengash.R
@@ -22,8 +21,8 @@ import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniT
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
-import com.example.room.roomEntity.TokenEntity
-import com.example.room.viewModel.TokenViewModel
+import com.example.room.roomEntity.UserEntity
+import com.example.room.viewModel.UserViewModel
 import retrofit2.Response
 
 
@@ -32,7 +31,7 @@ class KirishQismi : Fragment() {
     private val binding get() = _binding!!
     private lateinit var kirishViewModel: KirishViewModel
     private var checkUser = ""
-    private val tokenViewModel: TokenViewModel by activityViewModels()
+    private val userViewModel: UserViewModel by activityViewModels()
     private var telNomerViewModel: TelNomerViewModel? = null
     //Click listenrlani iloji bulsa onCreateViewda qoyib oling
 
@@ -66,7 +65,13 @@ class KirishQismi : Fragment() {
         kirishViewModel.parolniTekshirish.observe(viewLifecycleOwner, Observer {
             if (it.isSuccessful) {
                 if (it.body()!!.status == "success") {
-                    tokenViewModel.insertToken(TokenEntity(token = it.body()!!.data.token))
+                   userViewModel.insertUser(
+                       UserEntity(
+                            full_name = it.body()!!.data.user.full_name,
+                           phone = it.body()!!.data.user.username,
+                           token = it.body()!!.data.token
+                       )
+                   )
                     startActivity(Intent(requireContext(), MainActivity::class.java))
                     activity?.finish()
                 } else {
