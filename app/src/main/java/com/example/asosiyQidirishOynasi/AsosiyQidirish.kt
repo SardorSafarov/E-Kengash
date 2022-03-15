@@ -1,4 +1,4 @@
-package com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi
+package com.example.asosiyQidirishOynasi
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,6 @@ class AsosiyQidirish : AppCompatActivity() {
         setContentView(binding.root)
         window.statusBarColor=Color.WHITE
         ortga()
-
     }
 
     private fun ortga() {

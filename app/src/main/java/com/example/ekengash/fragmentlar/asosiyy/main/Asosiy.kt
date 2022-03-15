@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
-import com.example.ekengash.fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish
+import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
+import com.example.engYaqin.EngYaqin
 import com.example.qrcode.QRcodeScaner
-import com.example.servislar.ab.izlash.ABIzlash
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
@@ -42,6 +42,13 @@ class Asosiy : Fragment() {
         asosiyBildishnomalar()
         qrcodeScaner()
         tanggalar()
+        engYaqin()
+    }
+
+    private fun engYaqin() {
+        binding.engYaqin.setOnClickListener {
+            startActivity(Intent(requireContext(),EngYaqin::class.java))
+        }
     }
 
     private fun tanggalar() {

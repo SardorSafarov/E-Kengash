@@ -1,10 +1,12 @@
 package com.example.servislar.tanggalar.main
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityTanggalarBinding
+import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish
 import com.example.servislar.tanggalar.taxi.TanggalardanTaxi
 
@@ -14,9 +16,22 @@ class ServisTanggalar : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityTanggalarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        teginma()
+
+    }
+
+    private fun teginma() {
         topButton()
         ortgaqaytish()
         statsbar()
+        qidirish()
+    }
+
+    /*=================Teginma=========================*/
+    private fun qidirish() {
+        binding.qidirsh.setOnClickListener {
+            startActivity(Intent(this,AsosiyQidirish::class.java))
+        }
     }
 
 
@@ -26,6 +41,7 @@ class ServisTanggalar : AppCompatActivity() {
             TanggalardanFoydalanish()
         ).commit()
         binding.aviaQirirish.setOnClickListener{
+            binding.aviaQirirish.setBackgroundResource(R.drawable.tanggalar_button_radius)
             topbuttonChage(true)
             supportFragmentManager.beginTransaction().replace(
                 R.id.tanggalar_fragment,
@@ -45,7 +61,7 @@ class ServisTanggalar : AppCompatActivity() {
         when(b){
             true->
             {
-                binding.aviaQirirish.setBackgroundColor(Color.WHITE)
+
                 binding.tanggaText.setTextColor(Color.BLACK)
                 binding.aviaChiptalar.setBackgroundColor(Color.parseColor("#E8E8E8"))
                 binding.aviaChiptalar.setTextColor(Color.parseColor("#C0C0C0"))

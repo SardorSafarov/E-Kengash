@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish">
+    tools:context="com.example.asosiyQidirishOynasi.AsosiyQidirish">
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -14,7 +14,8 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/kuk" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/asosiy_qidirish_button"
@@ -40,6 +41,31 @@
             android:backgroundTint="#6C757D"
             android:iconifiedByDefault="false"
             android:queryHint="Nimadir izlash" />
+
     </com.google.android.material.card.MaterialCardView>
 
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Tarix"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asosiy_qidirish_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        android:text="Eng ko'p izlanganlar"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 </androidx.constraintlayout.widget.ConstraintLayout>

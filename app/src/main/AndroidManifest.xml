@@ -5,7 +5,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -17,8 +21,17 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.servislar.saqlanganlar.ServesSaqlanganlar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.chiptalarim.ServesChiptalarim"
+            android:exported="false" />
+        <activity
+            android:name="com.example.engYaqin.EngYaqin"
+            android:exported="false" />
+        <activity
             android:name="com.example.splashScreen.SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,9 +41,7 @@
         <activity
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
-            android:theme="@style/FullScreenThem">
-
-        </activity>
+            android:theme="@style/FullScreenThem" />
         <activity
             android:name="com.example.servislar.ab.main.ServesAB"
             android:exported="true" />
@@ -123,7 +134,7 @@
             android:name="com.example.servislar.ab.izlash.ABIzlash"
             android:exported="false" />
         <activity
-            android:name=".fragmentlar.asosiyy.asosiy_qidirish_oynasi.AsosiyQidirish"
+            android:name="com.example.asosiyQidirishOynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.poyezd.main.ServesPoyezd"

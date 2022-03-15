@@ -20,7 +20,7 @@
         app:showAsAction="always"/>
     <item
         android:id="@+id/chap_menu_offerta"
-        android:title="Offerta"
+        android:title="Oferta"
         android:icon="@drawable/ic_chap_m_offerta"
         app:showAsAction="always"/>
 <!--    <item-->
@@ -30,7 +30,7 @@
 <!--        app:showAsAction="ifRoom"/>-->
     <item
         android:id="@+id/chap_menu_sozlanma"
-        android:title="Sozlanmalar"
+        android:title="Sozlamalar"
         android:icon="@drawable/ic_chap_m_sozlanma"
         app:showAsAction="always"/>
 

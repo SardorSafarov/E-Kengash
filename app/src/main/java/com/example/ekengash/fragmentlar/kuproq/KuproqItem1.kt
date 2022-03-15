@@ -18,7 +18,9 @@ import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
+import com.example.servislar.chiptalarim.ServesChiptalarim
 import com.example.servislar.poyezd.main.ServesPoyezd
+import com.example.servislar.saqlanganlar.ServesSaqlanganlar
 import com.example.servislar.tanggalar.main.ServisTanggalar
 import com.example.servislar.taxi.main.ServesTaxi
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
@@ -86,6 +88,13 @@ class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
             }
             "Kamera"->{
                 startActivity(Intent(context, QRcodeScaner::class.java))
+            }
+            "Chiptalarim"->
+            {
+                startActivity(Intent(context, ServesChiptalarim::class.java))
+            }
+            "Saqlanganlar"->{
+                startActivity(Intent(context, ServesSaqlanganlar::class.java))
             }
         }
     }

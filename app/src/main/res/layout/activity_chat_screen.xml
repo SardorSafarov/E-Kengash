@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragmentlar.chat.ChatScreen">
 
-
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -158,7 +156,7 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/chat_send_button"
         android:padding="10dp"
-        android:src="@drawable/ic_xabar_yuborish"
+        android:src="@drawable/ic_send_message_ic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
