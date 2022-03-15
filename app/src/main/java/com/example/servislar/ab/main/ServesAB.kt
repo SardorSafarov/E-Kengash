@@ -135,7 +135,27 @@ class ServesAB : AppCompatActivity() {
         val bottomDialog = BottomSheetDialog(this, R.style.BottomSheetDiaolg)
         val view = LayoutInflater.from(this).inflate(R.layout.bottom_sheet_avia_holat, null)
         bottomDialog.setContentView(view)
+        binding.abHolat.setOnClickListener {
+            bottomDialog.show()
+        }
+
         val poyezdHolatBinding = BottomSheetAviaHolatBinding.bind(view)
+        poyezdHolatBinding.davomEtishButton.setOnClickListener {
+            val umumiyKishilar = kattalar+bolalar+chaqaloqlar
+            if(umumiyKishilar!=0){
+                binding.holatDefault.visibility = View.INVISIBLE
+                binding.holatTanlanganda.visibility = View.VISIBLE
+                binding.holatText.visibility = View.VISIBLE
+                binding.holatText.setText(umumiyKishilar.toString()+" kishi")
+            }
+            else{
+                binding.holatDefault.visibility = View.VISIBLE
+                binding.holatTanlanganda.visibility = View.INVISIBLE
+                binding.holatText.visibility = View.INVISIBLE
+            }
+            bottomDialog.dismiss()
+        }
+
         poyezdHolatBinding.beletTuri.visibility = View.GONE
         poyezdHolatBinding.orqagaQaytish.setOnClickListener {
             bottomDialog.dismiss()
@@ -191,9 +211,8 @@ class ServesAB : AppCompatActivity() {
                 poyezdHolatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
             }
         }
-        binding.abHolat.setOnClickListener {
-            bottomDialog.show()
-        }
+
+
     }
 
     private fun statusBar() {

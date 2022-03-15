@@ -23,6 +23,22 @@ import java.util.*
 
 
 class AviaQidirish : Fragment() {
+    private var _binding: FragmentAviaQidirishBinding? = null
+    private val binding get() = _binding!!
+    var kattalar=0
+    var bolalar=0
+    var chaqaloqlar=0
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentAviaQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 
 
 
@@ -118,8 +134,8 @@ class AviaQidirish : Fragment() {
         }
 
     }
-
-//    private fun aviQachongacha() {
+    ///oldingi kalandar///
+    //    private fun aviQachongacha() {
 //        val calendar = Calendar.getInstance()
 //        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
 //        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_calendar,null)
@@ -146,6 +162,11 @@ class AviaQidirish : Fragment() {
 //            bottomDialog.dismiss()
 //        }
 //    }
+    /////////////////////
+
+
+
+
 private fun aviQachongacha() {
     val datePicker =
         MaterialDatePicker.Builder.datePicker()
@@ -168,9 +189,7 @@ private fun aviQachon() {
     binding.aviaQachon.setOnClickListener {
         fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
     }
-//    qachonBinding.chiqish.setOnClickListener {
-//        bottomDialog.dismiss()
-//    }
+
 }
 
     private fun aviaQayerga() {
@@ -203,20 +222,5 @@ private fun aviQachon() {
 
 
 
-    private var _binding: FragmentAviaQidirishBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentAviaQidirishBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-    var kattalar=0
-    var bolalar=0
-    var chaqaloqlar=0
 
 }

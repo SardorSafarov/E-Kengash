@@ -280,7 +280,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/eeee"
+                        android:id="@+id/holat_tanlanganda"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -292,7 +292,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/holat_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -301,7 +301,7 @@
                         android:textColor="@color/black"
                         android:textSize="13dp"
                         app:layout_constraintStart_toEndOf="@+id/holat"
-                        app:layout_constraintTop_toBottomOf="@+id/eeee" />
+                        app:layout_constraintTop_toBottomOf="@+id/holat_tanlanganda" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -309,8 +309,8 @@
                         android:text=" ekonom"
                         android:visibility="invisible"
                         android:textSize="13dp"
-                        app:layout_constraintStart_toEndOf="@+id/textView9"
-                        app:layout_constraintTop_toBottomOf="@+id/eeee" />
+                        app:layout_constraintStart_toEndOf="@+id/holat_text"
+                        app:layout_constraintTop_toBottomOf="@+id/holat_tanlanganda" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
