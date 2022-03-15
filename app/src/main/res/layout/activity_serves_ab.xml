@@ -194,7 +194,7 @@
                                     android:id="@+id/textView8"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
+                                    android:layout_marginStart="5dp"
                                     android:layout_marginTop="10dp"
                                     android:text="Qachon"
                                     android:textSize="12dp"
@@ -202,9 +202,10 @@
                                     app:layout_constraintTop_toTopOf="parent" />
 
                                 <TextView
+                                    android:id="@+id/ab_qachon_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
+                                    android:layout_marginStart="5dp"
                                     android:text="24 Fev,Pay"
                                     android:textColor="@color/black"
                                     android:textSize="14dp"

@@ -69,12 +69,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 
-
-
-
-
-
-    ///-------------------Tegma-----------------------------/////
+    ///==============================Tegma===============================================================/////
 
 
 
