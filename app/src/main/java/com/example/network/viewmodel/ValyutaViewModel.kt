@@ -12,11 +12,11 @@ import retrofit2.Response
 class ValyutaViewModel(private val valyutaRepository: ValyutaRepository):ViewModel() {
 
     /*==============Valyuta kurslari=================*/
-    val valyuta:MutableLiveData<Response<ValyutaEntity>> = MutableLiveData()
-    fun valyuta(){
+
+    fun valyuta(valyuyaRespone:(response:Response<ValyutaEntity>)->Unit){
         viewModelScope.launch {
             try {
-                valyuta.value = valyutaRepository.valyuta()
+               valyuyaRespone(valyutaRepository.valyuta())
             }catch (e:Exception){
                 D.d("${e.message}   ValyutaViewModel valyuta funi")
             }

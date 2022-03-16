@@ -1,5 +1,6 @@
 package com.example.ekengash.fragmentlar.chat
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +10,11 @@ import android.view.ViewGroup
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentChatBinding
 import com.example.ekengash.databinding.FragmentKuproqitem2Binding
+import com.example.ekengash.fragmentlar.chat.chatHaqida.ChatHaqida
 
 class Chat : Fragment() {
+
+
     private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -18,8 +22,15 @@ class Chat : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
+        chatHaqida()
         val view = binding.root
         return view
+    }
+
+    private fun chatHaqida() {
+        binding.chatHaqida.setOnClickListener {
+            startActivity(Intent(requireContext(),ChatHaqida::class.java))
+        }
     }
 
 

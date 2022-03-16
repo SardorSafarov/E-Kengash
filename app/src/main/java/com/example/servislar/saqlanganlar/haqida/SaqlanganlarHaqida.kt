@@ -1,19 +1,18 @@
-package com.example.ekengash.fragmentlar.chat.chatHaqida
+package com.example.servislar.saqlanganlar.haqida
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityChatHaqidaBinding
+import com.example.ekengash.databinding.ActivitySaqlanganlarHaqidaBinding
 
-class ChatHaqida : AppCompatActivity() {
-    private lateinit var binding:ActivityChatHaqidaBinding
+class SaqlanganlarHaqida : AppCompatActivity() {
+    private lateinit var binding:ActivitySaqlanganlarHaqidaBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityChatHaqidaBinding.inflate(layoutInflater)
+        binding = ActivitySaqlanganlarHaqidaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        statusbar()
+        statusBar()
         ortgaQaytish()
-
     }
 
     private fun ortgaQaytish() {
@@ -22,7 +21,7 @@ class ChatHaqida : AppCompatActivity() {
         }
     }
 
-    private fun statusbar() {
+    private fun statusBar() {
         window.statusBarColor = Color.WHITE
     }
 }

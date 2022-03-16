@@ -7,16 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
+import com.example.chapMenu.profil.main.Profil
+import com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.adapter.kuproq.KuproqItem2Adapter
 import com.example.ekengash.databinding.FragmentKuproqitem2Binding
 import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
+import com.example.engYaqin.main.EngYaqin
 import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
+import com.example.servislar.chiptalarim.main.ServesChiptalarim
 import com.example.servislar.poyezd.main.ServesPoyezd
 import com.example.servislar.saqlanganlar.main.ServesSaqlanganlar
 import com.example.servislar.tanggalar.main.ServisTanggalar
@@ -74,7 +77,7 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
             "Chegirmalar"->{
                 startActivity(Intent(context, ServesChegirmalar::class.java))
             }
-            "Mehmonxona"->{
+            "Turar-joy"->{
                 startActivity(Intent(context, ServesTurarjoy::class.java))
             }
             "Valyuta kursi"->{
@@ -86,8 +89,18 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
             "Kamera"->{
                 startActivity(Intent(context, QRcodeScaner::class.java))
             }
+            "Chiptalarim"->
+            {
+                startActivity(Intent(context, ServesChiptalarim::class.java))
+            }
             "Saqlanganlar"->{
                 startActivity(Intent(context, ServesSaqlanganlar::class.java))
+            }
+            "Eng yaqin"->{
+                startActivity(Intent(context, EngYaqin::class.java))
+            }
+            "Profil"->{
+                startActivity(Intent(context, Profil::class.java))
             }
         }
     }
@@ -118,18 +131,14 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
             icon = R.drawable.ic_chiptalarim,
             text = "Chiptalarim"
         ),
-//        KuproqItemEntitit(
-//            icon = R.drawable.ic_sayohatlarim,
-//            text = "Sayohatlarim"
-//        ),
         KuproqItemEntitit(
             icon = R.drawable.ic_saqlanganlar,
             text = "Saqlanganlar"
         ),
-//        KuproqItemEntitit(
-//            icon = R.drawable.ic_mudatliy_tolov,
-//            text = "Muddatli to'lov"
-//        ),
+        KuproqItemEntitit(
+            icon = R.drawable.ic_eng_yaqin,
+            text = "Eng yaqin"
+        ),
         KuproqItemEntitit(
             icon = R.drawable.ic_a_b,
             text = "A-B"
@@ -153,7 +162,7 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         ),
         KuproqItemEntitit(
             icon = R.drawable.ic_mehmonhonalar,
-            text = "Mehmonxona"
+            text = "Turar-joy"
         ),
         KuproqItemEntitit(
             icon = R.drawable.ic_turpaket,
@@ -162,7 +171,11 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         KuproqItemEntitit(
             icon = R.drawable.ic_valyuta,
             text = "Valyuta kursi"
-        )
+        ),
+        KuproqItemEntitit(
+            icon = R.drawable.ic_profil,
+            text = "Profil"
+        ),
 
     )
 

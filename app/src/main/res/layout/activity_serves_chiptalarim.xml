@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
-    tools:context="com.example.servislar.chiptalarim.ServesChiptalarim">
+    tools:context="com.example.servislar.chiptalarim.main.ServesChiptalarim">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/qidirsh"
+                android:id="@+id/haqida"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="0dp"

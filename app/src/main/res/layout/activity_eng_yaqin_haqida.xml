@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.engYaqin.main.EngYaqin">
+    tools:context="com.example.engYaqin.haqida.EngYaqinHaqida">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eng yaqin"
+                android:text="Eng yaqin haqida"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,13 +41,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/eng_yaqin_haqida"
+                android:id="@+id/profil_haqida"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="0dp"
-
+                android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:src="@drawable/ic_bildirishnoma_ic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,22 +56,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView25"
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView6">
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <ImageView
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/eng_yaqin"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView25" />
+        android:text="Eng yaqin haqida"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView6"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

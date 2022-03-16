@@ -10,7 +10,6 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityServesAbBinding
 import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
 import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
-import com.example.log.D
 import com.example.servislar.ab.izlash.ABIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -150,7 +149,7 @@ class ServesAB : AppCompatActivity() {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" kishi")
+                binding.holatText.setText(umumiyKishilar.toString()+" Kishi")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

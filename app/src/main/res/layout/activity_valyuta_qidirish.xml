@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chapMenu.valyutaKurslari.qidirsh.ValyutaQidirish">
+    <ImageButton
+        android:id="@+id/orqaga_qaytish"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/kuk" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/asosiy_qidirish_button"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#EEF1F6"
+        android:orientation="horizontal"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orqaga_qaytish"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#EEF1F6"
+        app:strokeWidth="1dp">
+
+        <SearchView
+            android:id="@+id/chats_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:backgroundTint="#6C757D"
+            android:iconifiedByDefault="false"
+            android:queryHint="Nimadir izlash" />
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

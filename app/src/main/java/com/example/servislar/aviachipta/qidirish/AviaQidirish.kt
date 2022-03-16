@@ -73,17 +73,17 @@ class AviaQidirish : Fragment() {
             if(umumiyKishilar!=0){
                 if(aviaholatBinding.aviaEkonom.isChecked)
                 {
-                    binding.holatKlass.setText("ekonom")
+                    binding.holatKlass.setText("Ekonom")
                 }
                 else
                 {
-                    binding.holatKlass.setText("business")
+                    binding.holatKlass.setText("Business")
                 }
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
                 binding.holatKlass.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" kishi, ")
+                binding.holatText.setText(umumiyKishilar.toString()+" Kishi, ")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

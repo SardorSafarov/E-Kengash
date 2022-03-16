@@ -10,20 +10,33 @@ import com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy
 
 class ServesChegirmalar : AppCompatActivity() {
 
-    lateinit var binding:ActivityServesChegirmalarBinding
+    lateinit var binding: ActivityServesChegirmalarBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityServesChegirmalarBinding.inflate(layoutInflater)
+        binding = ActivityServesChegirmalarBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor=Color.WHITE
+        statusBar()
+        ortgaQaytish()
+        qidirish()
+
+        binding.turarJoy.setOnClickListener {
+            startActivity(Intent(this, ServesChegirmaTurarJoy::class.java))
+        }
+    }
+
+    private fun qidirish() {
+        binding.qidirsh.setOnClickListener {
+            startActivity(Intent(this, AsosiyQidirish::class.java))
+        }
+    }
+
+    private fun ortgaQaytish() {
         binding.imageView10.setOnClickListener {
             finish()
         }
-        binding.chegirmalarTopButton1.setOnClickListener {
-            startActivity(Intent(this,AsosiyQidirish::class.java))
-        }
-        binding.turarJoy.setOnClickListener {
-            startActivity(Intent(this,ServesChegirmaTurarJoy::class.java))
-        }
+    }
+
+    private fun statusBar() {
+        window.statusBarColor = Color.WHITE
     }
 }

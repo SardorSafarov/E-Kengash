@@ -29,7 +29,7 @@ import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
 import com.example.chapMenu.profil.main.Profil
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
-import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
+import com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.ChapMenuBinding
@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when(id)
         {
             R.id.chap_menu_valuta_kursi->{
-                startActivity(Intent(this,ValyutaKurslari::class.java))
+                startActivity(Intent(this, ValyutaKurslari::class.java))
             }
             R.id.chap_menu_kup_savol ->{
                 startActivity(Intent(this,KupBeriladiganSavollar::class.java))

@@ -55,8 +55,9 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="6dp"
                         android:text="Qayerdan"
-                        android:textSize="10dp"
-                        android:visibility="visible"
+
+                        android:textSize="@dimen/qachon_tanlangan"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,9 +65,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Samarqand"
-                        android:textColor="@color/black"
-                        android:textSize="13dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Qayerdan"
+                        android:textSize="@dimen/qachon_default_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toBottomOf="@+id/textView7" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -106,8 +108,8 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="6dp"
                         android:text="Qayerga"
-                        android:textSize="10dp"
-                        android:visibility="visible"
+                        android:textSize="@dimen/qachon_tanlangan"
+                        android:visibility="invisible"
                         app:layout_constraintStart_toEndOf="@+id/qayerga_image"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,9 +117,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="Toshkent"
-                        android:textColor="@color/black"
-                        android:textSize="13dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="Qayerga"
+                        android:textSize="@dimen/qachon_default_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/qayerga_image"
                         app:layout_constraintTop_toBottomOf="@+id/textView3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -253,6 +256,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:text="0 ta kishi"
+                            android:textStyle="bold"
                             android:visibility="invisible"
                             android:textColor="@color/black"
                             android:textSize="14dp"

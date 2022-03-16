@@ -214,10 +214,10 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/tug_dav_edit"
+                            android:id="@+id/tugulgan_davlati_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
-                            android:visibility="invisible"
+                            android:visibility="visible"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             app:boxStrokeColor="@color/kuk"
@@ -227,7 +227,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/tug_dav"
+                                android:id="@+id/tugulgan_davlati"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -238,7 +238,7 @@
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="invisible"
+                            android:visibility="visible"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
@@ -247,7 +247,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/doimy_yasha"
+                                android:id="@+id/doimy_yashash"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -276,6 +276,7 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:orientation="horizontal"
+                        android:visibility="gone"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginBottom="20dp"
                         android:layout_height="wrap_content">

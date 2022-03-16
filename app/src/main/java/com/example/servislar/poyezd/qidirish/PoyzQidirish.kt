@@ -120,7 +120,7 @@ class PoyzQidirish : Fragment() {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" kishi")
+                binding.holatText.setText(umumiyKishilar.toString()+" Kishi")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

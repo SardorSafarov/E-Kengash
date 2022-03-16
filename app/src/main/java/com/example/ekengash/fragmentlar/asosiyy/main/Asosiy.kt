@@ -49,6 +49,9 @@ class Asosiy : Fragment() {
         binding.engYaqin.setOnClickListener {
             startActivity(Intent(requireContext(), EngYaqin::class.java))
         }
+        binding.engyaqinKuproq.setOnClickListener {
+            startActivity(Intent(requireContext(), EngYaqin::class.java))
+        }
     }
 
     private fun tanggalar() {

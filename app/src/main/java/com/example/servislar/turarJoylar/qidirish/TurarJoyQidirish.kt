@@ -17,7 +17,7 @@ import java.util.*
 class TurarJoyQidirish : Fragment() {
     private var _binding: FragmentTurarJoyQidirishBinding? = null
     private val binding get() = _binding!!
-    var xonalar=0
+    var xonalar=1
     var kattalar=0
     var bolalar=0
     var chaqaloqlar=0
@@ -138,7 +138,7 @@ class TurarJoyQidirish : Fragment() {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(xonalar.toString()+" xona,"+umumiyKishilar.toString()+" kishi")
+                binding.holatText.setText(xonalar.toString()+" Xona,"+umumiyKishilar.toString()+" Kishi")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE
@@ -157,9 +157,9 @@ class TurarJoyQidirish : Fragment() {
             turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
         }
         turarJoyHolatBind.holatXonalarKam.setOnClickListener {
-            if(xonalar>0){
+            if(xonalar>1){
             xonalar--
-            if(xonalar==0){
+            if(xonalar==1){
                 turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                 turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
             }

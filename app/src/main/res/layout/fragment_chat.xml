@@ -81,7 +81,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/chat_top_button"
                 android:padding="5dp"
@@ -89,7 +89,19 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
+            <ImageView
+                android:id="@+id/chat_haqida"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:paddingVertical="14dp"
+                android:paddingEnd="20dp"
+                android:visibility="visible"
+                android:src="@drawable/ic_bildirishnoma_ic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kuk" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

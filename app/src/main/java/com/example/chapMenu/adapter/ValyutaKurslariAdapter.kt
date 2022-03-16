@@ -23,32 +23,66 @@ class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewH
         {
             when(adapterPosition)
             {
-                0->{binding.davlatBayrog.setImageResource(R.drawable.usa)}
-                1->{binding.davlatBayrog.setImageResource(R.drawable.euro)}
-                2->{binding.davlatBayrog.setImageResource(R.drawable.russia)}
-                3->{binding.davlatBayrog.setImageResource(R.drawable.gbp)}
-                4->{binding.davlatBayrog.setImageResource(R.drawable.jpy)}
+                0->{
+                    binding.davlatBayrog.setImageResource(R.drawable.usa)
+                    binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                    binding.valyutaNomi.setText(item.CcyNm_UZ)
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 1000).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 2000).toString())
+                }
+                1->{
+                    binding.davlatBayrog.setImageResource(R.drawable.euro)
+                    binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                    binding.valyutaNomi.setText(item.CcyNm_UZ)
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 1000).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 3000).toString())
+                }
+                2->{
+                    binding.davlatBayrog.setImageResource(R.drawable.russia)
+                    binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                    binding.valyutaNomi.setText(item.CcyNm_UZ)
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 1).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 7).toString())
+                }
+                3->{
+                    binding.davlatBayrog.setImageResource(R.drawable.gbp)
+                    binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                    binding.valyutaNomi.setText(item.CcyNm_UZ)
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 1000).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 1000).toString())
+                }
+                4->{
+                    binding.davlatBayrog.setImageResource(R.drawable.jpy)
+                    binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                    binding.valyutaNomi.setText(item.CcyNm_UZ)
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 10).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 20).toString())
+                }
                 5->{
                     binding.davlatBayrog.setImageResource(R.drawable.chf)
+                    binding.valyutaRamziyKodi.setText("1 CHF")
+                    binding.valyutaNomi.setText("Shveytsariya franki")
+                    binding.valyutaMbDagi.setText(item.Rate)
+                    val df = DecimalFormat("#.##")
+                    df.roundingMode = RoundingMode.CEILING
+                    binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 1000).toString())
+                    binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 4000).toString())
                 }
-            }
-            if(adapterPosition!=5) {
-                binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
-                binding.valyutaNomi.setText(item.CcyNm_UZ)
-                binding.valyutaMbDagi.setText(item.Rate)
-                val df = DecimalFormat("#.##")
-                df.roundingMode = RoundingMode.CEILING
-                binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 90).toString())
-                binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 250).toString())
-            }else
-            {
-                binding.valyutaRamziyKodi.setText("1 CHF")
-                binding.valyutaNomi.setText("Shveytsariya franki")
-                binding.valyutaMbDagi.setText(item.Rate)
-                val df = DecimalFormat("#.##")
-                df.roundingMode = RoundingMode.CEILING
-                binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 90).toString())
-                binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 250).toString())
             }
         }
     }

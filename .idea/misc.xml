@@ -144,10 +144,12 @@
         <entry key="..\:/EKengash2/app/src/main/res/menu/chat_top_menu.xml" value="0.29322916666666665" />
         <entry key="..\:/EKengash2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.221" />
         <entry key="..\:/Katrip/app/src/main/res/drawable-v24/kuproq_top_button_2.xml" value="0.206" />
+        <entry key="..\:/Katrip/app/src/main/res/drawable/bildirishnoma_switch_chack.xml" value="0.1885" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_a_b.xml" value="0.1915" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_a_icon.xml" value="0.1915" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_b_icon.xml" value="0.1915" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_bildirishnoma_ic.xml" value="0.1915" />
+        <entry key="..\:/Katrip/app/src/main/res/drawable/ic_eng_yaqin.xml" value="0.1835" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_kirish.xml" value="0.1915" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_kuproq_top_button_1.xml" value="0.1915" />
         <entry key="..\:/Katrip/app/src/main/res/drawable/ic_profil_passport_malumot.xml" value="0.1885" />
@@ -168,7 +170,9 @@
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_boglanish.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_chat_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_chat_screen.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_chiptalarim_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_eng_yaqin.xml" value="0.2" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_eng_yaqin_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_ilova_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_kirish.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_kup_beriladigan_savollar.xml" value="0.29322916666666665" />
@@ -193,11 +197,13 @@
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_shaxsiy_malumotlar2.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_shaxsiy_profil_tasdiqlash_sms.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_sozlanmalar.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_sozlanmalar_bildishnomalar.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_splash_screen.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_tanggalar.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_tanggalar_turar_joy.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_taxi.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_valyuta_kurslari.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_valyuta_qidirish.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_yuzni_skanerlash.xml" value="0.22" />
         <entry key="..\:/Katrip/app/src/main/res/layout/alert_diaolg_sms_tasdiqlash.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/bottom_sheet_avia_holat.xml" value="0.29322916666666665" />
@@ -210,6 +216,7 @@
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_asosiy2.xml" value="0.2887179487179487" />
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_avia_chiptalarim.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_avia_qidirish.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/fragment_avtobus_chiptalarim.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_avtobus_qidirish.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_biznes.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/fragment_chat.xml" value="0.29322916666666665" />

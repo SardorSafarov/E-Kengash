@@ -23,6 +23,18 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.engYaqin.haqida.EngYaqinHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.chiptalarim.haqida.ChiptalarimHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.saqlanganlar.haqida.SaqlanganlarHaqida"
+            android:exported="false" />
+        <activity
+            android:name="com.example.chapMenu.valyutaKurslari.qidirsh.ValyutaQidirish"
+            android:exported="false" />
+        <activity
             android:name=".fragmentlar.chat.chatHaqida.ChatHaqida"
             android:exported="false" />
         <activity
@@ -32,7 +44,7 @@
             android:name="com.example.servislar.saqlanganlar.main.ServesSaqlanganlar"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chiptalarim.ServesChiptalarim"
+            android:name="com.example.servislar.chiptalarim.main.ServesChiptalarim"
             android:exported="false" />
         <activity
             android:name="com.example.engYaqin.main.EngYaqin"
@@ -112,7 +124,7 @@
             android:name="com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.valyutaKurslari.ValyutaKurslari"
+            android:name="com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari"
             android:exported="true" />
         <activity
             android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"

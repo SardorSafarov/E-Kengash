@@ -67,6 +67,16 @@ class PassportMalumotlar : AppCompatActivity() {
                 passportAmalqilishUddatiEdit.error = "Amal qilish muddatini $validatsitaMessage"
                 return false
             }
+            if(tugulganDavlati.text?.length==0)
+            {
+                tugulganDavlatiEdit.error = "Tug'ulgan davlatni $validatsitaMessage"
+                return false
+            }
+            if(doimyYashash.text?.length==0)
+            {
+                doimiyYashashEdit.error = "Doimiy yashashni $validatsitaMessage"
+                return false
+            }
 
 
         }

@@ -4,9 +4,9 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityServesChiptalarimBinding
 import com.example.ekengash.databinding.ActivityServesSaqlanganlarBinding
-import com.example.servislar.saqlanganlar.saqlanganlarHaqida.SaqlanganlarHaqida
+import com.example.log.D
+import com.example.servislar.saqlanganlar.haqida.SaqlanganlarHaqida
 
 class ServesSaqlanganlar : AppCompatActivity() {
     private lateinit var binding: ActivityServesSaqlanganlarBinding
@@ -26,7 +26,8 @@ class ServesSaqlanganlar : AppCompatActivity() {
 
     private fun saqlanganlarHaqida() {
         binding.haqida.setOnClickListener {
-            startActivity(Intent(this,SaqlanganlarHaqida::class.java))
+            D.d("keldiiii")
+            startActivity(Intent(this, SaqlanganlarHaqida::class.java))
         }
     }
 
