@@ -160,7 +160,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/qachon_tanlangan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -178,7 +178,7 @@
                             android:textColor="@color/black"
                             android:textSize="14dp"
                             app:layout_constraintStart_toEndOf="@+id/imageView7"
-                            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                            app:layout_constraintTop_toBottomOf="@+id/qachon_tanlangan" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -210,7 +210,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/nn"
+                            android:id="@+id/qachongacha_tanlangan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -229,7 +229,7 @@
                             android:textSize="14dp"
 
                             app:layout_constraintStart_toEndOf="@+id/eee"
-                            app:layout_constraintTop_toBottomOf="@+id/nn" />
+                            app:layout_constraintTop_toBottomOf="@+id/qachongacha_tanlangan" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -280,37 +280,42 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/holat_tanlanganda"
+                        android:id="@+id/qachon_default"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="6dp"
                         android:text="Qachon"
-                        android:textSize="10dp"
+                        android:textSize="@dimen/qachon_default_text"
                         android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/holat"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/holat_text"
+                        android:id="@+id/qachon_tanlanganda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:text="Qachon"
+                        android:textSize="@dimen/qachon_tanlangan"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toEndOf="@+id/holat"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/qachon_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="24 Fev,Pay"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="13dp"
-                        app:layout_constraintStart_toEndOf="@+id/holat"
-                        app:layout_constraintTop_toBottomOf="@+id/holat_tanlanganda" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" ekonom"
                         android:visibility="invisible"
-                        android:textSize="13dp"
-                        app:layout_constraintStart_toEndOf="@+id/holat_text"
-                        app:layout_constraintTop_toBottomOf="@+id/holat_tanlanganda" />
+                        android:textSize="@dimen/qachon_text"
+                        app:layout_constraintStart_toEndOf="@+id/holat"
+                        app:layout_constraintTop_toBottomOf="@+id/qachon_tanlanganda" />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

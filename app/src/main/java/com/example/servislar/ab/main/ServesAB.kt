@@ -19,6 +19,9 @@ import java.util.*
 
 class ServesAB : AppCompatActivity() {
     private lateinit var binding: ActivityServesAbBinding
+    var kattalar = 0
+    var bolalar = 0
+    var chaqaloqlar = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityServesAbBinding.inflate(layoutInflater)
@@ -34,11 +37,13 @@ class ServesAB : AppCompatActivity() {
 
     private fun abQachon() {
 
-        val calendar = Calendar.getInstance()
-        val kun = calendar[Calendar.DAY_OF_MONTH]
-        val haftaKuni = calendar[Calendar.DAY_OF_WEEK]
-        val oy = calendar[Calendar.MONTH]
-        abQachonText(kun = kun, oy = oy, haftaKuni = haftaKuni)
+//        val calendar = Calendar.getInstance()
+//        val kun = calendar[Calendar.DAY_OF_MONTH]
+//        val haftaKuni = calendar[Calendar.DAY_OF_WEEK]
+//        val oy = calendar[Calendar.MONTH]
+//        abQachonText(kun = kun, oy = oy, haftaKuni = haftaKuni)
+
+
         val datePicker =
             MaterialDatePicker.Builder.datePicker()
                 .setTitleText("Select date")
@@ -55,6 +60,9 @@ class ServesAB : AppCompatActivity() {
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_WEEK)
             )
+            binding.abQachonDefault.visibility = View.INVISIBLE
+            binding.qachonTanlangan.visibility= View.VISIBLE
+            binding.abQachonText.visibility = View.VISIBLE
         }
 
     }
@@ -117,11 +125,7 @@ class ServesAB : AppCompatActivity() {
         }
     }
 
-    private fun orqagaQaytish() {
-        binding.orqagaQaytishAb.setOnClickListener {
-            finish()
-        }
-    }
+
 
 
     private fun izlash() {
@@ -139,8 +143,8 @@ class ServesAB : AppCompatActivity() {
             bottomDialog.show()
         }
 
-        val poyezdHolatBinding = BottomSheetAviaHolatBinding.bind(view)
-        poyezdHolatBinding.davomEtishButton.setOnClickListener {
+        val abHolatBinding = BottomSheetAviaHolatBinding.bind(view)
+        abHolatBinding.davomEtishButton.setOnClickListener {
             val umumiyKishilar = kattalar+bolalar+chaqaloqlar
             if(umumiyKishilar!=0){
                 binding.holatDefault.visibility = View.INVISIBLE
@@ -156,70 +160,73 @@ class ServesAB : AppCompatActivity() {
             bottomDialog.dismiss()
         }
 
-        poyezdHolatBinding.beletTuri.visibility = View.GONE
-        poyezdHolatBinding.orqagaQaytish.setOnClickListener {
+        abHolatBinding.beletTuri.visibility = View.GONE
+        abHolatBinding.orqagaQaytish.setOnClickListener {
             bottomDialog.dismiss()
         }
 /*-------------Kattalar------------------*/
-        poyezdHolatBinding.holatKattalarQush.setOnClickListener {
+        abHolatBinding.holatKattalarQush.setOnClickListener {
             kattalar++
-            poyezdHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            poyezdHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            poyezdHolatBinding.holatKattalarSoni.text = kattalar.toString()
+            abHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            abHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            abHolatBinding.holatKattalarSoni.text = kattalar.toString()
         }
-        poyezdHolatBinding.holatKattalarKam.setOnClickListener {
+        abHolatBinding.holatKattalarKam.setOnClickListener {
             if (kattalar > 0) {
                 kattalar--
                 if (kattalar == 0) {
-                    poyezdHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    poyezdHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    abHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    abHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                poyezdHolatBinding.holatKattalarSoni.text = kattalar.toString()
+                abHolatBinding.holatKattalarSoni.text = kattalar.toString()
             }
         }
         /*----------------Bolalar------------*/
-        poyezdHolatBinding.holatBolalarQush.setOnClickListener {
+        abHolatBinding.holatBolalarQush.setOnClickListener {
             bolalar++
-            poyezdHolatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            poyezdHolatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            poyezdHolatBinding.bolalarSoni.text = bolalar.toString()
+            abHolatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            abHolatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            abHolatBinding.bolalarSoni.text = bolalar.toString()
         }
-        poyezdHolatBinding.holatBolalarKam.setOnClickListener {
+        abHolatBinding.holatBolalarKam.setOnClickListener {
             if (bolalar > 0) {
                 bolalar--
                 if (bolalar == 0) {
-                    poyezdHolatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    poyezdHolatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    abHolatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    abHolatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                poyezdHolatBinding.bolalarSoni.text = bolalar.toString()
+                abHolatBinding.bolalarSoni.text = bolalar.toString()
             }
         }
         /*---------------Chaqaloqlar-------------*/
-        poyezdHolatBinding.holatChaqaloqQush.setOnClickListener {
+        abHolatBinding.holatChaqaloqQush.setOnClickListener {
             chaqaloqlar++
-            poyezdHolatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            poyezdHolatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            poyezdHolatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
+            abHolatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            abHolatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            abHolatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
         }
-        poyezdHolatBinding.holatChaqaloqKam.setOnClickListener {
+        abHolatBinding.holatChaqaloqKam.setOnClickListener {
             if (chaqaloqlar > 0) {
                 chaqaloqlar--
                 if (chaqaloqlar == 0) {
-                    poyezdHolatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    poyezdHolatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    abHolatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    abHolatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                poyezdHolatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
+                abHolatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
             }
         }
 
 
+    }
+    private fun orqagaQaytish() {
+        binding.orqagaQaytishAb.setOnClickListener {
+            finish()
+        }
     }
 
     private fun statusBar() {
         window.statusBarColor = Color.parseColor("#F3F3F3")
     }
 
-    var kattalar = 0
-    var bolalar = 0
-    var chaqaloqlar = 0
+
 }

@@ -1,3 +1,6 @@
 <resources>
-        <dimen name="fab_margin">16dp</dimen>
-    </resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="qachon_tanlangan">12dp</dimen>
+    <dimen name="qachon_text">14dp</dimen>
+    <dimen name="qachon_default_text">16dp</dimen>
+</resources>

@@ -11,14 +11,31 @@ import com.example.ekengash.databinding.BottomSheetTurarJoyHolatBinding
 import com.example.ekengash.databinding.FragmentTurarJoyQidirishBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
+import java.util.*
 
 
 class TurarJoyQidirish : Fragment() {
+    private var _binding: FragmentTurarJoyQidirishBinding? = null
+    private val binding get() = _binding!!
+    var xonalar=0
+    var kattalar=0
+    var bolalar=0
+    var chaqaloqlar=0
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentTurarJoyQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        bottomSheetDialog()
+        turarJoyHolat()
         turarJoyQachon()
         turarJoyQachongacha()
     }
@@ -33,6 +50,19 @@ class TurarJoyQidirish : Fragment() {
         binding.turarJoyQachon.setOnClickListener {
             fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
         }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time= turarJoyQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachonDefault.visibility = View.INVISIBLE
+            binding.qachonTanlangan.visibility= View.VISIBLE
+            binding.qachonText.visibility = View.VISIBLE
+            binding.qachonText.setText(time)
+        }
     }
 
     private fun turarJoyQachongacha()
@@ -45,110 +75,156 @@ class TurarJoyQidirish : Fragment() {
         binding.turarJoyQachongacha.setOnClickListener {
             fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
         }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time= turarJoyQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachongachaDefault.visibility = View.INVISIBLE
+            binding.qachongachaTanlangan.visibility= View.VISIBLE
+            binding.qachongachaText.visibility = View.VISIBLE
+            binding.qachongachaText.setText(time)
+        }
     }
 
+    private fun turarJoyQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
 
+        val oytext = when (oy + 1) {
+            1 -> "Yan"
+            2 -> "Fev"
+            3 -> "Mar"
+            4 -> "Apr"
+            5 -> "May"
+            6 -> "June"
+            7 -> "July"
+            8 -> "Aug"
+            9 -> "Sep"
+            10 -> "Oct"
+            11 -> "Noya"
+            12 -> "Dek"
+
+            else -> {}
+        }
+        val haftaKuniText = when (haftaKuni) {
+            1 -> "Yak"
+            2 -> "Dush"
+            3 -> "Sesh"
+            4 -> "Chor"
+            5 -> "Pay"
+            6 -> "Juma"
+            7 -> "Shan"
+            else -> {}
+        }
+        return ((kun.toString() + " " + oytext + "," + haftaKuniText))
+    }
 
     /*-------------------------Teginma--------------------------------*/
-    private fun bottomSheetDialog() {
+    private fun turarJoyHolat() {
         val bottomsheet=BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_turar_joy_holat,null)
-        val bottomsheetBinding = BottomSheetTurarJoyHolatBinding.bind(view)
+        val turarJoyHolatBind = BottomSheetTurarJoyHolatBinding.bind(view)
         bottomsheet.setContentView(view)
         binding.turarJoyHolat.setOnClickListener {
             bottomsheet.show()
         }
-        /*-----------Xonalar-----------------------*/
-        bottomsheetBinding.holatXonalarQush.setOnClickListener {
-            xonalar++
-            bottomsheetBinding.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            bottomsheetBinding.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            bottomsheetBinding.xonalarSoni.text=xonalar.toString()
+        turarJoyHolatBind.davomEtishButton.setOnClickListener {
+
+            val umumiyKishilar = kattalar+bolalar+chaqaloqlar
+            if(umumiyKishilar!=0){
+
+                binding.holatDefault.visibility = View.INVISIBLE
+                binding.holatTanlanganda.visibility = View.VISIBLE
+                binding.holatText.visibility = View.VISIBLE
+                binding.holatText.setText(xonalar.toString()+" xona,"+umumiyKishilar.toString()+" kishi")
+            }
+            else{
+                binding.holatDefault.visibility = View.VISIBLE
+                binding.holatTanlanganda.visibility = View.INVISIBLE
+                binding.holatText.visibility = View.INVISIBLE
+            }
+            bottomsheet.dismiss()
         }
-        bottomsheetBinding.holatXonalarKam.setOnClickListener {
+
+
+        /*-----------Xonalar-----------------------*/
+        turarJoyHolatBind.holatXonalarQush.setOnClickListener {
+            xonalar++
+            turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
+        }
+        turarJoyHolatBind.holatXonalarKam.setOnClickListener {
             if(xonalar>0){
             xonalar--
             if(xonalar==0){
-                bottomsheetBinding.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                bottomsheetBinding.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
             }
-            bottomsheetBinding.xonalarSoni.text=xonalar.toString()
+                turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
             }
         }
         /*-------------Kattalar------------------*/
-        bottomsheetBinding.holatKattalarQush.setOnClickListener {
+        turarJoyHolatBind.holatKattalarQush.setOnClickListener {
             kattalar++
-            bottomsheetBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            bottomsheetBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            bottomsheetBinding.holatKattalarSoni.text=kattalar.toString()
+            turarJoyHolatBind.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turarJoyHolatBind.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turarJoyHolatBind.holatKattalarSoni.text=kattalar.toString()
         }
-        bottomsheetBinding.holatKattalarKam.setOnClickListener {
+        turarJoyHolatBind.holatKattalarKam.setOnClickListener {
             if(kattalar>0){
                 kattalar--
                 if(kattalar==0){
-                    bottomsheetBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    bottomsheetBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turarJoyHolatBind.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turarJoyHolatBind.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                bottomsheetBinding.holatKattalarSoni.text=kattalar.toString()
+                turarJoyHolatBind.holatKattalarSoni.text=kattalar.toString()
             }
         }
         /*----------------Bolalar------------*/
-        bottomsheetBinding.holatBolalarQush.setOnClickListener {
+        turarJoyHolatBind.holatBolalarQush.setOnClickListener {
             bolalar++
-            bottomsheetBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            bottomsheetBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            bottomsheetBinding.bolalarSoni.text=bolalar.toString()
+            turarJoyHolatBind.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turarJoyHolatBind.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turarJoyHolatBind.bolalarSoni.text=bolalar.toString()
         }
-        bottomsheetBinding.holatBolalarKam.setOnClickListener {
+        turarJoyHolatBind.holatBolalarKam.setOnClickListener {
             if(bolalar>0){
                 bolalar--
                 if(bolalar==0){
-                    bottomsheetBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    bottomsheetBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turarJoyHolatBind.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turarJoyHolatBind.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                bottomsheetBinding.bolalarSoni.text=bolalar.toString()
+                turarJoyHolatBind.bolalarSoni.text=bolalar.toString()
             }
         }
         /*---------------Chaqaloqlar-------------*/
-        bottomsheetBinding.holatChaqaloqQush.setOnClickListener {
+        turarJoyHolatBind.holatChaqaloqQush.setOnClickListener {
             chaqaloqlar++
-            bottomsheetBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            bottomsheetBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            bottomsheetBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
+            turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turarJoyHolatBind.holatChaqaloqSoni.text=chaqaloqlar.toString()
         }
-        bottomsheetBinding.holatChaqaloqKam.setOnClickListener {
+        turarJoyHolatBind.holatChaqaloqKam.setOnClickListener {
             if(chaqaloqlar>0){
                 chaqaloqlar--
                 if(chaqaloqlar==0){
-                    bottomsheetBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    bottomsheetBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                bottomsheetBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
+                turarJoyHolatBind.holatChaqaloqSoni.text=chaqaloqlar.toString()
             }
         }
 
 
-        bottomsheetBinding.orqagaQaytish.setOnClickListener {
+        turarJoyHolatBind.orqagaQaytish.setOnClickListener {
             bottomsheet.dismiss()
         }
     }
 
 
 
-    private var _binding: FragmentTurarJoyQidirishBinding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentTurarJoyQidirishBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-    var xonalar=0
-    var kattalar=0
-    var bolalar=0
-    var chaqaloqlar=0
 }

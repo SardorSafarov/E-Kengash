@@ -20,6 +20,22 @@ import java.util.*
 
 
 class PoyzQidirish : Fragment() {
+    private var _binding: FragmentPoyzQidirishBinding? = null
+    private val binding get() = _binding!!
+    var kattalar=0
+    var bolalar=0
+    var chaqaloqlar=0
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentPoyzQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -33,6 +49,61 @@ class PoyzQidirish : Fragment() {
         poyezdQachon()
         poyezdHolat()
     }
+    private fun poyezdQachon() {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.poyezdQachon.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
+        }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time= avtobusQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachonDefault.visibility = View.INVISIBLE
+            binding.qachonTanlanganda.visibility= View.VISIBLE
+            binding.qachonText.visibility = View.VISIBLE
+            binding.qachonText.setText(time)
+        }
+    }
+
+    private fun avtobusQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
+
+        val oytext = when (oy + 1) {
+            1 -> "Yan"
+            2 -> "Fev"
+            3 -> "Mar"
+            4 -> "Apr"
+            5 -> "May"
+            6 -> "June"
+            7 -> "July"
+            8 -> "Aug"
+            9 -> "Sep"
+            10 -> "Oct"
+            11 -> "Noya"
+            12 -> "Dek"
+
+            else -> {}
+        }
+        val haftaKuniText = when (haftaKuni) {
+            1 -> "Yak"
+            2 -> "Dush"
+            3 -> "Sesh"
+            4 -> "Chor"
+            5 -> "Pay"
+            6 -> "Juma"
+            7 -> "Shan"
+            else -> {}
+        }
+        return ((kun.toString() + " " + oytext + "," + haftaKuniText))
+    }
+
 
     private fun poyezdHolat() {
 
@@ -41,6 +112,25 @@ class PoyzQidirish : Fragment() {
         bottomDialog.setContentView(view)
         val poyezdHolatBinding = BottomSheetAviaHolatBinding.bind(view)
         poyezdHolatBinding.beletTuri.visibility=View.GONE
+
+
+        poyezdHolatBinding.davomEtishButton.setOnClickListener {
+            val umumiyKishilar = kattalar+bolalar+chaqaloqlar
+            if(umumiyKishilar!=0){
+                binding.holatDefault.visibility = View.INVISIBLE
+                binding.holatTanlanganda.visibility = View.VISIBLE
+                binding.holatText.visibility = View.VISIBLE
+                binding.holatText.setText(umumiyKishilar.toString()+" kishi")
+            }
+            else{
+                binding.holatDefault.visibility = View.VISIBLE
+                binding.holatTanlanganda.visibility = View.INVISIBLE
+                binding.holatText.visibility = View.INVISIBLE
+            }
+            bottomDialog.dismiss()
+        }
+
+
         poyezdHolatBinding.orqagaQaytish.setOnClickListener {
             bottomDialog.dismiss()
         }
@@ -112,16 +202,7 @@ class PoyzQidirish : Fragment() {
 //            bottomDialog.dismiss()
 //        }
 //    }
-private fun poyezdQachon() {
-    val datePicker =
-        MaterialDatePicker.Builder.datePicker()
-            .setTitleText("Select date")
-            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-            .build()
-    binding.poyezdQachon.setOnClickListener {
-        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
-    }
-}
+
 
 
     private fun poyezdQayerdan() {
@@ -149,21 +230,4 @@ private fun poyezdQachon() {
             bottomsheet.show()
         }
     }
-
-    /*----------------Tegma----------------------*/
-    private var _binding: FragmentPoyzQidirishBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentPoyzQidirishBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-    var kattalar=0
-    var bolalar=0
-    var chaqaloqlar=0
 }

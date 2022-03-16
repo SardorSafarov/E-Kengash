@@ -8,10 +8,10 @@
     tools:context="com.example.servislar.taxi.main.ServesTaxi">
     <ImageButton
         android:id="@+id/orqaga_qaytish_ab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="40dp"
-        android:paddingTop="30dp"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

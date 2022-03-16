@@ -9,10 +9,10 @@
 
     <ImageButton
         android:id="@+id/orqaga_qaytish_ab"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

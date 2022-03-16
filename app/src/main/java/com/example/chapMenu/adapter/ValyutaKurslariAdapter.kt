@@ -8,6 +8,8 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemValyutaBinding
 import com.example.log.D
 import com.example.network.netWorkEndtity.valyuta.ValyutaEntityItem
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewHolder>() {
 
@@ -31,8 +33,11 @@ class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewH
             binding.valyutaRamziyKodi.setText("1 "+item.Ccy)
             binding.valyutaNomi.setText(item.CcyNm_UZ)
             binding.valyutaMbDagi.setText(item.Rate)
-            binding.valyutaSotibOlish.setText((item.Rate.toDouble()-90).toString())
-            binding.valyutaSotish.setText((item.Rate.toDouble()+250).toString())
+            val df = DecimalFormat("#.##")
+            df.roundingMode = RoundingMode.CEILING
+
+            binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble()-90).toString())
+            binding.valyutaSotish.setText(df.format(item.Rate.toDouble()+250).toString())
 
         }
     }

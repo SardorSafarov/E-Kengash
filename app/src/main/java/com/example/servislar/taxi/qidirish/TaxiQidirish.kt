@@ -12,9 +12,23 @@ import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
 import com.example.ekengash.databinding.FragmentTaxiQidirishBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
+import java.util.*
 
 
 class TaxiQidirish : Fragment() {
+    private var _binding: FragmentTaxiQidirishBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentTaxiQidirishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -22,6 +36,60 @@ class TaxiQidirish : Fragment() {
         taxiQayerdan()
         taxiQayerga()
         taxiQachon()
+    }
+    private fun taxiQachon() {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.taxiQachon.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
+        }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time= avtobusQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachonDefault.visibility = View.INVISIBLE
+            binding.qachonTanlanganda.visibility= View.VISIBLE
+            binding.qachonText.visibility = View.VISIBLE
+            binding.qachonText.setText(time)
+        }
+    }
+
+    private fun avtobusQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
+
+        val oytext = when (oy + 1) {
+            1 -> "Yan"
+            2 -> "Fev"
+            3 -> "Mar"
+            4 -> "Apr"
+            5 -> "May"
+            6 -> "June"
+            7 -> "July"
+            8 -> "Aug"
+            9 -> "Sep"
+            10 -> "Oct"
+            11 -> "Noya"
+            12 -> "Dek"
+
+            else -> {}
+        }
+        val haftaKuniText = when (haftaKuni) {
+            1 -> "Yak"
+            2 -> "Dush"
+            3 -> "Sesh"
+            4 -> "Chor"
+            5 -> "Pay"
+            6 -> "Juma"
+            7 -> "Shan"
+            else -> {}
+        }
+        return ((kun.toString() + " " + oytext + "," + haftaKuniText))
     }
 
     private fun taxiQayerdan() {
@@ -62,30 +130,9 @@ class TaxiQidirish : Fragment() {
 //            bottomDialog.dismiss()
 //        }
 //    }
-private fun taxiQachon() {
-    val datePicker =
-        MaterialDatePicker.Builder.datePicker()
-            .setTitleText("Select date")
-            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-            .build()
-    binding.taxiQachon.setOnClickListener {
-        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
-    }
-}
+
 
     /*----------------Tegma----------------------*/
-    private var _binding: FragmentTaxiQidirishBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentTaxiQidirishBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
 
 
 }

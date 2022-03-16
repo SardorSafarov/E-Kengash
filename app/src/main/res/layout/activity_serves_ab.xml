@@ -191,13 +191,26 @@
                                     app:layout_constraintTop_toTopOf="parent" />
 
                                 <TextView
-                                    android:id="@+id/textView8"
+                                    android:id="@+id/qachon_tanlangan"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="5dp"
                                     android:layout_marginTop="10dp"
                                     android:text="Qachon"
+                                    android:visibility="invisible"
                                     android:textSize="12dp"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/ab_qachon_default"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Qachon"
+                                    android:visibility="visible"
+                                    android:textSize="16dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toEndOf="@+id/imageView7"
                                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -207,10 +220,11 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="5dp"
                                     android:text="24 Fev,Pay"
+                                    android:visibility="invisible"
                                     android:textColor="@color/black"
                                     android:textSize="14dp"
                                     app:layout_constraintStart_toEndOf="@+id/imageView7"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                                    app:layout_constraintTop_toBottomOf="@+id/qachon_tanlangan" />
 
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -260,9 +274,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="10dp"
-                                    android:layout_marginTop="6dp"
+                                    android:layout_marginTop="10dp"
                                     android:text="Holat"
-                                    android:textSize="10dp"
+                                    android:textSize="12dp"
                                     android:visibility="invisible"
                                     app:layout_constraintStart_toEndOf="@+id/holat"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -275,7 +289,7 @@
                                     android:text="0 ta kishi"
                                     android:visibility="invisible"
                                     android:textColor="@color/black"
-                                    android:textSize="13dp"
+                                    android:textSize="14dp"
                                     app:layout_constraintStart_toEndOf="@+id/holat"
                                     app:layout_constraintTop_toBottomOf="@+id/holat_tanlanganda" />
 
