@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
-import com.example.engYaqin.EngYaqin
+import com.example.engYaqin.main.EngYaqin
 import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
@@ -47,7 +47,7 @@ class Asosiy : Fragment() {
 
     private fun engYaqin() {
         binding.engYaqin.setOnClickListener {
-            startActivity(Intent(requireContext(),EngYaqin::class.java))
+            startActivity(Intent(requireContext(), EngYaqin::class.java))
         }
     }
 

@@ -1,12 +1,16 @@
 package com.example.qrcode.main
 
+import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import androidx.core.app.ActivityCompat
 import com.budiyev.android.codescanner.AutoFocusMode
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
@@ -20,7 +24,9 @@ class QRcodeScaner : AppCompatActivity() {
     private lateinit var binding: ActivityQrcodeScanerBinding
     private lateinit var codeScanner: CodeScanner
     private var flash = true
-
+    private var PERMISSIONS: Array<String> = arrayOf(
+        Manifest.permission.CAMERA
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQrcodeScanerBinding.inflate(layoutInflater)
@@ -39,6 +45,7 @@ class QRcodeScaner : AppCompatActivity() {
         qrcodeHaqida()
         ortgaQaytish()
         flash()
+        chackPerimition()
     }
 
     private fun qrcodeHaqida() {
@@ -114,5 +121,37 @@ class QRcodeScaner : AppCompatActivity() {
     override fun onPause() {
         codeScanner.releaseResources()
         super.onPause()
+    }
+    /*---------------Ruxsat berish-------------------*/
+    private fun chackPerimition() {
+        if (!hasPermissions(this, *PERMISSIONS)) {
+
+            ActivityCompat.requestPermissions(this,PERMISSIONS,1);
+        }
+    }
+    private fun hasPermissions(context: Context?, vararg PERMISSIONS: String): Boolean {
+        if (context != null && PERMISSIONS != null) {
+            for (permission in PERMISSIONS) {
+                if (ActivityCompat.checkSelfPermission(
+                        context,
+                        permission
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String?>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            }
+        }
     }
 }

@@ -28,17 +28,28 @@ class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewH
                 2->{binding.davlatBayrog.setImageResource(R.drawable.russia)}
                 3->{binding.davlatBayrog.setImageResource(R.drawable.gbp)}
                 4->{binding.davlatBayrog.setImageResource(R.drawable.jpy)}
-                5->{binding.davlatBayrog.setImageResource(R.drawable.chf)}
+                5->{
+                    binding.davlatBayrog.setImageResource(R.drawable.chf)
+                }
             }
-            binding.valyutaRamziyKodi.setText("1 "+item.Ccy)
-            binding.valyutaNomi.setText(item.CcyNm_UZ)
-            binding.valyutaMbDagi.setText(item.Rate)
-            val df = DecimalFormat("#.##")
-            df.roundingMode = RoundingMode.CEILING
-
-            binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble()-90).toString())
-            binding.valyutaSotish.setText(df.format(item.Rate.toDouble()+250).toString())
-
+            if(adapterPosition!=5) {
+                binding.valyutaRamziyKodi.setText("1 " + item.Ccy)
+                binding.valyutaNomi.setText(item.CcyNm_UZ)
+                binding.valyutaMbDagi.setText(item.Rate)
+                val df = DecimalFormat("#.##")
+                df.roundingMode = RoundingMode.CEILING
+                binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 90).toString())
+                binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 250).toString())
+            }else
+            {
+                binding.valyutaRamziyKodi.setText("1 CHF")
+                binding.valyutaNomi.setText("Shveytsariya franki")
+                binding.valyutaMbDagi.setText(item.Rate)
+                val df = DecimalFormat("#.##")
+                df.roundingMode = RoundingMode.CEILING
+                binding.valyutaSotibOlish.setText(df.format(item.Rate.toDouble() - 90).toString())
+                binding.valyutaSotish.setText(df.format(item.Rate.toDouble() + 250).toString())
+            }
         }
     }
 

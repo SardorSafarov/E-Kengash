@@ -1,22 +1,23 @@
-package com.example.ekengash.fragmentlar.kuproq
+package com.example.ekengash.fragmentlar.kuproq.page1
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.chapMenu.valyutaKurslari.ValyutaKurslari
 import com.example.ekengash.R
-import com.example.ekengash.adapter.kuproq.KuproqItem2Adapter
-import com.example.ekengash.databinding.FragmentKuproqitem2Binding
+import com.example.ekengash.adapter.kuproq.KuproqItem1Adapter
+import com.example.ekengash.databinding.FragmentKuproqItem1Binding
 import com.example.ekengash.recyclerViewItemEntity.KuproqItemEntitit
 import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
 import com.example.servislar.chegirmalar.ServesChegirmalar
+import com.example.servislar.chiptalarim.ServesChiptalarim
 import com.example.servislar.poyezd.main.ServesPoyezd
 import com.example.servislar.saqlanganlar.main.ServesSaqlanganlar
 import com.example.servislar.tanggalar.main.ServisTanggalar
@@ -24,33 +25,34 @@ import com.example.servislar.taxi.main.ServesTaxi
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
 
-class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
-    private var _binding: FragmentKuproqitem2Binding? = null
+class KuproqItem1 : Fragment(), KuproqItem1Adapter.OnClickLister {
+    private var _binding: FragmentKuproqItem1Binding? = null
     private val binding get() = _binding!!
-    private lateinit var adapter: KuproqItem2Adapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentKuproqitem2Binding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        _binding = FragmentKuproqItem1Binding.inflate(inflater, container, false)
+        adapter = KuproqItem1Adapter(this)
+        return binding.root
     }
 
+
+    private lateinit var adapter: KuproqItem1Adapter
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        adapter = KuproqItem2Adapter(this)
+
         adaptergaUlash()
     }
 
     private fun adaptergaUlash() {
-        binding.recyclerView.adapter=adapter
-        val layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.layoutManager = layoutManager
+        binding.recyclerVieKuproq1.adapter=adapter
+        val layoutManager = GridLayoutManager(context, 3)
+        binding.recyclerVieKuproq1.layoutManager = layoutManager
         adapter.setData(list)
     }
     override fun onClickListener(text: String) {
@@ -86,20 +88,24 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
             "Kamera"->{
                 startActivity(Intent(context, QRcodeScaner::class.java))
             }
+            "Chiptalarim"->
+            {
+                startActivity(Intent(context, ServesChiptalarim::class.java))
+            }
             "Saqlanganlar"->{
                 startActivity(Intent(context, ServesSaqlanganlar::class.java))
             }
         }
     }
 
-
-    /*--------------------Teginmaaa----------------*/
+    /*-------------Teginmaaa----------------*/
 
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
     private var list: List<KuproqItemEntitit> = listOf(
         KuproqItemEntitit(

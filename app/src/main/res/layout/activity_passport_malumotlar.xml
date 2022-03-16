@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:src="@drawable/ic_profil_passport_malumot"
+        android:src="@drawable/ic_passport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
@@ -111,7 +111,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismi"
+                            android:id="@+id/passport_seriya_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii1"
+                                android:id="@+id/passport_seriya"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -134,6 +134,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_jshsher_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -145,6 +146,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_jshsher"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -152,6 +154,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_kim_berdi_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -163,6 +166,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_kim_berdi"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -170,6 +174,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_berilgan_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -181,6 +186,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_berilgan"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -189,6 +195,7 @@
 
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_amalqilish_uddati_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -200,14 +207,17 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_amalqilish_uddati"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tug_dav_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
+                            android:visibility="invisible"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             app:boxStrokeColor="@color/kuk"
@@ -217,15 +227,18 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tug_dav"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/doimiy_yashash_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:visibility="invisible"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
@@ -234,24 +247,28 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/doimy_yasha"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email_edit"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
+                            android:visibility="invisible"
                             android:layout_marginTop="15dp"
                             android:layout_marginBottom="20dp"
                             android:hint="Email"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>

@@ -19,7 +19,7 @@ import com.example.ekengash.fragmentlar.chat.chatHaqida.ChatHaqida
 
 
 class ChatScreen : AppCompatActivity() {
-    lateinit var binding :ActivityChatScreenBinding
+    lateinit var binding : ActivityChatScreenBinding
     var ovozliButton=true
 
 

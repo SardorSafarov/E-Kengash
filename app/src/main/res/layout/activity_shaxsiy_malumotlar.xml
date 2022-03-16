@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:src="@drawable/ic_profil_shaxsiy_malumotlar"
+        android:src="@drawable/ic_shaxsiy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
@@ -111,7 +111,7 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismi"
+                            android:id="@+id/ism_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii1"
+                                android:id="@+id/foydalanuvchi_ismi"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk" />
@@ -134,6 +134,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/famil_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -145,6 +146,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_famil"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -152,6 +154,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/otasi_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -163,6 +166,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_otasi"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -170,6 +174,7 @@
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tugulgan_kun_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -181,6 +186,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_tugulgan_kuni"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
@@ -218,6 +224,7 @@
                         </RadioGroup>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/davlat_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -229,12 +236,14 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_davlat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/viloyat_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -246,12 +255,14 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_viloyat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/telefon_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -263,12 +274,14 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_tel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email_editText1"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -281,6 +294,7 @@
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/foydalanuvchi_email"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>

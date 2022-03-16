@@ -1,4 +1,4 @@
-package com.example.ekengash.fragmentlar.kuproq
+package com.example.ekengash.fragmentlar.kuproq.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentKuproqBinding
+import com.example.ekengash.fragmentlar.kuproq.page1.KuproqItem1
+import com.example.ekengash.fragmentlar.kuproq.page2.Kuproqitem2
 
 
 class Kuproqq : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.engYaqin
+package com.example.engYaqin.main
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity

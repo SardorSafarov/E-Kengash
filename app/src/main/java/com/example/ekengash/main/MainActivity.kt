@@ -1,11 +1,9 @@
 package com.example.ekengash.main
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -20,7 +18,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
@@ -37,8 +34,8 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.ChapMenuBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
-import com.example.ekengash.fragmentlar.chat.main.ChatScreen
-import com.example.ekengash.fragmentlar.kuproq.Kuproqq
+import com.example.ekengash.fragmentlar.chat.Chat
+import com.example.ekengash.fragmentlar.kuproq.main.Kuproqq
 import com.example.room.viewModel.UserViewModel
 import com.google.android.material.navigation.NavigationView
 
@@ -51,9 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private var toggle: ActionBarDrawerToggle? = null
     private var toolbar: Toolbar? = null
 
-    private var PERMISSIONS: Array<String> = arrayOf(
-        Manifest.permission.CAMERA
-    )
+
 
     @SuppressLint("WrongViewCast")
     @RequiresApi(Build.VERSION_CODES.M)
@@ -80,18 +75,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         blok()
         statusBar()
         chapMenu()
-        foydalanuvchiHaqida()
+        foydalanuvchiHaqidaMalumotlar()
       //  chackPerimition()
         logOut()
         binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
 
-    private fun foydalanuvchiHaqida() {
+    private fun foydalanuvchiHaqidaMalumotlar() {
         val bind= ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
         userViewModel.readUser.observe(this, Observer {
             bind.foydalanuvchiIsm.setText(it.get(0).full_name)
             bind.foydalanuvchiTel.setText("+"+it.get(0).phone)
         })
+        bind.foydalanuvchiRasmi.setOnClickListener {
+            startActivity(Intent(this, Profil::class.java))
+            val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+            drawer.closeDrawer(GravityCompat.START)
+        }
+        bind.foydalanuvchiniTasdiqlash.setOnClickListener {
+            startActivity(Intent(this, Profil::class.java))
+            val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+            drawer.closeDrawer(GravityCompat.START)
+        }
     }
 
     /*=========================Chap menu itemclick==============================*/
@@ -116,6 +121,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //            }
             R.id.chap_menu_profil ->{
                 startActivity(Intent(this, Profil::class.java))
+            }
+            R.id.chap_menu_ilova_ulashish->{
+                val intent = Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT,
+                    "Ishlab chiqaruvchi Sardor Safarov \nMurojat uchun tel:+99899 505 66 98");
+                intent.type = "text/plain"
+                startActivity(intent)
             }
         }
         val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
@@ -145,7 +158,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     true
                 }
                 R.id.chat -> {
-                    startActivity(Intent(this, ChatScreen::class.java))
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
+                        Chat()
+                    ).commit()
+                 //   startActivity(Intent(this, ChatScreen::class.java))
                     true
                 }
                 R.id.kuproq -> {
@@ -253,41 +269,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
         return false
-    }
-
-
-
-    /*---------------Ruxsat berish-------------------*/
-    private fun chackPerimition() {
-        if (!hasPermissions(this, *PERMISSIONS)) {
-
-            ActivityCompat.requestPermissions(this,PERMISSIONS,1);
-        }
-    }
-    private fun hasPermissions(context: Context?, vararg PERMISSIONS: String): Boolean {
-        if (context != null && PERMISSIONS != null) {
-            for (permission in PERMISSIONS) {
-                if (ActivityCompat.checkSelfPermission(
-                        context,
-                        permission
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    return false
-                }
-            }
-        }
-        return true
-    }
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String?>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == 1) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            }
-        }
     }
 
 }

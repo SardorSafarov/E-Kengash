@@ -35,7 +35,7 @@
             android:name="com.example.servislar.chiptalarim.ServesChiptalarim"
             android:exported="false" />
         <activity
-            android:name="com.example.engYaqin.EngYaqin"
+            android:name="com.example.engYaqin.main.EngYaqin"
             android:exported="false" />
         <activity
             android:name="com.example.splashScreen.SplashScreen"

@@ -15,10 +15,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView"
+            android:id="@+id/foydalanuvchi_rasmi"
             android:layout_width="45dp"
             android:layout_height="45dp"
-
             android:layout_marginStart="30dp"
             android:layout_marginTop="40dp"
             app:cardCornerRadius="100dp"
@@ -42,8 +41,8 @@
             android:textColor="@color/white"
             android:textSize="18dp"
             app:layout_constraintBottom_toTopOf="@+id/foydalanuvchi_tel"
-            app:layout_constraintStart_toEndOf="@+id/materialCardView"
-            app:layout_constraintTop_toTopOf="@+id/materialCardView" />
+            app:layout_constraintStart_toEndOf="@+id/foydalanuvchi_rasmi"
+            app:layout_constraintTop_toTopOf="@+id/foydalanuvchi_rasmi" />
 
         <TextView
             android:id="@+id/foydalanuvchi_tel"
@@ -53,10 +52,11 @@
             android:text="+998 99 123 45 67"
             android:textColor="@color/white"
             android:textSize="14dp"
-            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
-            app:layout_constraintStart_toEndOf="@+id/materialCardView" />
+            app:layout_constraintBottom_toBottomOf="@+id/foydalanuvchi_rasmi"
+            app:layout_constraintStart_toEndOf="@+id/foydalanuvchi_rasmi" />
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/foydalanuvchini_tasdiqlash"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -64,7 +64,7 @@
             app:cardCornerRadius="6dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_rasmi">
 
             <TextView
                 android:layout_width="wrap_content"

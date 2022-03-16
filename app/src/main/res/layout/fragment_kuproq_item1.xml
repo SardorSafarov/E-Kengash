@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context=".fragmentlar.kuproq.KuproqItem1">
+    tools:context=".fragmentlar.kuproq.page1.KuproqItem1">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerVie_kuproq_1"
