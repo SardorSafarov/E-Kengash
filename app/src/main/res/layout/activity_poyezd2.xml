@@ -56,16 +56,18 @@
                 android:backgroundTint="@color/white"
                 android:text="Qidirish"
                 android:textAllCaps="false"
+                android:layout_weight="1"
                 android:stateListAnimator="@null"
                 android:textColor="@color/black"
                 app:cornerRadius="6dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/avia_chiptalar"
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:backgroundTint="#E8E8E8"
+                android:layout_weight="1"
                 android:text="Chiptalarim"
                 android:maxLines="1"
                 android:stateListAnimator="@null"

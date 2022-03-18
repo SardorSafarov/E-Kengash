@@ -1,4 +1,4 @@
-package com.example.servislar.chegirmalar
+package com.example.servislar.chegirmalar.mian
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.ekengash.databinding.ActivityServesChegirmalarBinding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
-import com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy
+import com.example.servislar.chegirmalar.transport.ChegirmalarTransport
+import com.example.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy
+import com.example.servislar.chegirmalar.turpaket.ChegirmalarTurpaket
 
 class ServesChegirmalar : AppCompatActivity() {
 
@@ -18,9 +20,27 @@ class ServesChegirmalar : AppCompatActivity() {
         statusBar()
         ortgaQaytish()
         qidirish()
+        turarJoy()
+        turPaket()
+        transport()
 
+    }
+
+    private fun transport() {
+        binding.transportlar.setOnClickListener {
+            startActivity(Intent(this, ChegirmalarTransport::class.java))
+        }
+    }
+
+    private fun turPaket() {
+        binding.turPaketlar.setOnClickListener {
+            startActivity(Intent(this, ChegirmalarTurpaket::class.java))
+        }
+    }
+
+    private fun turarJoy() {
         binding.turarJoy.setOnClickListener {
-            startActivity(Intent(this, ServesChegirmaTurarJoy::class.java))
+            startActivity(Intent(this, ChegirmaTurarJoy::class.java))
         }
     }
 

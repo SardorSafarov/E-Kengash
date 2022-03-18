@@ -237,6 +237,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val alerDialogBinding = AlertDialog.Builder(this)
             alerDialogBinding.setTitle("Internetga ulaning.")
             alerDialogBinding.setMessage("Tarmoqni tekshiring!!")
+            alerDialogBinding.setPositiveButton("Ok"){ dialogInterface: DialogInterface, i: Int -> }
             alerDialogBinding.setCancelable(false)
             alerDialogBinding.show()
         }

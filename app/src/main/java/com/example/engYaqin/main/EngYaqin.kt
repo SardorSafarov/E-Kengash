@@ -8,6 +8,7 @@ import com.example.ekengash.databinding.ActivityEngYaqinBinding
 import com.example.engYaqin.haqida.EngYaqinHaqida
 
 class EngYaqin : AppCompatActivity() {
+
     private lateinit var binding:ActivityEngYaqinBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

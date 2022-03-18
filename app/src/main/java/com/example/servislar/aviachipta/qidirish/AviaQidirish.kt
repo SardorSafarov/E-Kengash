@@ -25,7 +25,7 @@ import java.util.*
 class AviaQidirish : Fragment() {
     private var _binding: FragmentAviaQidirishBinding? = null
     private val binding get() = _binding!!
-    var kattalar=0
+    var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
 
@@ -101,9 +101,9 @@ class AviaQidirish : Fragment() {
             aviaholatBinding.holatKattalarSoni.text=kattalar.toString()
         }
         aviaholatBinding.holatKattalarKam.setOnClickListener {
-            if(kattalar>0){
+            if(kattalar>1){
                 kattalar--
-                if(kattalar==0){
+                if(kattalar==1){
                     aviaholatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     aviaholatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }

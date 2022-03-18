@@ -14,10 +14,11 @@ import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
-import com.example.servislar.chegirmalar.ServesChegirmalar
+import com.example.servislar.chegirmalar.mian.ServesChegirmalar
 import com.example.servislar.poyezd.main.ServesPoyezd
 import com.example.servislar.tanggalar.main.ServisTanggalar
 import com.example.servislar.taxi.main.ServesTaxi
+import com.example.servislar.turPaketlar.main.ServesTurPaket
 import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
 
@@ -90,13 +91,16 @@ class Asosiy : Fragment() {
         startActivity(Intent(context, ServesAB::class.java))
         }
         binding.servesChegirmalarButton.setOnClickListener {
-            startActivity(Intent(context,ServesChegirmalar::class.java))
+            startActivity(Intent(context, ServesChegirmalar::class.java))
         }
         binding.servesTurarJoyButton.setOnClickListener {
             startActivity(Intent(context, ServesTurarjoy::class.java))
         }
         binding.servesTaxsiButton.setOnClickListener {
             startActivity(Intent(context,ServesTaxi::class.java))
+        }
+        binding.servesTurpaketButton.setOnClickListener {
+            startActivity(Intent(context,ServesTurPaket::class.java))
         }
     }
     private fun asosiyQidirishOynasi() {

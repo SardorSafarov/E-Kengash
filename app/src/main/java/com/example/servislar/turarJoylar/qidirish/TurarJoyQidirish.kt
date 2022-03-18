@@ -18,7 +18,7 @@ class TurarJoyQidirish : Fragment() {
     private var _binding: FragmentTurarJoyQidirishBinding? = null
     private val binding get() = _binding!!
     var xonalar=1
-    var kattalar=0
+    var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
     override fun onCreateView(
@@ -174,9 +174,9 @@ class TurarJoyQidirish : Fragment() {
             turarJoyHolatBind.holatKattalarSoni.text=kattalar.toString()
         }
         turarJoyHolatBind.holatKattalarKam.setOnClickListener {
-            if(kattalar>0){
+            if(kattalar>1){
                 kattalar--
-                if(kattalar==0){
+                if(kattalar==1){
                     turarJoyHolatBind.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     turarJoyHolatBind.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }

@@ -18,7 +18,7 @@ import com.example.qrcode.main.QRcodeScaner
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
-import com.example.servislar.chegirmalar.ServesChegirmalar
+import com.example.servislar.chegirmalar.mian.ServesChegirmalar
 import com.example.servislar.chiptalarim.main.ServesChiptalarim
 import com.example.servislar.poyezd.main.ServesPoyezd
 import com.example.servislar.saqlanganlar.main.ServesSaqlanganlar
@@ -121,7 +121,7 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         ),
         KuproqItemEntitit(
             icon = R.drawable.ic_tanggalar,
-            text = "Tanggalar"
+            text = "Tangalar"
         ),
         KuproqItemEntitit(
             icon = R.drawable.ic_kamera,

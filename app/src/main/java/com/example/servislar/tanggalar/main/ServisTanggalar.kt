@@ -8,7 +8,7 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityTanggalarBinding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish
-import com.example.servislar.tanggalar.taxi.TanggalardanTaxi
+import com.example.servislar.tanggalar.tarixi.TangalarTarixi
 
 class ServisTanggalar : AppCompatActivity() {
     private lateinit var binding:ActivityTanggalarBinding
@@ -52,7 +52,7 @@ class ServisTanggalar : AppCompatActivity() {
             topbuttonChage(false)
             supportFragmentManager.beginTransaction().replace(
                 R.id.tanggalar_fragment,
-                TanggalardanTaxi()
+                TangalarTarixi()
             ).commit()
         }
     }

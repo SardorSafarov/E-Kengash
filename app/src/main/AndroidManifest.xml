@@ -23,6 +23,15 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.servislar.turPaketlar.main.ServesTurPaket"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.chegirmalar.turpaket.ChegirmalarTurpaket"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.chegirmalar.transport.ChegirmalarTransport"
+            android:exported="false" />
+        <activity
             android:name="com.example.engYaqin.haqida.EngYaqinHaqida"
             android:exported="false" />
         <activity
@@ -145,10 +154,10 @@
             android:name="com.example.servislar.aviachipta.izlash.AviaIzlash"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy"
+            android:name="com.example.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.ServesChegirmalar"
+            android:name="com.example.servislar.chegirmalar.mian.ServesChegirmalar"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.ab.izlash.ABIzlash"

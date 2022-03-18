@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.core.view.marginTop
 import com.example.ekengash.R
 import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
 import com.example.ekengash.databinding.BottomSheetCalendarBinding
@@ -22,7 +23,7 @@ import java.util.*
 class PoyzQidirish : Fragment() {
     private var _binding: FragmentPoyzQidirishBinding? = null
     private val binding get() = _binding!!
-    var kattalar=0
+    var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
 
@@ -113,7 +114,6 @@ class PoyzQidirish : Fragment() {
         val poyezdHolatBinding = BottomSheetAviaHolatBinding.bind(view)
         poyezdHolatBinding.beletTuri.visibility=View.GONE
 
-
         poyezdHolatBinding.davomEtishButton.setOnClickListener {
             val umumiyKishilar = kattalar+bolalar+chaqaloqlar
             if(umumiyKishilar!=0){
@@ -142,9 +142,9 @@ class PoyzQidirish : Fragment() {
             poyezdHolatBinding.holatKattalarSoni.text=kattalar.toString()
         }
         poyezdHolatBinding.holatKattalarKam.setOnClickListener {
-            if(kattalar>0){
+            if(kattalar>1){
                 kattalar--
-                if(kattalar==0){
+                if(kattalar==1){
                     poyezdHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     poyezdHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }

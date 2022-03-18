@@ -18,7 +18,7 @@ import java.util.*
 
 class ServesAB : AppCompatActivity() {
     private lateinit var binding: ActivityServesAbBinding
-    var kattalar = 0
+    var kattalar = 1
     var bolalar = 0
     var chaqaloqlar = 0
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -171,9 +171,9 @@ class ServesAB : AppCompatActivity() {
             abHolatBinding.holatKattalarSoni.text = kattalar.toString()
         }
         abHolatBinding.holatKattalarKam.setOnClickListener {
-            if (kattalar > 0) {
+            if (kattalar > 1) {
                 kattalar--
-                if (kattalar == 0) {
+                if (kattalar == 1) {
                     abHolatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     abHolatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }

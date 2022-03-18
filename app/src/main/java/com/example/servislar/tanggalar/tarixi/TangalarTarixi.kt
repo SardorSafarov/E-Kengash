@@ -1,4 +1,4 @@
-package com.example.servislar.tanggalar.taxi
+package com.example.servislar.tanggalar.tarixi
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.ekengash.R
 
 
-class TanggalardanTaxi : Fragment() {
+class TangalarTarixi : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,7 @@ class TanggalardanTaxi : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tanggalardan_taxi, container, false)
+        return inflater.inflate(R.layout.fragment_tanggalar_tarixi, container, false)
     }
 
 

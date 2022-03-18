@@ -51,6 +51,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/turar_joy_qirirish"
                 android:layout_width="120dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:text="Qidirish"
@@ -62,9 +63,10 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/turar_joy_buyurtmalar"
-                android:layout_width="125dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@null"
+                android:layout_weight="1"
                 android:backgroundTint="#E8E8E8"
                 android:text="Buyurtmalar"
                 android:maxLines="1"

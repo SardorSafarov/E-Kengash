@@ -170,6 +170,8 @@
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_boglanish.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_chat_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_chat_screen.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_chegirmalar_transport.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_chegirmalar_turarjoy.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_chiptalarim_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_eng_yaqin.xml" value="0.2" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_eng_yaqin_haqida.xml" value="0.29322916666666665" />
@@ -190,8 +192,10 @@
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_saqlanganlar_haqida.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_ab.xml" value="0.33" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_chegirmalar.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_chegirmalar_turarjoy.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_chiptalarim.xml" value="0.33" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_saqlanganlar.xml" value="0.29322916666666665" />
+        <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_tur_paket.xml" value="0.28125" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_serves_turarjoy2.xml" value="0.29322916666666665" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_shaxsiy_malumotlar.xml" value="0.33" />
         <entry key="..\:/Katrip/app/src/main/res/layout/activity_shaxsiy_malumotlar2.xml" value="0.29322916666666665" />

@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/asosiy_orqa_ranggi"
     android:layout_height="match_parent"
-    android:background="#F3F3F3"
-    tools:context="com.example.servislar.taxi.main.ServesTaxi">
+    tools:context="com.example.servislar.turPaketlar.main.ServesTurPaket">
+
     <ImageButton
         android:id="@+id/orqaga_qaytish_ab"
         android:layout_width="60dp"
@@ -22,7 +23,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Taxi"
+        android:text="Turpaket"
         android:textSize="22dp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="@+id/orqaga_qaytish_ab"
@@ -48,12 +49,11 @@
             android:paddingHorizontal="3dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/taxi_qirirish"
+                android:id="@+id/avia_qirirish"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:text="Qidirish"
-                android:layout_weight="1"
                 android:maxLines="1"
                 android:textAllCaps="false"
                 android:stateListAnimator="@null"
@@ -61,13 +61,12 @@
                 app:cornerRadius="6dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/taxi_chiptalar"
+                android:id="@+id/avia_chiptalar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@null"
-                android:layout_weight="1"
                 android:backgroundTint="#E8E8E8"
-                android:text="Chiptalarim"
+                android:text="Saqlanganlar"
                 android:maxLines="1"
                 android:stateListAnimator="@null"
                 android:textAllCaps="false"

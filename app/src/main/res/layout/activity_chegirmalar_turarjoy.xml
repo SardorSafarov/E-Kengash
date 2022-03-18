@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context="com.example.servislar.chegirmalar.turarjoy.ServesChegirmaTurarJoy">
+    tools:context="com.example.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView11"
         android:layout_width="match_parent"
@@ -41,32 +41,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
-                android:id="@+id/chegirmalar_top_button_1"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/kuproq_top_button_2"
-                android:padding="6dp"
+                android:id="@+id/qidirsh"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:paddingVertical="14dp"
+                android:paddingEnd="20dp"
                 android:src="@drawable/ic_asoyiy_qidirsh"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/chegirmalar_top_button_2"
-                app:tint="#109BFF" />
-
-
-            <ImageView
-                android:id="@+id/chegirmalar_top_button_2"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/kuproq_top_button_2"
-                android:padding="6dp"
-                android:src="@drawable/ic___tangga"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kuk" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

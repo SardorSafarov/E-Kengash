@@ -13,6 +13,18 @@ import com.example.ekengash.fragmentlar.kuproq.page2.Kuproqitem2
 
 
 class Kuproqq : Fragment() {
+    private var _binding: FragmentKuproqBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentKuproqBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -26,18 +38,7 @@ class Kuproqq : Fragment() {
 
 
     /*---------------Teginma---------------------------*/
-    private var _binding: FragmentKuproqBinding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentKuproqBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
     private fun topbuttonUzgartirish() {
         childFragmentManager.beginTransaction().replace(R.id.kuproq_item_fragment, KuproqItem1())
             .commit()
