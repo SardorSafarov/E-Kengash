@@ -9,7 +9,7 @@
         android:title="Asosiy" />
 
     <item
-        android:id="@+id/kompas"
+        android:id="@+id/explore"
         android:icon="@drawable/ic_kompas_ic"
         app:showAsAction="always"
         android:title="Explore" />

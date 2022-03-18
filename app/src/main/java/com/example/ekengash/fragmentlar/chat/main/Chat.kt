@@ -1,4 +1,4 @@
-package com.example.ekengash.fragmentlar.chat
+package com.example.ekengash.fragmentlar.chat.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentChatBinding
-import com.example.ekengash.databinding.FragmentKuproqitem2Binding
 import com.example.ekengash.fragmentlar.chat.chatHaqida.ChatHaqida
 
 class Chat : Fragment() {

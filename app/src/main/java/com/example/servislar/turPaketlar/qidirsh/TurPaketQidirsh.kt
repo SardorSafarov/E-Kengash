@@ -16,10 +16,10 @@ import java.util.*
 class TurPaketQidirsh : Fragment() {
     private var _binding: FragmentTurPaketQidirshBinding? = null
     private val binding get() = _binding!!
-    var xonalar=1
+
     var kattalar = 1
     var bolalar = 0
-    var kun = 0
+    var xonalar = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -205,19 +205,19 @@ class TurPaketQidirsh : Fragment() {
         turarJoyHolatBind.chaqaloqTxt.setText("Kun")
         turarJoyHolatBind.chaqaloqSubTxt.setText("Safar davomiyligini tanlang")
         turarJoyHolatBind.holatChaqaloqQush.setOnClickListener {
-            kun++
+            xonalar++
             turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
             turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.holatChaqaloqSoni.text=kun.toString()
+            turarJoyHolatBind.holatChaqaloqSoni.text=xonalar.toString()
         }
         turarJoyHolatBind.holatChaqaloqKam.setOnClickListener {
-            if(kun>0){
-                kun--
-                if(kun==0){
+            if(xonalar>0){
+                xonalar--
+                if(xonalar==0){
                     turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                turarJoyHolatBind.holatChaqaloqSoni.text=kun.toString()
+                turarJoyHolatBind.holatChaqaloqSoni.text=xonalar.toString()
             }
         }
 

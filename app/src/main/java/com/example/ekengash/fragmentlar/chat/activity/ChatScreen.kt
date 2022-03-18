@@ -1,4 +1,4 @@
-package com.example.ekengash.fragmentlar.chat.main
+package com.example.ekengash.fragmentlar.chat.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent

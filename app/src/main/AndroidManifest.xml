@@ -177,7 +177,7 @@
             android:name="com.example.servislar.aviachipta.main.ServesAvia"
             android:exported="false" />
         <activity
-            android:name=".fragmentlar.chat.main.ChatScreen"
+            android:name=".fragmentlar.chat.activity.ChatScreen"
             android:exported="false" />
         <activity
             android:name="com.example.blok.BlokActivitt"

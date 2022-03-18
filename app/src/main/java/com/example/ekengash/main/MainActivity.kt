@@ -34,7 +34,8 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.ChapMenuBinding
 import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
-import com.example.ekengash.fragmentlar.chat.Chat
+import com.example.ekengash.fragmentlar.chat.main.Chat
+import com.example.ekengash.fragmentlar.explore.main.Explore
 import com.example.ekengash.fragmentlar.kuproq.main.Kuproqq
 import com.example.room.viewModel.UserViewModel
 import com.google.android.material.navigation.NavigationView
@@ -149,10 +150,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         .replace(R.id.nav_host_fragment_activity_main, Asosiy()).commit()
                     true
                 }
-                R.id.kompas -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-//                        Murojatlar()
-//                    ).commit()
+                R.id.explore -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
+                        Explore()
+                    ).commit()
                     true
                 }
                 R.id.chat -> {
