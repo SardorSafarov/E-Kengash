@@ -25,9 +25,9 @@ import java.util.*
 class AviaQidirish : Fragment() {
     private var _binding: FragmentAviaQidirishBinding? = null
     private val binding get() = _binding!!
-    var kattalar=1
-    var bolalar=0
-    var chaqaloqlar=0
+    var kattalar = 1
+    var bolalar = 0
+    var chaqaloqlar = 0
 
 
     override fun onCreateView(
@@ -41,14 +41,10 @@ class AviaQidirish : Fragment() {
     }
 
 
-
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         teginma()
     }
-
-
 
 
     /*------------------------Teginma---------------Tegma----------------------*/
@@ -64,28 +60,24 @@ class AviaQidirish : Fragment() {
     }
 
     private fun aviaHolat() {
-        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_avia_holat,null)
+        val bottomDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_avia_holat, null)
         bottomDialog.setContentView(view)
         val aviaholatBinding = BottomSheetAviaHolatBinding.bind(view)
         aviaholatBinding.davomEtishButton.setOnClickListener {
-            val umumiyKishilar = kattalar+bolalar+chaqaloqlar
-            if(umumiyKishilar!=0){
-                if(aviaholatBinding.aviaEkonom.isChecked)
-                {
+            val umumiyKishilar = kattalar + bolalar + chaqaloqlar
+            if (umumiyKishilar != 0) {
+                if (aviaholatBinding.aviaEkonom.isChecked) {
                     binding.holatKlass.setText("Ekonom")
-                }
-                else
-                {
+                } else {
                     binding.holatKlass.setText("Business")
                 }
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
                 binding.holatKlass.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" Kishi, ")
-            }
-            else{
+                binding.holatText.setText(umumiyKishilar.toString() + " Kishi, ")
+            } else {
                 binding.holatDefault.visibility = View.VISIBLE
                 binding.holatTanlanganda.visibility = View.INVISIBLE
                 binding.holatText.visibility = View.INVISIBLE
@@ -93,21 +85,21 @@ class AviaQidirish : Fragment() {
             }
             bottomDialog.dismiss()
         }
-     /*-------------Kattalar------------------*/
+        /*-------------Kattalar------------------*/
         aviaholatBinding.holatKattalarQush.setOnClickListener {
             kattalar++
             aviaholatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
             aviaholatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            aviaholatBinding.holatKattalarSoni.text=kattalar.toString()
+            aviaholatBinding.holatKattalarSoni.text = kattalar.toString()
         }
         aviaholatBinding.holatKattalarKam.setOnClickListener {
-            if(kattalar>1){
+            if (kattalar > 1) {
                 kattalar--
-                if(kattalar==1){
+                if (kattalar == 1) {
                     aviaholatBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     aviaholatBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                aviaholatBinding.holatKattalarSoni.text=kattalar.toString()
+                aviaholatBinding.holatKattalarSoni.text = kattalar.toString()
             }
         }
         /*----------------Bolalar------------*/
@@ -115,16 +107,16 @@ class AviaQidirish : Fragment() {
             bolalar++
             aviaholatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
             aviaholatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            aviaholatBinding.bolalarSoni.text=bolalar.toString()
+            aviaholatBinding.bolalarSoni.text = bolalar.toString()
         }
         aviaholatBinding.holatBolalarKam.setOnClickListener {
-            if(bolalar>0){
+            if (bolalar > 0) {
                 bolalar--
-                if(bolalar==0){
+                if (bolalar == 0) {
                     aviaholatBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     aviaholatBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                aviaholatBinding.bolalarSoni.text=bolalar.toString()
+                aviaholatBinding.bolalarSoni.text = bolalar.toString()
             }
         }
         /*---------------Chaqaloqlar-------------*/
@@ -132,21 +124,21 @@ class AviaQidirish : Fragment() {
             chaqaloqlar++
             aviaholatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
             aviaholatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            aviaholatBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
+            aviaholatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
         }
         aviaholatBinding.holatChaqaloqKam.setOnClickListener {
-            if(chaqaloqlar>0){
+            if (chaqaloqlar > 0) {
                 chaqaloqlar--
-                if(chaqaloqlar==0){
+                if (chaqaloqlar == 0) {
                     aviaholatBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
                     aviaholatBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                aviaholatBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
+                aviaholatBinding.holatChaqaloqSoni.text = chaqaloqlar.toString()
             }
         }
         /*----------Bottom Sheetni chiqrish----------------------*/
         binding.aviaHolat.setOnClickListener {
-        bottomDialog.show()
+            bottomDialog.show()
         }
         aviaholatBinding.orqagaQaytish.setOnClickListener {
             bottomDialog.dismiss()
@@ -155,7 +147,7 @@ class AviaQidirish : Fragment() {
 
     private fun aviaIzlash() {
         binding.aviaIzlash.setOnClickListener {
-            startActivity(Intent(context,AviaIzlash::class.java))
+            startActivity(Intent(context, AviaIzlash::class.java))
         }
 
     }
@@ -190,58 +182,56 @@ class AviaQidirish : Fragment() {
     /////////////////////
 
 
-
-
-private fun aviQachongacha() {
-    val datePicker =
-        MaterialDatePicker.Builder.datePicker()
-            .setTitleText("Select date")
-            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-            .build()
-    binding.aviaQachongacha.setOnClickListener {
-        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
-    }
-    datePicker.addOnPositiveButtonClickListener { selection: Long? ->
-        val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
-        calendar.time = selection?.let { Date(it) }
-        val time= aviaQachonQachongachaText(
-            calendar.get(Calendar.DAY_OF_MONTH),
-            calendar.get(Calendar.MONTH),
-            calendar.get(Calendar.DAY_OF_WEEK)
-        )
-        binding.qachongachaDefault.visibility = View.INVISIBLE
-        binding.qachongachaTanlangan.visibility= View.VISIBLE
-        binding.qachongachaText.visibility = View.VISIBLE
-        binding.qachongachaText.setText(time)
-    }
-}
-
-private fun aviQachon() {
-    val datePicker =
-        MaterialDatePicker.Builder.datePicker()
-            .setTitleText("Select date")
-            .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-            .build()
-    binding.aviaQachon.setOnClickListener {
-        fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
-    }
-    datePicker.addOnPositiveButtonClickListener { selection: Long? ->
-        val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
-        calendar.time = selection?.let { Date(it) }
-        val time= aviaQachonQachongachaText(
-            calendar.get(Calendar.DAY_OF_MONTH),
-            calendar.get(Calendar.MONTH),
-            calendar.get(Calendar.DAY_OF_WEEK)
-        )
-        binding.qachonDefault.visibility = View.INVISIBLE
-        binding.qachonTanlangan.visibility= View.VISIBLE
-        binding.qachonText.visibility = View.VISIBLE
-        binding.qachonText.setText(time)
+    private fun aviQachongacha() {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.aviaQachongacha.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1, "tag") }
+        }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time = aviaQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachongachaDefault.visibility = View.INVISIBLE
+            binding.qachongachaTanlangan.visibility = View.VISIBLE
+            binding.qachongachaText.visibility = View.VISIBLE
+            binding.qachongachaText.setText(time)
+        }
     }
 
-}
+    private fun aviQachon() {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        binding.aviaQachon.setOnClickListener {
+            fragmentManager?.let { it1 -> datePicker.show(it1, "tag") }
+        }
+        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
+            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
+            calendar.time = selection?.let { Date(it) }
+            val time = aviaQachonQachongachaText(
+                calendar.get(Calendar.DAY_OF_MONTH),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_WEEK)
+            )
+            binding.qachonDefault.visibility = View.INVISIBLE
+            binding.qachonTanlangan.visibility = View.VISIBLE
+            binding.qachonText.visibility = View.VISIBLE
+            binding.qachonText.setText(time)
+        }
 
-    private fun aviaQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
+    }
+
+    private fun aviaQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int): String {
 
         val oytext = when (oy + 1) {
             1 -> "Yan"
@@ -273,11 +263,11 @@ private fun aviQachon() {
     }
 
     private fun aviaQayerga() {
-        val bottomsheet=BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan,null)
+        val bottomsheet = BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan, null)
         val bottomsheetBinding = BottomSheetServesQayerdanBinding.bind(view)
         bottomsheet.setContentView(view)
-        bottomsheetBinding.textView11.text="Qayerga"
+        bottomsheetBinding.textView11.text = "Qayerga"
         bottomsheetBinding.chiqish.setOnClickListener {
             bottomsheet.dismiss()
         }
@@ -288,8 +278,8 @@ private fun aviQachon() {
     }
 
     private fun aviaQayedan() {
-        val bottomsheet=BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
-        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan,null)
+        val bottomsheet = BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
+        val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan, null)
         val bottomsheetBinding = BottomSheetServesQayerdanBinding.bind(view)
         bottomsheet.setContentView(view)
         bottomsheetBinding.chiqish.setOnClickListener {
@@ -299,8 +289,6 @@ private fun aviQachon() {
             bottomsheet.show()
         }
     }
-
-
 
 
 }

@@ -17,7 +17,6 @@ import java.util.*
 class TurarJoyQidirish : Fragment() {
     private var _binding: FragmentTurarJoyQidirishBinding? = null
     private val binding get() = _binding!!
-    var xonalar=1
     var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
@@ -37,7 +36,6 @@ class TurarJoyQidirish : Fragment() {
         super.onActivityCreated(savedInstanceState)
         turarJoyHolat()
         turarJoyQachon()
-        turarJoyQachongacha()
     }
 
     private fun turarJoyQachon()
@@ -65,30 +63,7 @@ class TurarJoyQidirish : Fragment() {
         }
     }
 
-    private fun turarJoyQachongacha()
-    {
-        val datePicker =
-            MaterialDatePicker.Builder.datePicker()
-                .setTitleText("Select date")
-                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-                .build()
-        binding.turarJoyQachongacha.setOnClickListener {
-            fragmentManager?.let { it1 -> datePicker.show(it1,"tag") }
-        }
-        datePicker.addOnPositiveButtonClickListener { selection: Long? ->
-            val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
-            calendar.time = selection?.let { Date(it) }
-            val time= turarJoyQachonQachongachaText(
-                calendar.get(Calendar.DAY_OF_MONTH),
-                calendar.get(Calendar.MONTH),
-                calendar.get(Calendar.DAY_OF_WEEK)
-            )
-            binding.qachongachaDefault.visibility = View.INVISIBLE
-            binding.qachongachaTanlangan.visibility= View.VISIBLE
-            binding.qachongachaText.visibility = View.VISIBLE
-            binding.qachongachaText.setText(time)
-        }
-    }
+
 
     private fun turarJoyQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
 
@@ -125,12 +100,13 @@ class TurarJoyQidirish : Fragment() {
     private fun turarJoyHolat() {
         val bottomsheet=BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_turar_joy_holat,null)
-        val turarJoyHolatBind = BottomSheetTurarJoyHolatBinding.bind(view)
+        val turPaketBinding = BottomSheetTurarJoyHolatBinding.bind(view)
         bottomsheet.setContentView(view)
+
         binding.turarJoyHolat.setOnClickListener {
             bottomsheet.show()
         }
-        turarJoyHolatBind.davomEtishButton.setOnClickListener {
+        turPaketBinding.davomEtishButton.setOnClickListener {
 
             val umumiyKishilar = kattalar+bolalar+chaqaloqlar
             if(umumiyKishilar!=0){
@@ -138,7 +114,7 @@ class TurarJoyQidirish : Fragment() {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(xonalar.toString()+" Xona,"+umumiyKishilar.toString()+" Kishi")
+                binding.holatText.setText(umumiyKishilar.toString()+" Kishi")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE
@@ -147,79 +123,60 @@ class TurarJoyQidirish : Fragment() {
             }
             bottomsheet.dismiss()
         }
-
-
-        /*-----------Xonalar-----------------------*/
-        turarJoyHolatBind.holatXonalarQush.setOnClickListener {
-            xonalar++
-            turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
-        }
-        turarJoyHolatBind.holatXonalarKam.setOnClickListener {
-            if(xonalar>1){
-            xonalar--
-            if(xonalar==1){
-                turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
-            }
-                turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
-            }
-        }
         /*-------------Kattalar------------------*/
-        turarJoyHolatBind.holatKattalarQush.setOnClickListener {
+        turPaketBinding.holatKattalarQush.setOnClickListener {
             kattalar++
-            turarJoyHolatBind.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            turarJoyHolatBind.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.holatKattalarSoni.text=kattalar.toString()
+            turPaketBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turPaketBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turPaketBinding.holatKattalarSoni.text=kattalar.toString()
         }
-        turarJoyHolatBind.holatKattalarKam.setOnClickListener {
+        turPaketBinding.holatKattalarKam.setOnClickListener {
             if(kattalar>1){
                 kattalar--
                 if(kattalar==1){
-                    turarJoyHolatBind.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    turarJoyHolatBind.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turPaketBinding.holatKattalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turPaketBinding.holatKattalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                turarJoyHolatBind.holatKattalarSoni.text=kattalar.toString()
+                turPaketBinding.holatKattalarSoni.text=kattalar.toString()
             }
         }
         /*----------------Bolalar------------*/
-        turarJoyHolatBind.holatBolalarQush.setOnClickListener {
+        turPaketBinding.holatBolalarQush.setOnClickListener {
             bolalar++
-            turarJoyHolatBind.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            turarJoyHolatBind.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.bolalarSoni.text=bolalar.toString()
+            turPaketBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turPaketBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turPaketBinding.bolalarSoni.text=bolalar.toString()
         }
-        turarJoyHolatBind.holatBolalarKam.setOnClickListener {
+        turPaketBinding.holatBolalarKam.setOnClickListener {
             if(bolalar>0){
                 bolalar--
                 if(bolalar==0){
-                    turarJoyHolatBind.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    turarJoyHolatBind.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turPaketBinding.holatBolalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turPaketBinding.holatBolalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                turarJoyHolatBind.bolalarSoni.text=bolalar.toString()
+                turPaketBinding.bolalarSoni.text=bolalar.toString()
             }
         }
         /*---------------Chaqaloqlar-------------*/
-        turarJoyHolatBind.holatChaqaloqQush.setOnClickListener {
+        turPaketBinding.holatChaqaloqQush.setOnClickListener {
             chaqaloqlar++
-            turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.holatChaqaloqSoni.text=chaqaloqlar.toString()
+            turPaketBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turPaketBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turPaketBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
         }
-        turarJoyHolatBind.holatChaqaloqKam.setOnClickListener {
+        turPaketBinding.holatChaqaloqKam.setOnClickListener {
             if(chaqaloqlar>0){
                 chaqaloqlar--
                 if(chaqaloqlar==0){
-                    turarJoyHolatBind.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    turarJoyHolatBind.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                    turPaketBinding.holatChaqaloqKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turPaketBinding.holatChaqaloqKamIcon.setImageResource(R.drawable.ic_minus_kuk)
                 }
-                turarJoyHolatBind.holatChaqaloqSoni.text=chaqaloqlar.toString()
+                turPaketBinding.holatChaqaloqSoni.text=chaqaloqlar.toString()
             }
         }
 
 
-        turarJoyHolatBind.orqagaQaytish.setOnClickListener {
+        turPaketBinding.orqagaQaytish.setOnClickListener {
             bottomsheet.dismiss()
         }
     }
