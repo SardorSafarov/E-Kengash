@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.avtorizatsiya.sms_kod_qismi.SmsniTasdiqlash">
+    tools:context="com.example.avtorizatsiya.smsQismi.SmsniTasdiqlash">
 
     <TextView
         android:id="@+id/textView23"
@@ -95,7 +95,6 @@
         android:layout_marginHorizontal="100dp"
         android:maxLength="6"
         android:inputType="number"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mamlakat_kodi" />
@@ -104,7 +103,16 @@
         android:id="@+id/kod_vaqt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="01:55"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="sardor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kod_text" />
+    <Button
+        android:id="@+id/kod_vaqt_b"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kod_text" />

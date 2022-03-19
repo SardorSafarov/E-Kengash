@@ -1,4 +1,4 @@
-package com.example.avtorizatsiya.ruyxatdan_utish
+package com.example.avtorizatsiya.ruyxatdanUtish
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.kirsh_qismi.KirishQismi
+import com.example.avtorizatsiya.kirshQismi.KirishQismi
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentRuyxatdanUtishTuliqBinding
 import com.example.log.D

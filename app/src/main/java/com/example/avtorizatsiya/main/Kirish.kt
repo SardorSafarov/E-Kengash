@@ -3,7 +3,7 @@ package com.example.avtorizatsiya.main
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.avtorizatsiya.kirsh_qismi.KirishQismi
+import com.example.avtorizatsiya.smsQismi.SmsniTasdiqlash
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityKirishBinding
 
@@ -24,7 +24,7 @@ class Kirish : AppCompatActivity() {
 
     private fun teginma() {
         statusbar()
-        supportFragmentManager.beginTransaction().replace(R.id.kirsh_qismidagi_fragment,KirishQismi()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.kirsh_qismidagi_fragment,SmsniTasdiqlash()).commit()
     }
 
     private fun statusbar() {

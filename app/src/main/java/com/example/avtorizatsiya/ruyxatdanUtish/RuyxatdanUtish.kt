@@ -1,18 +1,15 @@
-package com.example.avtorizatsiya.ruyxatdan_utish
+package com.example.avtorizatsiya.ruyxatdanUtish
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.kirsh_qismi.KirishQismi
-import com.example.avtorizatsiya.sms_kod_qismi.SmsniTasdiqlash
+import com.example.avtorizatsiya.kirshQismi.KirishQismi
+import com.example.avtorizatsiya.smsQismi.SmsniTasdiqlash
 import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.databinding.FragmentRuyxatdanUtishBinding
-import com.example.log.D
 
 
 class RuyxatdanUtish : Fragment() {

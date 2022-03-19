@@ -1,4 +1,4 @@
-package com.example.avtorizatsiya.kirsh_qismi
+package com.example.avtorizatsiya.kirshQismi
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,8 +10,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.ruyxatdan_utish.RuyxatdanUtishTuliq
-import com.example.avtorizatsiya.ruyxatdan_utish.TelNomerViewModel
+import com.example.avtorizatsiya.ruyxatdanUtish.RuyxatdanUtishTuliq
+import com.example.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
