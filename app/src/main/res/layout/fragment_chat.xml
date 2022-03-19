@@ -133,15 +133,22 @@
             android:padding="10dp"
             android:background="#F2F2F2">
 
-            <ImageView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/file_junatish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
-                android:src="@drawable/ic_filelarga_kirish"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:backgroundTint="@color/asosiy_orqa_ranggi"
+                app:cardElevation="0dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_filelarga_kirish" />
+            </com.google.android.material.card.MaterialCardView>
 
             <EditText
                 android:id="@+id/matinliy_xabar"

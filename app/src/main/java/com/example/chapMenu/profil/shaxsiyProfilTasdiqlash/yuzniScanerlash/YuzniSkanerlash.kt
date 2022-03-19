@@ -22,9 +22,9 @@ class YuzniSkanerlash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityYuzniSkanerlashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        statusbar()
-        ortgaQaytish()
-        davomEtish()
+//        statusbar()
+//        ortgaQaytish()
+//        davomEtish()
     }
 
     private fun davomEtish() {

@@ -22,7 +22,7 @@ class ChatScreen : AppCompatActivity() {
     lateinit var binding : ActivityChatScreenBinding
     var ovozliButton=true
 
-
+    private val GALLERY_REQUEST = 2
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,17 +31,14 @@ class ChatScreen : AppCompatActivity() {
         setContentView(binding.root)
         teginma()
         fileTanlash()
+        binding.fileJunatish.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            startActivityForResult(intent,GALLERY_REQUEST)
+        }
     }
 
     private fun fileTanlash() {
-        val intent = Intent(
-            Intent.ACTION_VIEW, Uri.parse(
-                "content://media/internal/images/media"
-            )
-        )
-        binding.fileJunatish.setOnClickListener {
-            startActivity(intent)
-        }
 
     }
 

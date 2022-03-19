@@ -11,18 +11,27 @@ import com.example.ekengash.databinding.FragmentChatBinding
 import com.example.ekengash.fragmentlar.chat.chatHaqida.ChatHaqida
 
 class Chat : Fragment() {
-
-
     private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
+
+    private val GALLERY_REQUEST = 2
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
         chatHaqida()
+        fileJunatish()
         val view = binding.root
         return view
+    }
+
+    private fun fileJunatish() {
+        binding.fileJunatish.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            startActivityForResult(intent,GALLERY_REQUEST)
+        }
     }
 
     private fun chatHaqida() {

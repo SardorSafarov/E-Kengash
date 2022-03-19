@@ -58,15 +58,7 @@
         <activity
             android:name="com.example.engYaqin.main.EngYaqin"
             android:exported="false" />
-        <activity
-            android:name="com.example.splashScreen.SplashScreen"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.example.avtorizatsiya.main.Kirish"
             android:exported="true"
@@ -186,6 +178,15 @@
             android:name=".main.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.EKengash" />
+        <activity
+            android:name="com.example.splashScreen.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
