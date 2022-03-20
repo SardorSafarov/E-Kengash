@@ -27,7 +27,7 @@ class ProfilShaxsiy : Fragment() {
         val view = binding.root
         userViewModel.readUser.observe(viewLifecycleOwner, Observer {
             binding.foydalanuvchiIsm.setText(it.get(0).full_name)
-            binding.foydalanuvchiTel.setText("+"+it.get(0).phone)
+            binding.foydalanuvchiTel.setText(it.get(0).phone)
         })
         return view
     }

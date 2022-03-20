@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onbording_nav"
+    app:startDestination="@id/tilniTanlash">
+
+    <fragment
+        android:id="@+id/tilniTanlash"
+        android:name="com.example.kirsh.omBoridng.fragment.tilniTanlash.TilniTanlash"
+        android:label="fragment_tilni_tanlash"
+        tools:layout="@layout/fragment_tilni_tanlash" >
+        <action
+            android:id="@+id/action_tilniTanlash_to_onBordingBir"
+            app:destination="@id/onBordingBir" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBordingBir"
+        android:name="com.example.kirsh.omBoridng.fragment.birinchOyna.OnBordingBir"
+        android:label="fragment_on_bording_bir"
+        tools:layout="@layout/fragment_on_bording_bir" >
+        <action
+            android:id="@+id/action_onBordingBir_to_ikkiOnBording"
+            app:destination="@id/ikkiOnBording" />
+        <action
+            android:id="@+id/action_onBordingBir_to_tilniTanlash"
+            app:destination="@id/tilniTanlash" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikkiOnBording"
+        android:name="com.example.kirsh.omBoridng.fragment.ikkinchOyna.IkkiOnBording"
+        android:label="fragment_ikki_on_bording"
+        tools:layout="@layout/fragment_ikki_on_bording" >
+        <action
+            android:id="@+id/action_ikkiOnBording_to_uchOnBording"
+            app:destination="@id/uchOnBording" />
+    </fragment>
+    <fragment
+        android:id="@+id/uchOnBording"
+        android:name="com.example.kirsh.omBoridng.fragment.uchinchi.UchOnBording"
+        android:label="fragment_uch_on_bording"
+        tools:layout="@layout/fragment_uch_on_bording" >
+        <action
+            android:id="@+id/action_uchOnBording_to_ikkiOnBording"
+            app:destination="@id/ikkiOnBording" />
+    </fragment>
+</navigation>

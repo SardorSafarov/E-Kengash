@@ -5,12 +5,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.engYaqin.main.EngYaqin
+import com.example.log.D
 import com.example.qrcode.main.QRcodeScaner
+import com.example.room.viewModel.UserViewModel
 import com.example.servislar.ab.main.ServesAB
 import com.example.servislar.aviachipta.main.ServesAvia
 import com.example.servislar.avtobus.main.ServesAvtobus
@@ -25,6 +30,7 @@ import com.example.servislar.turarJoylar.main.ServesTurarjoy
 class Asosiy : Fragment() {
     private var _binding: FragmentAsosiy2Binding? = null
     private val binding get() = _binding!!
+    private val userViewModel: UserViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,6 +50,19 @@ class Asosiy : Fragment() {
         qrcodeScaner()
         tanggalar()
         engYaqin()
+        balanse()
+    }
+
+    private fun balanse() {
+        userViewModel.readUser.observe(requireActivity(), Observer {
+            try {
+                binding.foydalanuvchiBalanse.text = it.get(0).balans
+            }catch (e:Exception)
+            {
+                D.d("Asosiy balense() da muammo")
+            }
+
+        })
     }
 
     private fun engYaqin() {

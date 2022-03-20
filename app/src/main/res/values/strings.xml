@@ -16,6 +16,9 @@
     <string name="cameraga_olish">Iltimos sizning yuzinggiz belgilangan maydondan chiqmasligi va ko\'zlaringgiz yumulmagan bo\'lishini taninlang.Agar ko\'zoynakinggiz bo\'lsa yechib oling.</string>
     <string name="profil_shaxsiy_text">Ilovaning barcha imkoniyatlaridan foydalanish uchun iltimos profilingizni tasdiqlash jarayonidan o\'ting.</string>
     <string name="profil_biznes_text">Shaxsiy biznes yoki tashkilotinggizni ilovaga qo\'shish orqali xizmatlarimizdan foydalanishingiz va hisob raqamdan to\'lov qilishingiz mumkin. Batafsil ma\'lumot uchun qo\'llab-quvvatlash markaziga murojaat eting!\n\nEslatma:Biznes profil qo\'shishdan oldin avvalo,shaxsiy profilni tasdiqlashingiz shart!</string>
+    <string name="onboring_text_1">Shaharlardagi sayohatga oid joylarga online sayohat\nqilish,audio git, 360 formatda tomosha qilish va\nboshqa ko\'plab imkoniyatlar</string>
+    <string name="onbording_text_3">A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</string>
+    <string name="onbording_text_2">Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</string>
 
 
     <string-array name="Oylar">

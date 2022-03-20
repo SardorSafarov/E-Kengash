@@ -1,4 +1,4 @@
-package com.example.avtorizatsiya.kirshQismi
+package com.example.kirsh.avtorizatsiya.kirshQismi
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,14 +10,17 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.ruyxatdanUtish.RuyxatdanUtishTuliq
-import com.example.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
+import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.RuyxatdanUtishTuliq
+import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
+import com.example.kirsh.avtorizatsiya.smsQismi.SmsniTasdiqlash
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
 import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
 import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.KirishRepository
 import com.example.network.viewModelFactory.KirishViewModelFactory
 import com.example.network.viewmodel.KirishViewModel
@@ -55,9 +58,9 @@ class KirishQismi : Fragment() {
                 }
                 else
                 {
-                    kirishViewModel.telJunatish("998" + binding.telNumber.text.toString())
+                    kirishViewModel.smsgaSurovTashlash(SmsSurov( binding.telNumber.text.toString()))
                     {
-                        onResponse(it)
+                        onResponseSms(it)
                     }
                 }
             }
@@ -85,8 +88,22 @@ class KirishQismi : Fragment() {
         return binding.root
     }
 
+    private fun onResponseSms(response: Response<SmsJavob>) {
+        if(response.isSuccessful)
+        {
+            if(response.body()?.status=="success"){
+                telNomerViewModel =
+                    ViewModelProviders.of(requireActivity()).get(TelNomerViewModel::class.java)
+                telNomerViewModel!!.telNomer(binding.telNumber.text.toString())
+                requireFragmentManager()?.beginTransaction()
+                    ?.replace(R.id.kirsh_qismidagi_fragment, SmsniTasdiqlash())
+                    ?.addToBackStack(null)?.commit()
+            }
 
-
+        }else{
+            D.d("KishQismidagi onResponseSms ishlamadi")
+        }
+    }
 
 
     private fun setUi() {

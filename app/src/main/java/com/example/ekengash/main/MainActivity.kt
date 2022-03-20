@@ -22,7 +22,6 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.main.Kirish
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
 import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
@@ -37,7 +36,9 @@ import com.example.ekengash.fragmentlar.asosiyy.main.Asosiy
 import com.example.ekengash.fragmentlar.chat.main.Chat
 import com.example.ekengash.fragmentlar.explore.main.Explore
 import com.example.ekengash.fragmentlar.kuproq.main.Kuproqq
+import com.example.log.D
 import com.example.room.viewModel.UserViewModel
+import com.example.splashScreen.SplashScreen
 import com.google.android.material.navigation.NavigationView
 
 
@@ -57,8 +58,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         teginma()
-
-
     }
 
 
@@ -83,8 +82,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun foydalanuvchiHaqidaMalumotlar() {
         val bind= ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
         userViewModel.readUser.observe(this, Observer {
-            bind.foydalanuvchiIsm.setText(it.get(0).full_name)
-            bind.foydalanuvchiTel.setText("+"+it.get(0).phone)
+            try {
+                bind.foydalanuvchiIsm.setText(it.get(0).full_name)
+                bind.foydalanuvchiTel.setText(it.get(0).phone)
+            }catch (e:Exception)
+            {
+             D.d("")
+            }
         })
         bind.foydalanuvchiRasmi.setOnClickListener {
             startActivity(Intent(this, Profil::class.java))
@@ -181,8 +185,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             alertDialog.setTitle("Profildan chiqish.")
             alertDialog.setMessage("Siz ushbu profildan chiqmoqchimisiz?")
             alertDialog.setPositiveButton("Ha"){ dialogInterface: DialogInterface, i: Int ->
+                startActivity(Intent(this, SplashScreen::class.java))
                 userViewModel.deleteToken()
-                startActivity(Intent(this, Kirish::class.java))
                 finish()
             }
             alertDialog.setNegativeButton("Yo`q"){ dialogInterface: DialogInterface, i: Int -> }

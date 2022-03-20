@@ -1,4 +1,4 @@
-package com.example.avtorizatsiya.ruyxatdanUtish
+package com.example.kirsh.avtorizatsiya.ruyxatdanUtish
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,4 +1,4 @@
-package com.example.avtorizatsiya.ruyxatdanUtish
+package com.example.kirsh.avtorizatsiya.ruyxatdanUtish
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
-import com.example.avtorizatsiya.kirshQismi.KirishQismi
-import com.example.avtorizatsiya.smsQismi.SmsniTasdiqlash
+import com.example.kirsh.avtorizatsiya.kirshQismi.KirishQismi
+import com.example.kirsh.avtorizatsiya.smsQismi.SmsniTasdiqlash
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentRuyxatdanUtishBinding
 
 
 class RuyxatdanUtish : Fragment() {
+    private var _binding: FragmentRuyxatdanUtishBinding? = null
+    private val binding get() = _binding!!
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentRuyxatdanUtishBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -50,18 +61,7 @@ class RuyxatdanUtish : Fragment() {
 
     private var telNomerViewModel:TelNomerViewModel? = null
 
-    private var _binding: FragmentRuyxatdanUtishBinding? = null
-    private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentRuyxatdanUtishBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
 
 
 }

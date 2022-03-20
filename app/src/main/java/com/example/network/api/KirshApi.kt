@@ -6,6 +6,10 @@ import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.javob.ParolniT
 import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
 import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
+import com.example.network.netWorkEndtity.sms.smsKeldi.javob.SmsKeldiJavob
+import com.example.network.netWorkEndtity.sms.smsKeldi.surov.SmsKeldiSurov
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -23,4 +27,9 @@ interface KirshApi {
     @POST("/api/v1/sign-in")
     suspend fun parolniTekshirish(@Body body: ParolniTekshirishSurov): Response<ParolniTekshirishJavob>
 
+    @POST("/api/v1/sms")
+    suspend fun smsSurov(@Body body: SmsSurov):Response<SmsJavob>
+
+    @POST("/api/v1/token")
+    suspend fun smsKeldi(@Body body: SmsKeldiSurov):Response<SmsKeldiJavob>
 }

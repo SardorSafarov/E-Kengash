@@ -10,5 +10,6 @@ class UserEntity(
     var _id:Int=0,
     var full_name:String="",
     var phone:String="",
-    var token:String?=null
+    var token:String?=null,
+    var balans:String=""
 )

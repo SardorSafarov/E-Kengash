@@ -23,6 +23,18 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.kirsh.surovnoma.kimBilanSayohat.KimBilanSayohat"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kirsh.surovnoma.shaharlar.Shaharlar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kirsh.omBoridng.main.OnBoriding"
+            android:exported="false" />
+        <activity
             android:name="com.example.servislar.turPaketlar.main.ServesTurPaket"
             android:exported="false" />
         <activity
@@ -58,9 +70,8 @@
         <activity
             android:name="com.example.engYaqin.main.EngYaqin"
             android:exported="false" />
-
         <activity
-            android:name="com.example.avtorizatsiya.main.Kirish"
+            android:name="com.example.kirsh.avtorizatsiya.main.Kirish"
             android:exported="true"
             android:theme="@style/FullScreenThem" />
         <activity

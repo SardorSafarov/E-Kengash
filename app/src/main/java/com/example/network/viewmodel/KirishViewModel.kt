@@ -9,11 +9,41 @@ import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.javob.ParolniT
 import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
 import com.example.network.netWorkEndtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
+import com.example.network.netWorkEndtity.sms.smsKeldi.javob.SmsKeldiJavob
+import com.example.network.netWorkEndtity.sms.smsKeldi.surov.SmsKeldiSurov
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.KirishRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class KirishViewModel(private val kirishRepository: KirishRepository):ViewModel() {
+
+    /*=======================Sms keldi================================*/
+
+    fun smsKeldi(body: SmsKeldiSurov,onResponse: (response: Response<SmsKeldiJavob>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(kirishRepository.smsKeldi(body))
+            }catch (e:Exception){
+                D.d("KirishViewModel smsKeldi funi   ${e.message} ")
+            }
+        }
+    }
+
+    /*==============================Sms========================================*/
+
+    fun smsgaSurovTashlash(body:SmsSurov, onResponse: (response: Response<SmsJavob>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(kirishRepository.sms(body))
+            }catch (e:Exception){
+                D.d("KirishViewModel sms funi   ${e.message} ")
+            }
+        }
+    }
 
     /*===============Parolni tekshirish========================*/
 

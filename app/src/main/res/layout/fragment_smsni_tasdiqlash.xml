@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.avtorizatsiya.smsQismi.SmsniTasdiqlash">
+    tools:context="com.example.kirsh.avtorizatsiya.smsQismi.SmsniTasdiqlash">
 
     <TextView
         android:id="@+id/textView23"
@@ -76,6 +76,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
+            android:id="@+id/tel_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -93,7 +94,7 @@
         android:layout_marginTop="50dp"
         app:pinLineColors="@color/kuk"
         android:layout_marginHorizontal="100dp"
-        android:maxLength="6"
+        android:maxLength="5"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
