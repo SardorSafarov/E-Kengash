@@ -1,7 +1,9 @@
 package com.example.kirsh.surovnoma.sayohatTurlari
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -10,8 +12,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.constants.Constants.TOKEN
 import com.example.ekengash.databinding.ActivitySayohatTurlariBinding
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
+import com.example.kirsh.surovnoma.shaharlar.Shaharlar
 import com.example.log.D
 import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.netWorkEndtity.surovNoma.surovNomaJavob.SurovNomaJavob
 import com.example.network.repository.surov.SurovNomaRepository
 import com.example.network.viewModelFactory.surov.SurovNomaViewModelFactory
 import com.example.network.viewmodel.surov.SurovNomaViewModel
@@ -56,9 +60,8 @@ class SayohatTurlari : AppCompatActivity(), SurovNomaAdapter.onClickListener {
     }
     private fun sayohatTurlari(it: Response<SurovNoma1ViewJavob>) {
         if (it.isSuccessful) {
-            D.d(it.body().toString())
+                binding.progersBar.visibility = View.GONE
                 val s = it.body() as SurovNoma1ViewJavob
-                D.d(s.data.toString())
                 adapter.getData(s.data.survey)
                 binding.sayohatTurlariRecyc.adapter = adapter
                 binding.sayohatTurlariRecyc.layoutManager = GridLayoutManager(this, 2)
@@ -68,7 +71,8 @@ class SayohatTurlari : AppCompatActivity(), SurovNomaAdapter.onClickListener {
     }
 
     override fun surovNomaOnclick(surveyId: Int, id: Int) {
-        D.d(surveyId.toString()+"  "+id.toString())
+        surovNomaViewModel.surovNomaJavob(TOKEN, SurovNomaJavob(id,surveyId))
+        startActivity(Intent(this,Shaharlar::class.java))
     }
 
 }

@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
 import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.netWorkEndtity.surovNoma.surovNomaJavob.SurovNomaJavob
 import com.example.network.repository.surov.SurovNomaRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -18,6 +19,17 @@ class SurovNomaViewModel(private val surovNomaRepository: SurovNomaRepository): 
                 onResponse(surovNomaRepository.surovNoma(token,qiziqsh_id))
             } catch (e: Exception) {
                 D.d("SurovNomaViewModel surovNoma funi   ${e.message} ")
+            }
+        }
+    }
+
+    /*=======================SurovNomaJavob========================*/
+    fun surovNomaJavob(token: String,surovNomaJavob: SurovNomaJavob) {
+        viewModelScope.launch {
+            try {
+                surovNomaRepository.surovNomaJavob(token,surovNomaJavob)
+            } catch (e: Exception) {
+                D.d("SurovNomaViewModel surovNomaJavob funi   ${e.message} ")
             }
         }
     }
