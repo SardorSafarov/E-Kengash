@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 bind.foydalanuvchiTel.setText(it.get(0).phone)
             }catch (e:Exception)
             {
-             D.d("")
+             D.d("MainActivity readuser")
             }
         })
         bind.foydalanuvchiRasmi.setOnClickListener {

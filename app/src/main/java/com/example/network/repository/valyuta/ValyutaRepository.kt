@@ -1,4 +1,4 @@
-package com.example.network.repository
+package com.example.network.repository.valyuta
 
 import com.example.ekengash.kirish.RetrofitBuilder
 

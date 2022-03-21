@@ -21,9 +21,9 @@ import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.Fooydal
 import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
 import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
 import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
-import com.example.network.repository.KirishRepository
-import com.example.network.viewModelFactory.KirishViewModelFactory
-import com.example.network.viewmodel.KirishViewModel
+import com.example.network.repository.kirish.KirishRepository
+import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
+import com.example.network.viewmodel.kirish.KirishViewModel
 import com.example.room.roomEntity.UserEntity
 import com.example.room.viewModel.UserViewModel
 import retrofit2.Response

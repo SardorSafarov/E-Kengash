@@ -8,13 +8,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.chapMenu.adapter.ValyutaKurslariAdapter
-import com.example.chapMenu.valyutaKurslari.qidirsh.ValyutaQidirish
 import com.example.ekengash.databinding.ActivityValyutaKurslariBinding
 import com.example.log.D
 import com.example.network.netWorkEndtity.valyuta.ValyutaEntity
-import com.example.network.repository.ValyutaRepository
-import com.example.network.viewModelFactory.ValyutaViewModelFactory
-import com.example.network.viewmodel.ValyutaViewModel
+import com.example.network.repository.valyuta.ValyutaRepository
+import com.example.network.viewModelFactory.valyuta.ValyutaViewModelFactory
+import com.example.network.viewmodel.valyuta.ValyutaViewModel
 import retrofit2.Response
 
 class ValyutaKurslari : AppCompatActivity() {

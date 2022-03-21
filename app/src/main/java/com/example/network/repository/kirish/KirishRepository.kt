@@ -1,4 +1,4 @@
-package com.example.network.repository
+package com.example.network.repository.kirish
 
 import com.example.ekengash.kirish.RetrofitBuilder
 import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish

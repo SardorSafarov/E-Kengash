@@ -1,9 +1,9 @@
-package com.example.network.viewModelFactory
+package com.example.network.viewModelFactory.kirish
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.network.repository.KirishRepository
-import com.example.network.viewmodel.KirishViewModel
+import com.example.network.repository.kirish.KirishRepository
+import com.example.network.viewmodel.kirish.KirishViewModel
 
 
 

@@ -1,4 +1,4 @@
-package com.example.network.viewmodel
+package com.example.network.viewmodel.kirish
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,7 +13,7 @@ import com.example.network.netWorkEndtity.sms.smsKeldi.javob.SmsKeldiJavob
 import com.example.network.netWorkEndtity.sms.smsKeldi.surov.SmsKeldiSurov
 import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
 import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
-import com.example.network.repository.KirishRepository
+import com.example.network.repository.kirish.KirishRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
