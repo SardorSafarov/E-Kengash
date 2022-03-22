@@ -21,12 +21,13 @@ import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiga
 import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel
 import retrofit2.Response
 
-class KupBeriladiganSavollar : AppCompatActivity() {
-    lateinit var binding:ActivityKupBeriladiganSavollarBinding
-    private lateinit var kupBeriladiganSavollarViewModel:KupBeriladiganSavollarViewModel
-    private val kupBeriladiganSavollarKategoriyaAdapter:KupBeriladiganSavollarKategoriyaAdapter by lazy { KupBeriladiganSavollarKategoriyaAdapter() }
-    private val kupBeriladiganSavollarAdapter:KupBeriladiganSavollarAdapter by lazy { KupBeriladiganSavollarAdapter() }
-
+class KupBeriladiganSavollar : AppCompatActivity(),
+    KupBeriladiganSavollarKategoriyaAdapter.savolKategoriyaBtn {
+    lateinit var binding: ActivityKupBeriladiganSavollarBinding
+    private lateinit var kupBeriladiganSavollarViewModel: KupBeriladiganSavollarViewModel
+    private val kupBeriladiganSavollarKategoriyaAdapter: KupBeriladiganSavollarKategoriyaAdapter by lazy { KupBeriladiganSavollarKategoriyaAdapter(this) }
+    private val kupBeriladiganSavollarAdapter: KupBeriladiganSavollarAdapter by lazy { KupBeriladiganSavollarAdapter() }
+    private lateinit var list:List<FAQ>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityKupBeriladiganSavollarBinding.inflate(layoutInflater)
@@ -39,18 +40,18 @@ class KupBeriladiganSavollar : AppCompatActivity() {
     }
 
     private fun savollar() {
-        kupBeriladiganSavollarViewModel.KupBeriladiganSavollarViewModel(TOKEN){
+        kupBeriladiganSavollarViewModel.KupBeriladiganSavollarViewModel(TOKEN) {
             kupBeriladiganSavollar(it)
         }
     }
 
     private fun kupBeriladiganSavollar(response: Response<KupBeriladiganSavollarJavob>) {
-        if(response.isSuccessful)
-        {
+        if (response.isSuccessful) {
             binding.progress.visibility = View.GONE
-            D.d(response.body().toString())
+            list=response.body()!!.data.FAQ
+            savolFilter("Tur paket")
             savollarkategoriya(response.body()!!.data.FAQ_TYPE)
-            savollarVaJavoblar(response.body()!!.data.FAQ)
+
         }
     }
 
@@ -61,14 +62,28 @@ class KupBeriladiganSavollar : AppCompatActivity() {
     }
 
     private fun savollarkategoriya(faqType: List<FAQTYPE>) {
-            kupBeriladiganSavollarKategoriyaAdapter.setData(faqType)
-            binding.savolKategoriya.adapter = kupBeriladiganSavollarKategoriyaAdapter
-            binding.savolKategoriya.layoutManager= LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        kupBeriladiganSavollarKategoriyaAdapter.setData(faqType)
+        binding.savolKategoriya.adapter = kupBeriladiganSavollarKategoriyaAdapter
+        binding.savolKategoriya.layoutManager =LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+    }
+    override fun onclick(type: String) {
+        savolFilter(type)
+    }
+
+    fun savolFilter(faq_type:String)
+    {
+        var faqList:MutableList<FAQ> = mutableListOf()
+        list.forEach {
+            if(it.type == faq_type)
+                faqList.add(it)
+        }
+        savollarVaJavoblar(faqList)
     }
 
     private fun setUi() {
         val kupBeriladiganSavollarRepository = KupBeriladiganSavollarRepository()
-        val kupBeriladiganSavollarViewModelFactory = KupBeriladiganSavollarViewModelFactory(kupBeriladiganSavollarRepository)
+        val kupBeriladiganSavollarViewModelFactory =
+            KupBeriladiganSavollarViewModelFactory(kupBeriladiganSavollarRepository)
         val kupBeriladiganSavollarViewModel = ViewModelProvider(
             this,
             kupBeriladiganSavollarViewModelFactory
@@ -89,7 +104,10 @@ class KupBeriladiganSavollar : AppCompatActivity() {
 
     private fun qidirish() {
         binding.qidirsh.setOnClickListener {
-            startActivity(Intent(this,AsosiyQidirish::class.java))
+            startActivity(Intent(this, AsosiyQidirish::class.java))
         }
     }
+
+
+
 }
