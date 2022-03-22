@@ -1,4 +1,4 @@
-package com.example.chapMenu.adapter
+package com.example.chapMenu.valyutaKurslari.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +13,7 @@ import java.text.DecimalFormat
 
 class ValyutaKurslariAdapter():RecyclerView.Adapter<ValyutaKurslariAdapter.ViewHolder>() {
 
-    var list:List<ValyutaEntityItem> = mutableListOf()
+  private  var list:List<ValyutaEntityItem> = mutableListOf()
 
 
     inner class ViewHolder(item: View):RecyclerView.ViewHolder(item)

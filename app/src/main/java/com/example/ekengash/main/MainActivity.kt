@@ -24,11 +24,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
-import com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar
+import com.example.chapMenu.kupBeriladiganSavollar.main.KupBeriladiganSavollar
 import com.example.chapMenu.offerta.Offerta
 import com.example.chapMenu.profil.main.Profil
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari
+import com.example.constants.Constants.TOKEN
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
 import com.example.ekengash.databinding.ChapMenuBinding
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val bind= ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
         userViewModel.readUser.observe(this, Observer {
             try {
+                TOKEN=it.get(0).token.toString()
                 bind.foydalanuvchiIsm.setText(it.get(0).full_name)
                 bind.foydalanuvchiTel.setText(it.get(0).phone)
             }catch (e:Exception)
@@ -111,7 +113,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(Intent(this, ValyutaKurslari::class.java))
             }
             R.id.chap_menu_kup_savol ->{
-                startActivity(Intent(this,KupBeriladiganSavollar::class.java))
+                startActivity(Intent(this, KupBeriladiganSavollar::class.java))
             }
             R.id.chap_menu_sozlanma ->{
                 startActivity(Intent(this,Sozlanmalar::class.java))

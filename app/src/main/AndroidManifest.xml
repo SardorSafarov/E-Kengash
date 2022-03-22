@@ -31,11 +31,7 @@
         <activity
             android:name="com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.kirsh.omBoridng.main.OnBoriding"
@@ -139,7 +135,7 @@
             android:name="com.example.chapMenu.sozlanmalar.main.Sozlanmalar"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.kupBeriladiganSavollar.KupBeriladiganSavollar"
+            android:name="com.example.chapMenu.kupBeriladiganSavollar.main.KupBeriladiganSavollar"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari"
@@ -198,7 +194,11 @@
         <activity
             android:name="com.example.splashScreen.SplashScreen"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

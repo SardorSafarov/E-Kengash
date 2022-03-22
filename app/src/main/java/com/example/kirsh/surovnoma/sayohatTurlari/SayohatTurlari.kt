@@ -78,12 +78,3 @@ class SayohatTurlari : AppCompatActivity(), SurovNomaAdapter.onClickListener {
 }
 
 
-class MyInterceptor : Interceptor {
-    override fun intercept(chain: Interceptor.Chain): okhttp3.Response {
-        val requser = chain.request()
-            .newBuilder()
-            .addHeader("authorization", TOKEN)
-            .build()
-        return chain.proceed(requser)
-    }
-}
