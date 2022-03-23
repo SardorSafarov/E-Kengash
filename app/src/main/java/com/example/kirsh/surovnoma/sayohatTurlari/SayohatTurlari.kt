@@ -14,13 +14,12 @@ import com.example.ekengash.databinding.ActivitySayohatTurlariBinding
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
 import com.example.kirsh.surovnoma.shaharlar.Shaharlar
 import com.example.log.D
-import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
-import com.example.network.netWorkEndtity.surovNoma.surovNomaJavob.SurovNomaJavob
+import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
 import com.example.network.repository.surov.SurovNomaRepository
 import com.example.network.viewModelFactory.surov.SurovNomaViewModelFactory
 import com.example.network.viewmodel.surov.SurovNomaViewModel
 import com.example.room.viewModel.UserViewModel
-import okhttp3.Interceptor
 import retrofit2.Response
 
 

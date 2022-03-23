@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.constants.Constants
 import com.example.kirsh.avtorizatsiya.main.Kirish
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentUchOnBordingBinding
@@ -15,7 +16,8 @@ import com.example.ekengash.databinding.FragmentUchOnBordingBinding
 class UchOnBording : Fragment() {
     private var _binding: FragmentUchOnBordingBinding? = null
     private val binding get() = _binding!!
-
+    lateinit var title: Array<String>
+    lateinit var sub_title: Array<String>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,11 +28,39 @@ class UchOnBording : Fragment() {
         val view = binding.root
         activity?.window?.statusBarColor = resources.getColor(R.color.white)
         binding.davomEtishButton.setOnClickListener{
-            onBordingFinish()
+           onBordingFinish()
             startActivity(Intent(requireContext(), Kirish::class.java))
             activity?.finish()
         }
         return view
+    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        til()
+    }
+    private fun til() {
+        when (Constants.TIL) {
+            "uz" -> {
+                binding.title.setText(title[2])
+                binding.subTitle.setText(sub_title[2])
+            }
+            "ru" -> {
+                binding.title.setText(title[5])
+                binding.subTitle.setText(sub_title[5])
+
+            }
+            "en" -> {
+                binding.title.setText(title[8])
+                binding.subTitle.setText(sub_title[8])
+
+            }
+        }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        title = resources.getStringArray(R.array.on_bording_title)
+        sub_title = resources.getStringArray(R.array.on_bording_subtitle)
     }
     private fun onBordingFinish()
     {

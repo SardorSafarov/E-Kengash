@@ -1,6 +1,7 @@
 package com.example.kirsh.avtorizatsiya.smsQismi
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -16,11 +17,12 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentSmsniTasdiqlashBinding
 import com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari
 import com.example.log.D
-import com.example.network.netWorkEndtity.sms.smsKeldi.javob.SmsKeldiJavob
-import com.example.network.netWorkEndtity.sms.smsKeldi.surov.SmsKeldiSurov
-import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
+import com.example.network.endtity.sms.smsKeldi.javob.SmsKeldiJavob
+import com.example.network.endtity.sms.smsKeldi.surov.SmsKeldiSurov
+import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
+import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel
 import com.example.room.roomEntity.UserEntity
 import com.example.room.viewModel.UserViewModel
@@ -71,7 +73,7 @@ class SmsniTasdiqlash : Fragment() {
 
             override fun onFinish() {
                 binding.kodVaqtB.visibility = View.GONE
-                binding.kodVaqt.setTextColor(resources.getColor(R.color.kuk))
+                binding.kodVaqt.setTextColor(Color.parseColor("#109BFF"))
                 binding.kodVaqt.setText("Sms kelmadimi?")
             }
         }.start()
@@ -108,10 +110,7 @@ class SmsniTasdiqlash : Fragment() {
             }
         }
     }
-
-
     private fun smsSurov() {
-
         kirishViewModel.smsgaSurovTashlash(SmsSurov(telNumber)) {}
     }
 

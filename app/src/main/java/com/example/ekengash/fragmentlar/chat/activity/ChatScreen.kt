@@ -96,8 +96,6 @@ class ChatScreen : AppCompatActivity() {
         val optionsMenu = MenuPopupHelper(this, menuBuilder, view)
         optionsMenu.setForceShowIcon(true)
         menuBuilder.setCallback(object : MenuBuilder.Callback {
-
-
             override fun onMenuItemSelected(menu: MenuBuilder, item: MenuItem): Boolean {
                 when(item.itemId)
                 {

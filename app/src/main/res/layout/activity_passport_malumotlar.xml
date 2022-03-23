@@ -148,6 +148,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/passport_jshsher"
                                 android:layout_width="match_parent"
+                                android:inputType="number"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
 
@@ -189,6 +190,7 @@
                                 android:id="@+id/passport_berilgan"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="date"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,6 +212,7 @@
                                 android:id="@+id/passport_amalqilish_uddati"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="date"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 

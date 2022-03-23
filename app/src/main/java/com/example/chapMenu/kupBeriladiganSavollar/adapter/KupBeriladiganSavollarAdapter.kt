@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemKupBeriladiganSavollarBinding
 import com.example.log.D
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.FAQ
+import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQ
 
 
 

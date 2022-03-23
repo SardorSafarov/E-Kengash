@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemValyutaBinding
 import com.example.log.D
-import com.example.network.netWorkEndtity.valyuta.ValyutaEntityItem
+import com.example.network.endtity.valyuta.ValyutaEntityItem
 import java.math.RoundingMode
 import java.text.DecimalFormat
 

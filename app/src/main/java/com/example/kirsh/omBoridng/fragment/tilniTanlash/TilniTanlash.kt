@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.constants.Constants.TIL
 import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentTilniTanlashBinding
 
@@ -25,12 +26,16 @@ class TilniTanlash : Fragment() {
         activity?.window?.statusBarColor = resources.getColor(R.color.asosiy_orqa_ranggi)
        binding.tilUz.setOnClickListener{
            findNavController().navigate(R.id.action_tilniTanlash_to_onBordingBir)
+            TIL="uz"
        }
         binding.tilRu.setOnClickListener{
             findNavController().navigate(R.id.action_tilniTanlash_to_onBordingBir)
+            TIL="ru"
+
         }
         binding.tilEn.setOnClickListener{
             findNavController().navigate(R.id.action_tilniTanlash_to_onBordingBir)
+            TIL="en"
         }
         return view
     }

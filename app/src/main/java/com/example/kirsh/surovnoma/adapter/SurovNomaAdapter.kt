@@ -1,7 +1,6 @@
 package com.example.kirsh.surovnoma.adapter
 
 import android.content.Context
-import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemSurovnomaBinding
 import com.example.log.D
-import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.Survey
-import java.net.URL
+import com.example.network.endtity.surovNoma.sayohatTurlari.response.Survey
 
 class SurovNomaAdapter(private val listener: onClickListener, var applicationContext: Context) :
     RecyclerView.Adapter<SurovNomaAdapter.ViewHolder>() {

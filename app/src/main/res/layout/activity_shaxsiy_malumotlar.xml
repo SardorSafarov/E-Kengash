@@ -128,6 +128,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_ismi"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk" />
 
@@ -149,6 +150,7 @@
                                 android:id="@+id/foydalanuvchi_famil"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -168,6 +170,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_otasi"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
 
@@ -188,6 +191,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_tugulgan_kuni"
                                 android:layout_width="match_parent"
+                                android:inputType="date"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
@@ -238,6 +242,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_davlat"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
@@ -257,6 +262,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_viloyat"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
@@ -276,6 +282,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_tel"
                                 android:layout_width="match_parent"
+                                android:inputType="phone"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
@@ -296,6 +303,7 @@
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/foydalanuvchi_email"
                                 android:layout_width="match_parent"
+                                android:inputType="textEmailAddress"
                                 android:layout_height="wrap_content"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>

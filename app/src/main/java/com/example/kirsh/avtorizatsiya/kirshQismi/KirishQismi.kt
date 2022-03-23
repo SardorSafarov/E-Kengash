@@ -1,11 +1,13 @@
 package com.example.kirsh.avtorizatsiya.kirshQismi
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
+import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.view.menu.MenuBuilder
+import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -17,12 +19,13 @@ import com.example.ekengash.R
 import com.example.ekengash.databinding.FragmentKirishQismiBinding
 import com.example.ekengash.main.MainActivity
 import com.example.log.D
-import com.example.network.netWorkEndtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
-import com.example.network.netWorkEndtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
-import com.example.network.netWorkEndtity.sms.telNumberJunatish.javob.SmsJavob
-import com.example.network.netWorkEndtity.sms.telNumberJunatish.surov.SmsSurov
+import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
+import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.endtity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
+import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel
 import com.example.room.roomEntity.UserEntity
 import com.example.room.viewModel.UserViewModel
@@ -36,7 +39,6 @@ class KirishQismi : Fragment() {
     private var checkUser = ""
     private val userViewModel: UserViewModel by activityViewModels()
     private var telNomerViewModel: TelNomerViewModel? = null
-    //Click listenrlani iloji bulsa onCreateViewda qoyib oling
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -85,7 +87,96 @@ class KirishQismi : Fragment() {
                 D.d("KirishQismi parolniTekshirishga qara")
             }
         })
+        topMenu()
         return binding.root
+    }
+
+
+
+    private fun topMenu() {
+        val clickListener = View.OnClickListener { view ->
+            when (view.id) {
+                R.id.mamlakat_kodi -> {
+                    showPopup(view)
+                }
+            }
+        }
+        binding.mamlakatKodi.setOnClickListener(clickListener)
+
+    }
+
+
+
+    @SuppressLint("RestrictedApi")
+    private fun showPopup(view: View) {
+
+        val menuBuilder = MenuBuilder(requireContext())
+        val inflater = MenuInflater(requireContext())
+        inflater.inflate(R.menu.tel_kod, menuBuilder)
+
+        val optionsMenu = MenuPopupHelper(requireContext(), menuBuilder, view)
+        optionsMenu.setForceShowIcon(true)
+        menuBuilder.setCallback(object : MenuBuilder.Callback {
+            override fun onMenuItemSelected(menu: MenuBuilder, item: MenuItem): Boolean {
+                when(item.itemId)
+                {
+                   R.id.tel_uz->{
+                       binding.flag.setImageResource(R.drawable.uz)
+                       binding.kod.text=item.title
+                   }
+                    R.id.tel_arab->{
+                        binding.flag.setImageResource(R.drawable.arab)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_usa->{
+                        binding.flag.setImageResource(R.drawable.us)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_ru->{
+                        binding.flag.setImageResource(R.drawable.ru)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_kz->{
+                        binding.flag.setImageResource(R.drawable.kz)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_kirgiz->{
+                        binding.flag.setImageResource(R.drawable.kirgiz)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_tj->{
+                        binding.flag.setImageResource(R.drawable.tj)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_turkiya->{
+                        binding.flag.setImageResource(R.drawable.turkiya)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_turkman->{
+                        binding.flag.setImageResource(R.drawable.turkman)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_koreya->{
+                        binding.flag.setImageResource(R.drawable.koreya)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_india->{
+                        binding.flag.setImageResource(R.drawable.ind)
+                        binding.kod.text=item.title
+                    }
+                    R.id.tel_italiya->{
+                        binding.flag.setImageResource(R.drawable.italiya)
+                        binding.kod.text=item.title
+                    }
+                    else -> false
+                }
+                return true
+            }
+
+            override fun onMenuModeChange(menu: MenuBuilder) {}
+        })
+        optionsMenu.show()
+
     }
 
     private fun onResponseSms(response: Response<SmsJavob>) {

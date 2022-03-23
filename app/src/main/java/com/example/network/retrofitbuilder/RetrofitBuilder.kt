@@ -4,12 +4,9 @@ package com.example.ekengash.kirish
 
 import com.example.constants.Constants.URL_1
 import com.example.constants.Constants.URL_VALYUTA
+import com.example.network.api.*
 
 
-import com.example.network.api.KirshApi
-import com.example.network.api.KupBeriladiganSavollar
-import com.example.network.api.SurovNomaApi
-import com.example.network.api.ValyutaApi
 import com.example.network.interceptor.MyInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -42,6 +39,9 @@ class RetrofitBuilder {
         retrofit.create(KupBeriladiganSavollar::class.java)
     }
 
+    val profil:Profil by lazy {
+        retrofit.create(Profil::class.java)
+    }
 
 
 

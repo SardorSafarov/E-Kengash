@@ -21,6 +21,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.blok.Blok
 import com.example.blok.BlokActivitt
@@ -38,6 +39,9 @@ import com.example.ekengash.fragmentlar.chat.main.Chat
 import com.example.ekengash.fragmentlar.explore.main.Explore
 import com.example.ekengash.fragmentlar.kuproq.main.Kuproqq
 import com.example.log.D
+import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
+import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
+import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel
 import com.example.room.viewModel.UserViewModel
 import com.example.splashScreen.SplashScreen
 import com.google.android.material.navigation.NavigationView
@@ -62,9 +66,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
     ///==============================Tegma===============================================================/////
-
 
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -75,23 +77,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         statusBar()
         chapMenu()
         foydalanuvchiHaqidaMalumotlar()
-      //  chackPerimition()
+        //  chackPerimition()
         logOut()
         binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
 
     private fun foydalanuvchiHaqidaMalumotlar() {
-        val bind= ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
+        val bind =
+            ChapMenuBinding.bind(binding.asosiyMenuChap.inflateHeaderView(R.layout.chap_menu))
         userViewModel.readUser.observe(this, Observer {
             try {
-                TOKEN=it.get(0).token.toString()
+                TOKEN = it.get(0).token.toString()
+                D.d(TOKEN)
                 bind.foydalanuvchiIsm.setText(it.get(0).full_name)
                 bind.foydalanuvchiTel.setText(it.get(0).phone)
-            }catch (e:Exception)
-            {
-             D.d("MainActivity readuser")
+            } catch (e: Exception) {
+                D.d("MainActivity readuser")
             }
         })
+
         bind.foydalanuvchiRasmi.setOnClickListener {
             startActivity(Intent(this, Profil::class.java))
             val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
@@ -104,30 +108,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+
+
     /*=========================Chap menu itemclick==============================*/
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        when(id)
-        {
-            R.id.chap_menu_valuta_kursi->{
+        when (id) {
+            R.id.chap_menu_valuta_kursi -> {
                 startActivity(Intent(this, ValyutaKurslari::class.java))
             }
-            R.id.chap_menu_kup_savol ->{
+            R.id.chap_menu_kup_savol -> {
                 startActivity(Intent(this, KupBeriladiganSavollar::class.java))
             }
-            R.id.chap_menu_sozlanma ->{
-                startActivity(Intent(this,Sozlanmalar::class.java))
+            R.id.chap_menu_sozlanma -> {
+                startActivity(Intent(this, Sozlanmalar::class.java))
             }
-            R.id.chap_menu_offerta ->{
-                startActivity(Intent(this,Offerta::class.java))
+            R.id.chap_menu_offerta -> {
+                startActivity(Intent(this, Offerta::class.java))
             }
 //            R.id.chap_menu_boglanish ->{
 //                startActivity(Intent(this,Boglanish::class.java))
 //            }
-            R.id.chap_menu_profil ->{
+            R.id.chap_menu_profil -> {
                 startActivity(Intent(this, Profil::class.java))
             }
-            R.id.chap_menu_ilova_ulashish->{
+            R.id.chap_menu_ilova_ulashish -> {
                 val intent = Intent()
                 intent.action = Intent.ACTION_SEND
                 intent.putExtra(Intent.EXTRA_TEXT,
@@ -140,8 +145,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
-
-
 
 
     private fun bottomBarSetOnclickListener() {
@@ -157,16 +160,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     true
                 }
                 R.id.explore -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-                        Explore()
-                    ).commit()
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main,
+                            Explore()
+                        ).commit()
                     true
                 }
                 R.id.chat -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
-                        Chat()
-                    ).commit()
-                 //   startActivity(Intent(this, ChatScreen::class.java))
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main,
+                            Chat()
+                        ).commit()
+                    //   startActivity(Intent(this, ChatScreen::class.java))
                     true
                 }
                 R.id.kuproq -> {
@@ -182,16 +187,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun logOut() {
-        binding.logOut.setOnClickListener{
-           val alertDialog = AlertDialog.Builder(this)
+        binding.logOut.setOnClickListener {
+            val alertDialog = AlertDialog.Builder(this)
             alertDialog.setTitle("Profildan chiqish.")
             alertDialog.setMessage("Siz ushbu profildan chiqmoqchimisiz?")
-            alertDialog.setPositiveButton("Ha"){ dialogInterface: DialogInterface, i: Int ->
+            alertDialog.setPositiveButton("Ha") { dialogInterface: DialogInterface, i: Int ->
                 startActivity(Intent(this, SplashScreen::class.java))
                 userViewModel.deleteToken()
                 finish()
             }
-            alertDialog.setNegativeButton("Yo`q"){ dialogInterface: DialogInterface, i: Int -> }
+            alertDialog.setNegativeButton("Yo`q") { dialogInterface: DialogInterface, i: Int -> }
             alertDialog.show()
         }
     }
@@ -242,12 +247,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val alerDialogBinding = AlertDialog.Builder(this)
             alerDialogBinding.setTitle("Internetga ulaning.")
             alerDialogBinding.setMessage("Tarmoqni tekshiring!!")
-            alerDialogBinding.setPositiveButton("Ok"){ dialogInterface: DialogInterface, i: Int -> }
+            alerDialogBinding.setPositiveButton("Ok") { dialogInterface: DialogInterface, i: Int -> }
             alerDialogBinding.setCancelable(false)
             alerDialogBinding.show()
         }
     }
-
 
 
     private fun statusBar() {

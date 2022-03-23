@@ -2,6 +2,7 @@ package com.example.ekengash.fragmentlar.asosiyy.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.ekengash.databinding.FragmentAsosiy2Binding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
+import com.example.ekengash.R
 import com.example.ekengash.fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar
 import com.example.engYaqin.main.EngYaqin
 import com.example.log.D
@@ -31,7 +33,7 @@ class Asosiy : Fragment() {
     private var _binding: FragmentAsosiy2Binding? = null
     private val binding get() = _binding!!
     private val userViewModel: UserViewModel by viewModels()
-
+    private var asosiy_rasm=1
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,6 +53,45 @@ class Asosiy : Fragment() {
         tanggalar()
         engYaqin()
         balanse()
+        asosiyRasmlarUzgarishi()
+    }
+
+    private fun asosiyRasmlarUzgarishi() {
+        Handler().postDelayed({
+            when (asosiy_rasm){
+                1->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_2)
+                    asosiy_rasm=2
+                }
+                2->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_2)
+                    asosiy_rasm=3
+                }
+                3->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_3)
+                    asosiy_rasm=4
+                }
+                4->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_4)
+                    asosiy_rasm=5
+
+                }
+                5->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_5)
+                    asosiy_rasm=6
+                }
+                6->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_6)
+                    asosiy_rasm=7
+                }
+                7->{
+                    binding.constraintLayout.setBackgroundResource(R.drawable.asosiy_7)
+                    asosiy_rasm=1
+                }
+            }
+            asosiyRasmlarUzgarishi()
+        },4000)
+
     }
 
     private fun balanse() {

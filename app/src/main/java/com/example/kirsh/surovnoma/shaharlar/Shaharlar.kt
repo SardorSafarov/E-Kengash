@@ -5,22 +5,18 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.constants.Constants
 import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivitySayohatTurlariBinding
 import com.example.ekengash.databinding.ActivityShaharlarBinding
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
 import com.example.kirsh.surovnoma.kimBilanSayohat.KimBilanSayohat
 import com.example.log.D
-import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
-import com.example.network.netWorkEndtity.surovNoma.surovNomaJavob.SurovNomaJavob
+import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
 import com.example.network.repository.surov.SurovNomaRepository
 import com.example.network.viewModelFactory.surov.SurovNomaViewModelFactory
 import com.example.network.viewmodel.surov.SurovNomaViewModel
-import com.example.room.viewModel.UserViewModel
 import retrofit2.Response
 
 class Shaharlar : AppCompatActivity(), SurovNomaAdapter.onClickListener {

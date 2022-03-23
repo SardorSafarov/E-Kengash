@@ -26,6 +26,7 @@ class SplashScreen : AppCompatActivity() {
             if (it.isEmpty()) {
                 if (onBordingFinish()) {
                     startActivity(Intent(this, Kirish::class.java))
+                    finish()
                 } else {
                     startActivity(Intent(this, OnBoriding::class.java))
                     finish()

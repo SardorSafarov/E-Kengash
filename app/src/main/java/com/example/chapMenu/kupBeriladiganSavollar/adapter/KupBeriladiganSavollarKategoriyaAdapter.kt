@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ItemSelectButtonBinding
 import com.example.log.D
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.FAQTYPE
+import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQTYPE
 
 
 class KupBeriladiganSavollarKategoriyaAdapter(private val listener: savolKategoriyaBtn) :

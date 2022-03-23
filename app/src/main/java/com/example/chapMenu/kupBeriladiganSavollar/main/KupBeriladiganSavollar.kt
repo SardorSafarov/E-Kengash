@@ -12,10 +12,9 @@ import com.example.chapMenu.kupBeriladiganSavollar.adapter.KupBeriladiganSavolla
 import com.example.chapMenu.kupBeriladiganSavollar.adapter.KupBeriladiganSavollarKategoriyaAdapter
 import com.example.constants.Constants.TOKEN
 import com.example.ekengash.databinding.ActivityKupBeriladiganSavollarBinding
-import com.example.log.D
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.FAQ
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.FAQTYPE
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
+import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQ
+import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQTYPE
+import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
 import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel

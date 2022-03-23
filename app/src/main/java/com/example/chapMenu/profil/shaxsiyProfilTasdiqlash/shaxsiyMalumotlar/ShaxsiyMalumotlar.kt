@@ -5,12 +5,24 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.ViewModelProvider
 import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar
+import com.example.constants.Constants.TOKEN
 import com.example.ekengash.databinding.ActivityShaxsiyMalumotlarBinding
+import com.example.log.D
+import com.example.network.endtity.profil.qushish.shaxsiy.ShaxsiyMalumotlarSurov
+import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
+import com.example.network.repository.profil.ProfilRepository
+import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
+import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
+import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel
+import com.example.network.viewmodel.profil.ProfilViewModel
 
 class ShaxsiyMalumotlar : AppCompatActivity() {
     private lateinit var binding:ActivityShaxsiyMalumotlarBinding
+    private lateinit var profilViewModel: ProfilViewModel
     private val validatsitaMessage="to'ldirilishi shart"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +31,18 @@ class ShaxsiyMalumotlar : AppCompatActivity() {
         ortgaQaytish()
         statusBar()
         davomEtish()
-
-
+        setUi()
     }
-
+    private fun setUi() {
+        val profilRepository = ProfilRepository()
+        val profilViewModelFactory =
+            ProfilViewModelFactory(profilRepository)
+        val profilViewModel = ViewModelProvider(
+            this,
+            profilViewModelFactory
+        ).get(ProfilViewModel::class.java)
+        this.profilViewModel = profilViewModel
+    }
     private fun davomEtish() {
         val alertDialog = AlertDialog.Builder(this)
         alertDialog.setTitle("Xatolik!!")
@@ -30,12 +50,36 @@ class ShaxsiyMalumotlar : AppCompatActivity() {
         alertDialog.setPositiveButton("Tushundim"){ dialogInterface: DialogInterface, i: Int -> }
         binding.davomEtishButton.setOnClickListener {
             if(validatsiyaEditText()){
+                shaxsiyMalumotQushish()
                 startActivity(Intent(this,PassportMalumotlar::class.java))
             }else
             {
+                D.d(binding.foydalanuvchiTugulganKuni.text.toString())
                 alertDialog.show()
             }
 
+        }
+    }
+
+    private fun shaxsiyMalumotQushish() {
+        profilViewModel.profilMalumotlarQushish(TOKEN, ShaxsiyMalumotlarSurov(
+            fname = binding.foydalanuvchiIsmi.text.toString(),
+            lname = binding.foydalanuvchiFamil.text.toString(),
+            dname = binding.foydalanuvchiOtasi.text.toString(),
+            bdate = binding.foydalanuvchiTugulganKuni.text.toString(),
+            text_address = binding.foydalanuvchiViloyat.text.toString(),
+            region = binding.foydalanuvchiViloyat.text.toString(),
+            gender = if(binding.erkak.isChecked) 1 else 0,
+            email = binding.foydalanuvchiEmail.text.toString(),
+            country = binding.foydalanuvchiDavlat.text.toString(),
+            next_phone = binding.foydalanuvchiTel.text.toString()
+        )
+        )
+        {
+            if(it.isSuccessful){
+                if(it.body()!!.status == "success")
+                Toast.makeText(this, "Ma'lumolar qo'shildi", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

@@ -14,7 +14,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/asosiy"
+        android:background="@drawable/asosiy_7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -47,21 +47,35 @@
             android:orientation="horizontal"
             app:strokeColor="#99999988"
             app:strokeWidth="1dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp"
-                android:text="Nimadir izlang"
-                android:textColor="#B6C2B1"
-                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="20dp"
+                    android:background="@android:color/transparent"
+                    android:text="Nimadir izlang"
+                    android:textColor="#B6C2B1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView23"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <ImageView
+                    android:id="@+id/imageView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_asoyiy_qidirsh"
                     android:layout_gravity="end|center_vertical"
-                    android:layout_marginEnd="10dp"
-                    />
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_asoyiy_qidirsh"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 <!--            <SearchView-->
 <!--                android:id="@+id/chats_searchView"-->
 <!--                android:layout_width="match_parent"-->
@@ -115,6 +129,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:background="#99999988"
                 android:layout_height="match_parent">
 
                 <ImageView
@@ -123,6 +138,8 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="5dp"
                     android:src="@drawable/tangga"
+                    android:elevation="0dp"
+                    android:backgroundTint="#99999988"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -134,6 +151,7 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginBottom="0dp"
                     android:text="22 000"
+                    android:background="@android:color/transparent"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"

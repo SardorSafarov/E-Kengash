@@ -1,15 +1,18 @@
 package com.example.network.api
 
-import com.example.network.netWorkEndtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
-import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.endtity.info.javob.InfoJavob
+import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
-import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface KupBeriladiganSavollar {
 
     @GET("/api/v1/info/faq")
     suspend fun kupBeriladiganSavollar(@Header("authorization") token: String, ): Response<KupBeriladiganSavollarJavob>
+
+    @GET("/api/v1/info/info")
+    suspend fun info(@Header("authorization") token: String,@Query("lang")lang:String): Response<InfoJavob>
 
 }

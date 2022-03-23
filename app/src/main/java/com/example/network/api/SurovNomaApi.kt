@@ -1,8 +1,8 @@
 package com.example.network.api
 
 
-import com.example.network.netWorkEndtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
-import com.example.network.netWorkEndtity.surovNoma.surovNomaJavob.SurovNomaJavob
+import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
 import retrofit2.Response
 import retrofit2.http.*
 
