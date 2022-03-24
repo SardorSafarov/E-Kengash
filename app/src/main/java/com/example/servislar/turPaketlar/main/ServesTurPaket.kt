@@ -3,10 +3,8 @@ package com.example.servislar.turPaketlar.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityServesTurPaketBinding
-import com.example.servislar.aviachipta.chiptalarim.AviaChiptalarim
-import com.example.servislar.aviachipta.qidirish.AviaQidirish
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityServesTurPaketBinding
 import com.example.servislar.turPaketlar.qidirsh.TurPaketQidirsh
 import com.example.servislar.turPaketlar.saqlanganlar.TurPaketSaqlanganlar
 

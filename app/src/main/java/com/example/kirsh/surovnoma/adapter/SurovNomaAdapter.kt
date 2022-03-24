@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ItemSurovnomaBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ItemSurovnomaBinding
 import com.example.log.D
 import com.example.network.endtity.surovNoma.sayohatTurlari.response.Survey
 

@@ -4,8 +4,8 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kirsh.avtorizatsiya.kirshQismi.KirishQismi
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityKirishBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityKirishBinding
 
 
 class Kirish : AppCompatActivity() {

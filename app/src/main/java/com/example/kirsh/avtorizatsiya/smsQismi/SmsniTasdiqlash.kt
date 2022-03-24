@@ -13,8 +13,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentSmsniTasdiqlashBinding
+import com.example.katrip.databinding.FragmentSmsniTasdiqlashBinding
 import com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari
 import com.example.log.D
 import com.example.network.endtity.sms.smsKeldi.javob.SmsKeldiJavob
@@ -22,7 +21,6 @@ import com.example.network.endtity.sms.smsKeldi.surov.SmsKeldiSurov
 import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
-import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel
 import com.example.room.roomEntity.UserEntity
 import com.example.room.viewModel.UserViewModel

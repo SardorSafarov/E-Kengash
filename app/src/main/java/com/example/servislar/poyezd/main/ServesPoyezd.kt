@@ -3,8 +3,8 @@ package com.example.servislar.poyezd.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityPoyezd2Binding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityPoyezd2Binding
 import com.example.servislar.poyezd.chiptalarim.PoyizChiptalarim
 import com.example.servislar.poyezd.qidirish.PoyzQidirish
 

@@ -1,6 +1,6 @@
 package com.example.network.repository.profil
 
-import com.example.ekengash.kirish.RetrofitBuilder
+import com.example.katrip.kirish.RetrofitBuilder
 import com.example.network.endtity.profil.biznes.surov.BiznesSurov
 import com.example.network.endtity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
 import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov

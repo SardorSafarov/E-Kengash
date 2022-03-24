@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.constants.Constants
-import com.example.ekengash.databinding.ActivityEngYaqinBinding
-import com.example.ekengash.databinding.ActivityEngYaqinHaqidaBinding
-import com.example.ekengash.databinding.ActivityOffertaBinding
+import com.example.katrip.databinding.ActivityEngYaqinHaqidaBinding
 import com.example.network.endtity.info.javob.INFO
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory

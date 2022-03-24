@@ -4,8 +4,8 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityTanggalarBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityTanggalarBinding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish
 import com.example.servislar.tanggalar.tarixi.TangalarTarixi

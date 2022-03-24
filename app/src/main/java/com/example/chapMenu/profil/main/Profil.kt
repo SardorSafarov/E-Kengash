@@ -7,8 +7,8 @@ import android.os.Bundle
 import com.example.chapMenu.profil.biznes.main.ProfilBiznes
 import com.example.chapMenu.profil.profileHaqida.ProfilHaqida
 import com.example.chapMenu.profil.shaxsiy.ProfilShaxsiy
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityProfilBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityProfilBinding
 
 class Profil : AppCompatActivity() {
     private lateinit var binding:ActivityProfilBinding

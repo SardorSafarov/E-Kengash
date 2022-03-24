@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish
-import com.example.ekengash.databinding.FragmentProfilBiznesBinding
+import com.example.katrip.databinding.FragmentProfilBiznesBinding
 
 class ProfilBiznes : Fragment() {
 

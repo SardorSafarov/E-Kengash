@@ -3,7 +3,7 @@ package com.example.chapMenu.profil.biznes.sms
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityBiznesProfilQurishSmsBinding
+import com.example.katrip.databinding.ActivityBiznesProfilQurishSmsBinding
 
 class BiznesProfilQurishSms : AppCompatActivity() {
     private lateinit var binding:ActivityBiznesProfilQurishSmsBinding

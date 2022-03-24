@@ -1,4 +1,4 @@
-package com.example.ekengash.kirish
+package com.example.katrip.kirish
 
 
 
@@ -26,6 +26,9 @@ class RetrofitBuilder {
             .build()
     }
 
+    val takliflarLayfxaklar:TakliflarLayfxaklar by lazy {
+        retrofit.create(TakliflarLayfxaklar::class.java)
+    }
 
     val kirshApi: KirshApi by lazy {
         retrofit.create(KirshApi::class.java)

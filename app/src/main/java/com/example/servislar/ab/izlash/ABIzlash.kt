@@ -3,8 +3,7 @@ package com.example.servislar.ab.izlash
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityAbIzlashBinding
-import com.example.ekengash.databinding.ActivityServesAbBinding
+import com.example.katrip.databinding.ActivityAbIzlashBinding
 
 class ABIzlash : AppCompatActivity() {
 

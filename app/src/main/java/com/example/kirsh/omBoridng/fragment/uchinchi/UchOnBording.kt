@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.constants.Constants
 import com.example.kirsh.avtorizatsiya.main.Kirish
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentUchOnBordingBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.FragmentUchOnBordingBinding
 
 
 class UchOnBording : Fragment() {

@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.constants.Constants
-import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivityProfilHaqidaBinding
-import com.example.ekengash.databinding.ActivityQrcodeScanerHaqidaBinding
-import com.example.log.D
+import com.example.katrip.databinding.ActivityQrcodeScanerHaqidaBinding
 import com.example.network.endtity.info.javob.INFO
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory

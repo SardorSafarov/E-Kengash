@@ -2,8 +2,7 @@ package com.example.blok
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityBlokActivittBinding
+import com.example.katrip.databinding.ActivityBlokActivittBinding
 
 class BlokActivitt : AppCompatActivity() {
 

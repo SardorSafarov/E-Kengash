@@ -14,9 +14,9 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.RuyxatdanUtishTuliq
 import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
 import com.example.kirsh.avtorizatsiya.smsQismi.SmsniTasdiqlash
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentKirishQismiBinding
-import com.example.ekengash.main.MainActivity
+import com.example.katrip.R
+import com.example.katrip.databinding.FragmentKirishQismiBinding
+import com.example.katrip.main.MainActivity
 import com.example.log.D
 import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
 import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov

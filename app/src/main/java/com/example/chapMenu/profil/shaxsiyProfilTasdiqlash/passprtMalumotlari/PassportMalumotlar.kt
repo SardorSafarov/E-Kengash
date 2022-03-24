@@ -11,7 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms
 import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivityPassportMalumotlarBinding
+import com.example.katrip.databinding.ActivityPassportMalumotlarBinding
 import com.example.network.endtity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
 import com.example.network.repository.profil.ProfilRepository
 import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory

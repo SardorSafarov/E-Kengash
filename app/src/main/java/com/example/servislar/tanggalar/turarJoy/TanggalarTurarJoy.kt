@@ -3,7 +3,7 @@ package com.example.servislar.tanggalar.turarJoy
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityTanggalarTurarJoyBinding
+import com.example.katrip.databinding.ActivityTanggalarTurarJoyBinding
 
 class TanggalarTurarJoy : AppCompatActivity() {
     private lateinit var binding:ActivityTanggalarTurarJoyBinding

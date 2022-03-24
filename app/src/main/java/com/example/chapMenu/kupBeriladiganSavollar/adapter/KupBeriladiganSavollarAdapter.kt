@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ItemKupBeriladiganSavollarBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ItemKupBeriladiganSavollarBinding
 import com.example.log.D
 import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQ
 

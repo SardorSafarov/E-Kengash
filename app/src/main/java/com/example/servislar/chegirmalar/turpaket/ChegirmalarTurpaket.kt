@@ -3,7 +3,7 @@ package com.example.servislar.chegirmalar.turpaket
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityChegirmalarTurpaketBinding
+import com.example.katrip.databinding.ActivityChegirmalarTurpaketBinding
 
 class ChegirmalarTurpaket : AppCompatActivity() {
     private lateinit var binding:ActivityChegirmalarTurpaketBinding

@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityServesAbBinding
-import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
-import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityServesAbBinding
+import com.example.katrip.databinding.BottomSheetAviaHolatBinding
+import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
 import com.example.servislar.ab.izlash.ABIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker

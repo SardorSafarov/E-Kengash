@@ -3,7 +3,7 @@ package com.example.servislar.chegirmalar.turarjoy
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityChegirmalarTurarjoyBinding
+import com.example.katrip.databinding.ActivityChegirmalarTurarjoyBinding
 
 
 class ChegirmaTurarJoy : AppCompatActivity() {

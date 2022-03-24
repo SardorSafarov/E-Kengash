@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import com.example.chapMenu.profil.main.Profil
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityShaxsiyProfilTasdiqlashSmsBinding
-import com.example.ekengash.databinding.AlertDiaolgSmsTasdiqlashBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityShaxsiyProfilTasdiqlashSmsBinding
+import com.example.katrip.databinding.AlertDiaolgSmsTasdiqlashBinding
 
 class ShaxsiyProfilTasdiqlashSms : AppCompatActivity() {
     private lateinit var binding:ActivityShaxsiyProfilTasdiqlashSmsBinding

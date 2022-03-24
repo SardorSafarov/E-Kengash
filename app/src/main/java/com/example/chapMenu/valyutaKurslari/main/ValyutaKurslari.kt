@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.chapMenu.valyutaKurslari.adapter.ValyutaKurslariAdapter
-import com.example.ekengash.databinding.ActivityValyutaKurslariBinding
+import com.example.katrip.databinding.ActivityValyutaKurslariBinding
 import com.example.log.D
 import com.example.network.endtity.valyuta.ValyutaEntity
 import com.example.network.repository.valyuta.ValyutaRepository

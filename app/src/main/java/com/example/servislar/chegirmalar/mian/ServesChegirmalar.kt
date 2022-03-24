@@ -4,7 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityServesChegirmalarBinding
+import com.example.katrip.databinding.ActivityServesChegirmalarBinding
 import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.servislar.chegirmalar.transport.ChegirmalarTransport
 import com.example.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy

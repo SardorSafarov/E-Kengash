@@ -3,8 +3,8 @@ package com.example.servislar.taxi.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityTaxiBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityTaxiBinding
 import com.example.servislar.taxi.buyurtmalrim.TaxiBuyurtmalrim
 import com.example.servislar.taxi.qidirish.TaxiQidirish
 

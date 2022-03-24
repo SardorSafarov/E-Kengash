@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.constants.Constants.TIL
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentOnBordingBirBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.FragmentOnBordingBirBinding
 
 
 class OnBordingBir : Fragment() {

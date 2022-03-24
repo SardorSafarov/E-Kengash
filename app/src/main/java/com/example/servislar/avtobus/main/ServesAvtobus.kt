@@ -3,8 +3,8 @@ package com.example.servislar.avtobus.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityAvtobusBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityAvtobusBinding
 import com.example.servislar.avtobus.chiptalarim.AvtobusChiptalarim
 import com.example.servislar.avtobus.qidirish.AvtobusQidirish
 

@@ -2,7 +2,7 @@ package com.example.chapMenu.valyutaKurslari.qidirsh
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityValyutaQidirishBinding
+import com.example.katrip.databinding.ActivityValyutaQidirishBinding
 
 class ValyutaQidirish : AppCompatActivity() {
     private lateinit var binding:ActivityValyutaQidirishBinding

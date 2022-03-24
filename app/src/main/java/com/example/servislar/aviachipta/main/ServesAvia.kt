@@ -3,8 +3,8 @@ package com.example.servislar.aviachipta.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityAviachiptaBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityAviachiptaBinding
 import com.example.servislar.aviachipta.chiptalarim.AviaChiptalarim
 import com.example.servislar.aviachipta.qidirish.AviaQidirish
 

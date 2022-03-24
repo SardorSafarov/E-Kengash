@@ -3,7 +3,7 @@ package com.example.chapMenu.boglanish
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityBoglanishBinding
+import com.example.katrip.databinding.ActivityBoglanishBinding
 
 class Boglanish : AppCompatActivity() {
 

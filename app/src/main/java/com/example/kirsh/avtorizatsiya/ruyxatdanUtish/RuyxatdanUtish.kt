@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import com.example.kirsh.avtorizatsiya.kirshQismi.KirishQismi
 import com.example.kirsh.avtorizatsiya.smsQismi.SmsniTasdiqlash
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentRuyxatdanUtishBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.FragmentRuyxatdanUtishBinding
 
 
 class RuyxatdanUtish : Fragment() {

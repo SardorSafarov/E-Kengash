@@ -4,7 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityServesChiptalarimBinding
+import com.example.katrip.databinding.ActivityServesChiptalarimBinding
 import com.example.servislar.chiptalarim.haqida.ChiptalarimHaqida
 
 class ServesChiptalarim : AppCompatActivity() {

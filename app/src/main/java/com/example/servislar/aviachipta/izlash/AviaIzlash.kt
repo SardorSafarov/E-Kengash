@@ -3,7 +3,7 @@ package com.example.servislar.aviachipta.izlash
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityAviaIzlashBinding
+import com.example.katrip.databinding.ActivityAviaIzlashBinding
 
 class AviaIzlash : AppCompatActivity() {
     lateinit var binding:ActivityAviaIzlashBinding

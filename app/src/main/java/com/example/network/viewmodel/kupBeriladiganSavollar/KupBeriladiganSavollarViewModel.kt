@@ -3,6 +3,7 @@ package com.example.network.viewmodel.kupBeriladiganSavollar
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
+import com.example.network.endtity.bildirshnoma.BildirishNomaJavob
 import com.example.network.endtity.info.javob.InfoJavob
 import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
@@ -39,5 +40,22 @@ class KupBeriladiganSavollarViewModel(private val kupBeriladiganSavollarReposito
         }
 
     }
+
+
+
+    fun bildirishnoma(token:String,onResponse:(response:Response<BildirishNomaJavob>)->Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(kupBeriladiganSavollarRepository.bildirishnoma(token))
+
+            }catch (e:Exception)
+            {
+                D.d("KupBeriladiganSavollarViewModel  bildirishnoma funi ${e.message}")
+            }
+        }
+
+    }
+
 
 }

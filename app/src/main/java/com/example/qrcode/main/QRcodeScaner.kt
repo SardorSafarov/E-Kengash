@@ -17,7 +17,7 @@ import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
-import com.example.ekengash.databinding.ActivityQrcodeScanerBinding
+import com.example.katrip.databinding.ActivityQrcodeScanerBinding
 import com.example.log.D
 import com.example.qrcode.qrcodeHaqida.QRcodeScanerHaqida
 

@@ -8,15 +8,15 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.constants.Constants
-import com.example.ekengash.databinding.ActivityKimBilanSayohatBinding
-import com.example.ekengash.main.MainActivity
+import com.example.katrip.databinding.ActivityKimBilanSayohatBinding
+import com.example.katrip.main.MainActivity
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
 import com.example.log.D
 import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
 import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
-import com.example.network.repository.surov.SurovNomaRepository
-import com.example.network.viewModelFactory.surov.SurovNomaViewModelFactory
-import com.example.network.viewmodel.surov.SurovNomaViewModel
+import com.example.network.repository.surovNoma.SurovNomaRepository
+import com.example.network.viewModelFactory.surovNoma.SurovNomaViewModelFactory
+import com.example.network.viewmodel.surovNoma.SurovNomaViewModel
 import retrofit2.Response
 
 class KimBilanSayohat : AppCompatActivity(),SurovNomaAdapter.onClickListener {

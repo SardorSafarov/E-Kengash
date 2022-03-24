@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ekengash">
+    package="com.example.katrip">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -23,6 +23,13 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".fragmentlar.asosiyy.bildirishnomalar.yangiliklar.YangiliklarFulScreen"
+            android:exported="false" />
+        <activity
+            android:name="com.example.servislar.stories.TakliflarLayfxaklarFullScreen"
+            android:exported="false"
+            android:theme="@style/FullScreenThem" />
+        <activity
             android:name="com.example.kirsh.surovnoma.kimBilanSayohat.KimBilanSayohat"
             android:exported="false" />
         <activity
@@ -30,9 +37,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name="com.example.kirsh.omBoridng.main.OnBoriding"
             android:exported="false" />
@@ -144,7 +149,7 @@
             android:name=".fragmentlar.asosiyy.bildirishnomalar.utkazmalar.Utkazmalar"
             android:exported="false" />
         <activity
-            android:name=".fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar"
+            android:name=".fragmentlar.asosiyy.bildirishnomalar.main.Bildirshnomalar"
             android:exported="false" />
         <activity
             android:name="com.example.servislar.taxi.main.ServesTaxi"

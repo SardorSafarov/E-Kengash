@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F3F3F3"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragmentlar.asosiyy.bildirishnomalar.asosiy.Bildirshnomalar">
+    android:background="#F3F3F3"
+    tools:context=".fragmentlar.asosiyy.bildirishnomalar.main.Bildirshnomalar">
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"
@@ -22,19 +23,20 @@
                 android:id="@+id/orqaga_qaytish"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:paddingStart="20dp"
                 android:paddingVertical="14dp"
+                android:paddingStart="20dp"
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kuk" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bildirshnomalar"
-                android:textSize="18dp"
                 android:textColor="@color/black"
+                android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,9 +67,9 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
+                android:stateListAnimator="@null"
                 android:text="Yangiliklar"
                 android:textAllCaps="false"
-                android:stateListAnimator="@null"
                 android:textColor="@color/black"
                 app:cornerRadius="6dp" />
 
@@ -77,8 +79,8 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:backgroundTint="#E8E8E8"
-                android:text="Shaxsiy xabarlar"
                 android:stateListAnimator="@null"
+                android:text="Shaxsiy xabarlar"
                 android:textAllCaps="false"
                 android:textColor="#C0C0C0"
                 app:cornerRadius="6dp" />
@@ -86,315 +88,312 @@
     </com.google.android.material.card.MaterialCardView>
 
 
+    <FrameLayout
+        android:id="@+id/fragmen_bildirishnomalar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView9" />
 
 
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:id="@+id/bildishnoma_utkazmalar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        app:cardCornerRadius="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView6">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView14"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:src="@drawable/bildirishnoma_ic_soat"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView25"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="O'tkazmalar"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/imageView14"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView26"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="Sardor"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView15"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView25"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView25" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="0dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="24-yan 2022 | 12:00"-->
+    <!--                android:textColor="#4D4D4D"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView15"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView25"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView26" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView15"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:src="@drawable/ic_kirish"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:tint="#109BFF" />-->
 
 
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </com.google.android.material.card.MaterialCardView>-->
+
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:id="@+id/materialCardView20"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:cardCornerRadius="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/bildishnoma_utkazmalar">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView144"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:src="@drawable/ic_bildirishnoma_ic"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView255"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="Hurmatli mijoz"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/imageView144"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView266"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="Sardor"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView155"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView255"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView255" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="0dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="24-yan 2022 | 12:00"-->
+    <!--                android:textColor="#4D4D4D"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView155"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView255"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView266" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView155"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:src="@drawable/ic_kirish"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:tint="#109BFF" />-->
 
 
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </com.google.android.material.card.MaterialCardView>-->
 
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:id="@+id/materialCardView21"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:cardCornerRadius="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView20">-->
 
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
 
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView1444"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:src="@drawable/bildirishnoma_ic_soat"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView2555"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="O'tkazma"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/imageView1444"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView2666"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="Sardor"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView1555"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView2555"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView2555" />-->
 
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="0dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="24-yan 2022 | 12:00"-->
+    <!--                android:textColor="#4D4D4D"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView1555"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView2555"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView2666" />-->
 
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView1555"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:src="@drawable/ic_kirish"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:tint="#109BFF" />-->
 
-<!--    <com.google.android.material.card.MaterialCardView-->
-<!--        android:id="@+id/bildishnoma_utkazmalar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_marginHorizontal="20dp"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        app:cardCornerRadius="12dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView6">-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </com.google.android.material.card.MaterialCardView>-->
 
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:cardCornerRadius="12dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView21">-->
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView14"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:src="@drawable/bildirishnoma_ic_soat"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/textView25"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="O'tkazmalar"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="18dp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/imageView14"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView14444"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:src="@drawable/ic_bildirishnoma_ic"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/textView26"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="Sardor"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView15"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView25"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView25" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView25555"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="Bizda yangilik"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="18dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintStart_toEndOf="@+id/imageView14444"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="0dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="24-yan 2022 | 12:00"-->
-<!--                android:textColor="#4D4D4D"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView15"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView25"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView26" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView26666"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="25dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="Sardor"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView15555"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView25555"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView25555" />-->
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView15"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:src="@drawable/ic_kirish"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:tint="#109BFF" />-->
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="0dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:text="24-yan 2022 | 12:00"-->
+    <!--                android:textColor="#4D4D4D"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/imageView15555"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/textView25555"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/textView26666" />-->
 
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imageView15555"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:src="@drawable/ic_kirish"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:tint="#109BFF" />-->
 
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--    </com.google.android.material.card.MaterialCardView>-->
-
-<!--    <com.google.android.material.card.MaterialCardView-->
-<!--        android:id="@+id/materialCardView20"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_marginHorizontal="20dp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        app:cardCornerRadius="12dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/bildishnoma_utkazmalar">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView144"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:src="@drawable/ic_bildirishnoma_ic"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView255"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="Hurmatli mijoz"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="18dp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/imageView144"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView266"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="Sardor"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView155"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView255"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView255" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="0dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="24-yan 2022 | 12:00"-->
-<!--                android:textColor="#4D4D4D"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView155"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView255"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView266" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView155"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:src="@drawable/ic_kirish"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:tint="#109BFF" />-->
-
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--    </com.google.android.material.card.MaterialCardView>-->
-
-<!--    <com.google.android.material.card.MaterialCardView-->
-<!--        android:id="@+id/materialCardView21"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_marginHorizontal="20dp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        app:cardCornerRadius="12dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView20">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView1444"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:src="@drawable/bildirishnoma_ic_soat"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView2555"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="O'tkazma"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="18dp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/imageView1444"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView2666"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="Sardor"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView1555"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView2555"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView2555" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="0dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="24-yan 2022 | 12:00"-->
-<!--                android:textColor="#4D4D4D"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView1555"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView2555"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView2666" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView1555"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:src="@drawable/ic_kirish"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:tint="#109BFF" />-->
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--    </com.google.android.material.card.MaterialCardView>-->
-
-<!--    <com.google.android.material.card.MaterialCardView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:layout_marginHorizontal="20dp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        app:cardCornerRadius="12dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/materialCardView21">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView14444"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:src="@drawable/ic_bildirishnoma_ic"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView25555"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="20dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="Bizda yangilik"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="18dp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/imageView14444"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView26666"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="Sardor"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView15555"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView25555"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView25555" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="0dp"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:text="24-yan 2022 | 12:00"-->
-<!--                android:textColor="#4D4D4D"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/imageView15555"-->
-<!--                app:layout_constraintStart_toStartOf="@+id/textView25555"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/textView26666" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView15555"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="20dp"-->
-<!--                android:src="@drawable/ic_kirish"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:tint="#109BFF" />-->
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--    </com.google.android.material.card.MaterialCardView>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </com.google.android.material.card.MaterialCardView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

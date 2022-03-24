@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ekengash.databinding.FragmentViewPagerFargmentBinding
+import com.example.katrip.databinding.FragmentViewPagerFargmentBinding
 import com.example.kirsh.omBoridng.adapter.OnBoridingViewPageAdapter
 import com.example.kirsh.omBoridng.fragment.birinchOyna.OnBordingBir
 import com.example.kirsh.omBoridng.fragment.ikkinchOyna.IkkiOnBording

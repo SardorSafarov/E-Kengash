@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ekengash.R
-import com.example.ekengash.databinding.*
+import com.example.katrip.R
+import com.example.katrip.databinding.*
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*

@@ -8,7 +8,7 @@ import com.example.chapMenu.sozlanmalar.bildirishnoma.SozlanmalarBildishnomalar
 import com.example.chapMenu.sozlanmalar.dasturTili.DasturTili
 import com.example.chapMenu.sozlanmalar.ilovaHaqida.IlovaHaqida
 import com.example.chapMenu.sozlanmalar.qurulmalar.Qurulmalar
-import com.example.ekengash.databinding.ActivitySozlanmalarBinding
+import com.example.katrip.databinding.ActivitySozlanmalarBinding
 
 class Sozlanmalar : AppCompatActivity() {
     lateinit var binding:ActivitySozlanmalarBinding

@@ -10,8 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar
 import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivityShaxsiyMalumotlarBinding
-import com.example.log.D
+import com.example.katrip.databinding.ActivityShaxsiyMalumotlarBinding
 import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
 import com.example.network.repository.profil.ProfilRepository
 import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory

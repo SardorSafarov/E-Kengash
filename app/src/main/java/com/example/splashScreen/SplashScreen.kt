@@ -9,8 +9,8 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.example.kirsh.avtorizatsiya.main.Kirish
 import com.example.kirsh.omBoridng.main.OnBoriding
-import com.example.ekengash.databinding.ActivitySplashScreenBinding
-import com.example.ekengash.main.MainActivity
+import com.example.katrip.databinding.ActivitySplashScreenBinding
+import com.example.katrip.main.MainActivity
 import com.example.room.viewModel.UserViewModel
 
 class SplashScreen : AppCompatActivity() {

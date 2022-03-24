@@ -1,6 +1,6 @@
 package com.example.network.repository.kirish
 
-import com.example.ekengash.kirish.RetrofitBuilder
+import com.example.katrip.kirish.RetrofitBuilder
 import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
 import com.example.network.endtity.kirsh.parolniTekshirish.javob.ParolniTekshirishJavob
 import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov

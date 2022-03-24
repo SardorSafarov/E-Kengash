@@ -10,15 +10,15 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivitySayohatTurlariBinding
+import com.example.katrip.databinding.ActivitySayohatTurlariBinding
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
 import com.example.kirsh.surovnoma.shaharlar.Shaharlar
 import com.example.log.D
 import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
 import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
-import com.example.network.repository.surov.SurovNomaRepository
-import com.example.network.viewModelFactory.surov.SurovNomaViewModelFactory
-import com.example.network.viewmodel.surov.SurovNomaViewModel
+import com.example.network.repository.surovNoma.SurovNomaRepository
+import com.example.network.viewModelFactory.surovNoma.SurovNomaViewModelFactory
+import com.example.network.viewmodel.surovNoma.SurovNomaViewModel
 import com.example.room.viewModel.UserViewModel
 import retrofit2.Response
 

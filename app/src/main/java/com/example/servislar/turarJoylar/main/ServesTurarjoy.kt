@@ -3,8 +3,8 @@ package com.example.servislar.turarJoylar.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ActivityServesTurarjoy2Binding
+import com.example.katrip.R
+import com.example.katrip.databinding.ActivityServesTurarjoy2Binding
 import com.example.servislar.turarJoylar.buyurtmalar.TurarJoyBuyurmalar
 import com.example.servislar.turarJoylar.qidirish.TurarJoyQidirish
 

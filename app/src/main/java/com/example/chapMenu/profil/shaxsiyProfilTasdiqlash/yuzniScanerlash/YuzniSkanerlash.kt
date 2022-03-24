@@ -1,19 +1,11 @@
 package com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash
 
-import android.Manifest.permission.CAMERA
-import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.content.res.AssetFileDescriptor
 import android.graphics.Color
-import android.media.MediaPlayer
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.SurfaceHolder
-import androidx.annotation.RequiresApi
 import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms
-import com.example.ekengash.databinding.ActivityYuzniSkanerlashBinding
+import com.example.katrip.databinding.ActivityYuzniSkanerlashBinding
 
 class YuzniSkanerlash : AppCompatActivity() {
     lateinit var binding:ActivityYuzniSkanerlashBinding

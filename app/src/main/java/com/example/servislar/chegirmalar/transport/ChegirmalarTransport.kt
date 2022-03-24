@@ -3,7 +3,7 @@ package com.example.servislar.chegirmalar.transport
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityChegirmalarTransportBinding
+import com.example.katrip.databinding.ActivityChegirmalarTransportBinding
 
 class ChegirmalarTransport : AppCompatActivity() {
     private lateinit var binding:ActivityChegirmalarTransportBinding

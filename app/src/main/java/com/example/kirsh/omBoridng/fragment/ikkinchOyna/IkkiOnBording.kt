@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.constants.Constants
-import com.example.ekengash.R
-import com.example.ekengash.databinding.FragmentIkkiOnBordingBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.FragmentIkkiOnBordingBinding
 
 
 class IkkiOnBording : Fragment() {

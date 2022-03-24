@@ -1,5 +1,6 @@
 package com.example.network.api
 
+import com.example.network.endtity.bildirshnoma.BildirishNomaJavob
 import com.example.network.endtity.info.javob.InfoJavob
 import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import retrofit2.Response
@@ -15,4 +16,6 @@ interface KupBeriladiganSavollar {
     @GET("/api/v1/info/info")
     suspend fun info(@Header("authorization") token: String,@Query("lang")lang:String): Response<InfoJavob>
 
+    @GET("/api/v1/data/notification_news")
+    suspend fun bildirishnoma(@Header("authorization") token: String): Response<BildirishNomaJavob>
 }

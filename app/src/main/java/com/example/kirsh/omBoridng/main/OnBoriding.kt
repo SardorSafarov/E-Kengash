@@ -3,7 +3,7 @@ package com.example.kirsh.omBoridng.main
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityOnBoridingBinding
+import com.example.katrip.databinding.ActivityOnBoridingBinding
 
 class OnBoriding : AppCompatActivity() {
     private lateinit var binding:ActivityOnBoridingBinding

@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ItemSelectButtonBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ItemSelectButtonBinding
 import com.example.log.D
 import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQTYPE
 

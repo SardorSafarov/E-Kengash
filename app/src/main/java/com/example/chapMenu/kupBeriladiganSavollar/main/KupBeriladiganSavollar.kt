@@ -11,7 +11,7 @@ import com.example.asosiyQidirishOynasi.AsosiyQidirish
 import com.example.chapMenu.kupBeriladiganSavollar.adapter.KupBeriladiganSavollarAdapter
 import com.example.chapMenu.kupBeriladiganSavollar.adapter.KupBeriladiganSavollarKategoriyaAdapter
 import com.example.constants.Constants.TOKEN
-import com.example.ekengash.databinding.ActivityKupBeriladiganSavollarBinding
+import com.example.katrip.databinding.ActivityKupBeriladiganSavollarBinding
 import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQ
 import com.example.network.endtity.kupBeriladiganSavollar.javob.FAQTYPE
 import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
@@ -36,6 +36,17 @@ class KupBeriladiganSavollar : AppCompatActivity(),
         statusbar()
         setUi()
         savollar()
+    }
+    private fun setUi() {
+        val kupBeriladiganSavollarRepository = KupBeriladiganSavollarRepository()
+        val kupBeriladiganSavollarViewModelFactory =
+            KupBeriladiganSavollarViewModelFactory(kupBeriladiganSavollarRepository)
+        val kupBeriladiganSavollarViewModel = ViewModelProvider(
+            this,
+            kupBeriladiganSavollarViewModelFactory
+        ).get(KupBeriladiganSavollarViewModel::class.java)
+        this.kupBeriladiganSavollarViewModel = kupBeriladiganSavollarViewModel
+
     }
 
     private fun savollar() {
@@ -79,17 +90,7 @@ class KupBeriladiganSavollar : AppCompatActivity(),
         savollarVaJavoblar(faqList)
     }
 
-    private fun setUi() {
-        val kupBeriladiganSavollarRepository = KupBeriladiganSavollarRepository()
-        val kupBeriladiganSavollarViewModelFactory =
-            KupBeriladiganSavollarViewModelFactory(kupBeriladiganSavollarRepository)
-        val kupBeriladiganSavollarViewModel = ViewModelProvider(
-            this,
-            kupBeriladiganSavollarViewModelFactory
-        ).get(KupBeriladiganSavollarViewModel::class.java)
-        this.kupBeriladiganSavollarViewModel = kupBeriladiganSavollarViewModel
 
-    }
 
     private fun statusbar() {
         window.statusBarColor = Color.WHITE

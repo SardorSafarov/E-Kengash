@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.ekengash.databinding.FragmentTanggalardanFoydalanishBinding
+import com.example.katrip.databinding.FragmentTanggalardanFoydalanishBinding
 import com.example.servislar.tanggalar.turarJoy.TanggalarTurarJoy
-import com.example.servislar.turarJoylar.main.ServesTurarjoy
 
 
 class TanggalardanFoydalanish : Fragment() {

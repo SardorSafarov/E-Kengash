@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ekengash.R
-import com.example.ekengash.databinding.ItemValyutaBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.ItemValyutaBinding
 import com.example.log.D
 import com.example.network.endtity.valyuta.ValyutaEntityItem
 import java.math.RoundingMode

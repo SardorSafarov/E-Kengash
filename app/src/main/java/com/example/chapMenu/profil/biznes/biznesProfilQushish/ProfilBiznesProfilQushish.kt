@@ -9,12 +9,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.example.chapMenu.profil.biznes.sms.BiznesProfilQurishSms
-import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar
 import com.example.constants.Constants
-import com.example.ekengash.databinding.ActivityProfilBiznesProfilQushishBinding
+import com.example.katrip.databinding.ActivityProfilBiznesProfilQushishBinding
 import com.example.log.D
 import com.example.network.endtity.profil.biznes.surov.BiznesSurov
-import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
 import com.example.network.repository.profil.ProfilRepository
 import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.profil.ProfilViewModel

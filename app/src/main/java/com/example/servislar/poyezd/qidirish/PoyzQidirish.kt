@@ -7,13 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import androidx.core.view.marginTop
-import com.example.ekengash.R
-import com.example.ekengash.databinding.BottomSheetAviaHolatBinding
-import com.example.ekengash.databinding.BottomSheetCalendarBinding
-import com.example.ekengash.databinding.BottomSheetServesQayerdanBinding
-import com.example.ekengash.databinding.FragmentPoyzQidirishBinding
+import com.example.katrip.R
+import com.example.katrip.databinding.BottomSheetAviaHolatBinding
+import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
+import com.example.katrip.databinding.FragmentPoyzQidirishBinding
 import com.example.servislar.poyezd.izlash.PoyezdIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker

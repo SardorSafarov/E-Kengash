@@ -3,7 +3,7 @@ package com.example.chapMenu.sozlanmalar.dasturTili
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityDasturTiliBinding
+import com.example.katrip.databinding.ActivityDasturTiliBinding
 
 class DasturTili : AppCompatActivity() {
     lateinit var binding:ActivityDasturTiliBinding

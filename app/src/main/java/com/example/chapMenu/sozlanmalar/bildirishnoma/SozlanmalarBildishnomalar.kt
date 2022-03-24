@@ -3,8 +3,7 @@ package com.example.chapMenu.sozlanmalar.bildirishnoma
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.ekengash.databinding.ActivityBildirshnomalarBinding
-import com.example.ekengash.databinding.ActivitySozlanmalarBildishnomalarBinding
+import com.example.katrip.databinding.ActivitySozlanmalarBildishnomalarBinding
 
 class SozlanmalarBildishnomalar : AppCompatActivity() {
     lateinit var binding:ActivitySozlanmalarBildishnomalarBinding
