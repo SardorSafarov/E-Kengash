@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.appcompat.view.menu.MenuPopupHelper
@@ -25,7 +24,6 @@ import com.example.network.endtity.sms.telNumberJunatish.javob.SmsJavob
 import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
-import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel
 import com.example.room.roomEntity.UserEntity
 import com.example.room.viewModel.UserViewModel
@@ -186,6 +184,8 @@ class KirishQismi : Fragment() {
                 telNomerViewModel =
                     ViewModelProviders.of(requireActivity()).get(TelNomerViewModel::class.java)
                 telNomerViewModel!!.telNomer(binding.telNumber.text.toString())
+                telNomerViewModel!!.flag(binding.flag)
+                telNomerViewModel!!.telKode(binding.kod.text.toString())
                 requireFragmentManager()?.beginTransaction()
                     ?.replace(R.id.kirsh_qismidagi_fragment, SmsniTasdiqlash())
                     ?.addToBackStack(null)?.commit()

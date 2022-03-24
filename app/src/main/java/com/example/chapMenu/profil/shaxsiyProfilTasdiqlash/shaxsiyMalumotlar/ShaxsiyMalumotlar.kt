@@ -12,12 +12,9 @@ import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.Pa
 import com.example.constants.Constants.TOKEN
 import com.example.ekengash.databinding.ActivityShaxsiyMalumotlarBinding
 import com.example.log.D
-import com.example.network.endtity.profil.qushish.shaxsiy.ShaxsiyMalumotlarSurov
-import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
+import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
 import com.example.network.repository.profil.ProfilRepository
 import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
-import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
-import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel
 import com.example.network.viewmodel.profil.ProfilViewModel
 
 class ShaxsiyMalumotlar : AppCompatActivity() {
@@ -54,7 +51,6 @@ class ShaxsiyMalumotlar : AppCompatActivity() {
                 startActivity(Intent(this,PassportMalumotlar::class.java))
             }else
             {
-                D.d(binding.foydalanuvchiTugulganKuni.text.toString())
                 alertDialog.show()
             }
 

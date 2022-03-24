@@ -1,4 +1,4 @@
-package com.example.network.endtity.profil.qushish.umumiyJavob
+package com.example.network.endtity.profil.shaxsniTasdiqlash.umumiyJavob
 
 data class ShaxPassMalumotlarJavob(
     val `data`: Data,

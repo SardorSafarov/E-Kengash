@@ -5,4 +5,5 @@ object Constants {
     const val URL_VALYUTA ="https://cbu.uz/"
     var TOKEN=""
     var TIL=""
+    var TEL=""
 }

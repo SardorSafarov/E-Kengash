@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.budiyev.android.codescanner.AutoFocusMode
 import com.budiyev.android.codescanner.CodeScanner
@@ -22,11 +23,12 @@ import com.example.qrcode.qrcodeHaqida.QRcodeScanerHaqida
 
 class QRcodeScaner : AppCompatActivity() {
     private lateinit var binding: ActivityQrcodeScanerBinding
-    private lateinit var codeScanner: CodeScanner
+    private var codeScanner: CodeScanner? = null
     private var flash = true
     private var PERMISSIONS: Array<String> = arrayOf(
         Manifest.permission.CAMERA
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQrcodeScanerBinding.inflate(layoutInflater)
@@ -35,7 +37,6 @@ class QRcodeScaner : AppCompatActivity() {
         teginma()
 
     }
-
 
 
     /*===================Teginma============================*/
@@ -55,39 +56,40 @@ class QRcodeScaner : AppCompatActivity() {
     }
 
     fun startScaneer() {
-        codeScanner.camera = CodeScanner.CAMERA_BACK
-        codeScanner.formats = CodeScanner.ALL_FORMATS
-        codeScanner.autoFocusMode = AutoFocusMode.SAFE
-        codeScanner.scanMode = ScanMode.SINGLE
-        codeScanner.isAutoFocusEnabled = true
-        codeScanner.decodeCallback = DecodeCallback { result ->
-            runOnUiThread {
-                val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
-                if (Build.VERSION.SDK_INT >= 26) {
-                    vibrator.vibrate(
-                        VibrationEffect.createOneShot(
-                            500,
-                            VibrationEffect.DEFAULT_AMPLITUDE
+        codeScanner?.apply {
+            camera = CodeScanner.CAMERA_BACK
+            formats = CodeScanner.ALL_FORMATS
+            autoFocusMode = AutoFocusMode.SAFE
+            scanMode = ScanMode.SINGLE
+            isAutoFocusEnabled = true
+            decodeCallback = DecodeCallback { result ->
+                runOnUiThread {
+                    val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
+                    if (Build.VERSION.SDK_INT >= 26) {
+                        vibrator.vibrate(
+                            VibrationEffect.createOneShot(
+                                500,
+                                VibrationEffect.DEFAULT_AMPLITUDE
+                            )
                         )
-                    )
-                } else {
-                    vibrator.vibrate(500)
+                    } else {
+                        vibrator.vibrate(500)
+                    }
+
+                    Toast.makeText(this@QRcodeScaner, "${result.text}", Toast.LENGTH_SHORT).show()
                 }
-
-                D.d(result.text)
-
+                errorCallback = ErrorCallback {
+                    runOnUiThread {
+                        D.d("QRcodeScaner codeScanner.errorCallback ")
+                    }
+                }
             }
         }
-        codeScanner.errorCallback = ErrorCallback {
-            runOnUiThread {
-                D.d("QRcodeScaner codeScanner.errorCallback ")
-            }
-        }
+
         binding.scannerView.setOnClickListener {
-            codeScanner.startPreview()
+            codeScanner?.startPreview()
         }
     }
-
 
 
     private fun starusBar() {
@@ -99,36 +101,48 @@ class QRcodeScaner : AppCompatActivity() {
             finish()
         }
     }
+
     private fun flash() {
         binding.flashButton.setOnClickListener {
-            if (flash) {
-                D.d("1")
-                codeScanner.isFlashEnabled = true
-                flash = false
+            codeScanner?.apply {
+                if (flash) {
+                    D.d("1")
+                    this.isFlashEnabled = true
+                    flash = false
 
-            } else {
-                D.d("2")
-                codeScanner.isFlashEnabled = false
-                flash = true
+                } else {
+                    D.d("2")
+                    this.isFlashEnabled = false
+                    flash = true
+                }
             }
+
         }
     }
+
     override fun onResume() {
         super.onResume()
-        codeScanner.startPreview()
+        codeScanner?.startPreview()
     }
 
     override fun onPause() {
-        codeScanner.releaseResources()
+        codeScanner?.releaseResources()
         super.onPause()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        codeScanner = null
+    }
+
     /*---------------Ruxsat berish-------------------*/
     private fun chackPerimition() {
         if (!hasPermissions(this, *PERMISSIONS)) {
 
-            ActivityCompat.requestPermissions(this,PERMISSIONS,1);
+            ActivityCompat.requestPermissions(this, PERMISSIONS, 1);
         }
     }
+
     private fun hasPermissions(context: Context?, vararg PERMISSIONS: String): Boolean {
         if (context != null && PERMISSIONS != null) {
             for (permission in PERMISSIONS) {
@@ -143,10 +157,11 @@ class QRcodeScaner : AppCompatActivity() {
         }
         return true
     }
+
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<String?>,
-        grantResults: IntArray
+        grantResults: IntArray,
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == 1) {

@@ -22,6 +22,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:paddingStart="20dp"
+                android:visibility="visible"
                 android:paddingVertical="14dp"
                 android:src="@drawable/ic_back"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,14 +42,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/profil_haqida"
+                android:id="@+id/qidirsh"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="0dp"
                 android:paddingVertical="14dp"
                 android:paddingEnd="20dp"
                 android:visibility="invisible"
-                android:src="@drawable/ic_bildirishnoma_ic"
+                android:src="@drawable/ic_list"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -56,14 +57,26 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
+
     <TextView
+        android:id="@+id/oferta_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
+
+    <ProgressBar
+        android:id="@+id/progers_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Eng yaqin haqida"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/materialCardView6"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oferta_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

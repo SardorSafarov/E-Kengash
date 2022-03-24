@@ -3,9 +3,10 @@ package com.example.network.viewmodel.profil
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
-import com.example.network.endtity.profil.qushish.pasport.PassportMalumotlarSurov
-import com.example.network.endtity.profil.qushish.shaxsiy.ShaxsiyMalumotlarSurov
-import com.example.network.endtity.profil.qushish.umumiyJavob.ShaxPassMalumotlarJavob
+import com.example.network.endtity.profil.biznes.surov.BiznesSurov
+import com.example.network.endtity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
+import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
+import com.example.network.endtity.profil.shaxsniTasdiqlash.umumiyJavob.ShaxPassMalumotlarJavob
 import com.example.network.repository.profil.ProfilRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response
@@ -37,6 +38,22 @@ class ProfilViewModel(private val profilRepository: ProfilRepository):ViewModel(
             }catch (e:Exception)
             {
                 D.d("ProfilViewModel passportMalumotlarQushish funi ${e.message}")
+            }
+        }
+    }
+
+
+    /*=================Biznes malumotlani qushish======================*/
+
+    fun biznesMalumotlarQushish(token:String,body:BiznesSurov,onResponse:(response:Response<ShaxPassMalumotlarJavob>)->Unit){
+        viewModelScope.launch {
+            try {
+
+                onResponse(profilRepository.biznesMalumotlarQushish(token,body))
+
+            }catch (e:Exception)
+            {
+                D.d("ProfilViewModel biznesMalumotlarQushish funi ${e.message}")
             }
         }
     }

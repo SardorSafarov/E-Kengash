@@ -114,7 +114,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismi"
+                            android:id="@+id/tashkilot_turi"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -129,15 +129,16 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView25">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii1"
+                                android:id="@+id/tashkilot_turi_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii"
+                            android:id="@+id/tashlilot_nomi"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -149,17 +150,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismi">
+                            app:layout_constraintTop_toBottomOf="@+id/tashkilot_turi">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii2"
+                                android:id="@+id/tashlilot_nomi_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii12"
+                            android:id="@+id/tash_rasmiy_nomi"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -171,17 +173,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii">
+                            app:layout_constraintTop_toBottomOf="@+id/tashlilot_nomi">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii23"
+                                android:id="@+id/tash_rasmiy_nomi_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
+                                android:inputType="textCapWords"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121"
+                            android:id="@+id/direktor"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -193,17 +196,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii12">
+                            app:layout_constraintTop_toBottomOf="@+id/tash_rasmiy_nomi">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233"
+                                android:id="@+id/direktor_text"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121q"
+                            android:id="@+id/tash_tel"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -215,17 +219,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121">
+                            app:layout_constraintTop_toBottomOf="@+id/direktor">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233q"
+                                android:id="@+id/tash_tel_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
+                                android:inputType="phone"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qq"
+                            android:id="@+id/tash_tel_2"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -237,17 +242,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121q">
+                            app:layout_constraintTop_toBottomOf="@+id/tash_tel">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qq"
+                                android:id="@+id/tash_tel_2_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
+                                android:inputType="phone"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqq"
+                            android:id="@+id/tash_emil"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -259,17 +265,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qq">
+                            app:layout_constraintTop_toBottomOf="@+id/tash_tel_2">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqq"
+                                android:id="@+id/tash_emil_text"
                                 android:layout_width="match_parent"
+                                android:inputType="textEmailAddress"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqq"
+                            android:id="@+id/tash_stir"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -281,17 +288,17 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqq">
+                            app:layout_constraintTop_toBottomOf="@+id/tash_emil">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqq"
+                                android:id="@+id/tash_stir_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqq"
+                            android:id="@+id/bank_nomi"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -303,17 +310,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/tash_stir">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqq"
+                                android:id="@+id/bank_nomi_text"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqqq"
+                            android:id="@+id/mfo"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -325,17 +333,17 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/bank_nomi">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqqq"
+                                android:id="@+id/mfo_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqqqq"
+                            android:id="@+id/hisob_raqam"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -347,17 +355,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/mfo">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqqqq"
+                                android:id="@+id/hisob_raqam_text"
                                 android:layout_width="match_parent"
                                 android:textCursorDrawable="@color/kuk"
+                                android:inputType="number"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqqqqq"
+                            android:id="@+id/davlat"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="61dp"
@@ -369,17 +378,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/hisob_raqam">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqqqqq"
+                                android:id="@+id/davlat_text"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqqqqqq"
+                            android:id="@+id/yuridik_manzil"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -391,17 +401,18 @@
                             app:hintTextColor="@color/kuk"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/davlat">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqqqqqq"
+                                android:id="@+id/yuridik_manzil_text"
                                 android:layout_width="match_parent"
+                                android:inputType="textCapWords"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/foydalanuvchi_ismii121qqqqqqqqqq"
+                            android:id="@+id/pochta_indeks"
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
@@ -415,11 +426,12 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/foydalanuvchi_ismii121qqqqqqqqq">
+                            app:layout_constraintTop_toBottomOf="@+id/yuridik_manzil">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/foydalanuvchi_ismii233qqqqqqqqqq"
+                                android:id="@+id/pochta_indeks_text"
                                 android:layout_width="match_parent"
+                                android:inputType="number"
                                 android:textCursorDrawable="@color/kuk"
                                 android:layout_height="wrap_content" />
                         </com.google.android.material.textfield.TextInputLayout>

@@ -1,4 +1,4 @@
-package com.example.network.endtity.profil.qushish.pasport
+package com.example.network.endtity.profil.shaxsniTasdiqlash.pasport
 
 data class PassportMalumotlarSurov(
     val address: String,

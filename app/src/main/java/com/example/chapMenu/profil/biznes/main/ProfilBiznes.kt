@@ -18,18 +18,6 @@ class ProfilBiznes : Fragment() {
             startActivity(Intent(requireContext(),ProfilBiznesProfilQushish::class.java))
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
     private var _binding: FragmentProfilBiznesBinding? = null
     private val binding get() = _binding!!
 

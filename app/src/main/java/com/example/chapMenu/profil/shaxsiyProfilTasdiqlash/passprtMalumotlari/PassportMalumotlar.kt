@@ -6,20 +6,22 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms
-import com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash.YuzniSkanerlash
 import com.example.constants.Constants.TOKEN
 import com.example.ekengash.databinding.ActivityPassportMalumotlarBinding
-import com.example.network.endtity.profil.qushish.pasport.PassportMalumotlarSurov
+import com.example.network.endtity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
 import com.example.network.repository.profil.ProfilRepository
 import com.example.network.viewModelFactory.kirish.ProfilViewModelFactory
 import com.example.network.viewmodel.profil.ProfilViewModel
+import com.example.room.viewModel.UserViewModel
 
 class PassportMalumotlar : AppCompatActivity() {
     private lateinit var binding:ActivityPassportMalumotlarBinding
     private lateinit var profilViewModel: ProfilViewModel
+    private  val userViewmodel:UserViewModel by viewModels()
     private val validatsitaMessage="to'ldirilishi shart"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

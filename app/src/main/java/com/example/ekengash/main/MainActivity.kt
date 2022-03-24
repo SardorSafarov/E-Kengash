@@ -30,6 +30,7 @@ import com.example.chapMenu.offerta.Offerta
 import com.example.chapMenu.profil.main.Profil
 import com.example.chapMenu.sozlanmalar.main.Sozlanmalar
 import com.example.chapMenu.valyutaKurslari.main.ValyutaKurslari
+import com.example.constants.Constants.TEL
 import com.example.constants.Constants.TOKEN
 import com.example.ekengash.R
 import com.example.ekengash.databinding.ActivityMainBinding
@@ -77,7 +78,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         statusBar()
         chapMenu()
         foydalanuvchiHaqidaMalumotlar()
-        //  chackPerimition()
         logOut()
         binding.asosiyMenuChap.setNavigationItemSelectedListener(this)
     }
@@ -88,7 +88,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         userViewModel.readUser.observe(this, Observer {
             try {
                 TOKEN = it.get(0).token.toString()
-                D.d(TOKEN)
+                TEL=it.get(0).phone
+                D.d("token $TOKEN")
                 bind.foydalanuvchiIsm.setText(it.get(0).full_name)
                 bind.foydalanuvchiTel.setText(it.get(0).phone)
             } catch (e: Exception) {

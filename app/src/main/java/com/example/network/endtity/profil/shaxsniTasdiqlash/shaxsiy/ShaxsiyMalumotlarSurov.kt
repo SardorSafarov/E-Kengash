@@ -1,4 +1,4 @@
-package com.example.network.endtity.profil.qushish.shaxsiy
+package com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy
 
 data class ShaxsiyMalumotlarSurov(
     val bdate: String,
