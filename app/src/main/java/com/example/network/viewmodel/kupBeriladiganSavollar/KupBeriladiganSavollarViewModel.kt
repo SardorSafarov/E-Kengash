@@ -3,9 +3,9 @@ package com.example.network.viewmodel.kupBeriladiganSavollar
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
-import com.example.network.endtity.bildirshnoma.BildirishNomaJavob
-import com.example.network.endtity.info.javob.InfoJavob
-import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
+import com.example.network.entity.bildirshnoma.BildirishNomaJavob
+import com.example.network.entity.info.javob.InfoJavob
+import com.example.network.entity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import kotlinx.coroutines.launch
 import retrofit2.Response

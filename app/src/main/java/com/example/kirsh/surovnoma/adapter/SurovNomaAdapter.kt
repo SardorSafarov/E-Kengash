@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.katrip.R
 import com.example.katrip.databinding.ItemSurovnomaBinding
 import com.example.log.D
-import com.example.network.endtity.surovNoma.sayohatTurlari.response.Survey
+import com.example.network.entity.surovNoma.sayohatTurlari.response.Survey
 
 class SurovNomaAdapter(private val listener: onClickListener, var applicationContext: Context) :
     RecyclerView.Adapter<SurovNomaAdapter.ViewHolder>() {

@@ -19,6 +19,8 @@
     <string name="onboring_text_1">Shaharlardagi sayohatga oid joylarga online sayohat\nqilish,audio git, 360 formatda tomosha qilish va\nboshqa ko\'plab imkoniyatlar</string>
     <string name="onbording_text_3">A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</string>
     <string name="onbording_text_2">Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</string>
+    <string name="eslatma_biznes">Eslatma:Biznes profilga qo\'shgan\nma\'lumotlaringiz tasdiqlangandan so\'ngina\nilovaning maxsus imkoniyatlaridan\nfoydalanishingiz mumkin!</string>
+    <string name="til">til</string>
 
     <string-array name="on_bording_title">
         <item>Maxsus imkoniyatlar</item>

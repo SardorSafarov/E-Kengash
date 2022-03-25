@@ -16,9 +16,9 @@ import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
 import com.example.katrip.databinding.FragmentSmsniTasdiqlashBinding
 import com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari
 import com.example.log.D
-import com.example.network.endtity.sms.smsKeldi.javob.SmsKeldiJavob
-import com.example.network.endtity.sms.smsKeldi.surov.SmsKeldiSurov
-import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
+import com.example.network.entity.sms.smsKeldi.javob.SmsKeldiJavob
+import com.example.network.entity.sms.smsKeldi.surov.SmsKeldiSurov
+import com.example.network.entity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel

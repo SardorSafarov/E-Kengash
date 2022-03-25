@@ -1,15 +1,21 @@
 package com.example.network.api
 
-import com.example.network.endtity.profil.biznes.surov.BiznesSurov
-import com.example.network.endtity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
-import com.example.network.endtity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
-import com.example.network.endtity.profil.shaxsniTasdiqlash.umumiyJavob.ShaxPassMalumotlarJavob
+import com.example.network.entity.profil.biznes.surov.BiznesSurov
+import com.example.network.entity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov
+import com.example.network.entity.profil.shaxsniTasdiqlash.shaxsiy.ShaxsiyMalumotlarSurov
+import com.example.network.entity.profil.shaxsniTasdiqlash.umumiyJavob.ShaxPassMalumotlarJavob
+import com.example.network.entity.profil.user.UserHaqidaJavob
+import com.example.network.entity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.Header
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface Profil {
+
+
+
+    @GET("/api/v1/me")
+    suspend fun userHaqida(@Header("authorization") token: String): Response<UserHaqidaJavob>
+
 
     @POST("/api/v1/me/data")
     suspend fun profilMalumotlarQushish(@Header("authorization") token:String,@Body body: ShaxsiyMalumotlarSurov ):Response<ShaxPassMalumotlarJavob>

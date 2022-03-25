@@ -1,9 +1,9 @@
 package com.example.network.repository.kupBeriladiganSavollar
 
 import com.example.katrip.kirish.RetrofitBuilder
-import com.example.network.endtity.bildirshnoma.BildirishNomaJavob
-import com.example.network.endtity.info.javob.InfoJavob
-import com.example.network.endtity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
+import com.example.network.entity.bildirshnoma.BildirishNomaJavob
+import com.example.network.entity.info.javob.InfoJavob
+import com.example.network.entity.kupBeriladiganSavollar.javob.KupBeriladiganSavollarJavob
 import retrofit2.Response
 
 class KupBeriladiganSavollarRepository {

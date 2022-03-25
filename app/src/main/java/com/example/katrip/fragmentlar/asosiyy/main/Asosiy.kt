@@ -18,7 +18,7 @@ import com.example.katrip.R
 import com.example.katrip.databinding.FragmentAsosiy2Binding
 import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
 import com.example.log.D
-import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.entity.takliflarLayfxaklar.javob.Arr
 import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
 import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
@@ -82,15 +82,21 @@ class Asosiy : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
 
     private fun takliflarLayfxaklar() {
         userViewModel.readUser.observe(viewLifecycleOwner, Observer {
-            takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"home")
-            {
-                if(it.isSuccessful){
-                    taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
-                }else
+            try {
+                takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"home")
                 {
-                    D.d("Asosiy takliflarLayfxaklar funida")
+                    if(it.isSuccessful){
+                        taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
+                    }else
+                    {
+                        D.d("Asosiy takliflarLayfxaklar funida")
+                    }
                 }
+            }catch (e:Exception)
+            {
+                D.d("Asosiy takliflarLayfxaklar funida ${e.message}")
             }
+
         })
 
     }

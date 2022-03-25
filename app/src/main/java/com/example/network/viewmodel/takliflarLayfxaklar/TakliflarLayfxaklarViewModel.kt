@@ -3,7 +3,7 @@ package com.example.network.viewmodel.takliflarLayfxaklar
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
-import com.example.network.endtity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
+import com.example.network.entity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
 import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
 import kotlinx.coroutines.launch
 import retrofit2.Response

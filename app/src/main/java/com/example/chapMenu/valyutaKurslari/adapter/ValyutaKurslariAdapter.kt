@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.katrip.R
 import com.example.katrip.databinding.ItemValyutaBinding
 import com.example.log.D
-import com.example.network.endtity.valyuta.ValyutaEntityItem
+import com.example.network.entity.valyuta.ValyutaEntityItem
 import java.math.RoundingMode
 import java.text.DecimalFormat
 

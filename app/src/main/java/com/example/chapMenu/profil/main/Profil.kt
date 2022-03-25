@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.chapMenu.profil.biznes.main.ProfilBiznes
 import com.example.chapMenu.profil.profileHaqida.ProfilHaqida
-import com.example.chapMenu.profil.shaxsiy.ProfilShaxsiy
+import com.example.chapMenu.profil.shaxsiy.main.ProfilShaxsiy
 import com.example.katrip.R
 import com.example.katrip.databinding.ActivityProfilBinding
 
@@ -23,6 +23,7 @@ class Profil : AppCompatActivity() {
         statsbar()
         ilovaHaqida()
     }
+
 
     private fun ilovaHaqida() {
         binding.profilHaqida.setOnClickListener {

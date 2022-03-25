@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.katrip.databinding.FragmentTanggalardanFoydalanishBinding
 import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
 import com.example.log.D
-import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.entity.takliflarLayfxaklar.javob.Arr
 import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
 import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel

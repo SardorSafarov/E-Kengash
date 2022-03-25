@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shaxsiy_profilni_tasdiqlash.xml"
+    app:startDestination="@id/shaxsiyMalumotlarF">
+
+    <fragment
+        android:id="@+id/shaxsiyMalumotlarF"
+        android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.viewPager2.fragment.shaxsiyMalumotlar.ShaxsiyMalumotlarF"
+        android:label="fragment_shaxsiy_malumotlar"
+        tools:layout="@layout/fragment_shaxsiy_malumotlar" >
+        <action
+            android:id="@+id/action_shaxsiyMalumotlarF_to_passporMalumotlarF"
+            app:destination="@id/passporMalumotlarF" />
+    </fragment>
+    <fragment
+        android:id="@+id/passporMalumotlarF"
+        android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.viewPager2.fragment.passportMalumotlar.PassporMalumotlarF"
+        android:label="fragment_passpor_malumotlar"
+        tools:layout="@layout/fragment_passpor_malumotlar" >
+        <action
+            android:id="@+id/action_passporMalumotlarF_to_shaxsiyMalumotlarF"
+            app:destination="@id/shaxsiyMalumotlarF" />
+    </fragment>
+</navigation>

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.katrip.R
 import com.example.katrip.databinding.ItemYangiliklarBinding
-import com.example.network.endtity.bildirshnoma.Arr
+import com.example.network.entity.bildirshnoma.Arr
 
 
 class BildishNomaAdapter(private val listener:onClickListener,private val applicationContext:Context): RecyclerView.Adapter<BildishNomaAdapter.ViewHolder>() {

@@ -23,7 +23,7 @@ class ViewPagerFargment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentViewPagerFargmentBinding.inflate(inflater, container, false)
-        val listfragment = arrayListOf<Fragment>(
+        val listfragment = arrayListOf(
             TilniTanlash(),
             OnBordingBir(),
             IkkiOnBording(),

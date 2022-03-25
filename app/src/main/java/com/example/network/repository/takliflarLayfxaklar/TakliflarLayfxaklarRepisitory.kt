@@ -1,7 +1,7 @@
 package com.example.network.repository.takliflarLayfxaklar
 
 import com.example.katrip.kirish.RetrofitBuilder
-import com.example.network.endtity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
+import com.example.network.entity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
 import retrofit2.Response
 
 class TakliflarLayfxaklarRepisitory {

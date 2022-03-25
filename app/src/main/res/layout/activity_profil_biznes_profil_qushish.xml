@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
-    tools:context="com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish">
+    tools:context="com.example.chapMenu.profil.biznes.biznesProfilQushish.BiznesProfilQushish">
 
 
     <com.google.android.material.card.MaterialCardView

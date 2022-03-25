@@ -1,0 +1,436 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/asosiy_orqa_ranggi"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.viewPager2.fragment.passportMalumotlar.PassporMalumotlarF">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardElevation="0dp"
+        android:backgroundTint="@color/asosiy_orqa_ranggi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/orqaga_qaytish"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:paddingVertical="14dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kuk" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passport ma'lumotlar"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/qidirsh"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0dp"
+                android:paddingVertical="14dp"
+                android:paddingEnd="20dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_asoyiy_qidirsh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/kuk" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_passport"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_seriya_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="30dp"
+                            android:hint="Passport seriyasi va raqami"
+                            android:maxLength="6"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_seriya"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_jshsher_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginTop="15dp"
+                            android:hint="JSHSHIR"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_jshsher"
+                                android:layout_width="match_parent"
+                                android:inputType="number"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_kim_berdi_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginTop="15dp"
+                            android:hint="Kim tomonidan berilgan"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_kim_berdi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_berilgan_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
+                            android:hint="Berilgan vaqti"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_berilgan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:textCursorDrawable="@color/kuk"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passport_amalqilish_uddati_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
+                            android:hint="Amal qilish muddati"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/passport_amalqilish_uddati"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:textCursorDrawable="@color/kuk"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tugulgan_davlati_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:visibility="visible"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginTop="15dp"
+                            android:hint="Tug'ulgan joyi(davlatlar ro'yxati)"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tugulgan_davlati"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/doimiy_yashash_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="15dp"
+                            android:hint="Doimiy ro'yxatdan o'tgan manzili"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/doimy_yashash"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email_edit"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            app:boxStrokeColor="@color/kuk"
+                            app:hintTextColor="@color/kuk"
+                            android:visibility="invisible"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:hint="Email"
+                            android:maxLength="6">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textCursorDrawable="@color/kuk"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:backgroundTint="@color/asosiy_orqa_ranggi"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="0dp">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_up_download"
+                                        />
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Passportning\nold qismi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/linearLayout14"
+                                app:layout_constraintStart_toEndOf="@+id/linearLayout12"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:backgroundTint="@color/asosiy_orqa_ranggi"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="0dp">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_up_download"
+                                        />
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Passportning\norqa qismi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:backgroundTint="@color/asosiy_orqa_ranggi"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="0dp">
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ic_kamera"
+                                        />
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Passport\n bilan selfi"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/davom_etish_button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_margin="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#109BFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                app:strokeColor="#109BFF"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:text="@string/davom_etish_btn_text"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

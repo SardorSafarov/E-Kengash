@@ -12,8 +12,8 @@ import com.example.katrip.databinding.ActivityShaharlarBinding
 import com.example.kirsh.surovnoma.adapter.SurovNomaAdapter
 import com.example.kirsh.surovnoma.kimBilanSayohat.KimBilanSayohat
 import com.example.log.D
-import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
-import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
+import com.example.network.entity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.entity.surovNoma.surovNomaJavob.SurovNomaJavob
 import com.example.network.repository.surovNoma.SurovNomaRepository
 import com.example.network.viewModelFactory.surovNoma.SurovNomaViewModelFactory
 import com.example.network.viewmodel.surovNoma.SurovNomaViewModel

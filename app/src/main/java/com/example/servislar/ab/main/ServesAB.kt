@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.katrip.R
@@ -16,7 +15,7 @@ import com.example.katrip.databinding.BottomSheetAviaHolatBinding
 import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
 import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
 import com.example.log.D
-import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.entity.takliflarLayfxaklar.javob.Arr
 import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
 import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel

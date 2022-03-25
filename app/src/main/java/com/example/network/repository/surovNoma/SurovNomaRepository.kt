@@ -1,8 +1,8 @@
 package com.example.network.repository.surovNoma
 
 import com.example.katrip.kirish.RetrofitBuilder
-import com.example.network.endtity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
-import com.example.network.endtity.surovNoma.surovNomaJavob.SurovNomaJavob
+import com.example.network.entity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob
+import com.example.network.entity.surovNoma.surovNomaJavob.SurovNomaJavob
 import retrofit2.Response
 
 

@@ -7,7 +7,7 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.constants.Constants
 import com.example.katrip.databinding.ActivitySaqlanganlarHaqidaBinding
-import com.example.network.endtity.info.javob.INFO
+import com.example.network.entity.info.javob.INFO
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
 import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.constants.Constants.TOKEN
 import com.example.katrip.databinding.FragmentYangiliklarBinding
 import com.example.katrip.fragmentlar.asosiyy.bildirishnomalar.adapter.BildishNomaAdapter
-import com.example.network.endtity.bildirshnoma.Arr
+import com.example.network.entity.bildirshnoma.Arr
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
 import com.example.network.viewModelFactory.kupBeriladiganSavollar.KupBeriladiganSavollarViewModelFactory
 import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavollarViewModel

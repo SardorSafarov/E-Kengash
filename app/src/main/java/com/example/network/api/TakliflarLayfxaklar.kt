@@ -1,7 +1,6 @@
 package com.example.network.api
 
-import com.example.network.endtity.info.javob.InfoJavob
-import com.example.network.endtity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
+import com.example.network.entity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header

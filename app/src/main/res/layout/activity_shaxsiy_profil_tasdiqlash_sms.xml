@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms">
+    tools:context="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.sms.ShaxsiyProfilTasdiqlashSms">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"
         android:layout_width="match_parent"

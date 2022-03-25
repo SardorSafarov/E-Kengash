@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.katrip.R
 import com.example.katrip.databinding.ItemAsosiyLayfhaklarBinding
 import com.example.log.D
-import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.entity.takliflarLayfxaklar.javob.Arr
 
 class TakliflarLayfxaklarAdapter(private val listener:onClickListener,private val applicationContext:Context): RecyclerView.Adapter<TakliflarLayfxaklarAdapter.ViewHolder>() {
 

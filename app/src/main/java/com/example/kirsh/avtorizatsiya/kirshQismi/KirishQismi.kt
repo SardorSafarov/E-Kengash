@@ -18,10 +18,10 @@ import com.example.katrip.R
 import com.example.katrip.databinding.FragmentKirishQismiBinding
 import com.example.katrip.main.MainActivity
 import com.example.log.D
-import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
-import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
-import com.example.network.endtity.sms.telNumberJunatish.javob.SmsJavob
-import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
+import com.example.network.entity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
+import com.example.network.entity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.entity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.entity.sms.telNumberJunatish.surov.SmsSurov
 import com.example.network.repository.kirish.KirishRepository
 import com.example.network.viewModelFactory.kirish.KirishViewModelFactory
 import com.example.network.viewmodel.kirish.KirishViewModel

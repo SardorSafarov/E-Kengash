@@ -23,6 +23,9 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.viewPager2.main.ShaxsiyProfilniTasdiqlash"
+            android:exported="false" />
+        <activity
             android:name=".fragmentlar.asosiyy.bildirishnomalar.yangiliklar.YangiliklarFulScreen"
             android:exported="false" />
         <activity
@@ -91,22 +94,22 @@
             android:name="com.example.servislar.tanggalar.main.ServisTanggalar"
             android:exported="true" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.sms.ShaxsiyProfilTasdiqlashSms"
+            android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.sms.ShaxsiyProfilTasdiqlashSms"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.yuzniScanerlash.YuzniSkanerlash"
+            android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.yuzniScanerlash.YuzniSkanerlash"
             android:exported="true" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.passprtMalumotlari.PassportMalumotlar"
+            android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.passprtMalumotlari.PassportMalumotlar"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.profil.shaxsiyProfilTasdiqlash.shaxsiyMalumotlar.ShaxsiyMalumotlar"
+            android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.shaxsiyMalumotlar.ShaxsiyMalumotlar"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.profil.biznes.sms.BiznesProfilQurishSms"
             android:exported="false" />
         <activity
-            android:name="com.example.chapMenu.profil.biznes.biznesProfilQushish.ProfilBiznesProfilQushish"
+            android:name="com.example.chapMenu.profil.biznes.biznesProfilQushish.BiznesProfilQushish"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.profil.profileHaqida.ProfilHaqida"

@@ -7,11 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.example.katrip.R
 import com.example.kirsh.avtorizatsiya.main.Kirish
 import com.example.kirsh.omBoridng.main.OnBoriding
 import com.example.katrip.databinding.ActivitySplashScreenBinding
 import com.example.katrip.main.MainActivity
 import com.example.room.viewModel.UserViewModel
+import com.example.til.LanguachHelper
+import java.util.*
 
 class SplashScreen : AppCompatActivity() {
     //*======لا اله الا الله محمد رسول الله
@@ -22,6 +25,16 @@ class SplashScreen : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.statusBarColor = Color.WHITE
+        binding.apply {
+            button.setOnClickListener{
+                LanguachHelper.setLocale(context = applicationContext, "en").resources
+                textView8.setText(R.string.til)
+            }
+            button2.setOnClickListener{
+                textView8.setText(R.string.til)
+                LanguachHelper.setLocale(context = applicationContext, "ru").resources
+            }
+        }
         userViewModel.readUser.observe(this, Observer {
             if (it.isEmpty()) {
                 if (onBordingFinish()) {
@@ -37,7 +50,12 @@ class SplashScreen : AppCompatActivity() {
                 finish()
             }
         })
+
+
     }
+
+
+
 
     private fun onBordingFinish(): Boolean {
         val v1 = getSharedPreferences("onBording", Context.MODE_PRIVATE)

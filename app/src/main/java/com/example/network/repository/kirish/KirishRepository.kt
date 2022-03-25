@@ -1,15 +1,15 @@
 package com.example.network.repository.kirish
 
 import com.example.katrip.kirish.RetrofitBuilder
-import com.example.network.endtity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
-import com.example.network.endtity.kirsh.parolniTekshirish.javob.ParolniTekshirishJavob
-import com.example.network.endtity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
-import com.example.network.endtity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
-import com.example.network.endtity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
-import com.example.network.endtity.sms.smsKeldi.javob.SmsKeldiJavob
-import com.example.network.endtity.sms.smsKeldi.surov.SmsKeldiSurov
-import com.example.network.endtity.sms.telNumberJunatish.javob.SmsJavob
-import com.example.network.endtity.sms.telNumberJunatish.surov.SmsSurov
+import com.example.network.entity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
+import com.example.network.entity.kirsh.parolniTekshirish.javob.ParolniTekshirishJavob
+import com.example.network.entity.kirsh.parolniTekshirish.surov.ParolniTekshirishSurov
+import com.example.network.entity.kirsh.ruyxatdanUtish.javob.RuyxatdanUtishJavob
+import com.example.network.entity.kirsh.ruyxatdanUtish.surov.RuyxatdanUtishSurov
+import com.example.network.entity.sms.smsKeldi.javob.SmsKeldiJavob
+import com.example.network.entity.sms.smsKeldi.surov.SmsKeldiSurov
+import com.example.network.entity.sms.telNumberJunatish.javob.SmsJavob
+import com.example.network.entity.sms.telNumberJunatish.surov.SmsSurov
 import retrofit2.Response
 
 class KirishRepository {
