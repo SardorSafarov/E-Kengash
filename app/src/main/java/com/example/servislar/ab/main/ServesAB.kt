@@ -5,22 +5,37 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.katrip.R
 import com.example.katrip.databinding.ActivityServesAbBinding
 import com.example.katrip.databinding.BottomSheetAviaHolatBinding
 import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
+import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
+import com.example.log.D
+import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
+import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
+import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
+import com.example.room.viewModel.UserViewModel
 import com.example.servislar.ab.izlash.ABIzlash
+import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 
-class ServesAB : AppCompatActivity() {
+class ServesAB : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClickListener {
     private lateinit var binding: ActivityServesAbBinding
     var kattalar = 1
     var bolalar = 0
     var chaqaloqlar = 0
+    private lateinit var takliflarLayfxaklarViewModel: TakliflarLayfxaklarViewModel
+    private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy { TakliflarLayfxaklarAdapter(this, applicationContext = applicationContext) }
+    private val userViewModel: UserViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityServesAbBinding.inflate(layoutInflater)
@@ -32,7 +47,60 @@ class ServesAB : AppCompatActivity() {
         abQayerdan()
         abQayerga()
         abQachon()
+        layfxaklarSetUi()
+        takliflarLayfxaklar()
     }
+
+
+
+    private fun layfxaklarSetUi() {
+        val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
+        val takliflarLayfxaklarViewModelFactory = TakliflarLayfxaklarViewModelFactory(takliflarLayfxaklarRepisitory)
+        val takliflarLayfxaklarViewModel = ViewModelProvider(
+            this,
+            takliflarLayfxaklarViewModelFactory
+        ).get(TakliflarLayfxaklarViewModel::class.java)
+        this.takliflarLayfxaklarViewModel = takliflarLayfxaklarViewModel
+
+    }
+
+
+    private fun takliflarLayfxaklar() {
+        userViewModel.readUser.observe(this, androidx.lifecycle.Observer {
+
+            takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"aToB")
+            {
+                if(it.isSuccessful){
+                    taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
+                }else
+                {
+                    D.d("Asosiy takliflarLayfxaklar funida")
+                }
+            }
+        })
+
+    }
+    private fun taklifLafxaklarsetAdapterData(arr: List<Arr>) {
+        binding.apply {
+            takliflarLayfhaklarRecyc.adapter = takliflarLayfxaklarAdapter
+            takliflarLayfhaklarRecyc.layoutManager = LinearLayoutManager(this@ServesAB,
+                LinearLayoutManager.HORIZONTAL,false)
+            takliflarLayfxaklarAdapter.setData(arr)
+        }
+
+    }
+    override fun onClickListener(item: Arr) {
+        val intent = Intent(this, TakliflarLayfxaklarFullScreen::class.java)
+        intent.putExtra("text1",item.content1)
+        intent.putExtra("text2",item.content2)
+        intent.putExtra("text3",item.content3)
+        intent.putExtra("name",item.name)
+        intent.putExtra("image",item.image_link)
+        startActivity(intent)
+    }
+
+
+
 
     private fun abQachon() {
 
@@ -226,6 +294,8 @@ class ServesAB : AppCompatActivity() {
     private fun statusBar() {
         window.statusBarColor = Color.parseColor("#F3F3F3")
     }
+
+
 
 
 }

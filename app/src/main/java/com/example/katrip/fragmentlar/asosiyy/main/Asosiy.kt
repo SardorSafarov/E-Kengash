@@ -85,7 +85,7 @@ class Asosiy : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
             takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"home")
             {
                 if(it.isSuccessful){
-                    setAdapterData(it.body()!!.data.arr)
+                    taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
                 }else
                 {
                     D.d("Asosiy takliflarLayfxaklar funida")
@@ -95,7 +95,7 @@ class Asosiy : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
 
     }
 
-    private fun setAdapterData(arr: List<Arr>) {
+    private fun taklifLafxaklarsetAdapterData(arr: List<Arr>) {
         binding.apply {
             takliflarLayfhaklarRecyc.adapter = takliflarLayfxaklarAdapter
             takliflarLayfhaklarRecyc.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
@@ -223,6 +223,7 @@ class Asosiy : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         intent.putExtra("text1",item.content1)
         intent.putExtra("text2",item.content2)
         intent.putExtra("text3",item.content3)
+        intent.putExtra("name",item.name)
         intent.putExtra("image",item.image_link)
         startActivity(intent)
     }
