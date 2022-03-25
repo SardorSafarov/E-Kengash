@@ -7,22 +7,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.katrip.R
 import com.example.katrip.databinding.BottomSheetAviaHolatBinding
 import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
 import com.example.katrip.databinding.FragmentPoyzQidirishBinding
+import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
+import com.example.log.D
+import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
+import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
+import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
+import com.example.room.viewModel.UserViewModel
 import com.example.servislar.poyezd.izlash.PoyezdIzlash
+import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 
-class PoyzQidirish : Fragment() {
+class PoyzQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     private var _binding: FragmentPoyzQidirishBinding? = null
     private val binding get() = _binding!!
     var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
+    private lateinit var takliflarLayfxaklarViewModel: TakliflarLayfxaklarViewModel
+    private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy { TakliflarLayfxaklarAdapter(this, applicationContext = requireContext()) }
+    private val userViewModel: UserViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +45,7 @@ class PoyzQidirish : Fragment() {
     ): View? {
         _binding = FragmentPoyzQidirishBinding.inflate(inflater, container, false)
         val view = binding.root
+        layfxaklarSetUi()
         return view
     }
 
@@ -38,15 +53,73 @@ class PoyzQidirish : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        teginma()
+        takliflarLayfxaklar()
+    }
+    private fun layfxaklarSetUi() {
+        val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
+        val takliflarLayfxaklarViewModelFactory = TakliflarLayfxaklarViewModelFactory(takliflarLayfxaklarRepisitory)
+        val takliflarLayfxaklarViewModel = ViewModelProvider(
+            this,
+            takliflarLayfxaklarViewModelFactory
+        ).get(TakliflarLayfxaklarViewModel::class.java)
+        this.takliflarLayfxaklarViewModel = takliflarLayfxaklarViewModel
 
-        binding.poyezdIzlash.setOnClickListener {
-            startActivity(Intent(context,PoyezdIzlash::class.java))
+    }
+    private fun takliflarLayfxaklar() {
+        userViewModel.readUser.observe(requireActivity(), androidx.lifecycle.Observer {
+
+            takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"train")
+            {
+                if(it.isSuccessful){
+                    taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
+                }else
+                {
+                    D.d("AvtobusQidirish takliflarLayfxaklar funida")
+                }
+            }
+        })
+
+    }
+    private fun taklifLafxaklarsetAdapterData(arr: List<Arr>) {
+        binding.apply {
+            takliflarLayfhaklarRecyc.adapter = takliflarLayfxaklarAdapter
+            takliflarLayfhaklarRecyc.layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayoutManager.HORIZONTAL,false)
+            takliflarLayfxaklarAdapter.setData(arr)
         }
+
+    }
+    override fun onClickListener(item: Arr) {
+        val intent = Intent(requireContext(), TakliflarLayfxaklarFullScreen::class.java)
+        intent.putExtra("text1",item.content1)
+        intent.putExtra("text2",item.content2)
+        intent.putExtra("text3",item.content3)
+        intent.putExtra("name",item.name)
+        intent.putExtra("image",item.image_link)
+        startActivity(intent)
+    }
+
+
+
+    private fun teginma() {
         poyezdQayerdan()
         poyezdQayerga()
         poyezdQachon()
         poyezdHolat()
+        qidirish()
     }
+
+
+
+
+    private fun qidirish() {
+        binding.poyezdIzlash.setOnClickListener {
+            startActivity(Intent(context,PoyezdIzlash::class.java))
+        }
+    }
+
+
     private fun poyezdQachon() {
         val datePicker =
             MaterialDatePicker.Builder.datePicker()

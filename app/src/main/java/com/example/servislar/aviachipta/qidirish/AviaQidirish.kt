@@ -56,7 +56,14 @@ class AviaQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         teginma()
         takliflarLayfxaklar()
     }
-
+    private fun teginma() {
+        aviQachon()
+        aviQachongacha()
+        aviaQayedan()
+        aviaQayerga()
+        aviaHolat()
+        aviaIzlash()
+    }
 
     private fun layfxaklarSetUi() {
         val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
@@ -68,8 +75,6 @@ class AviaQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         this.takliflarLayfxaklarViewModel = takliflarLayfxaklarViewModel
 
     }
-
-
     private fun takliflarLayfxaklar() {
         userViewModel.readUser.observe(requireActivity(), androidx.lifecycle.Observer {
 
@@ -79,7 +84,7 @@ class AviaQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
                     taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
                 }else
                 {
-                    D.d("Asosiy takliflarLayfxaklar funida")
+                    D.d("AviaQidirish takliflarLayfxaklar funida")
                 }
             }
         })
@@ -106,14 +111,7 @@ class AviaQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     /*------------------------Teginma---------------Tegma----------------------*/
 
 
-    private fun teginma() {
-        aviQachon()
-        aviQachongacha()
-        aviaQayedan()
-        aviaQayerga()
-        aviaHolat()
-        aviaIzlash()
-    }
+
 
     private fun aviaHolat() {
         val bottomDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)

@@ -1,22 +1,36 @@
 package com.example.servislar.taxi.qidirish
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.katrip.R
 import com.example.katrip.databinding.BottomSheetServesQayerdanBinding
 import com.example.katrip.databinding.FragmentTaxiQidirishBinding
+import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
+import com.example.log.D
+import com.example.network.endtity.takliflarLayfxaklar.javob.Arr
+import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
+import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
+import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
+import com.example.room.viewModel.UserViewModel
+import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
 
-class TaxiQidirish : Fragment() {
+class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     private var _binding: FragmentTaxiQidirishBinding? = null
     private val binding get() = _binding!!
-
+    private lateinit var takliflarLayfxaklarViewModel: TakliflarLayfxaklarViewModel
+    private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy { TakliflarLayfxaklarAdapter(this, applicationContext = requireContext()) }
+    private val userViewModel: UserViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,17 +38,70 @@ class TaxiQidirish : Fragment() {
     ): View? {
         _binding = FragmentTaxiQidirishBinding.inflate(inflater, container, false)
         val view = binding.root
+        layfxaklarSetUi()
         return view
     }
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        teginma()
+        takliflarLayfxaklar()
+    }
 
+
+
+    private fun layfxaklarSetUi() {
+        val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
+        val takliflarLayfxaklarViewModelFactory = TakliflarLayfxaklarViewModelFactory(takliflarLayfxaklarRepisitory)
+        val takliflarLayfxaklarViewModel = ViewModelProvider(
+            this,
+            takliflarLayfxaklarViewModelFactory
+        ).get(TakliflarLayfxaklarViewModel::class.java)
+        this.takliflarLayfxaklarViewModel = takliflarLayfxaklarViewModel
+
+    }
+    private fun takliflarLayfxaklar() {
+        userViewModel.readUser.observe(requireActivity(), androidx.lifecycle.Observer {
+
+            takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"taxi")
+            {
+                if(it.isSuccessful){
+                    taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
+                }else
+                {
+                    D.d("AvtobusQidirish takliflarLayfxaklar funida")
+                }
+            }
+        })
+
+    }
+    private fun taklifLafxaklarsetAdapterData(arr: List<Arr>) {
+        binding.apply {
+            takliflarLayfhaklarRecyc.adapter = takliflarLayfxaklarAdapter
+            takliflarLayfhaklarRecyc.layoutManager = LinearLayoutManager(requireContext(),
+                LinearLayoutManager.HORIZONTAL,false)
+            takliflarLayfxaklarAdapter.setData(arr)
+        }
+
+    }
+    override fun onClickListener(item: Arr) {
+        val intent = Intent(requireContext(), TakliflarLayfxaklarFullScreen::class.java)
+        intent.putExtra("text1",item.content1)
+        intent.putExtra("text2",item.content2)
+        intent.putExtra("text3",item.content3)
+        intent.putExtra("name",item.name)
+        intent.putExtra("image",item.image_link)
+        startActivity(intent)
+    }
+
+
+    private fun teginma() {
         taxiQayerdan()
         taxiQayerga()
         taxiQachon()
     }
+
     private fun taxiQachon() {
         val datePicker =
             MaterialDatePicker.Builder.datePicker()
