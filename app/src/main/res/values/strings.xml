@@ -21,23 +21,14 @@
     <string name="onbording_text_2">Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</string>
 
     <string-array name="on_bording_title">
-        0
         <item>Maxsus imkoniyatlar</item>
-        1
         <item>Tezkor band qilish</item>
-        2
         <item>Qulay transportlardan foydalanish</item>
-        3
         <item>Специальные удобства</item>
-        4
         <item>Быстрое бронирование</item>
-        5
         <item>Удобный транспорт</item>
-        6
         <item>Special facilities</item>
-        7
         <item>Quick booking</item>
-        8
         <item>Convenient transportation</item>
     </string-array>
 
@@ -52,6 +43,15 @@
         <item>Online travel to city travel destinations, audio guide, 360-degree viewing and many other special features</item>
         <item>You will be able to book hotel, hostel, accommodation, resorts and various tour packages quickly and conveniently.</item>
         <item>Have the opportunity to show and get tickets for plane, train, bus and taxi routes for easy travel from point A to point B!</item>
+    </string-array>
+
+    <string-array name="on_bording_tugmalar">
+        <item>Davom etish</item>
+        <item>Продолжать</item>
+        <item>Continue</item>
+        <item>Boshlash</item>
+        <item>Начинать</item>
+        <item>Start</item>
     </string-array>
 
 
