@@ -13,7 +13,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_avia_chpta_izlash">AviaChptaIzlash</string>
-    <string name="davom_etish_btn_text">Davom etish</string>
+    <string name="davom_etish_btn_text">Davom etishru</string>
     <string name="cameraga_olish">Iltimos sizning yuzinggiz belgilangan maydondan chiqmasligi va ko\'zlaringgiz yumulmagan bo\'lishini taninlang.Agar ko\'zoynakinggiz bo\'lsa yechib oling.</string>
     <string name="profil_shaxsiy_text">Ilovaning barcha imkoniyatlaridan foydalanish uchun iltimos profilingizni tasdiqlash jarayonidan o\'ting.</string>
     <string name="profil_biznes_text">Shaxsiy biznes yoki tashkilotinggizni ilovaga qo\'shish orqali xizmatlarimizdan foydalanishingiz va hisob raqamdan to\'lov qilishingiz mumkin. Batafsil ma\'lumot uchun qo\'llab-quvvatlash markaziga murojaat eting!\n\nEslatma:Biznes profil qo\'shishdan oldin avvalo,shaxsiy profilni tasdiqlashingiz shart!</string>
@@ -21,7 +21,7 @@
     <string name="onbording_text_3">A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</string>
     <string name="onbording_text_2">Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</string>
     <string name="eslatma_biznes">Eslatma:Biznes profilga qo\'shgan\nma\'lumotlaringiz tasdiqlangandan so\'ngina\nilovaning maxsus imkoniyatlaridan\nfoydalanishingiz mumkin!</string>
-    <string name="til">til en</string>
+    <string name="til">til   ru</string>
 
     <string-array name="on_bording_title">
         <item>Maxsus imkoniyatlar</item>
