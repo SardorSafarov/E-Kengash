@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Qayerdan"
+                android:text="@string/qayerdan"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -65,7 +65,7 @@
                     android:layout_alignParentTop="true"
                     android:background="#F6F6F6"
                     android:iconifiedByDefault="false"
-                    android:queryHint="Izlash"
+                    android:queryHint="@string/izlash"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />

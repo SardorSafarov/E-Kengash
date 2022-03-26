@@ -135,7 +135,7 @@
     <string name="qayerdan">Where</string>
     <string name="qayerga">Where</string>
     <string name="qachon">When</string>
-    <string name="holat">Holat</string>
+    <string name="holat">Status</string>
     <string name="izlash">Search</string>
     <string name="qachongacha">Until when</string>
     <string name="falo_chiptalar">Falo tickets</string>
@@ -221,7 +221,20 @@
     <string name="sizga_quyida_keltirilgan_qaysi_nshaharlarga_borishni_xohlaysi">Which of the following\ncities would you like to visit?</string>
     <string name="kamera">Camera</string>
     <string name="tasdiqlanmagan_foydalanuvchi">Unauthorized user</string>
-
-
+    <string name="erkak">Male</string>
+    <string name="ayol">Woman</string>
+    <string name="qo_lab_quvatlash_haqida">About support</string>
+    <string name="xonalar">Rooms</string>
+    <string name="kattalar">Adults</string>
+    <string name="_12_yoshdan_kattalar">Over 12 years old</string>
+    <string name="bolalar">Children</string>
+    <string name="_2_yoshdan_12_yoshgacha">From 2 to 12 years</string>
+    <string name="chaqaloqlar">Babies</string>
+    <string name="_2_yoshgacha_o_rindiqsiz">Up to 2 years, without a seat</string>
+    <string name="holatni_tanlang">Select a mode</string>
+    <string name="sinf_va_yo_lovchilar">Class and passengers</string>
+    <string name="kun_va_yulovchila">Day and passengers</string>
+    <string name="xona">Room</string>
+    <string name="kishi">Person</string>
     <!-- Ingilz tili uchun   -->
 </resources>

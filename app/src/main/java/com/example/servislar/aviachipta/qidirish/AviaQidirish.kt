@@ -129,7 +129,7 @@ class AviaQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
                 binding.holatKlass.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString() + " Kishi, ")
+                binding.holatText.setText(umumiyKishilar.toString() + " ${activity?.getString(R.string.kishi)}, ")
             } else {
                 binding.holatDefault.visibility = View.VISIBLE
                 binding.holatTanlanganda.visibility = View.INVISIBLE

@@ -94,8 +94,8 @@ class PassporMalumotlarF : Fragment() {
     private fun passportMalumotlarQushish() {
         profilViewModel.passportMalumotlarQushish(Constants.TOKEN, PassportMalumotlarSurov(
             jshir = binding.passportJshsher.text.toString(),
-            give_date = binding.passportBerilgan.text.toString(),
-            end_date = binding.passportAmalqilishUddati.text.toString(),
+            give_date = binding.passportBerilgan.text.toString().reversed(),
+            end_date = binding.passportAmalqilishUddati.text.toString().reversed(),
             number = binding.passportSeriya.text.toString(),
             country = binding.tugulganDavlati.text.toString(),
             address = binding.doimyYashash.text.toString(),

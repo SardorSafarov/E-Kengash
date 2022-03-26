@@ -70,7 +70,7 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
                     taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
                 }else
                 {
-                    D.d("AvtobusQidirish takliflarLayfxaklar funida")
+                    D.d("TaxiQidirish takliflarLayfxaklar funida")
                 }
             }
         })

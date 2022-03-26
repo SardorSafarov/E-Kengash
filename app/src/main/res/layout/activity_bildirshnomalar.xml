@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bildirshnomalar"
+                android:text="@string/bildirshnomalar"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:stateListAnimator="@null"
-                android:text="Yangiliklar"
+                android:text="@string/yangiliklar"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 app:cornerRadius="6dp" />
@@ -80,7 +80,7 @@
                 android:background="@null"
                 android:backgroundTint="#E8E8E8"
                 android:stateListAnimator="@null"
-                android:text="Shaxsiy xabarlar"
+                android:text="@string/shaxsiy_xabarlar"
                 android:textAllCaps="false"
                 android:textColor="#C0C0C0"
                 app:cornerRadius="6dp" />

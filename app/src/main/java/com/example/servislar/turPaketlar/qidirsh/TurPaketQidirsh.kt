@@ -190,7 +190,7 @@ class TurPaketQidirsh : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         val turarJoyHolatBind = BottomSheetTurarJoyHolatBinding.bind(view)
         bottomsheet.setContentView(view)
         turarJoyHolatBind.holatXonalar.visibility = View.GONE
-        turarJoyHolatBind.textView22.setText("Kun va yo'lovchilar")
+        turarJoyHolatBind.textView22.setText(activity?.getString(R.string.kun_va_yulovchila))
         binding.turarJoyHolat.setOnClickListener {
             bottomsheet.show()
         }
@@ -202,7 +202,7 @@ class TurPaketQidirsh : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(xonalar.toString()+" Xona,"+umumiyKishilar.toString()+" Kishi")
+                binding.holatText.setText(xonalar.toString()+" ${activity?.getString(R.string.xona)},"+umumiyKishilar.toString()+" ${activity?.getString(R.string.kishi)}")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

@@ -185,7 +185,7 @@ class ServesAB : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClickListener 
         bottomsheetBinding.chiqish.setOnClickListener {
             bottomsheet.dismiss()
         }
-        bottomsheetBinding.textView11.setText("Qayerga")
+        bottomsheetBinding.textView11.setText(this.getString(R.string.qayerga))
         binding.abQayerga.setOnClickListener {
             bottomsheet.show()
         }
@@ -216,7 +216,7 @@ class ServesAB : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClickListener 
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" Kishi")
+                binding.holatText.setText(umumiyKishilar.toString()+" ${this.getString(R.string.kishi)}")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

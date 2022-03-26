@@ -63,9 +63,11 @@ class Yangiliklar : Fragment(),BildishNomaAdapter.onClickListener {
 
     override fun onclickListener(item: Arr) {
         val intent = Intent(requireContext(),YangiliklarFulScreen::class.java)
+
         intent.putExtra("name",item.name)
         intent.putExtra("image",item.image_link)
         intent.putExtra("title",item.content)
+        intent.putExtra("vaqt",item.date)
         startActivity(intent)
     }
 

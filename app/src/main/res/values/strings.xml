@@ -219,6 +219,20 @@
     <string name="sizga_quyida_keltirilgan_qaysi_nshaharlarga_borishni_xohlaysi">Sizga quyida keltirilgan qaysi\nshaharlarga borishni xohlaysi?</string>
     <string name="kamera">Kamera</string>
     <string name="tasdiqlanmagan_foydalanuvchi">Tasdiqlanmagan foydalanuvchi</string>
-
+    <string name="erkak">Erkak</string>
+    <string name="ayol">Ayol</string>
+    <string name="qo_lab_quvatlash_haqida">Qo\'lab-quvatlash haqida</string>
+    <string name="xonalar">Xonalar</string>
+    <string name="kattalar">Kattalar</string>
+    <string name="_12_yoshdan_kattalar">12 yoshdan kattalar</string>
+    <string name="bolalar">Bolalar</string>
+    <string name="_2_yoshdan_12_yoshgacha">2 yoshdan 12 yoshgacha</string>
+    <string name="chaqaloqlar">Chaqaloqlar</string>
+    <string name="_2_yoshgacha_o_rindiqsiz">2 yoshgacha, o`rindiqsiz</string>
+    <string name="holatni_tanlang">Holatni tanlang</string>
+    <string name="sinf_va_yo_lovchilar">Sinf va yo\'lovchilar</string>
+    <string name="kun_va_yulovchila">Kun va yo\'lovchilar</string>
+    <string name="xona">Xona</string>
+    <string name="kishi">Kishi</string>
     <!-- Uzb  tili uchun   -->
 </resources>

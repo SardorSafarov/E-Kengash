@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:text="Sinf va yo`lovchilar"
+        android:text="@string/sinf_va_yo_lovchilar"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -122,7 +122,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kattalar"
+                android:text="@string/kattalar"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -131,7 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="12 yoshdan kattalar"
+                android:text="@string/_12_yoshdan_kattalar"
                 android:textSize="18dp"
                 android:visibility="visible" />
         </LinearLayout>
@@ -218,7 +218,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bolalar"
+                android:text="@string/bolalar"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -227,7 +227,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="2 yoshdan 12 yoshgacha"
+                android:text="@string/_2_yoshdan_12_yoshgacha"
                 android:textSize="18dp"
                 android:visibility="visible" />
         </LinearLayout>
@@ -314,7 +314,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chaqaloqlar"
+                android:text="@string/chaqaloqlar"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -323,7 +323,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:text="2 yoshgacha, o`rindiqsiz"
+                android:text="@string/_2_yoshgacha_o_rindiqsiz"
                 android:textSize="18dp"
                 android:visibility="visible" />
         </LinearLayout>

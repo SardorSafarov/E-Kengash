@@ -1,11 +1,13 @@
 package com.example.chapMenu.offerta
 
+import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.constants.Constants
+import com.example.constants.Constants.LocalTilKey
 import com.example.katrip.databinding.ActivityOffertaBinding
 import com.example.network.entity.info.javob.INFO
 import com.example.network.repository.kupBeriladiganSavollar.KupBeriladiganSavollarRepository
@@ -15,15 +17,18 @@ import com.example.network.viewmodel.kupBeriladiganSavollar.KupBeriladiganSavoll
 class Offerta : AppCompatActivity() {
     lateinit var binding:ActivityOffertaBinding
     private lateinit var kupBeriladiganSavollarViewModel: KupBeriladiganSavollarViewModel
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var list:List<INFO>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sharedPreferences = getSharedPreferences(LocalTilKey, MODE_PRIVATE)
         binding = ActivityOffertaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         statusbar()
         ortgaQaytish()
         setUi()
-        info()
+        info(sharedPreferences.getString("til","ru").toString())
+
     }
 
     private fun setUi() {
@@ -36,8 +41,8 @@ class Offerta : AppCompatActivity() {
         ).get(KupBeriladiganSavollarViewModel::class.java)
         this.kupBeriladiganSavollarViewModel = kupBeriladiganSavollarViewModel
     }
-    fun info() {
-        kupBeriladiganSavollarViewModel.info(Constants.TOKEN,"uz") {
+    fun info(til: String) {
+        kupBeriladiganSavollarViewModel.info(Constants.TOKEN,til) {
             if (it.isSuccessful) {
                 binding.progersBar.visibility = View.GONE
                 list = it.body()!!.data.INFO

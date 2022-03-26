@@ -130,8 +130,8 @@
     <string name="mashhur_shaharlarga_sayohat">Путешествие по известным городам</string>
     <string name="ko_proq">Более</string>
     <string name="a_b_izlash">Поиск А-Б</string>
-    <string name="qayerdan">Где</string>
-    <string name="qayerga">Где</string>
+    <string name="qayerdan">Откуда</string>
+    <string name="qayerga">Куда</string>
     <string name="qachon">Когда</string>
     <string name="holat">Holat</string>
     <string name="izlash">Поиск</string>
@@ -220,7 +220,20 @@
     <string name="sizga_quyida_keltirilgan_qaysi_nshaharlarga_borishni_xohlaysi">Какой из следующих городов вы хотели бы посетить?</string>
     <string name="kamera">Камера</string>
     <string name="tasdiqlanmagan_foydalanuvchi">Неавторизованный пользователь</string>
-
-
+    <string name="erkak">Мужчина</string>
+    <string name="ayol">Женщина</string>
+    <string name="qo_lab_quvatlash_haqida">О поддержке</string>
+    <string name="xonalar">Номера</string>
+    <string name="kattalar">Взрослые</string>
+    <string name="_12_yoshdan_kattalar">Cтарше 12 лет</string>
+    <string name="bolalar">Дети</string>
+    <string name="_2_yoshdan_12_yoshgacha">От 2 до 12 лет</string>
+    <string name="chaqaloqlar">Младенцы</string>
+    <string name="_2_yoshgacha_o_rindiqsiz">До 2 лет, без места</string>
+    <string name="holatni_tanlang">Выберите режим</string>
+    <string name="sinf_va_yo_lovchilar">Класс и пассажиры</string>
+    <string name="kun_va_yulovchila">День и пассажиры</string>
+    <string name="xona">Номер</string>
+    <string name="kishi">Человек</string>
     <!-- Rus  tili uchun   -->
 </resources>

@@ -1,5 +1,6 @@
 package com.example.qrcode.qrcodeHaqida
 
+import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,15 +17,16 @@ class QRcodeScanerHaqida : AppCompatActivity() {
     lateinit var binding: ActivityQrcodeScanerHaqidaBinding
     private lateinit var kupBeriladiganSavollarViewModel: KupBeriladiganSavollarViewModel
     private lateinit var list:List<INFO>
-
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        sharedPreferences = getSharedPreferences(Constants.LocalTilKey, MODE_PRIVATE)
         binding = ActivityQrcodeScanerHaqidaBinding.inflate(layoutInflater)
         setContentView(binding.root)
         statusbar()
         ortgaQaytish()
         setUi()
-        info()
+        info(sharedPreferences.getString("til","ru").toString())
     }
 
     private fun setUi() {
@@ -37,8 +39,8 @@ class QRcodeScanerHaqida : AppCompatActivity() {
         ).get(KupBeriladiganSavollarViewModel::class.java)
         this.kupBeriladiganSavollarViewModel = kupBeriladiganSavollarViewModel
     }
-    fun info() {
-        kupBeriladiganSavollarViewModel.info(Constants.TOKEN,"uz") {
+    fun info(toString: String) {
+        kupBeriladiganSavollarViewModel.info(Constants.TOKEN,toString) {
             if (it.isSuccessful) {
                 binding.progersBar.visibility = View.GONE
                 list = it.body()!!.data.INFO

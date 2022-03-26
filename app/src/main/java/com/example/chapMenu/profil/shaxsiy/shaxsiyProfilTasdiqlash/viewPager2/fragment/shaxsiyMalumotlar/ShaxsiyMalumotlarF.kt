@@ -76,7 +76,7 @@ class ShaxsiyMalumotlarF : Fragment() {
             fname = binding.foydalanuvchiIsmi.text.toString(),
             lname = binding.foydalanuvchiFamil.text.toString(),
             dname = binding.foydalanuvchiOtasi.text.toString(),
-            bdate = binding.foydalanuvchiTugulganKuni.text.toString(),
+            bdate = binding.foydalanuvchiTugulganKuni.text.toString().reversed(),
             text_address = binding.foydalanuvchiViloyat.text.toString(),
             region = binding.foydalanuvchiViloyat.text.toString(),
             gender = if(binding.erkak.isChecked) 1 else 0,

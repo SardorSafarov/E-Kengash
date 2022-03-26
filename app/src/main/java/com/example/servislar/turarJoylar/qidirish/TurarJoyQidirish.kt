@@ -180,7 +180,7 @@ class TurarJoyQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
                 binding.holatDefault.visibility = View.INVISIBLE
                 binding.holatTanlanganda.visibility = View.VISIBLE
                 binding.holatText.visibility = View.VISIBLE
-                binding.holatText.setText(umumiyKishilar.toString()+" Kishi")
+                binding.holatText.setText(umumiyKishilar.toString()+" ${activity?.getString(R.string.kishi)}")
             }
             else{
                 binding.holatDefault.visibility = View.VISIBLE

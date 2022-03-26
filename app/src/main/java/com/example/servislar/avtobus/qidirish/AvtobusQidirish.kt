@@ -175,7 +175,7 @@ private fun avtobusQachon() {
         bottomsheetBinding.chiqish.setOnClickListener {
             bottomsheet.dismiss()
         }
-        bottomsheetBinding.textView11.setText("Qayerga")
+        bottomsheetBinding.textView11.setText("${activity?.getString(R.string.qayerga)}")
         binding.avtobusQayerga.setOnClickListener {
             bottomsheet.show()
         }

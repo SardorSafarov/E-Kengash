@@ -17,6 +17,7 @@ class YangiliklarFulScreen : AppCompatActivity() {
         binding.apply {
             name.setText(intent.getStringExtra("name"))
             title.setText(intent.getStringExtra("title"))
+            vaqt.setText(intent.getStringExtra("vaqt"))
         }
         ortgaQaytish()
 

@@ -216,7 +216,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:buttonTint="#109BFF"
-                                android:text="Erkak" />
+                                android:text="@string/erkak" />
 
                             <RadioButton
                                 android:id="@+id/ayol"
@@ -224,7 +224,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
                                 android:buttonTint="#109BFF"
-                                android:text="Ayol" />
+                                android:text="@string/ayol" />
                         </RadioGroup>
 
                         <com.google.android.material.textfield.TextInputLayout
