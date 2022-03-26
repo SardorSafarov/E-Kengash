@@ -13,40 +13,14 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_avia_chpta_izlash">AviaChptaIzlash</string>
-    <string name="davom_etish_btn_text">Davom etishru</string>
+
     <string name="cameraga_olish">Iltimos sizning yuzinggiz belgilangan maydondan chiqmasligi va ko\'zlaringgiz yumulmagan bo\'lishini taninlang.Agar ko\'zoynakinggiz bo\'lsa yechib oling.</string>
     <string name="profil_shaxsiy_text">Ilovaning barcha imkoniyatlaridan foydalanish uchun iltimos profilingizni tasdiqlash jarayonidan o\'ting.</string>
     <string name="profil_biznes_text">Shaxsiy biznes yoki tashkilotinggizni ilovaga qo\'shish orqali xizmatlarimizdan foydalanishingiz va hisob raqamdan to\'lov qilishingiz mumkin. Batafsil ma\'lumot uchun qo\'llab-quvvatlash markaziga murojaat eting!\n\nEslatma:Biznes profil qo\'shishdan oldin avvalo,shaxsiy profilni tasdiqlashingiz shart!</string>
-    <string name="onboring_text_1">Shaharlardagi sayohatga oid joylarga online sayohat\nqilish,audio git, 360 formatda tomosha qilish va\nboshqa ko\'plab imkoniyatlar</string>
-    <string name="onbording_text_3">A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</string>
-    <string name="onbording_text_2">Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</string>
     <string name="eslatma_biznes">Eslatma:Biznes profilga qo\'shgan\nma\'lumotlaringiz tasdiqlangandan so\'ngina\nilovaning maxsus imkoniyatlaridan\nfoydalanishingiz mumkin!</string>
     <string name="til">til   ru</string>
 
-    <string-array name="on_bording_title">
-        <item>Maxsus imkoniyatlar</item>
-        <item>Tezkor band qilish</item>
-        <item>Qulay transportlardan foydalanish</item>
-        <item>Специальные удобства</item>
-        <item>Быстрое бронирование</item>
-        <item>Удобный транспорт</item>
-        <item>Special facilities</item>
-        <item>Quick booking</item>
-        <item>Convenient transportation</item>
-    </string-array>
 
-
-    <string-array name="on_bording_subtitle">
-        <item>Shaharlardagi sayohatga oid joylarga online sayohat\nqilish,audio git, 360 formatda tomosha qilish va\nboshqa ko\'plab imkoniyatlar</item>
-        <item>A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</item>
-        <item>Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</item>
-        <item>Онлайн-путешествия по местам для путешествий по городам, аудиогид, обзор на 360 градусов и многие другие специальные функции.</item>
-        <item>Вы можете быстро и легко забронировать гостиницу, хостел, ночлег, дачу и различные турпакеты.</item>
-        <item>Имейте возможность показать и получить билеты на самолет, поезд, автобус и маршрут такси для удобного путешествия из точки А в точку Б!</item>
-        <item>Online travel to city travel destinations, audio guide, 360-degree viewing and many other special features</item>
-        <item>You will be able to book hotel, hostel, accommodation, resorts and various tour packages quickly and conveniently.</item>
-        <item>Have the opportunity to show and get tickets for plane, train, bus and taxi routes for easy travel from point A to point B!</item>
-    </string-array>
 
     <string-array name="on_bording_tugmalar">
         <item>Davom etish</item>
@@ -104,4 +78,39 @@
         <item>2049</item>
         <item>2050</item>
     </string-array>
+
+
+    <string-array name="on_bording_subtitle">
+        <item>Shaharlardagi sayohatga oid joylarga online sayohat\nqilish,audio git, 360 formatda tomosha qilish va\nboshqa ko\'plab imkoniyatlar</item>
+        <item>A nuqtadan B nuqtaga oson sayohat qilishingiz uchun\nsamaliyot,poyezd,avtobus va taksi yo\'nalishlarini\nko\'rtish va chipta olish imkoniga ega bo\'ling!</item>
+        <item>Mehmonxona,hostel,turar-joy,dacha va turli xil tur\nsayohat to\'pamlarini tezkor va qulay usulda band\n qilish imkoniga ega bo\'lasiz</item>
+        <item>Онлайн-путешествия по местам для путешествий по городам, аудиогид, обзор на 360 градусов и многие другие специальные функции.</item>
+        <item>Вы можете быстро и легко забронировать гостиницу, хостел, ночлег, дачу и различные турпакеты.</item>
+        <item>Имейте возможность показать и получить билеты на самолет, поезд, автобус и маршрут такси для удобного путешествия из точки А в точку Б!</item>
+        <item>Online travel to city travel destinations, audio guide, 360-degree viewing and many other special features</item>
+        <item>You will be able to book hotel, hostel, accommodation, resorts and various tour packages quickly and conveniently.</item>
+        <item>Have the opportunity to show and get tickets for plane, train, bus and taxi routes for easy travel from point A to point B!</item>
+    </string-array>
+
+    <string-array name="on_bording_title">
+        <item>Maxsus imkoniyatlar</item>
+        <item>Tezkor band qilish</item>
+        <item>Qulay transportlardan foydalanish</item>
+        <item>Специальные удобства</item>
+        <item>Быстрое бронирование</item>
+        <item>Удобный транспорт</item>
+        <item>Special facilities</item>
+        <item>Quick booking</item>
+        <item>Convenient transportation</item>
+    </string-array>
+    <!-- Rus  tili uchun   -->
+    <string name="davom_etish_btn_text">Продолжать</string>
+    <string name="maxsus_imkoniyatlar">Специальные удобства</string>
+    <string name="tezkor_band_qilish">Быстрое бронирование</string>
+    <string name="onboring_text_1">Онлайн-путешествия по местам для путешествий по городам, аудиогид, обзор на 360 градусов и многие другие специальные функции.</string>
+    <string name="onbording_text_2">Вы можете быстро и легко забронировать гостиницу, хостел, ночлег, дачу и различные турпакеты.</string>
+    <string name="onbording_text_3">Имейте возможность показать и получить билеты на самолет, поезд, автобус и маршрут такси для удобного путешествия из точки А в точку Б!</string>
+    <string name="boshlash">Начинать</string>
+
+
 </resources>

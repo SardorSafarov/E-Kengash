@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Tezkor band qilish"
+        android:text="@string/tezkor_band_qilish"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"

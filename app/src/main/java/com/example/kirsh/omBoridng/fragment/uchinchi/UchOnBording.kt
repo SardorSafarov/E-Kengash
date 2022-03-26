@@ -16,9 +16,6 @@ import com.example.katrip.databinding.FragmentUchOnBordingBinding
 class UchOnBording : Fragment() {
     private var _binding: FragmentUchOnBordingBinding? = null
     private val binding get() = _binding!!
-    lateinit var title: Array<String>
-    lateinit var sub_title: Array<String>
-    lateinit var button:Array<String>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,38 +31,38 @@ class UchOnBording : Fragment() {
         }
         return view
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        til()
-    }
-    private fun til() {
-        when (Constants.TIL) {
-            "uz" -> {
-                binding.title.setText(title[2])
-                binding.subTitle.setText(sub_title[2])
-                binding.btnText.setText(button[3])
-            }
-            "ru" -> {
-                binding.title.setText(title[5])
-                binding.subTitle.setText(sub_title[5])
-                binding.btnText.setText(button[4])
-
-            }
-            "en" -> {
-                binding.title.setText(title[8])
-                binding.subTitle.setText(sub_title[8])
-                binding.btnText.setText(button[5])
-
-            }
-        }
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        title = resources.getStringArray(R.array.on_bording_title)
-        sub_title = resources.getStringArray(R.array.on_bording_subtitle)
-        button = resources.getStringArray(R.array.on_bording_tugmalar)
-    }
+//    override fun onActivityCreated(savedInstanceState: Bundle?) {
+//        super.onActivityCreated(savedInstanceState)
+//        til()
+//    }
+//    private fun til() {
+//        when (Constants.TIL) {
+//            "uz" -> {
+//                binding.title.setText(title[2])
+//                binding.subTitle.setText(sub_title[2])
+//                binding.btnText.setText(button[3])
+//            }
+//            "ru" -> {
+//                binding.title.setText(title[5])
+//                binding.subTitle.setText(sub_title[5])
+//                binding.btnText.setText(button[4])
+//
+//            }
+//            "en" -> {
+//                binding.title.setText(title[8])
+//                binding.subTitle.setText(sub_title[8])
+//                binding.btnText.setText(button[5])
+//
+//            }
+//        }
+//    }
+//
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        title = resources.getStringArray(R.array.on_bording_title)
+//        sub_title = resources.getStringArray(R.array.on_bording_subtitle)
+//        button = resources.getStringArray(R.array.on_bording_tugmalar)
+//    }
     private fun onBordingFinish()
     {
         val v1=requireActivity().getSharedPreferences("onBording",Context.MODE_PRIVATE)
