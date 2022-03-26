@@ -34,7 +34,7 @@
             android:id="@+id/valyuta_ramziy_kodi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 USD"
+            android:text=""
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -43,7 +43,7 @@
             android:id="@+id/valyuta_nomi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AQSH dollar"
+            android:text=""
             android:textSize="18dp" />
 
     </LinearLayout>
@@ -68,8 +68,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="MB kursi"
-                android:textSize="18dp" />
+                android:text="@string/mb_kursi"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/valyuta_mb_dagi"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sotib olish"
+                android:text="@string/sotib_olish"
                 android:textSize="18dp" />
 
             <TextView
@@ -110,7 +110,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sotish"
+                android:text="@string/sotish"
                 android:textSize="18dp" />
 
             <TextView

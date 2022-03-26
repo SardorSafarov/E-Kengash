@@ -6,26 +6,55 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:src="@drawable/alert_dialog_sms_tasdiqlash_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_malumot_tasdiqlandi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:text="@string/sizning_yozgan_ma_lumotlar_nmuvaffaqiyatli_jo_natildi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView322"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:text="@string/ma_lumotlarni_3_ish_kunida_ko_rib_sizga_nshartnoma_yuboramiz"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/profil_bosh_sahifaga_qaytish"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginHorizontal="50dp"
-        android:backgroundTint="#109BFF"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#109BFF"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView322"
         app:strokeColor="#109BFF"
         app:strokeWidth="1dp">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -38,7 +67,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
-                android:text="Profil sahifasiga qaytish"
+                android:text="@string/profil_sahifasiga_qaytish"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:visibility="visible"

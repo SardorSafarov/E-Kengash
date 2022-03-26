@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.example.katrip.R
 import com.example.kirsh.avtorizatsiya.ruyxatdanUtish.TelNomerViewModel
 import com.example.katrip.databinding.FragmentSmsniTasdiqlashBinding
 import com.example.kirsh.surovnoma.sayohatTurlari.SayohatTurlari
@@ -72,7 +73,7 @@ class SmsniTasdiqlash : Fragment() {
             override fun onFinish() {
                 binding.kodVaqtB.visibility = View.GONE
                 binding.kodVaqt.setTextColor(Color.parseColor("#109BFF"))
-                binding.kodVaqt.setText("Sms kelmadimi?")
+                binding.kodVaqt.setText(getString(R.string.sms_kelmadimi))
             }
         }.start()
         binding.kodVaqtB.setOnClickListener {

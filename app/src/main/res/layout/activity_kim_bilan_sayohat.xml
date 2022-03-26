@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Sizga kimlar bilan sayohat\nqilish yoqadi?"
+        android:text="@string/sizga_kimlar_bilan_sayohat_nqilish_yoqadi"
         android:textColor="@color/kuk"
         android:textSize="20dp"
         android:textStyle="bold"

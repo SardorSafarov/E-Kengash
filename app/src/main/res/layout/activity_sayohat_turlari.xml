@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Sizga qanday turdagi\nsayohatlar yoqadi?"
+        android:text="@string/sizga_qanday_turdagi_nsayohatlar_yoqadi"
         android:textColor="@color/kuk"
         android:textSize="20dp"
         android:textStyle="bold"

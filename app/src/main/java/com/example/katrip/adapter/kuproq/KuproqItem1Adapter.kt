@@ -12,7 +12,7 @@ class KuproqItem1Adapter(private var listener: OnClickLister) :
     RecyclerView.Adapter<KuproqItem1Adapter.ViewHolder>() {
 
     interface OnClickLister {
-        fun onClickListener(text: String)
+        fun onClickListener(text: String?)
     }
 
     private var list: List<KuproqItemEntitit> = mutableListOf()

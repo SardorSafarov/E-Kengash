@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
-                android:text="Turar-joy"
+                android:text="@string/turar_joy"
                 android:textColor="@color/black"
                 android:textSize="22dp" />
 
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
-                android:text="Turpaket"
+                android:text="@string/turpaket"
                 android:textColor="@color/black"
                 android:textSize="22dp" />
 
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="20dp"
-                android:text="Transport"
+                android:text="@string/transport"
                 android:textColor="@color/black"
                 android:textSize="22dp" />
 
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
-                android:text="Takliflar va layfhaklar"
+                android:text="@string/takliflar_va_layfhaklar"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

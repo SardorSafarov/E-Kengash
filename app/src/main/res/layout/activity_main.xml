@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     android:fitsSystemWindows="true"
     tools:context=".main.MainActivity">
 
@@ -101,7 +102,7 @@
                 android:paddingStart="15dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:text="Chiqish" />
+                android:text="@string/chiqish" />
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
 

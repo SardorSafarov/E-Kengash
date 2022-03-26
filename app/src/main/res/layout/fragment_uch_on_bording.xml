@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Qulay transportlardan foydalanish"
+        android:text="@string/qulay_transportlardan_foydalanish"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"

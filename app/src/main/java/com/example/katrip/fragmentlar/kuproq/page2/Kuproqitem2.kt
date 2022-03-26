@@ -31,7 +31,7 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
     private var _binding: FragmentKuproqitem2Binding? = null
     private val binding get() = _binding!!
     private lateinit var adapter: KuproqItem2Adapter
-
+    private lateinit var list: List<KuproqItemEntitit>
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,66 +46,135 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        adapter = KuproqItem2Adapter(this)
+
+        addDataList()
         adaptergaUlash()
     }
 
-    private fun adaptergaUlash() {
-        binding.recyclerView.adapter=adapter
-        val layoutManager = LinearLayoutManager(context)
-        binding.recyclerView.layoutManager = layoutManager
-        adapter.setData(list)
+    private fun addDataList() {
+        list = listOf(
+            KuproqItemEntitit(
+                icon = R.drawable.ic_chegirmalar,
+                text = activity?.getString(R.string.chegirmalar).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_tanggalar,
+                text = activity?.getString(R.string.tangalar).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_kamera,
+                text = activity?.getString(R.string.kamera).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_chiptalarim,
+                text = activity?.getString(R.string.chiptalarim).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_saqlanganlar,
+                text = activity?.getString(R.string.saqlanganlar).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_eng_yaqin,
+                text = activity?.getString(R.string.eng_yaqin).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_a_b,
+                text = activity?.getString(R.string.a_b).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_avya,
+                text = activity?.getString(R.string.aviachipta).toString()
+            ),
+
+            KuproqItemEntitit(
+                icon = R.drawable.ic_poyiz,
+                text = activity?.getString(R.string.poyezd).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_avtobus,
+                text = activity?.getString(R.string.avtobus).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_taxi,
+                text = activity?.getString(R.string.taksi).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_mehmonhonalar,
+                text = activity?.getString(R.string.turar_joy).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_turpaket,
+                text = activity?.getString(R.string.turpaket).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_valyuta,
+                text = activity?.getString(R.string.valyuta_kursi).toString()
+            ),
+            KuproqItemEntitit(
+                icon = R.drawable.ic_profil,
+                text = activity?.getString(R.string.profil).toString()
+            ),
+
+            )
     }
-    override fun onClickListener(text: String) {
+
+
+    override fun onClickListener(text: String?) {
         when(text)
         {
-            "Aviachipta"->{
+            activity?.getString(R.string.aviachipta).toString()->{
                 startActivity(Intent(context, ServesAvia::class.java))
             }
-            "Avtobus"->{
+            activity?.getString(R.string.avtobus).toString()->{
                 startActivity(Intent(context, ServesAvtobus::class.java))
             }
-            "Poyezd"->{
+            activity?.getString(R.string.poyezd).toString()->{
                 startActivity(Intent(context, ServesPoyezd::class.java))
             }
-            "A-B"->{
+            activity?.getString(R.string.a_b).toString()->{
                 startActivity(Intent(context, ServesAB::class.java))
             }
-            "Taksi"->{
+            activity?.getString(R.string.taksi).toString()->{
                 startActivity(Intent(context, ServesTaxi::class.java))
             }
-            "Chegirmalar"->{
+            activity?.getString(R.string.chegirmalar).toString()->{
                 startActivity(Intent(context, ServesChegirmalar::class.java))
             }
-            "Turar-joy"->{
+            activity?.getString(R.string.turar_joy).toString()->{
                 startActivity(Intent(context, ServesTurarjoy::class.java))
             }
-            "Valyuta kursi"->{
+            activity?.getString(R.string.valyuta_kursi).toString()->{
                 startActivity(Intent(context, ValyutaKurslari::class.java))
             }
-            "Tanggalar"->{
+            activity?.getString(R.string.tangalar).toString()->{
                 startActivity(Intent(context, ServisTanggalar::class.java))
             }
-            "Kamera"->{
+            activity?.getString(R.string.kamera).toString()->{
                 startActivity(Intent(context, QRcodeScaner::class.java))
             }
-            "Chiptalarim"->
+            activity?.getString(R.string.chiptalarim).toString()->
             {
                 startActivity(Intent(context, ServesChiptalarim::class.java))
             }
-            "Saqlanganlar"->{
+            activity?.getString(R.string.saqlanganlar).toString()->{
                 startActivity(Intent(context, ServesSaqlanganlar::class.java))
             }
-            "Eng yaqin"->{
+            activity?.getString(R.string.eng_yaqin).toString()->{
                 startActivity(Intent(context, EngYaqin::class.java))
             }
-            "Profil"->{
+            activity?.getString(R.string.profil).toString()->{
                 startActivity(Intent(context, Profil::class.java))
             }
         }
     }
 
-
+    private fun adaptergaUlash() {
+        adapter = KuproqItem2Adapter(this)
+        binding.recyclerView.adapter=adapter
+        val layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = layoutManager
+        adapter.setData(list)
+    }
     /*--------------------Teginmaaa----------------*/
 
 
@@ -114,70 +183,7 @@ class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {
         _binding = null
     }
 
-    private var list: List<KuproqItemEntitit> = listOf(
-        KuproqItemEntitit(
-            icon = R.drawable.ic_chegirmalar,
-            text = "Chegirmalar"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_tanggalar,
-            text = "Tangalar"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_kamera,
-            text = "Kamera"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_chiptalarim,
-            text = "Chiptalarim"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_saqlanganlar,
-            text = "Saqlanganlar"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_eng_yaqin,
-            text = "Eng yaqin"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_a_b,
-            text = "A-B"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_avya,
-            text = "Aviachipta"
-        ),
 
-        KuproqItemEntitit(
-            icon = R.drawable.ic_poyiz,
-            text = "Poyezd"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_avtobus,
-            text = "Avtobus"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_taxi,
-            text = "Taksi"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_mehmonhonalar,
-            text = "Turar-joy"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_turpaket,
-            text = "Turpaket"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_valyuta,
-            text = "Valyuta kursi"
-        ),
-        KuproqItemEntitit(
-            icon = R.drawable.ic_profil,
-            text = "Profil"
-        ),
-
-    )
 
 
 }

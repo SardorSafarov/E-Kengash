@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Sizga quyida keltirilgan qaysi\nshaharlarga borishni xohlaysi?"
+        android:text="@string/sizga_quyida_keltirilgan_qaysi_nshaharlarga_borishni_xohlaysi"
         android:textColor="@color/kuk"
         android:textSize="20dp"
         android:textStyle="bold"

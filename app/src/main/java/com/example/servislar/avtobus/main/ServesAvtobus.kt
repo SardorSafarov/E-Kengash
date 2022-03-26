@@ -9,8 +9,6 @@ import com.example.servislar.avtobus.chiptalarim.AvtobusChiptalarim
 import com.example.servislar.avtobus.qidirish.AvtobusQidirish
 
 class ServesAvtobus : AppCompatActivity() {
-
-
     lateinit var binding:ActivityAvtobusBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

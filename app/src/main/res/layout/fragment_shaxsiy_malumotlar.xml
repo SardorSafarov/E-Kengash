@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shaxsiy ma'lumotlar"
+                android:text="@string/shaxsiy_ma_lumotlar"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +117,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="30dp"
-                            android:hint="Ismi"
+                            android:hint="@string/ismi"
                             android:maxLength="6"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
@@ -143,7 +143,7 @@
                             app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
-                            android:hint="Familiyasi"
+                            android:hint="@string/familiyasi"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -164,7 +164,7 @@
                             android:layout_marginTop="15dp"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
-                            android:hint="Otasini ismi"
+                            android:hint="@string/otasini_ismi"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -185,7 +185,7 @@
                             android:layout_marginTop="15dp"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
-                            android:hint="Tug'ilgan kuninggiz"
+                            android:hint="@string/tug_ulgan_kun"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -201,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:layout_marginTop="16dp"
-                            android:text="Jinsi"
+                            android:text="@string/jinsi"
                             android:textColor="@color/black" />
 
                         <RadioGroup
@@ -236,7 +236,7 @@
                             app:hintTextColor="@color/kuk"
                             android:layout_marginHorizontal="20dp"
                             android:layout_marginTop="15dp"
-                            android:hint="Davlat talang"
+                            android:hint="@string/davlat"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -256,7 +256,7 @@
                             android:layout_marginTop="15dp"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
-                            android:hint="Viloyat va shahar(tuman)"
+                            android:hint="@string/viloyat_shahar"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -276,7 +276,7 @@
                             android:layout_marginTop="15dp"
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
-                            android:hint="Telefon raqam"
+                            android:hint="@string/telefon_raqami"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -297,7 +297,7 @@
                             app:boxStrokeColor="@color/kuk"
                             app:hintTextColor="@color/kuk"
                             android:layout_marginBottom="20dp"
-                            android:hint="Email"
+                            android:hint="@string/email"
                             android:maxLength="6">
 
                             <com.google.android.material.textfield.TextInputEditText

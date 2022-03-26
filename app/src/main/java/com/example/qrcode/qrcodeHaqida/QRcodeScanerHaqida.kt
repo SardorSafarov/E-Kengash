@@ -16,6 +16,7 @@ class QRcodeScanerHaqida : AppCompatActivity() {
     lateinit var binding: ActivityQrcodeScanerHaqidaBinding
     private lateinit var kupBeriladiganSavollarViewModel: KupBeriladiganSavollarViewModel
     private lateinit var list:List<INFO>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQrcodeScanerHaqidaBinding.inflate(layoutInflater)

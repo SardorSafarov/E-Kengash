@@ -29,7 +29,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Turpaket"
+                android:text="@string/turpaket"
                 android:textSize="22dp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="@+id/orqaga_qaytish"
@@ -61,7 +61,7 @@
                         android:backgroundTint="@color/white"
                         android:maxLines="1"
                         android:stateListAnimator="@null"
-                        android:text="Qidirish"
+                        android:text="@string/izlash"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         app:cornerRadius="6dp" />
@@ -74,7 +74,7 @@
                         android:backgroundTint="#E8E8E8"
                         android:maxLines="1"
                         android:stateListAnimator="@null"
-                        android:text="Saqlanganlar"
+                        android:text="@string/saqlanganlar"
                         android:textAllCaps="false"
                         android:textColor="#C0C0C0"
                         app:cornerRadius="6dp" />

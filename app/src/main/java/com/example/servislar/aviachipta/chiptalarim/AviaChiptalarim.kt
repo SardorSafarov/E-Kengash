@@ -8,15 +8,6 @@ import android.view.ViewGroup
 import com.example.katrip.databinding.FragmentAviaChiptalarimBinding
 
 class AviaChiptalarim : Fragment() {
-
-
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-    }
-
-    /*----------------Tegma----------------------*/
     private var _binding: FragmentAviaChiptalarimBinding? = null
     private val binding get() = _binding!!
 

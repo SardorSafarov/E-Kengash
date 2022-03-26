@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="SMS kodni kiriting"
+        android:text="@string/sms_kodni_kiriting"
         android:textColor="#109BFF"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="sardor"
+        android:text="@string/sms_kelmadimi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kod_text" />
     <Button
@@ -133,7 +133,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tasdiqlash"
+            android:text="@string/tasdiqlash"
             android:layout_gravity="center"
             android:textSize="20dp"
             android:textColor="@color/white"

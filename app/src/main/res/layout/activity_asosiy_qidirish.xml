@@ -40,7 +40,7 @@
             android:background="@null"
             android:backgroundTint="#6C757D"
             android:iconifiedByDefault="false"
-            android:queryHint="Nimadir izlash" />
+            android:queryHint="@string/izlash" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Tarix"
+        android:text="@string/tarixi"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="190dp"
-        android:text="Eng ko'p izlanganlar"
+        android:text="@string/eng_ko_p_izlanganlar"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"

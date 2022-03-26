@@ -12,8 +12,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.constants.Constants.SHARED_KEY
-import com.example.constants.Constants.TIL
+import com.example.constants.Constants.LocalTilKey
 import com.example.katrip.R
 import com.example.katrip.databinding.FragmentTilniTanlashBinding
 import java.util.*
@@ -31,7 +30,7 @@ class TilniTanlash : Fragment() {
         _binding = FragmentTilniTanlashBinding.inflate(inflater, container, false)
         val view = binding.root
         setOnClickListener()
-        sharedPreferences = activity?.getSharedPreferences(SHARED_KEY, MODE_PRIVATE)!!
+        sharedPreferences = activity?.getSharedPreferences(LocalTilKey, MODE_PRIVATE)!!
         activity?.window?.statusBarColor = resources.getColor(R.color.asosiy_orqa_ranggi)
 
         return view

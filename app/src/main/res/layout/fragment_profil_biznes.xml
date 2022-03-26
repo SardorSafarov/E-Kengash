@@ -166,7 +166,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tashkilot turi" />
+                            android:text="@string/tashkilot_turi" />
 
                         <TextView
                             android:id="@+id/tash_turi"
@@ -186,7 +186,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Korxona yoki tashkilot nomi" />
+                            android:text="@string/korxona_yoki_tashkilot_nomi" />
 
                         <TextView
                             android:id="@+id/kor_tash_nomi"
@@ -206,7 +206,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tashkilotning rasmiy nomi" />
+                            android:text="@string/tashkilotning_rasmiy_nomi" />
 
                         <TextView
                             android:id="@+id/tash_rasmiy_nomi"
@@ -226,7 +226,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Direktor FIO" />
+                            android:text="@string/direktori_f_i_o" />
 
                         <TextView
                             android:id="@+id/direktor"
@@ -246,7 +246,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tel" />
+                            android:text="@string/telefon_raqami" />
 
                         <TextView
                             android:id="@+id/tash_tel"
@@ -266,7 +266,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Qo'shimcha tel" />
+                            android:text="@string/qo_shimcha_telefon_raqami" />
 
                         <TextView
                             android:id="@+id/qush_tel"
@@ -286,7 +286,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Email" />
+                            android:text="@string/email" />
 
                         <TextView
                             android:id="@+id/tash_email"
@@ -326,7 +326,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bank nomi" />
+                            android:text="@string/bank_nomi" />
 
                         <TextView
                             android:id="@+id/bank_nomi"
@@ -346,7 +346,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="MFO" />
+                            android:text="@string/mfo" />
 
                         <TextView
                             android:id="@+id/tash_mfo"
@@ -366,7 +366,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hisob raqam" />
+                            android:text="@string/hisob_raqami" />
 
                         <TextView
                             android:id="@+id/tash_hisob_raqam"
@@ -386,7 +386,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Davlat,shahar" />
+                            android:text="@string/davlat_shahar" />
 
                         <TextView
                             android:id="@+id/tash_davlat_shahar"
@@ -405,7 +405,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yuridik manzil" />
+                            android:text="@string/yuridik_manzili" />
 
                         <TextView
                             android:id="@+id/tash_yuridik_manzil"
@@ -424,7 +424,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pochta Indeksi" />
+                            android:text="@string/pochta_indeksi" />
 
                         <TextView
                             android:id="@+id/tash_pochta_indeksi"

@@ -3,24 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/chap_menu_profil"
-        android:title="Profil"
+        android:title="@string/profil"
         android:icon="@drawable/ic_chap_m_profil"
         app:showAsAction="always"
         />
     <item
         android:id="@+id/chap_menu_valuta_kursi"
-        android:title="Valuta kursi"
+        android:title="@string/valyuta_kursi"
         android:icon="@drawable/ic_valyuta"
         app:showAsAction="always"
         />
     <item
         android:id="@+id/chap_menu_kup_savol"
-        android:title="Ko`p beriladigan savollar"
+        android:title="@string/ko_p_beriladigan_savollar"
         android:icon="@drawable/ic_chap_m_kup_savol"
         app:showAsAction="always"/>
     <item
         android:id="@+id/chap_menu_offerta"
-        android:title="Oferta"
+        android:title="@string/oferta"
         android:icon="@drawable/ic_chap_m_offerta"
         app:showAsAction="always"/>
 <!--    <item-->
@@ -30,14 +30,14 @@
 <!--        app:showAsAction="ifRoom"/>-->
     <item
         android:id="@+id/chap_menu_sozlanma"
-        android:title="Sozlamalar"
+        android:title="@string/sozlamalar"
         android:icon="@drawable/ic_chap_m_sozlanma"
         app:showAsAction="always"/>
 
 
     <item
         android:id="@+id/chap_menu_ilova_ulashish"
-        android:title="Ilovani ulashish"
+        android:title="@string/ilovani_ulashish"
         android:icon="@drawable/ic_chap_m_ilovani_ulash"
         app:showAsAction="always"/>
 
