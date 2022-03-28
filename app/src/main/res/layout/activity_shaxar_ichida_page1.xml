@@ -92,7 +92,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginVertical="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/materialCardView30"
+                    app:layout_constraintEnd_toStartOf="@+id/tuliq_kurish_btn"
                     app:layout_constraintStart_toEndOf="@+id/materialCardView28"
                     app:layout_constraintTop_toTopOf="parent"
                     app:strokeColor="@color/kuk"
@@ -109,7 +109,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/materialCardView30"
+                    android:id="@+id/tuliq_kurish_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginVertical="20dp"

@@ -3,6 +3,7 @@ package com.example.network.viewmodel.explore
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.log.D
+import com.example.network.entity.explore.engYaqin.EngYaqinJavob
 import com.example.network.entity.explore.shaxarichi.ShaxarIchidaJavob
 import com.example.network.entity.explore.shaxarlar.javob.ShaxarlarJavob
 import com.example.network.repository.kirish.ExploreRepository
@@ -25,11 +26,25 @@ class ExploreViewModel(private val exploreRepository: ExploreRepository): ViewMo
             }
         }
     }
+    /*==============Shaxarlar ishidagilarni olish===================*/
     fun shaxarlarIchida(token:String,query: String,id:String,til:String, onResponse: (response: Response<ShaxarIchidaJavob>) -> Unit)
     {
         viewModelScope.launch {
             try {
                 onResponse(exploreRepository.shaxarlarIchida(token,query,id,til))
+            }catch (e:Exception){
+                D.d("ExploreViewModel shaxarlarIchida funi   ${e.message} ")
+            }
+        }
+    }
+
+    /*==========================Eng yaqin kategoriya btn=======================*/
+
+    fun engYaqinKategoriiyaBtn(token:String,lat: String,lon:String, onResponse: (response: Response<EngYaqinJavob>) -> Unit)
+    {
+        viewModelScope.launch {
+            try {
+                onResponse(exploreRepository.engYaqinKategoriiyaBtn(token,lat,lon))
             }catch (e:Exception){
                 D.d("ExploreViewModel shaxarlarIchida funi   ${e.message} ")
             }

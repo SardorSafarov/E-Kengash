@@ -1,11 +1,12 @@
 package com.example.katrip.fragmentlar.explore.shaxarIchida.page
+
 import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.fragment.app.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,12 +27,15 @@ import com.example.room.viewModel.UserViewModel
 import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
 import retrofit2.Response
 
-class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClickListener  {
+class ShaxarIchidaPage1 : AppCompatActivity(), TakliflarLayfxaklarAdapter.onClickListener {
     private lateinit var binding: ActivityShaxarIchidaPage1Binding
     private lateinit var exploreViewModel: ExploreViewModel
     private val userViewModel: UserViewModel by viewModels()
     private lateinit var takliflarLayfxaklarViewModel: TakliflarLayfxaklarViewModel
-    private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy { TakliflarLayfxaklarAdapter(this, applicationContext = applicationContext) }
+    private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy {
+        TakliflarLayfxaklarAdapter(this,
+            applicationContext = applicationContext)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityShaxarIchidaPage1Binding.inflate(layoutInflater)
@@ -43,9 +47,11 @@ class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClick
         layfxaklarSetUi()
         takliflarLayfxaklar()
     }
+
     private fun layfxaklarSetUi() {
         val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
-        val takliflarLayfxaklarViewModelFactory = TakliflarLayfxaklarViewModelFactory(takliflarLayfxaklarRepisitory)
+        val takliflarLayfxaklarViewModelFactory =
+            TakliflarLayfxaklarViewModelFactory(takliflarLayfxaklarRepisitory)
         val takliflarLayfxaklarViewModel = ViewModelProvider(
             this,
             takliflarLayfxaklarViewModelFactory
@@ -57,17 +63,15 @@ class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClick
     private fun takliflarLayfxaklar() {
         userViewModel.readUser.observe(this, Observer {
             try {
-                takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(),"home")
+                takliflarLayfxaklarViewModel.takliflarLayfxaklar(it.get(0).token.toString(), "home")
                 {
-                    if(it.isSuccessful){
+                    if (it.isSuccessful) {
                         taklifLafxaklarsetAdapterData(it.body()!!.data.arr)
-                    }else
-                    {
+                    } else {
                         D.d("Asosiy takliflarLayfxaklar funida")
                     }
                 }
-            }catch (e:Exception)
-            {
+            } catch (e: Exception) {
                 D.d("Asosiy takliflarLayfxaklar funida ${e.message}")
             }
 
@@ -79,7 +83,7 @@ class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClick
         binding.apply {
             takliflarLayfhaklarRecyc.adapter = takliflarLayfxaklarAdapter
             takliflarLayfhaklarRecyc.layoutManager = LinearLayoutManager(this@ShaxarIchidaPage1,
-                LinearLayoutManager.HORIZONTAL,false)
+                LinearLayoutManager.HORIZONTAL, false)
             takliflarLayfxaklarAdapter.setData(arr)
         }
 
@@ -113,6 +117,12 @@ class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClick
     private fun shaxar(response: Response<ShaxarIchidaJavob>) {
         val s = response.body() as ShaxarIchidaJavob
         val ss = s.data.arr[0]
+        val url = ss.`360Info`
+        binding.tuliqKurishBtn.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(myIntent)
+        }
+
         binding.apply {
             Glide.with(this@ShaxarIchidaPage1).load(ss.file_link).into(image)
             name.setText(ss.name)
@@ -125,17 +135,19 @@ class ShaxarIchidaPage1 : AppCompatActivity(),TakliflarLayfxaklarAdapter.onClick
 
     }
 
-    private fun statusBar() {
-        window.statusBarColor = Color.WHITE
+
+
+    override fun onClickListener(item: Arr) {
+        val intent = Intent(this, TakliflarLayfxaklarFullScreen::class.java)
+        intent.putExtra("text1", item.content1)
+        intent.putExtra("text2", item.content2)
+        intent.putExtra("text3", item.content3)
+        intent.putExtra("name", item.name)
+        intent.putExtra("image", item.image_link)
+        startActivity(intent)
     }
 
-    override fun onClickListener(item:Arr) {
-        val intent = Intent(this, TakliflarLayfxaklarFullScreen::class.java)
-        intent.putExtra("text1",item.content1)
-        intent.putExtra("text2",item.content2)
-        intent.putExtra("text3",item.content3)
-        intent.putExtra("name",item.name)
-        intent.putExtra("image",item.image_link)
-        startActivity(intent)
+    private fun statusBar() {
+        window.statusBarColor = Color.WHITE
     }
 }

@@ -1,5 +1,6 @@
 package com.example.network.api.explore
 
+import com.example.network.entity.explore.engYaqin.EngYaqinJavob
 import com.example.network.entity.explore.shaxarichi.ShaxarIchidaJavob
 import com.example.network.entity.explore.shaxarlar.javob.ShaxarlarJavob
 import com.example.network.entity.info.javob.InfoJavob
@@ -16,5 +17,8 @@ interface Explore {
 
     @GET("/api/v1/explore/find/category")
     suspend fun shaxarlarIchida(@Header("authorization") token: String, @Query("explore_category_id")category_id:String,@Query("like")id:String,@Query("lang_code")til:String): Response<ShaxarIchidaJavob>
+
+    @GET("/api/v1/explore/find/maps")
+    suspend fun engYaqinKategoriiyaBtn(@Header("authorization") token: String, @Query("latitude")latitude:String,@Query("longitude")longitude:String): Response<EngYaqinJavob>
 
 }

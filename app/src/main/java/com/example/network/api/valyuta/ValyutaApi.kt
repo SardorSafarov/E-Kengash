@@ -7,4 +7,6 @@ import retrofit2.http.GET
 interface ValyutaApi {
     @GET("/uz/arkhiv-kursov-valyut/json/")
     suspend fun valyuta():Response<ValyutaEntity>
+
+
 }
