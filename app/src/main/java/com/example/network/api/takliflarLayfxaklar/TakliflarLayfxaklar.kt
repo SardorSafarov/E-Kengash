@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.takliflarLayfxaklar
 
 import com.example.network.entity.takliflarLayfxaklar.javob.TakliflarLayfxaklarJavob
 import retrofit2.Response

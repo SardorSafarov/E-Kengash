@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentlar.explore.main.Explore">
+    tools:context=".fragmentlar.explore.shaxarIchida.main.ShaxarIchida">
 
     <ProgressBar
         android:id="@+id/progers_bar"
@@ -42,9 +42,10 @@
                 app:tint="@color/kuk" />
 
             <TextView
+                android:id="@+id/shaxar_nomi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/explore"
+                android:text="Shaxar nomi"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -68,17 +69,14 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/explore_shaxarlar"
+        android:id="@+id/shaxar_ichi_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
-        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView6"
-        tools:listitem="@layout/item_explore_shaxar"
-        />
-
+        tools:listitem="@layout/item_shaxar_ichida"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

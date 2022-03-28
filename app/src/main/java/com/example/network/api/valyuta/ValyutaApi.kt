@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.valyuta
 
 import com.example.network.entity.valyuta.ValyutaEntity
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.surovnoma
 
 
 import com.example.network.entity.surovNoma.sayohatTurlari.response.SurovNoma1ViewJavob

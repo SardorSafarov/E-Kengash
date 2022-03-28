@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.profil
 
 import com.example.network.entity.profil.biznes.surov.BiznesSurov
 import com.example.network.entity.profil.shaxsniTasdiqlash.pasport.PassportMalumotlarSurov

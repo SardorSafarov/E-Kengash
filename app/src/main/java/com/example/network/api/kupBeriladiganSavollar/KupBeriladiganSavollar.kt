@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.kupBeriladiganSavollar
 
 import com.example.network.entity.bildirshnoma.BildirishNomaJavob
 import com.example.network.entity.info.javob.InfoJavob

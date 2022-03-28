@@ -1,4 +1,4 @@
-package com.example.network.api
+package com.example.network.api.kirish
 
 
 import com.example.network.entity.kirsh.foydalanuvchiniTekshirsh.FooydalanuvchiniTekshirish
