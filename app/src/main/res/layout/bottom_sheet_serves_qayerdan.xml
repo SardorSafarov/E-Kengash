@@ -59,7 +59,7 @@
                 app:strokeWidth="1dp">
 
                 <SearchView
-                    android:id="@+id/chats_searchView"
+                    android:id="@+id/shaxar_izlash"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"

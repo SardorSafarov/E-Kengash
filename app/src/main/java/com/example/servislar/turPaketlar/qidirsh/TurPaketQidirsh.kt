@@ -213,23 +213,7 @@ class TurPaketQidirsh : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         }
 
 
-        /*-----------Xonalar-----------------------*/
-        turarJoyHolatBind.holatXonalarQush.setOnClickListener {
-            xonalar++
-            turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
-            turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
-            turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
-        }
-        turarJoyHolatBind.holatXonalarKam.setOnClickListener {
-            if(xonalar>1){
-                xonalar--
-                if(xonalar==1){
-                    turarJoyHolatBind.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
-                    turarJoyHolatBind.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
-                }
-                turarJoyHolatBind.xonalarSoni.text=xonalar.toString()
-            }
-        }
+
         /*-------------Kattalar------------------*/
         turarJoyHolatBind.holatKattalarQush.setOnClickListener {
             kattalar++

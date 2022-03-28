@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,8 +17,11 @@ import com.example.katrip.fragmentlar.asosiyy.adapter.TakliflarLayfxaklarAdapter
 import com.example.log.D
 import com.example.network.entity.takliflarLayfxaklar.javob.Arr
 import com.example.network.repository.takliflarLayfxaklar.TakliflarLayfxaklarRepisitory
+import com.example.network.repository.taxi.TaxiRepository
 import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxaklarViewModelFactory
+import com.example.network.viewModelFactory.taxi.TaxiViewModelFactory
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
+import com.example.network.viewmodel.taxi.TaxiViewModel
 import com.example.room.viewModel.UserViewModel
 import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -31,6 +35,9 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     private lateinit var takliflarLayfxaklarViewModel: TakliflarLayfxaklarViewModel
     private val takliflarLayfxaklarAdapter: TakliflarLayfxaklarAdapter by lazy { TakliflarLayfxaklarAdapter(this, applicationContext = requireContext()) }
     private val userViewModel: UserViewModel by viewModels()
+    private lateinit var taxiViewModel:TaxiViewModel
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,7 +46,18 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         _binding = FragmentTaxiQidirishBinding.inflate(inflater, container, false)
         val view = binding.root
         layfxaklarSetUi()
+        taxiSetUi()
         return view
+    }
+
+    private fun taxiSetUi() {
+        val taxiRepisitory = TaxiRepository()
+        val taxiViewModelFactory = TaxiViewModelFactory(taxiRepisitory)
+        val taxiViewModel = ViewModelProvider(
+            this,
+            taxiViewModelFactory
+        ).get(TaxiViewModel::class.java)
+        this.taxiViewModel = taxiViewModel
     }
 
 
@@ -114,7 +132,7 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         datePicker.addOnPositiveButtonClickListener { selection: Long? ->
             val calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"))
             calendar.time = selection?.let { Date(it) }
-            val time= avtobusQachonQachongachaText(
+            val time= taxiQachonQachongachaText(
                 calendar.get(Calendar.DAY_OF_MONTH),
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_WEEK)
@@ -126,7 +144,7 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         }
     }
 
-    private fun avtobusQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
+    private fun taxiQachonQachongachaText(kun: Int, oy: Int, haftaKuni: Int):String {
 
         val oytext = when (oy + 1) {
             1 -> "Yan"
@@ -168,7 +186,19 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         binding.taxiQayerdan.setOnClickListener {
             bottomsheet.show()
         }
+        bottomsheetBinding.shaxarIzlash.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                shaxarIzlashSurov(query)
+                return false
+            }
+            override fun onQueryTextChange(newText: String): Boolean {
+                return false
+            }
+        })
     }
+
+
+
     private fun taxiQayerga() {
         val bottomsheet= BottomSheetDialog(requireContext(), R.style.BottomSheetDiaolg)
         val view = LayoutInflater.from(context).inflate(R.layout.bottom_sheet_serves_qayerdan,null)
@@ -182,6 +212,22 @@ class TaxiQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
             bottomsheet.show()
         }
     }
+    private fun shaxarIzlashSurov(query: String) {
+        taxiViewModel.taxiManzilQidirish(
+            "formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry",
+            "$query",
+            "textquery",
+            "AIzaSyAyOUon_jgkDh8kDSCQvHJEdj9xt6QFoXc"){
+            if(it.isSuccessful){
+                D.d(it.body().toString())
+            }else
+            {
+                D.d("TaxiQidirish taxiViewModel funi")
+            }
+        }
+    }
+
+
 
 //    private fun taxiQachon() {
 //        val bottomDialog = BottomSheetDialog(requireContext(),R.style.BottomSheetDiaolg)

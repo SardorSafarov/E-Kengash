@@ -22,7 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name="com.example.servislar.turarJoylar.qidirish.izlash.TurarJoyIzlash"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

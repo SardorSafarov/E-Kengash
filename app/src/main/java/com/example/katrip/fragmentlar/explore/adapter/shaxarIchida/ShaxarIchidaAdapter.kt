@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.katrip.R
-import com.example.katrip.databinding.ItemExploreShaxarBinding
-import com.example.katrip.databinding.ItemShaxarIchidaBinding
+import com.example.katrip.databinding.ItemExploreShaxarIchidaBinding
 import com.example.log.D
 import com.example.network.entity.explore.shaxarichi.Arr
 
@@ -23,7 +22,7 @@ class ShaxarIchidaAdapter(private val listener: onClickListener, var application
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val binding = ItemShaxarIchidaBinding.bind(itemView)
+        private val binding = ItemExploreShaxarIchidaBinding.bind(itemView)
 
         fun bind(item: Arr) {
             D.d(item.toString())
@@ -45,7 +44,7 @@ class ShaxarIchidaAdapter(private val listener: onClickListener, var application
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_shaxar_ichida, parent, false))
+            .inflate(R.layout.item_explore_shaxar_ichida, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

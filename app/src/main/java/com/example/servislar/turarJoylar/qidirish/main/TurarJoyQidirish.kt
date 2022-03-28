@@ -1,4 +1,4 @@
-package com.example.servislar.turarJoylar.qidirish
+package com.example.servislar.turarJoylar.qidirish.main
 
 import android.content.Intent
 import android.graphics.Color
@@ -21,6 +21,7 @@ import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxak
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
 import com.example.room.viewModel.UserViewModel
 import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
+import com.example.servislar.turarJoylar.qidirish.izlash.TurarJoyIzlash
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
@@ -29,6 +30,7 @@ import java.util.*
 class TurarJoyQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     private var _binding: FragmentTurarJoyQidirishBinding? = null
     private val binding get() = _binding!!
+    var xonalar=1
     var kattalar=1
     var bolalar=0
     var chaqaloqlar=0
@@ -42,9 +44,15 @@ class TurarJoyQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
     ): View? {
         _binding = FragmentTurarJoyQidirishBinding.inflate(inflater, container, false)
         val view = binding.root
+        setOnClickListener()
         layfxaklarSetUi()
         return view
     }
+
+    private fun setOnClickListener() {
+        turarJoyIzlash()
+    }
+
 
 
 
@@ -54,6 +62,19 @@ class TurarJoyQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
         turarJoyQachon()
         takliflarLayfxaklar()
     }
+    private fun turarJoyIzlash() {
+        val intent = Intent(requireContext(),TurarJoyIzlash::class.java)
+        binding.turarJoyIzlash.setOnClickListener {
+            intent.putExtra("katta",kattalar.toString())
+            intent.putExtra("bolalar",bolalar.toString())
+            intent.putExtra("kishi",(kattalar+bolalar+chaqaloqlar).toString())
+            intent.putExtra("shaxar","Bukhara")
+            intent.putExtra("xona",xonalar.toString())
+            startActivity(intent)
+        }
+    }
+
+
 
     private fun layfxaklarSetUi() {
         val takliflarLayfxaklarRepisitory = TakliflarLayfxaklarRepisitory()
@@ -189,6 +210,25 @@ class TurarJoyQidirish : Fragment(),TakliflarLayfxaklarAdapter.onClickListener {
             }
             bottomsheet.dismiss()
         }
+        /*=========Xonalar=======================*/
+        turPaketBinding.holatXonalarQush.setOnClickListener {
+            xonalar++
+            D.d(xonalar.toString())
+            turPaketBinding.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#109BFF"))
+            turPaketBinding.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_oq)
+            turPaketBinding.holatXonalarSoni.text=xonalar.toString()
+        }
+        turPaketBinding.holatXonalarKam.setOnClickListener {
+            if(xonalar>1){
+                xonalar--
+                if(xonalar==1){
+                    turPaketBinding.holatXonalarKamIcon.setBackgroundColor(Color.parseColor("#ffffff"))
+                    turPaketBinding.holatXonalarKamIcon.setImageResource(R.drawable.ic_minus_kuk)
+                }
+                turPaketBinding.holatXonalarSoni.text=xonalar.toString()
+            }
+        }
+
         /*-------------Kattalar------------------*/
         turPaketBinding.holatKattalarQush.setOnClickListener {
             kattalar++

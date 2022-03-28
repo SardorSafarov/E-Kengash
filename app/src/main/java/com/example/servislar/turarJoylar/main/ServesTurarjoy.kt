@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.example.katrip.R
 import com.example.katrip.databinding.ActivityServesTurarjoy2Binding
 import com.example.servislar.turarJoylar.buyurtmalar.TurarJoyBuyurmalar
-import com.example.servislar.turarJoylar.qidirish.TurarJoyQidirish
+import com.example.servislar.turarJoylar.qidirish.main.TurarJoyQidirish
 
 class ServesTurarjoy : AppCompatActivity() {
     lateinit var binding:ActivityServesTurarjoy2Binding
