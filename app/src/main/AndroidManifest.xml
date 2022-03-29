@@ -23,6 +23,9 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.example.servislar.taxi.taxiQidirish.HaydovchiQidirish"
+            android:exported="false" />
+        <activity
             android:name="com.example.servislar.turarJoylar.qidirish.izlash.TurarJoyIzlash"
             android:exported="false" />
         <!--

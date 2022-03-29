@@ -13,14 +13,13 @@ class TaxiViewModel(private val taxiRepository: TaxiRepository) :ViewModel() {
 
     /*==============Hududlarni qidirish==============*/
     fun taxiManzilQidirish(
-        fields: String,
         input: String,
         inputtype: String,
         key: String,onResponse:(response:Response<TaxsiShaxarQidirishJavob>)->Unit
     ){
         viewModelScope.launch {
             try {
-                onResponse(taxiRepository.taxiManzilQidirish(fields,input,inputtype,key))
+                onResponse(taxiRepository.taxiManzilQidirish(input,inputtype,key))
             }catch (e:Exception)
             {
                 D.d("TaxiViewModel  taxiManzilQidirish funi  ${e.message}")
