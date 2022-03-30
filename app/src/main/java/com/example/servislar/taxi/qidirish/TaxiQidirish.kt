@@ -178,7 +178,13 @@ class TaxiQidirish : Fragment(), TakliflarLayfxaklarAdapter.onClickListener,
             binding.qachonTanlanganda.visibility = View.VISIBLE
             binding.qachonText.visibility = View.VISIBLE
             binding.qachonText.setText(time)
-            vaqt = "${calendar.get(Calendar.DAY_OF_MONTH)}/${calendar.get(Calendar.MONTH)+1}/${calendar.get(Calendar.YEAR)}"
+            val oy =when(calendar.get(Calendar.MONTH)+1){
+                12->{12}
+                11->{11}
+                10->{10}
+                else->{"0${calendar.get(Calendar.MONTH)+1}"}
+            }
+            vaqt = "${calendar.get(Calendar.DAY_OF_MONTH)}-${oy}-${calendar.get(Calendar.YEAR)}"
         }
     }
 
