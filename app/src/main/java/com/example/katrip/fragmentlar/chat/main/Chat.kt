@@ -91,7 +91,7 @@ class Chat : Fragment(),ChatAdapter.MessageSetOnClickListener {
     }
 
     override fun listener(userChatAddEntity: String) {
-        TODO("Not yet implemented")
+
     }
 
 
