@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "776902586827",
-    "project_id": "ekengash",
-    "storage_bucket": "ekengash.appspot.com"
+    "project_number": "109638726429",
+    "project_id": "katrip-314ed",
+    "storage_bucket": "katrip-314ed.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:776902586827:android:6c7474d37ac31d50a5864e",
+        "mobilesdk_app_id": "1:109638726429:android:25abde899ff903fd4aa7f4",
         "android_client_info": {
           "package_name": "com.example.ekengash"
         }
       },
       "oauth_client": [
         {
-          "client_id": "776902586827-bcitia5il4scgu0m1jjs20tsubjgus5p.apps.googleusercontent.com",
+          "client_id": "109638726429-pq56b656q5k5mopu64vvdqocnsion8rl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCN41e99mOwzblu2VNV0rBTA2DjXq-aAEw"
+          "current_key": "AIzaSyDZdRY_iM4oDXYPRBYck6nbUpv-tZDmJXM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "776902586827-bcitia5il4scgu0m1jjs20tsubjgus5p.apps.googleusercontent.com",
+              "client_id": "109638726429-pq56b656q5k5mopu64vvdqocnsion8rl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
