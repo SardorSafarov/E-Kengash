@@ -12,35 +12,69 @@ import com.example.log.D
 import com.example.network.entity.taxi.haydovchi.javob.Haydovchi
 
 
-class HaydovchiIzlashAdapter(private val listener: kategoriyaView, private val context: Context) :
+class HaydovchiIzlashAdapter(private val listener: haydovchiIzlashListener, private val context: Context) :
     RecyclerView.Adapter<HaydovchiIzlashAdapter.ViewHolder>() {
 
-    interface kategoriyaView {
-        fun onclickView(type: String)
+    interface haydovchiIzlashListener {
+        fun onclickView(
+            price: String,
+            driver: String,
+            seats: String,
+            duration: String,
+            departure_time: String,
+            qayerdan: String,
+            mashinaRanggi: String,
+            s: String,
+            s1: String
+        )
+
     }
 
     private var list: List<Haydovchi> = mutableListOf()
-
+    private var qayerdan:String=""
+    private var qayerga:String=""
+    private var vaqt =""
 
     inner class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = ItemTaxiHaydovchiBinding.bind(itemView)
-        fun bind(item: Haydovchi) {
-            D.d(item.toString())
-            Glide.with(context).load("https://yulda.uz/storage/users/March2022/avatar_1647669227.png").into(binding.image)
-            D.d(item.price.toString())
-            D.d(item.seats.toString())
-            D.d(item.distance.toString())
+        var t=1
+        fun bind(item: Haydovchi, qayerdan: String, qayerga: String, vaqt: String) {
+            Glide.with(context).load("https://yulda.uz/storage/${item.driver.avatar}").into(binding.image)
             binding.apply {
-                price.setText(item.price.toString())
+                price.setText(item.price.toString()+" UZS")
                 name.setText(item.driver.name)
                 seats.setText(item.seats.toString())
-//                seats.setText(seats.toString())
-//                distance.setText(item.distance.toString())
-//                name.setText(item.driver.name.toString())
-//                manzillar.setText(item.from_address+"-"+item.to_address)
+                duration.setText((item.duration.toInt() / 3600).toString())
+                distance.setText((item.distance/1000).toString()+" km")
+                departureTime.setText(item.departure_time.toString())
+                manzillar.setText(qayerdan+"\n"+qayerga)
+                mashinaRanggi.setText("Chevrolet Nexia | Белый")
+                borishKuni.setText(vaqt)
+            }
+            when(t)
+            {
+                1->{
+                    binding.mashinaRanggi.setText("Chevrolet Nexia | Белый")
+                    t=2
+                }
+                2->{
+                    binding.mashinaRanggi.setText("Chevrolet Lacetti | Белый")
+                    t=1
+                }
             }
             itemView.setOnClickListener {
+                listener.onclickView(
 
+                    item.price.toString(),
+                    item.driver.name.toString(),
+                    item.seats.toString(),
+                    (item.duration.toInt() / 3600).toString(),
+                    item.departure_time.toString(),
+                    (qayerdan+"\n"+qayerga).toString(),
+                    binding.mashinaRanggi.text.toString(),
+                    ((item.distance/1000).toString()+" km"),
+                    "https://yulda.uz/storage/${item.driver.avatar}"
+                )
             }
         }
     }
@@ -58,7 +92,7 @@ class HaydovchiIzlashAdapter(private val listener: kategoriyaView, private val c
         position: Int,
     ) {
         try {
-            holder.bind(list[position])
+            holder.bind(list[position],qayerdan,qayerga,vaqt)
         } catch (e: Exception) {
             D.d(e.message.toString())
         }
@@ -67,8 +101,11 @@ class HaydovchiIzlashAdapter(private val listener: kategoriyaView, private val c
 
     override fun getItemCount(): Int = list.size
 
-    fun setData(list: List<Haydovchi>) {
+    fun setData(list: List<Haydovchi>, qayerdan: String, qayerga: String, vaqt: String) {
         this.list = list
         notifyDataSetChanged()
+        this.qayerdan=qayerdan
+        this.qayerga=qayerga
+        this.vaqt = vaqt
     }
 }

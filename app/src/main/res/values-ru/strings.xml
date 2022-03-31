@@ -238,5 +238,7 @@
     <string name="yaqin_joylar">Yaqin joylar</string>
     <string name="masofa">Masofa</string>
     <string name="borish_o_rinlar">Borish o\'rinlar</string>
+    <string name="borish_vaqti">Borish vaqti</string>
+    <string name="borish_kuni">Borish kuni</string>
     <!-- Rus  tili uchun   -->
 </resources>
