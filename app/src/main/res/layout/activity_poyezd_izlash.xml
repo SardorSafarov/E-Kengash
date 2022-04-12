@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3F3F3"
-    tools:context="com.example.servislar.poyezd.izlash.PoyezdIzlash">
+    tools:context=".servislar.poyezd.izlash.PoyezdIzlash">
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView11"
         android:layout_width="match_parent"

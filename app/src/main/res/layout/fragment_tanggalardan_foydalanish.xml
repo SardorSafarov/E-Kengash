@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
     android:layout_height="match_parent"
-    tools:context="com.example.servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish">
+    tools:context=".servislar.tanggalar.tanggalardanFoydalanish.TanggalardanFoydalanish">
 
     <LinearLayout
         android:id="@+id/tanggalar_turarjoy"

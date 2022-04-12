@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
-    tools:context="com.example.servislar.taxi.taxiQidirish.haydovchiniTasdiqlash.HaydovchiniTasdiqlash">
+    tools:context=".servislar.taxi.taxiQidirish.haydovchiniTasdiqlash.HaydovchiniTasdiqlash">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView6"

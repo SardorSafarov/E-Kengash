@@ -15,16 +15,16 @@ import com.example.katrip.databinding.FragmentKuproqitem2Binding
 import com.example.katrip.recyclerViewItemEntity.KuproqItemEntitit
 import com.example.engYaqin.main.EngYaqin
 import com.example.qrcode.main.QRcodeScaner
-import com.example.servislar.ab.main.ServesAB
-import com.example.servislar.aviachipta.main.ServesAvia
-import com.example.servislar.avtobus.main.ServesAvtobus
-import com.example.servislar.chegirmalar.mian.ServesChegirmalar
-import com.example.servislar.chiptalarim.main.ServesChiptalarim
-import com.example.servislar.poyezd.main.ServesPoyezd
-import com.example.servislar.saqlanganlar.main.ServesSaqlanganlar
-import com.example.servislar.tanggalar.main.ServisTanggalar
-import com.example.servislar.taxi.main.ServesTaxi
-import com.example.servislar.turarJoylar.main.ServesTurarjoy
+import com.example.katrip.servislar.ab.main.ServesAB
+import com.example.katrip.servislar.aviachipta.main.ServesAvia
+import com.example.katrip.servislar.avtobus.main.ServesAvtobus
+import com.example.katrip.servislar.chegirmalar.mian.ServesChegirmalar
+import com.example.katrip.servislar.chiptalarim.main.ServesChiptalarim
+import com.example.katrip.servislar.poyezd.main.ServesPoyezd
+import com.example.katrip.servislar.saqlanganlar.main.ServesSaqlanganlar
+import com.example.katrip.servislar.tanggalar.main.ServisTanggalar
+import com.example.katrip.servislar.taxi.main.ServesTaxi
+import com.example.katrip.servislar.turarJoylar.main.ServesTurarjoy
 
 
 class Kuproqitem2 : Fragment(), KuproqItem2Adapter.OnClickLister {

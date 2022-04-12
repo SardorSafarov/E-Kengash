@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
     android:layout_height="match_parent"
-    tools:context="com.example.servislar.taxi.taxiQidirish.HaydovchiQidirish">
+    tools:context=".servislar.taxi.taxiQidirish.HaydovchiQidirish">
 
     <ProgressBar
         android:id="@+id/progress"

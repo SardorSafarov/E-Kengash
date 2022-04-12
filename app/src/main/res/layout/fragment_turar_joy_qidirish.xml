@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F3F3F3"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.servislar.turarJoylar.qidirish.main.TurarJoyQidirish">
+    tools:context=".servislar.turarJoylar.qidirish.main.TurarJoyQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"
@@ -62,6 +62,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/qayerdan_txt_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"

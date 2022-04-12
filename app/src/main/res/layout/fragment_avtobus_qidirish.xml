@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F3F3F3"
-    tools:context="com.example.servislar.avtobus.qidirish.AvtobusQidirish">
+    tools:context=".servislar.avtobus.qidirish.AvtobusQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"

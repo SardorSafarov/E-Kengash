@@ -152,11 +152,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.navView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.asosiy -> {
+                    binding.toolbarMain.visibility = View.VISIBLE
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.nav_host_fragment_activity_main, Asosiy()).commit()
                     true
                 }
                 R.id.explore -> {
+                    binding.toolbarMain.visibility = View.GONE
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.nav_host_fragment_activity_main,
                             Explore()
@@ -164,6 +166,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     true
                 }
                 R.id.chat -> {
+                    binding.toolbarMain.visibility = View.GONE
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.nav_host_fragment_activity_main,
                             Chat()
@@ -172,6 +175,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     true
                 }
                 R.id.kuproq -> {
+                    binding.toolbarMain.visibility = View.GONE
                     supportFragmentManager.beginTransaction().replace(
                         R.id.nav_host_fragment_activity_main,
                         Kuproqq()

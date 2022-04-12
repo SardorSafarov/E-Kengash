@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/asosiy_orqa_ranggi"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.servislar.turPaketlar.qidirsh.TurPaketQidirsh">
+    tools:context=".servislar.turPaketlar.qidirsh.TurPaketQidirsh">
 
 
     <com.google.android.material.card.MaterialCardView

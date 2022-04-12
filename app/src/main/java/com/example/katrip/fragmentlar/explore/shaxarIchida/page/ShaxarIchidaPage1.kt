@@ -24,7 +24,7 @@ import com.example.network.viewModelFactory.takliflarLayfxaklar.TakliflarLayfxak
 import com.example.network.viewmodel.explore.ExploreViewModel
 import com.example.network.viewmodel.takliflarLayfxaklar.TakliflarLayfxaklarViewModel
 import com.example.room.viewModel.UserViewModel
-import com.example.servislar.stories.TakliflarLayfxaklarFullScreen
+import com.example.katrip.servislar.stories.TakliflarLayfxaklarFullScreen
 import retrofit2.Response
 
 class ShaxarIchidaPage1 : AppCompatActivity(), TakliflarLayfxaklarAdapter.onClickListener {

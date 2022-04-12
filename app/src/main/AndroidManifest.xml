@@ -23,13 +23,16 @@
         android:theme="@style/Theme.EKengash"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.servislar.taxi.taxiQidirish.haydovchiniTasdiqlash.HaydovchiniTasdiqlash"
+            android:name="com.example.katrip.servislar.turarJoylar.qidirish.turarJoyHaqida.TurarJoyHaqida"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.taxi.taxiQidirish.HaydovchiQidirish"
+            android:name="com.example.katrip.servislar.taxi.taxiQidirish.haydovchiniTasdiqlash.HaydovchiniTasdiqlash"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.turarJoylar.qidirish.izlash.TurarJoyIzlash"
+            android:name="com.example.katrip.servislar.taxi.taxiQidirish.HaydovchiQidirish"
+            android:exported="false" />
+        <activity
+            android:name="com.example.katrip.servislar.turarJoylar.qidirish.turarJoyRuyxati.TurarJoylarRuxati"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -59,7 +62,7 @@
             android:name=".fragmentlar.asosiyy.bildirishnomalar.yangiliklar.YangiliklarFulScreen"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.stories.TakliflarLayfxaklarFullScreen"
+            android:name="com.example.katrip.servislar.stories.TakliflarLayfxaklarFullScreen"
             android:exported="false"
             android:theme="@style/FullScreenThem" />
         <activity
@@ -75,22 +78,22 @@
             android:name="com.example.kirsh.omBoridng.main.OnBoriding"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.turPaketlar.main.ServesTurPaket"
+            android:name="com.example.katrip.servislar.turPaketlar.main.ServesTurPaket"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.turpaket.ChegirmalarTurpaket"
+            android:name="com.example.katrip.servislar.chegirmalar.turpaket.ChegirmalarTurpaket"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.transport.ChegirmalarTransport"
+            android:name="com.example.katrip.servislar.chegirmalar.transport.ChegirmalarTransport"
             android:exported="false" />
         <activity
             android:name="com.example.engYaqin.haqida.EngYaqinHaqida"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chiptalarim.haqida.ChiptalarimHaqida"
+            android:name="com.example.katrip.servislar.chiptalarim.haqida.ChiptalarimHaqida"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.saqlanganlar.haqida.SaqlanganlarHaqida"
+            android:name="com.example.katrip.servislar.saqlanganlar.haqida.SaqlanganlarHaqida"
             android:exported="false" />
         <activity
             android:name="com.example.chapMenu.valyutaKurslari.qidirsh.ValyutaQidirish"
@@ -102,10 +105,10 @@
             android:name="com.example.qrcode.qrcodeHaqida.QRcodeScanerHaqida"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.saqlanganlar.main.ServesSaqlanganlar"
+            android:name="com.example.katrip.servislar.saqlanganlar.main.ServesSaqlanganlar"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chiptalarim.main.ServesChiptalarim"
+            android:name="com.example.katrip.servislar.chiptalarim.main.ServesChiptalarim"
             android:exported="false" />
         <activity
             android:name="com.example.engYaqin.main.EngYaqin"
@@ -115,13 +118,13 @@
             android:exported="true"
             android:theme="@style/FullScreenThem" />
         <activity
-            android:name="com.example.servislar.ab.main.ServesAB"
+            android:name="com.example.katrip.servislar.ab.main.ServesAB"
             android:exported="true" />
         <activity
-            android:name="com.example.servislar.tanggalar.turarJoy.TanggalarTurarJoy"
+            android:name="com.example.katrip.servislar.tanggalar.turarJoy.TanggalarTurarJoy"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.tanggalar.main.ServisTanggalar"
+            android:name="com.example.katrip.servislar.tanggalar.main.ServisTanggalar"
             android:exported="true" />
         <activity
             android:name="com.example.chapMenu.profil.shaxsiy.shaxsiyProfilTasdiqlash.activity.sms.ShaxsiyProfilTasdiqlashSms"
@@ -185,39 +188,39 @@
             android:name=".fragmentlar.asosiyy.bildirishnomalar.main.Bildirshnomalar"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.taxi.main.ServesTaxi"
+            android:name="com.example.katrip.servislar.taxi.main.ServesTaxi"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.turarJoylar.main.ServesTurarjoy"
+            android:name="com.example.katrip.servislar.turarJoylar.main.ServesTurarjoy"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.poyezd.izlash.PoyezdIzlash"
+            android:name="com.example.katrip.servislar.poyezd.izlash.PoyezdIzlash"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.aviachipta.izlash.AviaIzlash"
+            android:name="com.example.katrip.servislar.aviachipta.izlash.AviaIzlash"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy"
+            android:name="com.example.katrip.servislar.chegirmalar.turarjoy.ChegirmaTurarJoy"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.chegirmalar.mian.ServesChegirmalar"
+            android:name="com.example.katrip.servislar.chegirmalar.mian.ServesChegirmalar"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.ab.izlash.ABIzlash"
+            android:name="com.example.katrip.servislar.ab.izlash.ABIzlash"
             android:exported="false" />
         <activity
             android:name="com.example.asosiyQidirishOynasi.AsosiyQidirish"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.poyezd.main.ServesPoyezd"
+            android:name="com.example.katrip.servislar.poyezd.main.ServesPoyezd"
             android:exported="true"
             android:label="@string/title_activity_poyezd"
             android:theme="@style/Theme.EKengash.NoActionBar" />
         <activity
-            android:name="com.example.servislar.avtobus.main.ServesAvtobus"
+            android:name="com.example.katrip.servislar.avtobus.main.ServesAvtobus"
             android:exported="false" />
         <activity
-            android:name="com.example.servislar.aviachipta.main.ServesAvia"
+            android:name="com.example.katrip.servislar.aviachipta.main.ServesAvia"
             android:exported="false" />
         <activity
             android:name=".fragmentlar.chat.activity.ChatScreen"

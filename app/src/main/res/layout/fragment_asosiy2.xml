@@ -71,21 +71,11 @@
                     android:layout_gravity="end|center_vertical"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_asoyiy_qidirsh"
+                    android:layout_marginEnd="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--            <SearchView-->
-<!--                android:id="@+id/chats_searchView"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentTop="true"-->
-<!--                android:background="@null"-->
-<!--                android:visibility="invisible"-->
-<!--                android:backgroundTint="#99999988"-->
-<!--                android:iconifiedByDefault="false"-->
-<!--                android:queryHint="Nimadir izlash" />-->
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
@@ -246,17 +236,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="#898989"
-        android:background="#898989"
-        android:alpha="0.1"
-        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.card.MaterialCardView
         style="@style/MyCardView"
         android:layout_width="match_parent"

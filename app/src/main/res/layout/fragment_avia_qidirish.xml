@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#F3F3F3"
     android:layout_height="match_parent"
-    tools:context="com.example.servislar.aviachipta.qidirish.AviaQidirish">
+    tools:context=".servislar.aviachipta.qidirish.AviaQidirish">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView13"
